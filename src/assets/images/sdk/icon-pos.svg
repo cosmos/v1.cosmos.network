@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="101px" viewBox="0 0 88 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>shield</title>
+    <desc>Created with Sketch.</desc>
+    <g id="/SDK-(NEW)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cosmos_website_SDK_1920px" transform="translate(-323.000000, -2172.000000)" stroke="#FFFFFF" stroke-width="2">
+            <g id="SDk-Features" transform="translate(-1.000000, 1423.000000)">
+                <g id="shield" transform="translate(325.000000, 751.000000)">
+                    <path d="M42.5164454,0.277831483 L42.5164454,97.4060606" id="Line-5" stroke-linecap="square"></path>
+                    <path d="M0.487658969,16.3308829 C-1.36266508,43.2884557 2.05252321,62.1033404 10.7332238,72.7755371 C19.4139244,83.4477338 30.1695165,91.5225547 43,97 C57.3099693,89.3208713 67.2124191,81.7528486 72.7073494,74.295932 C80.9497448,63.110557 87.9342098,53.2675376 85.5138342,16.3308829 C85.5138342,16.3308829 74.5564039,16.3308829 63.0175322,13.065549 C55.324951,10.8886597 48.6524403,6.53347667 43,0 C39.3071539,5.49468557 33.300634,9.59017079 24.9804404,12.2864557 C16.6602468,14.9827405 8.49598629,16.3308829 0.487658969,16.3308829 Z" id="Path-9"></path>
+                    <path d="M3,48.6169444 L84,48.6169444" id="Line-6" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

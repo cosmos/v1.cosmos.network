@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1427px" height="319px" viewBox="0 0 1427 319" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="mountains" fill="#171C36" points="-47 215 28 142 164 173.5 327 124 459 192 545 173.5 715 207 806 169 849 173.5 938 142 1040 169 1094 142 1185 173.5 1324 112 1450 152 1450 468 -27 455"></polygon>
+        <rect id="mask" fill="#FFFFFF" x="0" y="279" width="1427" height="40"></rect>
+        <g id="buildings" transform="translate(0.000000, 123.000000)" fill="#FFFFFF">
+            <rect id="Rectangle" x="0" y="69.7862408" width="55" height="86.977887"></rect>
+            <rect id="Rectangle-Copy-30" x="790" y="129" width="92" height="110.565111"></rect>
+            <rect id="Rectangle-Copy-2" x="1223" y="75" width="89" height="93"></rect>
+            <rect id="Rectangle-Copy-3" x="1171" y="107" width="64" height="124.324324"></rect>
+            <rect id="Rectangle-Copy-13" x="978" y="124" width="58" height="124.324324"></rect>
+            <rect id="Rectangle-Copy-27" x="1312" y="122" width="58" height="124.324324"></rect>
+            <rect id="Rectangle-Copy-4" x="1278" y="141.955774" width="149" height="61"></rect>
+            <rect id="Rectangle-Copy-9" x="83" y="76" width="49" height="136.609337"></rect>
+            <rect id="Rectangle-Copy-11" x="336" y="121" width="89" height="136.609337"></rect>
+            <rect id="Rectangle-Copy-21" x="1086" y="129" width="164" height="134"></rect>
+            <rect id="Rectangle-Copy-7" x="1392" y="38.8280098" width="35" height="136.609337"></rect>
+            <rect id="Rectangle-Copy-28" x="1264" y="0" width="35" height="166"></rect>
+            <rect id="Rectangle-Copy-12" x="108" y="29" width="58" height="136.609337"></rect>
+            <rect id="Rectangle-Copy-29" x="38" y="103" width="272" height="136.609337"></rect>
+            <rect id="Rectangle-Copy-25" x="20" y="4" width="35" height="171"></rect>
+        </g>
+    </g>
+</svg>

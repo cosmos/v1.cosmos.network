@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="72.8061361%" y1="33.2204147%" x2="147.95954%" y2="124.597645%" id="linearGradient-1">
+            <stop stop-color="#4154E0" stop-opacity="0.910609149" offset="0%"></stop>
+            <stop stop-color="#ABB3ED" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#8997FF" offset="0%"></stop>
+            <stop stop-color="#505EFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="rocket-ii" transform="translate(200.012641, 200.409178) rotate(16.000000) translate(-200.012641, -200.409178) translate(97.012641, 58.909178)">
+            <polygon id="Fill-1" fill="url(#linearGradient-1)" points="133.854501 83.0898092 133.854501 48.6758161 104.252063 0 74.6496254 48.6758161 74.6496254 83.0898092 104.252063 100.297117"></polygon>
+            <polygon id="Fill-4" fill="url(#linearGradient-1)" points="133.854501 117.441613 133.854501 83.1526208 104.252063 66.0075043 74.6496254 83.1526208 74.6496254 117.441613 104.252063 134.58673"></polygon>
+            <polygon id="Fill-6" fill="url(#linearGradient-1)" points="133.854501 249.456932 133.854501 152.542706 104.164893 135.44397 74.4752846 152.542706 73.7915837 249.456932 104.164893 249.456932"></polygon>
+            <polygon id="Fill-8" fill="url(#linearGradient-1)" points="61.6413987 282.032064 104.681084 168.019102 45.4588416 176.212231 11.1545417 261.730813"></polygon>
+            <polygon id="Fill-13" fill="url(#linearGradient-1)" points="145.702428 282.032064 104.681084 168.876342 163.726797 177.015691 194.775459 262.665088"></polygon>
+            <polygon id="Stroke-11" stroke="url(#linearGradient-2)" points="50.3550855 276.888622 104.681084 134.58673 45.6147653 142.787657 0 256.568672"></polygon>
+            <polygon id="Stroke-15" stroke="url(#linearGradient-2)" points="156.28452 277.745862 104.681084 134.58673 163.383786 142.784319 205.071959 258.240307"></polygon>
+        </g>
+    </g>
+</svg>

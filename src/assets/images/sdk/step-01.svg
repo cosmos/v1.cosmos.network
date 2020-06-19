@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>1-program</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="72.8061361%" y1="33.2204147%" x2="118.598497%" y2="110.863054%" id="linearGradient-1">
+            <stop stop-color="#4154E0" stop-opacity="0.910609149" offset="0%"></stop>
+            <stop stop-color="#ABB3ED" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="/SDK-(NEW)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cosmos_website_SDK_1920px" transform="translate(-332.000000, -687.000000)">
+            <g id="1-program" transform="translate(332.000000, 687.000000)">
+                <circle id="Oval" fill="url(#linearGradient-1)" cx="70" cy="70" r="70"></circle>
+                <g id="Code-Icon" transform="translate(41.000000, 45.000000)">
+                    <circle id="Oval-Copy-6" fill="#FFFFFF" cx="7" cy="7" r="2"></circle>
+                    <circle id="Oval-Copy-7" fill="#FFFFFF" cx="12" cy="7" r="2"></circle>
+                    <circle id="Oval-Copy-8" fill="#FFFFFF" cx="17" cy="7" r="2"></circle>
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="55" height="47" rx="5"></rect>
+                    <path d="M1,12.500416 L55,12.500416" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M23.4782609,44 L34,18" id="Line-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+                    <polyline id="Path-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" points="20 22 10 31.0641259 20 40"></polyline>
+                    <polyline id="Path-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" points="36 22 46 30.9046781 36 40"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

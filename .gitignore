@@ -1,0 +1,24 @@
+.DS_Store
+node_modules
+dist
+cosmos-sdk
+src/newsletters.txt
+
+# local env files
+.env.local
+.env.*.local
+.env*
+
+# Log files
+npm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Local Netlify folder
+.netlify

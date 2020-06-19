@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/release/v0.37.9/client/lcd/swagger-ui/swagger.yaml",
+    "label": "Gaia 2.0.8",
+    "key": "v0.37.9"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/release/v0.38.3/client/lcd/swagger-ui/swagger.yaml",
+    "label": "Cosmos SDK v0.38.3",
+    "key": "v0.38.3"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/master/client/lcd/swagger-ui/swagger.yaml",
+    "label": "Cosmos SDK master",
+    "key": "master"
+  }
+]

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="83px" height="92px" viewBox="0 0 83 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>vote</title>
+    <desc>Created with Sketch.</desc>
+    <g id="/SDK-(NEW)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cosmos_website_SDK_1920px" transform="translate(-1120.000000, -1538.000000)">
+            <g id="SDk-Features" transform="translate(-1.000000, 1213.000000)">
+                <g id="vote" transform="translate(1121.000000, 325.000000)">
+                    <path d="M2,1 C1.44771525,1 1,1.44771525 1,2 L1,90 C1,90.5522847 1.44771525,91 2,91 L81,91 C81.5522847,91 82,90.5522847 82,90 L82,2 C82,1.44771525 81.5522847,1 81,1 L2,1 Z" id="Rectangle-7" stroke="#FFFFFF" stroke-width="2"></path>
+                    <path d="M12.0102041,53.3302752 L12.0102041,67.3669725 L26.1020408,67.3669725 L26.1020408,53.3302752 L12.0102041,53.3302752 Z" id="Rectangle-Copy-2" stroke="#FFFFFF" stroke-width="2"></path>
+                    <polygon id="Rectangle-2" fill="#FFFFFF" points="47.4285714 23.6330275 71.9897959 23.6330275 71.9897959 25.3211009 47.4285714 25.3211009"></polygon>
+                    <polygon id="Rectangle-2-Copy" fill="#FFFFFF" points="47.4285714 55.706422 71.9897959 55.706422 71.9897959 57.3944954 47.4285714 57.3944954"></polygon>
+                    <polygon id="Rectangle-2-Copy-2" fill="#FFFFFF" points="47.4285714 28.6972477 63.5204082 28.6972477 63.5204082 30.3853211 47.4285714 30.3853211"></polygon>
+                    <polygon id="Rectangle-2-Copy-3" fill="#FFFFFF" points="47.4285714 60.7706422 63.5204082 60.7706422 63.5204082 62.4587156 47.4285714 62.4587156"></polygon>
+                    <polyline id="Line" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" points="17.7857143 26.2233991 21.8508743 30.3853211 33.0306122 16.0366972"></polyline>
+                    <polyline id="Path-16" stroke="#FFFFFF" stroke-width="2" points="26.255102 21.6405192 26.255102 20.2568807 12.7040816 20.2568807 12.7040816 33.7614679 26.255102 33.7614679 26.255102 32.3885977 26.255102 30.3801498"></polyline>
+                    <ellipse id="Oval-Copy-7" fill="#FFFFFF" cx="38.5261224" cy="27.5001385" rx="4.52612237" ry="4.50013854"></ellipse>
+                    <ellipse id="Oval-Copy-8" fill="#FFFFFF" cx="38.5261224" cy="59.5001385" rx="4.52612237" ry="4.50013854"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

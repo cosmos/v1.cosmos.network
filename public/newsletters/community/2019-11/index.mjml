@@ -1,0 +1,266 @@
+<mjml>
+  <mj-head>
+    <mj-title>IBC Demo is Available & Game of Zones announced</mj-title>
+    <!-- Override to make full-width block links -->
+    <mj-style inline="inline">
+      a {
+        text-decoration: none;
+        color: #5064FB;
+      }
+      .link-panel a {
+        display: block !important
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-body background-color="white"/>
+      <mj-text margin="0 0 16px" padding="8px 24px" color="#2E3148"/>
+      <mj-image padding="8px 24px"/>
+      <mj-all font-family="Helvetica Neue, Arial, Helvetica, sans-serif" line-height="20px" font-size="14px"/>
+      <mj-button padding="8px 24px" font-size="14px"/>
+      <mj-divider padding="8px 24px" border-color="#EFF0F5" border-width="1px"/>
+      <mj-class name="btn-contained" background-color="#5064FB" color="#fff" border-radius="4px" text-transform="uppercase" font-weight="500" line-height="20px" inner-padding="12px 24px"/>
+      <mj-class name="h1" font-size="32px" line-height="40px" letter-spacing="-.02em" font-weight="700" color="#161931" padding-top="24px" padding-bottom="24px"/>
+      <mj-class name="h2" font-size="24px" line-height="32px" letter-spacing="-.01em" font-weight="700" color="#161931" padding-top="20px" padding-bottom="20px"/>
+      <mj-class name="h3" font-size="20px" line-height="28px" letter-spacing="-.01em" font-weight="500" color="#161931" padding-top="16px" padding-bottom="16px"/>
+      <mj-class name="h4" font-size="16px" line-height="24px" letter-spacing="-.01em" font-weight="500" color="#161931" padding-top="12px" padding-bottom="12px"/>
+      <mj-class name="large" font-size="16px" line-height="24px"/>
+      <mj-class name="overline" font-size="12px" line-height="16px" letter-spacing=".2em" text-transform="uppercase" />
+      <mj-class name="li" line-height="125%" padding-top="0" padding-left="40px" padding-bottom="5px" />
+      <mj-class name="link-panel" padding-top="8px" inner-padding="20px 24px" width="100%" text-align="left" align="left" background-color="#F8F9FC" border-radius="8px" color="#161931"/>
+      <mj-class name="panel-outer" padding="8px 24px"/>
+      <mj-class name="panel-inner" padding="24px 0px 16px" background-color="#F8F9FC" border-radius="8px"/>
+      <mj-class name="panel-title" padding-top="0" margin-top="0" margin-bottom="0"/>
+      <mj-class name="panel-text" padding-top="0" margin-top="0"/>
+      <mj-class name="blockquote" padding-left="24px" />
+      <mj-class name="blockquote-inner" border-left="4px solid #EFF0F5" />
+      <mj-class name="wide-image" padding-bottom="24px" />
+      <mj-class name="tweet-card" border-radius="4px"/>
+      <mj-class name="primary" color="#5064FB" />
+      <mj-class name="gray-44" color="#686A79" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="24px 0 0">
+      <mj-column>
+        <mj-image width="171px" src="cosmos-wordmark.png" alt="Cosmos"/>
+        <mj-text mj-class="overline gray-44" align="center">Hub &amp; Spoke Community Newsletter</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-image src="cover.jpg" alt="Game of Zones: Compete to win 100,000 ATOM by building and running Cosmos Zones." href="https://cosmos.network/goz"/>
+        <mj-text mj-class="h1">IBC Demo is Available &amp; Game of Zones announced</mj-text>
+        <mj-text mj-class="large">Welcome Cosmonauts to the November edition of the Cosmos Hub & Spoke newsletter.</mj-text>
+        <mj-spacer/>
+        <mj-text mj-class="li">✨ Didn’t make it to SFBW? Find out what you missed!</mj-text>
+        <mj-text mj-class="li">✨ Cosmos community-driven testnet for Cosmos Hub-3 upgrade</mj-text>
+        <mj-text mj-class="li">✨ Revving up for “Game of Zones” </mj-text>
+        <mj-text mj-class="li">✨ New tutorial on “Getting Started with Ethermint” </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">🌉 Five takeaways from Cosmos at SFBW</mj-text>
+        <mj-text mj-class="h3">1. The launch of the Virgo manifesto</mj-text>
+        <mj-text>Virgo’s mission is to create cohesion between individuals and organizations working to improve human coordination. Jae Kwon <a href="https://www.youtube.com/watch?v=Fdwe5dtCb7Y">presented the beginnings of Virgo at CESC</a> and shared his view for the future of this project. You can find out more and get involved in the discussion by visiting the links below:</mj-text>
+        <mj-spacer height="16px"/>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://github.com/virgo-project/virgo">Read the Virgo Manifesto &#8594;</mj-button>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://discordapp.com/invite/bSzwYHN">Join the Virgo Discord group &#8594;</mj-button>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://zc.vg/sf/EATFb">Sign up for Virgo communication and updates as they happen &#8594;</mj-button>
+        <mj-spacer height="32px"/>
+        <mj-text mj-class="h3">2. The inauguration of Supernova - building an inspired community</mj-text>
+        <mj-image mj-class="wide-image" src="supernova.jpg" alt="Supernova" href="https://supernova.community/"/>
+        <mj-text>Over the past three years, the Tendermint team has been in the trenches growing, supporting and learning from the Cosmos community with ups and downs. Chjango Unchained, together with Commonwealth Labs, announced the <a href="https://www.youtube.com/watch?v=kwdiGlay5Zs&list=PLdQIb0qr3pnAahA5ghQgpObFVp8-l4Nlj&index=7">inauguration of the Supernova community</a>, a Cosmos Zone that will allow any project to build an engaged community from day one of launching its mainnet. For more information, visit the <a href="https://supernova.community/">Supernova website</a> and sign up to receive updates about the project.</mj-text>
+        <mj-spacer height="32px"/>
+        <mj-text mj-class="h3">3. The largest DeFi Hackathon hosted in SF</mj-text>
+        <mj-image mj-class="wide-image" src="hackathon.jpg" alt="DeFi Hackathon - San Francisco | November 1-3, 2019" href="https://hackathon.sfblockchainweek.io/"/>
+        <mj-text>With prizes worth over $60K in value, the DeFi Hackathon attracted over 300 developers from around the world. We had 53 teams submitting projects and 11 finalists took home the bounties. We’ll be sharing a recap post that details the entire hackathon in the coming weeks. Congratulations to all the Cosmos DeFi hackers!</mj-text>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://defi-hackathon.devpost.com/submissions">See the comprehensive list of project submissions on Devpost &#8594;</mj-button>
+        <mj-spacer height="32px"/>
+        <mj-text mj-class="h3">4. A hackathon ready IBC demo</mj-text>
+        <mj-image mj-class="wide-image" src="ibc.jpg" alt="IBC: Inter-Blockchain Communication" href="https://cosmos.network/ibc"/>
+        <mj-text>Inter-Blockchain Communication (IBC) is a chain-agnostic protocol that will enable interoperability for cross-chain communication between any two blockchains. During the DeFi Hackathon, teams were able to try it out for themselves.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h3 panel-title">🔔 IBC Updates</mj-text>
+        <mj-text mj-class="panel-text">The <a href="https://cosmos.network/ibc">IBC webpage</a> was just launched. Sign up for updates about IBC related communication and make an impact by joining the technical <a href="https://zc.vg/sf/zI6BW">IBC working group</a>.</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://zc.vg/sf/zI6BW">Get IBC updates</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="overline gray-44 panel-title">Demo</mj-text>
+        <mj-text mj-class="h3 panel-title">👾 Hackathon Demo</mj-text>
+        <mj-text mj-class="panel-text">Check out the <a href="https://github.com/cosmos/gaia/blob/cwgoes/ibc-demo-fixes/ibc-demo.sh">recent hackathon-ready demo</a> that allows you to use an early prototype of IBC.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="overline gray-44 panel-title">Video</mj-text>
+        <mj-text mj-class="h3 panel-title">🍿 Chain Reaction</mj-text>
+        <mj-text mj-class="panel-text">Listen to the latest Chain Reaction #3: <a href="https://www.youtube.com/watch?v=DeMhlEck3E0">IBC Cosmos SDK demo review</a>. Catch up by listening to <a href="https://www.youtube.com/watch?v=pWsy0BD3DnY">Chain Reaction #1: Launching IBC</a> (Agoric and Tendermint) and <a href="https://www.youtube.com/watch?v=ZChn6E8Nz_s">Chain Reaction #2: Getting IBC Hackathon Ready</a></mj-text>
+      </mj-column>
+        </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="overline gray-44 panel-title">Podcast</mj-text>
+        <mj-text mj-class="h3 panel-title">📻 Interchain.FM</mj-text>
+        <mj-text mj-class="panel-text">New podcast announcement covering the world of IBC - <a href="https://interchain-fm.simplecast.com/episodes/001">Interchain.FM Ep. 001</a></mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h3">5. Cosmos DEX demo</mj-text>
+        <mj-text>The launch of the first Cosmos DEX demo is an initial exercise at exploring, ideating, and creating the next set of decentralized exchange (DEX) projects that can be built on the Cosmos SDK. We were happy to see several teams build on top of the DEX including the first place, second place, and overall general category winner of the DeFi Hackathon!</mj-text>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://github.com/tendermint/dex-demo">Test the new Cosmos DEX demo &#8594;</mj-button>
+        <mj-text>Stay tuned for more updates.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">✨ Community Conversations</mj-text>
+        <mj-spacer/>
+        <mj-text mj-class="h3">Community-driven testnet for software upgrades</mj-text>
+        <mj-text>While the Hub-2 upgrade proposal D passed, unfortunately the execution of the upgrade failed. A new block height, date and time for the next upgrade attempt is currently being discussed on the Cosmos Forum: <a href="https://forum.cosmos.network/t/cosmos-hub-3-upgrade-proposal-e/2833">Cosmos Hub 3 Upgrade Proposal E</a>. Don’t forget to check out the <a href="https://github.com/cosmos/gaia/releases/tag/v2.0.3">canonical version of the Cosmos SDK</a> that will be used in the next hub upgrade.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h4 panel-title">Interested in participating in the community testnet?</mj-text>
+        <mj-text mj-class="panel-text">Join the validator <a href="https://forum.cosmos.network/t/looking-for-new-testnet-participants-made-from-mainnet-ledger/2745?u=bharvest">testnet Telegram group</a> for more information.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-divider/>
+        <mj-text mj-class="h3">P2P management proposal</mj-text>
+        <mj-text>A new proposal by B-Harvest outlines improvements to the P2P management layer of the network targeted at achieving enhanced network stability. If passed and implemented, node operators would benefit from better connectivity between trusted peers and a stronger, more persistent connection to Tendermint.</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://github.com/tendermint/tendermint/issues/4053#issue-506547823">View proposal</mj-button>
+        <mj-divider padding-top="16px"/>
+        <mj-text mj-class="h3">Proportional slashing</mj-text>
+        <mj-text>Centralization of consensus power within the Cosmos Hub has been a hot topic since the mainnet launch. A recent proposal by Sunny Aggarwal, dubbed proportional slashing, offers a solution to reduce the concentration of stake and voting power among the top validators occupying 67% control of the network. In this new proposal, the percentage a validator gets slashed for a fault is proportional to the validator’s percent of consensus power. This way, larger validators face harsher slash amounts thus incentivizing risk-managing delegators to delegate to smaller validators. In the current system, the slashing percent is equal for all slashes.</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://forum.cosmos.network/t/proposal-draft-proportional-slashing/2887">View proposal</mj-button>
+        <mj-divider padding-top="16px"/>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column width="600px">
+        <mj-text mj-class="h2">💬 In the Twittersphere</mj-text>
+        <mj-spacer/>
+      </mj-column>
+      <mj-column width="300px">
+        <mj-image src="tweet1.png" mj-class="tweet-card" href="https://twitter.com/dogemos/status/1192072386738147328?s=20"/>
+      </mj-column>
+      <mj-column width="300px">
+        <mj-image src="tweet2.png" mj-class="tweet-card" href="https://twitter.com/_franzihei/status/1182464460591489025?s=21"/>
+      </mj-column>
+      <mj-column width="300px">
+        <mj-image src="tweet3.jpg" mj-class="tweet-card" href="https://twitter.com/gakonst/status/1184297543288492032?s=21"/>
+      </mj-column>
+      <mj-column width="600px" padding-top="16px">
+        <mj-button mj-class="btn-contained" href="https://twitter.com/intent/tweet?screen_name=Cosmos">Tweet us @cosmos</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">💫 Cosmos Events, News &amp; Meetups</mj-text>
+        <mj-spacer/>
+        <mj-text mj-class="overline gray-44" padding-bottom="0">Interview</mj-text>
+        <mj-text>Cryptoslate interview with Chris Goes (Tendermint) and Dean Tribble (Agoric) on the IBC specification process: <a href="https://cryptoslate.com/agoric-and-cosmos-hash-out-an-interoperable-future-for-2020-interview/">Agoric and Tendermint on designing an interoperable future for 2020</a></mj-text>
+        <mj-divider padding-top="16px"/>
+        <mj-text mj-class="overline gray-44" padding-bottom="0">Competition</mj-text>
+        <mj-text>One year ago, we launched Game of Stakes. Now, we’re gearing up for <a href="https://cosmos.network/goz">Game of Zones</a>, an adversarial environment to test IBC. The competition will create an invaluable educational opportunity and environment for the Cosmos community to experience the IBC protocol.</mj-text>
+        <mj-divider padding-top="16px"/>
+        <mj-text mj-class="overline gray-44" padding-bottom="0">Article</mj-text>
+        <mj-text>Read the Interchain Foundation’s <a href="https://medium.com/@interchain_io/virtual-machines-take-off-in-the-cosmos-3d11bd6ae942">overview of all the virtual machine’s integrated with Cosmos</a></mj-text>
+        <mj-divider padding-top="16px"/>
+        <mj-text mj-class="overline gray-44" padding-bottom="0">Update</mj-text>
+        <mj-text>Check out Figment’s November update - <a href="https://figment.network/resources/inter-blockchain-communication-ibc-is-coming-to-cosmos/">“IBC is Coming to Cosmos”</a> plus all the details from the November 5th <a href="https://t.me/StakingHub">Game of Zones AMA</a> with Zaki Manian (Tendermint) and Dean Tribble (Agoric)</mj-text>
+        <mj-divider padding-top="16px"/>
+        <mj-text mj-class="overline gray-44" padding-bottom="0">Update</mj-text>
+        <mj-text>The Cosmos community has a <a href="https://look.ping.pub/#/validators">new block explorer</a> - powered by Ping Pub</mj-text>
+        <mj-divider padding-top="16px"/>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h3 panel-title">🎉 Cosmos Meetups</mj-text>
+        <mj-text mj-class="panel-text">Join Cosmos meetups anywhere you are in the world: Cosmos is Worldwide on Meetup.com. Don’t see a Meetup near you? Contact <a href="https://www.meetup.com/Cosmos_SF/members/284457556/">Cosmos Admin</a> on Meetup.com</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://www.meetup.com/pro/cosmos_network/">Join Cosmos Meetup</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-spacer/>
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">🌟 Product Development Updates</mj-text>
+        <mj-spacer/>
+        <mj-text mj-class="h3">Cosmos SDK</mj-text>
+        <mj-text mj-class="li">- Modular AnteHandler added - this allows users to specify their own antehandler logic and register these functions with the module manager, rather than recreating all anti-handler logic.</mj-text>
+        <mj-text mj-class="li">- DeCoupling vesting from x/Auth - this new change decouples vesting from auth and creates a new vesting module, which extends auth’s functionality. </mj-text>
+        <mj-text mj-class="li">- Cosmos SDK release v0.34.10 - Bump Tendermint version to v0.31.11 to address the vulnerability found in the consensus package</mj-text>
+        <mj-text mj-class="li">- New <a href="https://github.com/tendermint/dex-demo">DEX demo module</a> for the Cosmos SDK</mj-text>
+        <mj-divider padding-top="16px"/>
+
+        <mj-text mj-class="h3">Inter-Blockchain Communication (IBC)</mj-text>
+        <mj-text>IBC will serve as an open standard for interchain communication. For a list of IBC implementations, IBC-supporting blockchains, and special IBC bridges, <a href="https://github.com/cosmos/ics/blob/master/ECOSYSTEM.md">see here.</a></mj-text>
+        <mj-text mj-class="li">- The specification version 1.0.0 release candidate 5 is now available, featuring client store layout abstraction, canonical encoding definitions, an improved versioning negotiation sub-protocol, and various bug fixes & clarity improvements.</mj-text>
+        <mj-text mj-class="li">- An early stage <a href="https://github.com/cosmos/gaia/blob/cwgoes/ibc-demo-fixes/ibc-demo.sh">IBC demo is now available</a></mj-text>
+        <mj-text mj-class="li">- First ever external contribution to the <a href="https://github.com/cosmos/ics/pull/278">IBC standards repo goes to Everett Protocol</a></mj-text>
+        <mj-divider padding-top="16px"/>
+
+        <mj-text mj-class="h3">Tendermint Core</mj-text>
+        <mj-text mj-class="li">- Two security releases were published along with two back-port releases</mj-text>
+        <mj-text mj-class="li">- Watch the Tendermint developer session <a href="https://www.youtube.com/watch?v=K3-E5wj2jA8&list=PLdQIb0qr3pnBbG5ZG-0gr3zM86_s8Rpqv&index=2">ABCI overview</a></mj-text>
+        <mj-text mj-class="li">- Recently added an alternative <a href="https://github.com/tendermint/awesome#rust-bundle">Rust ABCI server</a></mj-text>
+        <mj-divider padding-top="16px"/>
+
+        <mj-text mj-class="h3">Ethermint</mj-text>
+        <mj-text>Ethermint is designed to be a Proof of Stake implementation of the Ethereum Virtual Machine built on top of Tendermint Core. For more details on the product, check out our blog post <a href="https://blog.cosmos.network/a-beginners-guide-to-ethermint-38ee15f8a6f4">“A Beginner’s Guide to Ethermint.”</a></mj-text>
+        <mj-text mj-class="li">- New video tutorial: <a href="https://youtu.be/Rws-QQ_qcfU">Getting started with Ethermint</a></mj-text>
+        <mj-text mj-class="li">- ChainSafe’s <a href="https://github.com/ChainSafe/ethermint">Ethermint Github repo</a></mj-text>
+        <mj-text mj-class="li">- Aragon and ChainSafe forum discussion on using <a href="https://forum.aragon.org/t/agp-106-discussion-develop-aragon-chain/1337">Ethermint in production</a></mj-text>
+        <mj-text mj-class="li">- Read <a href="https://blog.aragon.one/aragon-chain/">Aragon One’s blog post</a> on selecting Ethermint for the new Aragon Chain</mj-text>
+        <mj-text mj-class="li">- Listen to a recent <a href="https://youtu.be/Qyl-0Wth2Z8">AMA with Aragon, ChainSafe and Cosmos</a> about the Aragon Chain on Ethermint</mj-text>
+        <mj-text mj-class="li">- Developer session on <a href="https://www.youtube.com/watch?v=_RCEWkVHpT0">ETH2.0 lite client with ChainSafe</a></mj-text>
+        <mj-spacer/>
+        <mj-text mj-class="h4">Development updates for Ethermint from ChainSafe’s Austin Abell</mj-text>
+        <mj-text mj-class="li">- Implement eth filter endpoints</mj-text>
+        <mj-text mj-class="li">- Include gas refunds for evm transactions to match total gas usage with Ethereum</mj-text>
+        <mj-text mj-class="li">- Implement queries through evm module to interact with Ethereum state</mj-text>
+        <mj-text mj-class="li">- Improve testing framework to ensure compatibility</mj-text>
+        <mj-divider padding-top="16px"/>
+
+        <mj-text mj-class="h3">CosmWasm ready to use for Rust developers</mj-text>
+        <mj-text>Rust CosmWasm will bring the WebAssembly (Wasm) virtual machine (VM) to the Cosmos SDK for Rust developers. WebAssembly potentially enables software written in arbitrary languages to run securely on any hardware. Wasm is an intermediate language that compiles the developer’s programming language of choice to the user’s hardware.</mj-text>
+        <mj-text mj-class="h4">Current updates on CosmWasm from Ethan Frey</mj-text>
+        <mj-text mj-class="li">- cosmwasm library to build smart contract and a VM to run them in.</mj-text>
+        <mj-text mj-class="li">- cosmwasm-opt script and Docker image to produce reproducible, minimal-sized wasm output.</mj-text>
+        <mj-text mj-class="li">- cosmwasm-template for developers to easily get started on coding contracts.</mj-text>
+        <mj-text mj-class="li">- go-cosmwasm bindings from cosmwasm/vm to golang, including passing kvstore over foreign function interface (FFI).</mj-text>
+        <mj-text mj-class="li">- cosmos/modules PR for Cosmos SDK integration.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="panel-text">Visit the <a href="https://github.com/confio/cosmwasm/blob/master/README.md">CosmWasm Github repo</a> for more details about how to get started coding your first smart contract.</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-divider padding-top="32px" padding-bottom="32px"/>
+        <mj-image width="171px" src="cosmos-wordmark.png" alt="Cosmos" href="https://cosmos.network/"/>
+        <mj-text align="center"><a href="https://cosmos.network/">cosmos.network</a></mj-text>
+        <mj-spacer/>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

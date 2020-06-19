@@ -1,0 +1,310 @@
+<mjml>
+  <mj-head>
+    <mj-title>Cosmos | Hub &amp; Spoke Newsletter - Jan 2020</mj-title>
+    <mj-style inline="inline">
+      a {
+        text-decoration: none;
+        color: #5064FB;
+      }
+      .container {
+        max-width: 488px !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h1, .h1 {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -.03em;
+        font-weight: 700;
+        margin-top: 56px;
+        margin-bottom: 8px;
+      }
+      h2 {
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: -.025em;
+        font-weight: 700;
+        margin-top: 40px;
+        margin-bottom: 8px;
+      }
+      h3 {
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -.02em;
+        font-weight: 700;
+        margin-top: 28px;
+        margin-bottom: 8px;
+      }
+      h4 {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -.02em;
+        font-weight: 700;
+        margin-top: 16px;
+        margin-bottom: 4px;
+      }
+      ul,ol {
+        margin: 16px 0;
+        margin-left: 24px;
+        padding: 0;
+      }
+      .tweet {
+          border-left: 4px solid #EFF0F5;
+      }
+      .primary-light {
+        color: #66A1FF;
+      }
+      .white {
+        color: #FFFFFF;
+      }
+      .white-80 {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .bg-black {
+        background-color: #161931;
+      }
+      .bg-primary {
+        background-color: #5064FB;
+      }
+      .bg-primary-light {
+        background-color: #66A1FF;
+      }
+      .bg-secondary {
+        background-color: #BA3FD9;
+      }
+      .bg-gray-95 {
+        background-color: #F8F9FC;
+      }
+      .emoji-block {
+        border-radius: 4px;
+        padding: 32px 8px;
+      }
+      .left-emoji {
+        margin-bottom: -2em;
+      }
+    </mj-style>
+    <mj-style>
+      /* Gmail ul margin reset */
+      u + .body .glist { margin-left: 0 !important; }
+      @media only screen and (max-width: 640px) {
+        u + .body .glist { margin-left: 25px !important; }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-body background-color="#F8F9FC"/>
+      <mj-all font-family="Helvetica Neue, Arial, Helvetica, sans-serif" line-height="24px" font-size="16px"/>
+      <mj-section padding="0px 20px" background-color="#FFFFFF" />
+      <mj-text padding="8px 0" color="#161931"/>
+      <mj-image padding="24px 0px 8px" border-radius="4px" />
+      <mj-button padding="16px 0 8px" font-size="16px"/>
+      <mj-divider padding="40px 0 0" border-color="#EFF0F5" border-width="1px"/>
+      <mj-social font-size="0" icon-size="32px" border-radius="24px" icon-padding="8px" mode="horizontal" inner-padding="4px" padding-top="32px" padding-bottom="4px" />
+      <mj-social-element background-color="transparent"/>
+      <mj-class name="btn-contained" background-color="#5064FB" color="#fff" border-radius="4px" font-weight="500" line-height="20px" inner-padding="12px 24px"/>
+      <mj-class name="btn-text" background-color="none" color="#5064FB" font-weight="400" font-size="18px" line-height="24px" inner-padding="12px 0" align="left" />
+      <mj-class name="large" font-size="20px" line-height="32px"/>
+      <mj-class name="base" font-size="16px" line-height="24px"/>
+      <mj-class name="small" font-size="13px" line-height="18px"/>
+      <mj-class name="overline" font-size="12px" line-height="16px" letter-spacing=".2em" text-transform="uppercase" />
+      <mj-class name="panel-inner" padding="24px 20px" background-color="#161931" border-radius="4px" />
+      <mj-class name="blockquote" padding-left="24px" padding-top="0" />
+      <mj-class name="blockquote-inner" border-left="4px solid #EFF0F5" />
+      <mj-class name="black" color="#161931" />
+      <mj-class name="white" color="#ffffff" />
+      <mj-class name="white-80" color="rgba(255,255,255,0.8)" />
+      <mj-class name="primary" color="#5064FB" />
+      <mj-class name="primary-light" color="#66A1FF" />
+      <mj-class name="gray-44" color="#686A79" />
+      <mj-class name="bg-black"  background-color="#161931" />
+      <mj-class name="bg-white" background-color="#ffffff" />
+      <mj-class name="bg-primary" background-color="#5064FB" />
+      <mj-class name="bg-gray-44" background-color="#686A79" />
+      <mj-class name="bg-gray-95" background-color="#F8F9FC" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body width="688px" css-class="body">
+    <mj-wrapper background-color="#FFFFFF" padding="0">
+      <mj-section padding-top="16px">
+        <mj-group>
+          <mj-column vertical-align="middle" width="20%">
+            <mj-image href="https://cosmos.network" width="48px" height="48px" padding="0" border-radius="24px" src="https://campaign-image.com/zohocampaigns/447316000004114752_zc_v122_cosmos_brandmark_144.png" alt="Cosmos" align="left"/>
+          </mj-column>
+          <mj-column vertical-align="middle" width="80%">
+            <mj-text mj-class="small" vertical-align="middle" padding="0" align="right"><a href="cosmos.network" target="_blank">Cosmos</a> | Internet of Blockchains</mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text align="center"><h1>Hub &amp; Spoke</h1></mj-text>
+          <mj-text mj-class="large" padding="0" align="center">Cosmos Community Newsletter</mj-text>
+          <mj-text mj-class="gray-44" padding-top="0" align="center">January 2020</mj-text>
+          <mj-image padding-top="32px" src="https://campaign-image.com/zohocampaigns/447316000004114628_2_malta.jpg" alt="Cosmos team in Malta"/>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="container">
+        <mj-column>
+          <mj-text padding-top="32px">Dear Cosmonauts,</mj-text>
+          <mj-text>Greetings (and Happy New Year) from the global Cosmos community. We didn’t just write it, <a href="https://youtu.be/QDBT0nmAVPM">we filmed it</a>! The team is back in action and it’s time for a Game of Zones update. We won’t be giving out exact dates, but project milestones and requirements will be shared.</mj-text>
+          <mj-text>We’ve been hard at work continuing the integration, specifications and promotion of Inter-Blockchain Communication.</mj-text>
+          <mj-text>If you aren’t following Cosmos on a regular basis, we have a snapshot of the voting power distribution, staking delegation and transaction volume.</mj-text>
+          <mj-text>A few lucky team members spent a week in Malta teaching University of Malta students about blockchain and DLT.  We’ll have a full blog post recap shortly with video recordings, course material and content.</mj-text>
+          <mj-divider/>
+          <mj-text><h2>The latest on Game of Zones</h2></mj-text>
+          <mj-text>An important milestone to look out for is the delivery of the Game of Zones demo. This will expand on the original IBC demo initially developed for the DeFi hackathon. You’ll be able to use it as a reference point to get ready for the competition. We’ll post other updates on the criteria and rules of engagement shortly on the Cosmos forum.</mj-text>
+          <mj-divider/>
+          <mj-text><h2>CosmWasm for multi-chain smart contracts</h2></mj-text>
+          <mj-text>Get started now writing smart contracts in RUST and easily add <a href="https://www.cosmwasm.com/" title="CosmWasm Website">CosmWasm</a> smart contracting support on a Cosmos chain, without adjusting existing logic. CosmWasm is under active development and will benefit from updates like the Cosmos SDK and IBC. Check out the <a href="https://blog.cosmos.network/cosmwasm-for-developers-7640ee38430f" title="Blog post: CosmWasm for Developers">introductory blog post</a> and join the <a href="https://t.me/joinchat/AkZriEhk9qcRw5A5U2MapA" title="Cosmos Telegram group">Telegram group</a>. If you want to go more in-depth, watch the tutorial videos:</mj-text>
+          <mj-text mj-class="large" line-height="1" padding-bottom="0" padding-top="24px"><div class="left-emoji">🎓</div></mj-text>
+          <mj-text padding-left="32px" padding-top="0"><b>CosmWasm: editing Smart Contracts</b><br><a href="https://www.youtube.com/watch?v=3JC-dK4MyVc" title="CosmWasm - Editing a Smart Contract Tutorial: Part one">Part one</a> | <a href="https://www.youtube.com/watch?v=15wQ5avYRnM" title="CosmWasm - Editing a Smart Contract Tutorial: Part two">Part two</a></mj-text>
+          <mj-divider/>
+          <mj-text><h2>IBC and Cosmos SDK integration has reached 66%!</h2></mj-text>
+          <mj-text>We’re making headway on the IBC and Cosmos SDK integration. The progress can be tracked on <a href="https://github.com/cosmos/cosmos-sdk/milestone/21" title="Cosmos SDK - GitHub">GitHub</a> and joining the <a href="https://github.com/cosmos/ics/tree/master/ecosystem" title="ICS - GitHub">bi-weekly ecosystem calls</a> is a good way to get started. IBC has been in the news:</mj-text>
+          <mj-text mj-class="large" line-height="1" padding-bottom="0" padding-top="24px"><div class="left-emoji">💎</div></mj-text>
+          <mj-text padding-left="32px" padding-top="0">This Week in Crypto episode has Zaki Manian &amp; Dean Tribble retelling the nativity of IBC.<br/><a href="https://thisweekincrypto.co/zaki-manian-and-dean-tribble/" title="This Week in Crypto">Tune in →</a></mj-text>
+          <mj-text mj-class="large" line-height="1" padding-bottom="0" padding-top="24px"><div class="left-emoji">💎</div></mj-text>
+          <mj-text padding-left="32px" padding-top="0">Cosmos’ Zaki Manian and Agoric’s Dean Tribble explain IBC on the podcast, ChainReaction.<br/><a href="https://podcasts.apple.com/us/podcast/zaki-manian-and-dean-tribble-no-blockchain-is-an-island/id1438148082?i=1000460151410" title="ChainReaction Podcast">Tune in →</a></mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="container">
+        <mj-column width="100%" padding-bottom="24px">
+          <mj-divider/>
+          <mj-text><h2>Cosmos numbers snapshot</h2></mj-text>
+        </mj-column>
+        <mj-column width="40%" padding="16px 8px 16px 0" vertical-align="top" padding-top="0">
+          <mj-text><div class="h1" style="margin:0;">5162</div></mj-text>
+          <mj-text mj-class="small gray-44" padding-top="0">Transactions</mj-text>
+        </mj-column>
+        <mj-column width="60%">
+          <mj-text>Transaction volumes over the last 30 days peaked at 5162 total transactions as of yesterday (1/15/20). Relative to stablecoin volumes, for instance, this is pretty anemic, but the result is not too surprising, as the ATOM is functioning in line with its stated utility—that of a staking token.</mj-text>
+        </mj-column>
+        <mj-column width="40%" padding="16px 8px 16px 0" vertical-align="top" padding-top="0">
+          <mj-text><div class="h1" style="margin:0;">74%</div></mj-text>
+          <mj-text mj-class="small gray-44" padding-top="0">Bonded or locked up</mj-text>
+        </mj-column>
+        <mj-column width="60%">
+          <mj-text>74.13% of the entire token supply of the network is currently bonded or locked up (~185M out of a total 250M ATOMs in circulation).</mj-text>
+        </mj-column>
+        <mj-column width="40%" padding="16px 8px 16px 0" vertical-align="top" padding-top="0">
+          <mj-text><div class="h1" style="margin:0;">$4m</div></mj-text>
+          <mj-text mj-class="small gray-44" padding-top="0">in ATOM bonded Dec 23</mj-text>
+        </mj-column>
+        <mj-column width="60%">
+          <mj-text>Cosmos continues to experience a strong staking ecosystem. Peak delegation activity from the last 30-day period was on Dec 23, 2019, where 909k ATOM (~$4m at today’s prices) were bonded just days before Christmas (<a href="https://www.cosmosoutpost.io/cosmos/network/1d?bar=30&lang=en" title="Network Stats">source</a>).</mj-text>
+        </mj-column>
+        <mj-column width="100%">
+          <mj-divider/>
+          <mj-text><h2>Documentation is King</h2></mj-text>
+          <mj-text>Cosmos SDK documentation was completely revamped with ease-of-use in mind. Try it out and check out some newly added tutorials. If you have any feedback on the new experience, we'd love to hear it.</mj-text>
+          <mj-button mj-class="btn-text" href="https://docs.cosmos.network">Cosmos SDK Docs →</mj-button>
+          <mj-divider/>
+          <mj-text><h2>Coverage, Events &amp; Meetups</h2></mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">🗓</div></mj-text>
+          <mj-text padding="0 0 0 32px" mj-class="small gray-44">January 21st - 23rd</mj-text>
+          <mj-text padding="0 0 0 32px"><a href="https://www.godays.io/" title="GoDays Conference"><h4 style="margin-top:0;">GoDays Conference</h4></mj-text>
+          <mj-text padding="0 0 0 32px">“Digital Scarcity and Gaming in Golang” workshop.<br/><a href="https://tutorials.cosmos.network/scavenge/tutorial/01-background.html" title="Scavenge - Cosmos SDK Tutorial">Check out the tutorial →</a></mj-text>
+          <mj-text mj-class="small" padding="0 0 0 32px">Belin, Germany</mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">🗓</div></mj-text>
+          <mj-text padding="0 0 0 32px" mj-class="small gray-44">February 12th</mj-text>
+          <mj-text padding="0 0 0 32px"><a href="https://blog.cosmos.network/ethermint-nfts-at-ethdenver-bf32766835b6" title="Ethermint and NFTS at EthDenver"><h4 style="margin-top:0;">Cosmos at ETHDenver</h4></a></mj-text>
+          <mj-text mj-class="small" padding="0 0 0 32px">Denver, USA</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="32px" padding-bottom="24px" css-class="container">
+        <mj-column mj-class="panel-inner">
+          <mj-text align="center" mj-class="white"><div class="h1" style="margin-top:0;">🌎</div><h3 style="margin:0;">Cosmos Meetups</h3></mj-text>
+          <mj-text align="center" mj-class="white-80">Join Cosmos meetups anywhere you are in the world: Cosmos is Worldwide on Meetup.com. Don’t see a Meetup near you? <a class="primary-light" href="https://www.meetup.com/Cosmos_SF/members/284457556/">Contact Cosmos Admin</a></mj-text>
+          <mj-button mj-class="btn-contained" align="center" href="https://www.meetup.com/pro/cosmos_network/">Join Cosmos Meetup</mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="container">
+        <mj-column>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">🎙</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">New Interchain podcast with Riad Riad Whaby, PhD student at Stanford University.<br/><a href="https://interchain-fm.simplecast.com/episodes/003" title="GooSig for Privacy-Preserving Airdrops">Listen to the newest edition →</a></mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">🎙</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">BlockStack podcast interviews Sunny Aggarwal discusses Tendermint’s design and architecture.<br/><a href="https://www.pscp.tv/w/1lDxLoMrbnLJm" title="Periscope: Blockstack @blockstack">Tune in →</a></mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">🍿</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">Watch the high-powered Ethereum, NearProtocol, Polkadot and Cosmos debate about the tradeoffs and benefits of app chain interactions. <a href="https://youtu.be/EYzYAokCVgM" title="Cross-app communication (Ethereum Serenity, NEAR, Polkadot, Cosmos)">Watch now →</a></mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">🎙</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">Messari’s Unqualified Opinions podcast sits down with Zaki Manian to discuss Cosmos. Watch the <a href="https://youtu.be/GRNcFsb6Ehk" title="Cosmos &mp; Beyond with Zaki Manian">video version</a> or listen to the <a href="https://open.spotify.com/show/0uG5qpwFg67zTt0VQRTaZ7" title="Unqualified Opinions Podcast - Spotify">podcast</a>.</mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">🎙</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">Solana’s podcast, No Sharding, invites Sunny Aggarwal to their all validators discussion on the recent edition.<br/><a href="https://podcasts.apple.com/ro/podcast/no-sharding-the-solana-podcast/id1476353378?i=1000463155993" title="No Sharding - The Solana Podcast">Tune in →</a></mj-text>
+          <mj-divider/>
+          <mj-text padding-bottom="24px"><h2>Twittersphere</h2></mj-text>
+          <mj-text css-class="tweet" mj-class="gray-44 small" padding-bottom="0" padding-left="20px"><a href="https://twitter.com/thorchain_org/status/1204615296482496513?s=20"><strong>THORChain ⚡️ᚱ</strong></a> <span>@thorchain_org</span></mj-text>
+          <mj-text css-class="tweet" padding-top="4px" padding-left="20px">The tech to build cross-chain liquidity pools has only just become available:<br><br>
+            * Powerful replicated state machine stack (<a href="https://twitter.com/cosmos">@cosmos</a>)<br>
+            * Efficient TSS scheme with no trusted dealer (<a href="https://twitter.com/sgoldfed">@sgoldfed</a>)<br>
+            * Production-validated liquidity pools (<a href="https://twitter.com/UniswapExchange">@UniswapExchange</a>)<br><br>
+            Time to ship it. <a href="https://twitter.com/search?q=%24RUNE&src=cashtag_click">$RUNE</a></mj-text>
+          <mj-spacer height="32px"/>
+          <mj-text css-class="tweet" mj-class="gray-44 small" padding-bottom="0" padding-left="20px"><a href="https://twitter.com/maigoh91/status/1211683153158397952?s=20"><strong>Michael Ng | Maigoh*iov</strong></a> <span>@maigoh91</span></mj-text>
+          <mj-text css-class="tweet" padding-top="4px" padding-left="20px">Made a short 2019 recap vid for <a href="https://twitter.com/cosmos">@cosmos</a>. Looking forward to grow alongside the most vibrant blockchain ecosystem in many years to come!<br><br>
+            <a href="https://twitter.com/maigoh91/status/1211683153158397952?s=20">[Video]</a></mj-text>
+          <mj-spacer height="32px"/>
+          <mj-text css-class="tweet" mj-class="gray-44 small" padding-bottom="0" padding-left="20px"><a href="https://twitter.com/MessariCrypto/status/1209191189553065984?s=20"><strong>Messari</strong></a> <span>@MessariCrypto</span></mj-text>
+          <mj-text css-class="tweet" padding-top="4px" padding-left="20px">☠️ ETH Killers 2020 ☠️<br><br>
+            + Ethereum will face legitimate smart contract platform competition as it transitions to POS<br><br>
+            + Most credible early favorites are <a href="https://twitter.com/cosmos">@cosmos</a> &amp; <a href="https://twitter.com/polkadotnetwork">@polkadotnetwork</a><br><br>
+            <a href="https://messari.io/article/ethereum-trends-for-2020">[Link]</a>
+          </mj-text>
+          <mj-divider/>
+          <mj-text><h2>Community Conversations</h2></mj-text>
+          <mj-text padding-bottom="0"><h4>How should the community pool work?</h4></mj-text>
+          <mj-text>The Cosmos Hub 3 upgrade allowed for the launch of the community pool. Terence Lab, Co-founder of Forbole, raised some questions as a starting point to further the discussion. <a href="https://forum.cosmos.network/t/general-questions-about-the-use-of-community-pool/3082" title="General questions about the use of Community Pool">Read more →</a></mj-text>
+          <mj-text padding-bottom="0"><h4>The 1st community fund proposal.</h4></mj-text>
+          <mj-text>Figment Networks, a Cosmos Validator, is proposing the creation and administration of a Cosmos Governance Working Group. Make sure you weigh in on the <a href="https://ipfs.io/ipfs/QmSMGEoY2dfxADPfgoAsJxjjC6hwpSNx1dXAqePiCEMCbY" title="Cosmos Governance Working Group Community Spend Proposal">proposal and voting</a>. You can also submit project ideas or contributions to Tendermint and Cosmos to help advance the community’s ecosystem - start a proposal on the <a href="https://forum.cosmos.network" title="Cosmos Forum">Cosmos Forum</a>.</mj-text>
+          <mj-text padding-bottom="0"><h4>Voting period determined by type of proposal.</h4></mj-text>
+          <mj-text>Ping Liang, from Ping Validator, proposes to shorten the current voting time of 14 days. The solution - a dynamic voting period based on the time sensitivity of the proposal. <a href="https://forum.cosmos.network/t/unfinished-draft-for-implimentation-of-variable-period/3065" title="[unfinished] Draft for implimentation of variable period - Governance">Read more →</a></mj-text>
+          <mj-divider/>
+          <mj-text><h2>Community News</h2></mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">⚡️</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">The Cosmos community had a major contribution! IBC specs are available in <a href="https://github.com/cosmos/ics/pull/338">Chinese</a> and <a href="https://github.com/DE-labtory/ics/tree/translate-spec/translation/ko/spec">Korean</a></mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">⚡️</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">Figment Network Cosmos <a href="https://figment.network/resources/cosmos-december-2019-network-analysis/">December 2019 Network Analysis</a></mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">⚡️</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">Our Cosmos India community member, Persistence, launched an <a href="https://medium.com/@PersistenceOne/issue-01-introducing-persistence-ff778a9b7022">Enterprise hub</a>.</mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">⚡️</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">Kadena will make Pact available on Cosmos as <a href="https://www.coindesk.com/jpmorgan-spinoff-kadena-launches-public-blockchain-integrates-wallet-to-cosmos-network">Kadenamint</a>, meaning developers will be able to create smart contracts using Kadena’s token.</mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">⚡️</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">XAR Network, the framework for <a href="https://twitter.com/xarnetwork/status/1207697088936660993?s=20">Cosmos and Fantom</a> based decentralized finance (DeFi) was launched.</mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">⚡️</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px"><a href="https://medium.com/desmosnetwork/rearchitecting-social-networks-9a28a9bbf2ce">Desmos</a>, a blockchain built on top of the Cosmos SDK, based on Tendermint, created for social networking apps, uses game theory and on-chain gov to decentralize the business model of social networks.</mj-text>
+          <mj-text mj-class="large" css-class="left-emoji" padding-top="20px" padding-bottom="0" line-height="1"><div class="left-emoji">⚡️</div></mj-text>
+          <mj-text padding-top="0" padding-left="32px">StakeFish introduces Grant.Fish to the Cosmos ecosystem by offering <a href="https://medium.com/stakefish/launching-grant-fish-validator-81634d882c40">grants</a> to newer projects that are contributing to Cosmos.</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="24px" padding-bottom="64px" css-class="container">
+        <mj-column mj-class="panel-inner bg-gray-95">
+          <mj-text align="center">📣 <a href="mailto:hello@tendermint.com">Let us know</a> if you have Cosmos news you want us to include.</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-section mj-class="bg-black">
+      <mj-column padding-top="24px" padding-bottom="16px" css-class="container">
+        <mj-image align="center" width="121px" height="24px" src="https://campaign-image.com/zohocampaigns/447316000004146635_1_72.png" alt="Cosmos"/>
+        <mj-text align="center" mj-class="white large" padding="16px 32px">Join the <b>most powerful</b> ecosystem of connected blockchains</mj-text>
+        <mj-button mj-class="btn-contained" href="https://cosmos.network">Learn more</mj-button>
+        <mj-social>
+          <mj-social-element name="cosmos-forum" href="http://forum.cosmos.network/" src="https://campaign-image.com/zohocampaigns/social_icon_forum_outlined_zc_v9_447316000004149286.png" alt="Forum" title="Cosmos Forum">
+            Cosmos Forum
+          </mj-social-element>
+          <mj-social-element name="riot" href="https://riot.im/app/#/group/+cosmos:matrix.org" src="https://campaign-image.com/zohocampaigns/social_icon_riot_outlined_zc_v9_447316000004149286.png" alt="Riot" title="Riot">
+            Riot
+          </mj-social-element>
+          <mj-social-element name="telegram" href="https://t.me/cosmosproject" src="https://campaign-image.com/zohocampaigns/social_icon_telegram_outlined_zc_v9_447316000004149286.png" alt="Telegram" title="Telegram">
+            Telegram
+          </mj-social-element>
+          <mj-social-element name="twitter-noshare" href="http://twitter.com/cosmos" src="https://campaign-image.com/zohocampaigns/social_icon_twitter_outlined_zc_v9_447316000004149286.png" alt="Twitter" title="Twitter">
+            Twitter
+          </mj-social-element>
+          <mj-social-element name="youtube" href="https://www.youtube.com/channel/UC8HFOUdnMnpoWmQMgeKoB3A" src="https://campaign-image.com/zohocampaigns/social_icon_youtube_outlined_zc_v9_447316000004149286.png" alt="YouTube" title="YouTube">
+            YouTube
+          </mj-social-element>
+        </mj-social>
+        <mj-text align="center" padding-top="0"><a href="https://cosmos.network/" title="Cosmos Network" class="white-80">cosmos.network</a></mj-text>
+        <mj-spacer/>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

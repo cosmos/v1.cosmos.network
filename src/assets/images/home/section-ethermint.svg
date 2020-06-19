@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="436px" height="486px" viewBox="0 0 436 486" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>ethermint diagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="72.8061361%" y1="33.2204147%" x2="147.95954%" y2="124.597645%" id="linearGradient-1">
+            <stop stop-color="#3448E0" stop-opacity="0.910609149" offset="0%"></stop>
+            <stop stop-color="#ABB3ED" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="72.8061361%" y1="33.2204147%" x2="147.95954%" y2="124.597645%" id="linearGradient-2">
+            <stop stop-color="#4154E0" stop-opacity="0.910609149" offset="0%"></stop>
+            <stop stop-color="#ABB3ED" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#2374FA" offset="0%"></stop>
+            <stop stop-color="#B3C9F3" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="/Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cosmos_website_home_1920px-Copy-2" transform="translate(-1012.000000, -3979.000000)">
+            <g id="Module---Ethermint" transform="translate(236.000000, 3659.000000)">
+                <g id="ethermint-diagram" transform="translate(776.000000, 317.000000)">
+                    <g id="blockchain1-copy" transform="translate(240.839875, 141.367068) rotate(90.500000) translate(-240.839875, -141.367068) translate(101.339875, -52.632932)">
+                        <polygon id="Fill-4-Copy" fill="#E4E4E4" points="70.472273 193.464014 70.9975141 270.589238 139.64794 309.411817 208.298366 270.589238 208.298366 192.946469 139.64794 154.126279"></polygon>
+                        <polygon id="Fill-2" fill="url(#linearGradient-1)" points="70.279059 155.798015 70.9464701 232.384995 140.163095 271.922781 208.813521 233.102591 208.813521 155.459823 140.163095 116.639633"></polygon>
+                        <polygon id="Fill-2-Copy-5" fill="url(#linearGradient-1)" points="0.83366447 39.4418319 1.28120024 116.667897 70.4206737 155.851852 140.240931 116.606464 139.007008 38.8691828 70.3565818 0.0489929206"></polygon>
+                        <polygon id="Fill-2-Copy-2" fill="url(#linearGradient-1)" points="140.19324 271.606529 140.447517 348.614541 209.522898 387.278785 278.173324 348.458595 278.173324 270.815827 208.885249 232.893909"></polygon>
+                    </g>
+                    <polygon id="Fill-2" fill-opacity="0.3" fill="url(#linearGradient-2)" points="39.4993923 489 0 420 39.4993923 351 118.500608 351 158 420 118.500608 489"></polygon>
+                    <g id="ethereum" transform="translate(46.000000, 371.000000)">
+                        <g id="Group" opacity="0.6" transform="translate(0.000000, 37.480469)" fill="#010101">
+                            <polygon id="Path" points="32 0.0484667603 0.0752941176 14.0674772 32 32.2788624 63.9121569 14.0674772"></polygon>
+                        </g>
+                        <g id="Group" opacity="0.45" fill="#3147F2">
+                            <polygon id="Path" points="0.0752941176 51.441711 32 69.7589087 32 0"></polygon>
+                        </g>
+                        <g id="Group" opacity="0.8" transform="translate(32.000000, 0.000000)" fill="#3147F2">
+                            <polygon id="Path" points="0 0 0 69.7589087 31.9121569 51.441711"></polygon>
+                        </g>
+                        <g id="Group" opacity="0.45" transform="translate(0.000000, 57.207031)" fill="#3147F2">
+                            <polygon id="Path" points="0.0752941176 0.0365957956 32 43.756373 32 18.3710894"></polygon>
+                        </g>
+                        <g id="Group" opacity="0.8" transform="translate(32.000000, 57.207031)" fill="#5064FB">
+                            <polygon id="Path" points="0 18.3710894 0 43.756373 31.9372549 0.0365957956"></polygon>
+                        </g>
+                    </g>
+                    <path d="M41.0358705,348.583302 L162.413414,142.033954" id="Line-Copy" stroke="url(#linearGradient-3)" stroke-width="2" stroke-linecap="round" stroke-dasharray="0,9"></path>
+                    <path d="M158.773177,417.834295 L277,212" id="Line-Copy-2" stroke="url(#linearGradient-3)" stroke-width="2" stroke-linecap="round" stroke-dasharray="0,9"></path>
+                    <path d="M125,347 L279,72" id="Line-Copy-3" stroke="#66A1FF" stroke-width="2" stroke-linecap="round" stroke-dasharray="0,9"></path>
+                    <g id="Group-9-Copy" transform="translate(48.000000, 144.000000)" stroke="#5064FB" stroke-linecap="round" stroke-width="2">
+                        <polyline id="Path-7" points="0 66 72.4418065 66 116 0"></polyline>
+                        <path d="M73,67 L113,133" id="Path-8"></path>
+                    </g>
+                    <g id="Group-9" transform="translate(165.000000, 74.000000)" stroke="#5064FB" stroke-width="2">
+                        <polyline id="Path-7" stroke-linecap="round" points="0 68 72.6906185 68 113.980105 0.281268923"></polyline>
+                        <path d="M71,67 L112.823249,135.908762" id="Path-8"></path>
+                    </g>
+                    <g id="Group-9-Copy-3" transform="translate(282.000000, 7.000000)" stroke="#5064FB" stroke-width="2">
+                        <polyline id="Path-7" stroke-linecap="round" points="0.527775441 66.1481481 73.7740133 66.1481481 113.120447 0.244885275"></polyline>
+                        <path d="M72.5561005,65.7103971 L112.371429,131.408289" id="Path-8"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

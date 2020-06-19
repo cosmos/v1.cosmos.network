@@ -1,0 +1,685 @@
+{
+  "hub": [
+    {
+      "id": "hub-hermes",
+      "title": "Testnet",
+      "version": "hermes",
+      "children": [],
+      "span": 1,
+      "date": "2017-06-26",
+      "notes":
+        "Hermes is a 7-node public testnet for Basecoin 0.6.0. It allows sending tokens to Mercury (our other testnet) through a relay.  [Offline]",
+      "url": ""
+    },
+    {
+      "id": "hub-mercury",
+      "title": "Testnet",
+      "version": "mercury",
+      "children": [],
+      "span": 1,
+      "date": "2017-06-26",
+      "notes":
+        "Mercury is a 7-node public testnet based Basecoin 0.6.0.  It allowed sending tokens to Hermes (our other testnet) through a relay.  [Offline]",
+      "url": ""
+    },
+    {
+      "id": "hub-venus",
+      "title": "Testnet",
+      "version": "venus",
+      "children": [],
+      "span": 1,
+      "date": "2017-06-30",
+      "notes":
+        "Venus is a 7-node public testnet based on Ethermint 0.3.0. It allows you to do everything you can do with the standard Ethereum network, but at 10-times the speed and a much lower cost per transaction. [Offline]",
+      "url": ""
+    },
+    {
+      "id": "hub-sdk1",
+      "title": "Testnet",
+      "version": "sdk1",
+      "children": ["gui-0-1"],
+      "span": 1,
+      "date": "2017-09-13",
+      "notes": "sdk1 is a public testnet for the first version of Cosmos SDK.",
+      "url": ""
+    },
+    {
+      "id": "hub-tak",
+      "title": "Testnet",
+      "version": "Tak",
+      "children": [],
+      "span": 1,
+      "date": "2017-09-25",
+      "notes":
+        "Tak is a continually updated development testnet for Cosmos SDK.",
+      "url": ""
+    },
+    {
+      "id": "hub-gaia-1",
+      "title": "Testnet",
+      "version": "gaia-1",
+      "children": ["gui-0-2", "gui-0-3"],
+      "span": 5,
+      "date": "2017-10-19",
+      "notes":
+        "gaia-1 is the first time Cosmos SDK and Tendermint BFT are bundled together to form an experimental version of the Cosmos Hub. It includes a dynamic validator set.",
+      "url":
+        "https://medium.com/@tendermint/validators-now-deployed-on-gaia-testnet-53d9e8b154fc"
+    },
+    {
+      "id": "hub-gaia-2",
+      "title": "Testnet",
+      "version": "gaia-2",
+      "children": ["gui-0-4"],
+      "span": 4,
+      "date": "2018-01-31",
+      "notes":
+        "gaia-2 includes basic delegation, UI integration for bonding and unbonding, and a PEX reactor for dynamic peer discovery.",
+      "url":
+        "https://blog.cosmos.network/quickstart-guide-connecting-to-the-latest-testnet-57568e2d6b9"
+    },
+    {
+      "id": "hub-gaia-3",
+      "title": "Testnet",
+      "version": "gaia-3000",
+      "children": [],
+      "span": 1,
+      "date": "2018-04-20",
+      "notes":
+        "Multiple instances of gaia-3000 are set up by the Cosmos community, following in the wake of new Tendermint and Cosmos SDK releases. The most recent version was gaia-3008.",
+      "url": "http://hubble.figment.network/"
+    },
+    {
+      "id": "hub-gaia-4",
+      "title": "Testnet",
+      "version": "gaia-4000",
+      "children": [],
+      "span": 2,
+      "date": "2018-04-21",
+      "notes":
+        "gaia-4000 has improved stability, bug fixes, and runs on Cosmos SDK 0.15.0.",
+      "url": "http://hubble.figment.network/"
+    },
+    {
+      "id": "hub-gaia-5",
+      "title": "Testnet",
+      "version": "gaia-5000",
+      "children": [],
+      "span": 2,
+      "date": "2018-05-02",
+      "notes":
+        "gaia-5000 includes support for block rewards for validators and commission fees.",
+      "url": "http://hubble.figment.network/"
+    },
+    {
+      "id": "hub-gaia-6",
+      "title": "Testnet",
+      "version": "gaia-6002",
+      "children": [],
+      "span": 1,
+      "date": "2018-06-08",
+      "notes":
+        "gaia-6000 includes support for slashing validators and bech32 addresses.",
+      "url": "http://hubble.figment.network/"
+    },
+    {
+      "id": "hub-gaia-7",
+      "title": "Testnet",
+      "version": "gaia-7000",
+      "children": [],
+      "span": 1,
+      "date": "",
+      "notes": "To be announced.",
+      "url": "http://hubble.figment.network/"
+    },
+    {
+      "id": "hub-1-0",
+      "title": "Cosmos Hub",
+      "version": "1.0.0",
+      "children": [],
+      "span": 1,
+      "date": "",
+      "notes":
+        "Final version of Cosmos Hub before we launch. Features are frozen.",
+      "url": "http://hubble.figment.network/"
+    }
+  ],
+  "sdk": [
+    {
+      "id": "sdk-0-2",
+      "title": "Basecoin",
+      "version": "0.2.0",
+      "children": ["gui-basecoin"],
+      "offset": 1,
+      "span": 1,
+      "date": "2017-03-06",
+      "notes": "",
+      "url": "https://github.com/tendermint/basecoin/releases/tag/v0.2.0"
+    },
+    {
+      "id": "sdk-0-3",
+      "title": "Basecoin",
+      "version": "0.3.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-03-24",
+      "notes": "",
+      "url": "https://github.com/tendermint/basecoin/releases/tag/v0.3.0"
+    },
+    {
+      "id": "sdk-0-4",
+      "title": "Basecoin",
+      "version": "0.4.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-04-22",
+      "notes": "",
+      "url": "https://github.com/tendermint/basecoin/releases/tag/v0.4.0"
+    },
+    {
+      "id": "sdk-0-5",
+      "title": "Basecoin",
+      "version": "0.5.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-05-29",
+      "notes": "",
+      "url": "https://github.com/tendermint/basecoin/releases/tag/v0.5.0"
+    },
+    {
+      "id": "sdk-0-6",
+      "title": "Basecoin",
+      "version": "0.6.0",
+      "children": ["hub-hermes", "hub-mercury", "hub-venus"],
+      "span": 2,
+      "date": "2017-06-22",
+      "notes":
+        "The last version of Basecoin before it is renamed to Cosmos SDK.",
+      "url": "https://github.com/tendermint/basecoin/releases/tag/v0.6.0"
+    },
+    {
+      "id": "sdk-0-7",
+      "title": "Cosmos SDK",
+      "version": "0.7.0",
+      "children": ["hub-sdk1"],
+      "span": 4,
+      "date": "2017-07-27",
+      "notes":
+        "Basecoin is renamed to Cosmos SDK for a more descriptive name. It will serve as the primary framework for building the Cosmos Hub.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.7.0"
+    },
+    {
+      "id": "sdk-0-8",
+      "title": "Cosmos SDK",
+      "version": "0.8.0",
+      "children": [],
+      "span": 2,
+      "date": "2017-12-19",
+      "notes": "",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.8.0"
+    },
+    {
+      "id": "sdk-0-9",
+      "title": "Cosmos SDK",
+      "version": "0.9.0",
+      "children": [],
+      "span": 1,
+      "date": "2018-02-13",
+      "notes":
+        "Cosmos-SDK 0.9.0, or the 'New SDK', initializes genesis state and marks a significant milestone, in that everything (gaia-3, Lunie 0.5.0, and partner projects) gets unblocked.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.9.0"
+    },
+    {
+      "id": "sdk-0-10",
+      "title": "Cosmos SDK",
+      "version": "0.10.0",
+      "children": [],
+      "span": 1,
+      "date": "2018-02-20",
+      "notes":
+        "Cosmos-SDK 0.10.0 \"Thales\" has improvements to BaseApp and a mock staking CLI.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.10.0"
+    },
+    {
+      "id": "sdk-0-11",
+      "title": "Cosmos SDK",
+      "version": "0.11.0",
+      "children": [],
+      "span": 1,
+      "date": "2018-03-01",
+      "notes":
+        "Cosmos-SDK 0.11.0 adds more tests, more examples, and spec for the REST API.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.11.0"
+    },
+    {
+      "id": "sdk-0-12",
+      "title": "Cosmos SDK",
+      "version": "0.12.0",
+      "children": [],
+      "span": 1,
+      "date": "2018-03-28",
+      "notes":
+        "Cosmos SDK 0.12.0 'Aristarchus' is part of a two-week sprint to refactor the SDK and to implement cross-chain visibility and transfer.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.12.0"
+    },
+    {
+      "id": "sdk-0-13",
+      "title": "Cosmos SDK",
+      "version": "0.13.0",
+      "children": [],
+      "span": 1,
+      "date": "2018-04-02",
+      "notes":
+        "Cosmos SDK 0.13.0 'Sima Tan' merges in the full staking module, improvements for `basecoind`, and a new `democoin` example app.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.13.0"
+    },
+    {
+      "id": "sdk-0-14",
+      "title": "Cosmos SDK",
+      "version": "0.14.0",
+      "children": ["hub-gaia-3", "gui-0-5"],
+      "span": 1,
+      "date": "2018-04-09",
+      "notes":
+        "Cosmos SDK 0.14.0 'Shi Shen' includes improvements to staking, usability, and refactoring to reduce duplicated code.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.14.1"
+    },
+    {
+      "id": "sdk-0-15",
+      "title": "Cosmos SDK",
+      "version": "0.15.0",
+      "children": ["hub-gaia-4"],
+      "span": 1,
+      "date": "2018-04-30",
+      "notes":
+        "Cosmos SDK 0.15.0 includes the upgrade from go-wire to go-amino.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.15.1"
+    },
+    {
+      "id": "sdk-0-16",
+      "title": "Cosmos SDK",
+      "version": "0.16.0",
+      "children": ["hub-gaia-5"],
+      "span": 1,
+      "date": "2018-05-02",
+      "notes":
+        "Cosmos SDK 0.16.0 includes staking functionality, new validator bonding/unbonding functions, and lots of refactoring.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.16.0-rc0"
+    },
+    {
+      "id": "sdk-0-17",
+      "title": "Cosmos SDK",
+      "version": "0.17.4",
+      "children": ["hub-gaia-5", "gui-0-6"],
+      "span": 1,
+      "date": "2018-05-16",
+      "notes":
+        "Cosmos SDK 0.17.0 includes querying for candidates and delegator-bonds, current state exporting, transaction tags, and a spec for IBC.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.17.4"
+    },
+    {
+      "id": "sdk-0-18",
+      "title": "Cosmos SDK",
+      "version": "0.18.0",
+      "children": ["hub-gaia-6", "gui-0-7"],
+      "span": 1,
+      "date": "2018-06-09",
+      "notes":
+        "Cosmos SDK 0.18.0 adds staking features for validators and delegators, bech32 address support, and gas consumption on transactions.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.18.0"
+    },
+    {
+      "id": "sdk-0-19",
+      "title": "Cosmos SDK",
+      "version": "0.19.0",
+      "children": ["hub-gaia-6", "gui-0-7"],
+      "span": 3,
+      "date": "2018-06-13",
+      "notes":
+        "Cosmos SDK 0.19.0 fixes consensus fault with gaia-6001, adds gas support and refactoring to the REST client.",
+      "url": "https://github.com/cosmos/cosmos-sdk/releases/tag/v0.19.0"
+    },
+    {
+      "id": "sdk-1-0",
+      "title": "Cosmos SDK",
+      "version": "1.0.0",
+      "children": [],
+      "span": 1,
+      "date": "",
+      "notes":
+        "Final version of Cosmos SDK before we launch. Features are frozen.",
+      "url": ""
+    }
+  ],
+  "tmc": [
+    {
+      "id": "tmc-0-1",
+      "title": "Tendermint",
+      "version": "0.1.0",
+      "children": [],
+      "span": 1,
+      "date": "2015-08-15",
+      "notes":
+        "The first public release of Tendermint includes address generation from a seed phrase and sending of coins.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/0.1"
+    },
+    {
+      "id": "tmc-0-2",
+      "title": "Tendermint",
+      "version": "0.2.0",
+      "children": ["gui-netmon"],
+      "span": 1,
+      "date": "2015-10-24",
+      "notes": "Fixed docker file.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/0.2"
+    },
+    {
+      "id": "tmc-0-7",
+      "title": "Tendermint",
+      "version": "0.7.0",
+      "children": [],
+      "span": 1,
+      "date": "2016-08-07",
+      "notes":
+        "Starting from this release (0.7.0 \"Tommy\") we commit to following a strict semantic versioning discipline and release protocol. In recognition of this monumental occasion, we bumped the version number a few extra times.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.7.0"
+    },
+    {
+      "id": "tmc-0-8",
+      "title": "Tendermint",
+      "version": "0.8.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-01-14",
+      "notes":
+        "Tendermint 0.8.0 \"Chuckie\" includes support for validator set changes, handshakes between Tendermint and app, BFT-liveness fix, and more test coverage.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.8.0"
+    },
+    {
+      "id": "tmc-0-9",
+      "title": "Tendermint",
+      "version": "0.9.0",
+      "children": [],
+      "span": 3,
+      "date": "2017-03-06",
+      "notes":
+        "Tendermint 0.9.0 \"Phil and Lil\" includes a new client API and RPC endpoint for viewing header and commits of particular blocks.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.9.0"
+    },
+    {
+      "id": "tmc-0-10",
+      "title": "Tendermint",
+      "version": "0.10.0",
+      "children": [],
+      "span": 4,
+      "date": "2017-06-02",
+      "notes":
+        "Tendermint 0.10.0 \"Angelica\" includes major updates to configuration, logging, and json serialization. Also includes the Grand Repo-Merge of 2017.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.10.0"
+    },
+    {
+      "id": "tmc-0-11",
+      "title": "Tendermint",
+      "version": "0.11.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-09-23",
+      "notes":
+        "Tendermint 0.11.0 \"Susie\" includes querying for validators at previous heights.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.11.0"
+    },
+    {
+      "id": "tmc-0-12",
+      "title": "Tendermint",
+      "version": "0.12.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-10-28",
+      "notes":
+        "Tendermint 0.12.0 \"Dil\" includes RPC calls for genesis, abci_query, and more.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.12.0"
+    },
+    {
+      "id": "tmc-0-13",
+      "title": "Tendermint",
+      "version": "0.13.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-12-06",
+      "notes":
+        "Tendermint 0.13.0 \"Constantine\" adds new RPC endpoints, a new trust metric for tracking peers, and TxIndexConfig.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.13.0"
+    },
+    {
+      "id": "tmc-0-14",
+      "title": "Tendermint",
+      "version": "0.14.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-12-12",
+      "notes": "Tendermint 0.14.0 \"Keanu\" adds a light-client RPC proxy.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.14.0"
+    },
+    {
+      "id": "tmc-0-15",
+      "title": "Tendermint",
+      "version": "0.15.0",
+      "children": [],
+      "span": 2,
+      "date": "2017-12-29",
+      "notes":
+        "Tendermint 0.15.0 \"Leo\" adds an RPC query for transactions at a give block height, a new evidence reactor, state features, and new docs.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.15.0"
+    },
+    {
+      "id": "tmc-0-16",
+      "title": "Tendermint",
+      "version": "0.16.0",
+      "children": ["hub-gaia-3"],
+      "span": 2,
+      "date": "2018-02-20",
+      "notes":
+        "Tendermint 0.16.0 \"Lovelace\" includes major P2P updates, a new specification and improvements to the config.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.16.0"
+    },
+    {
+      "id": "tmc-0-17",
+      "title": "Tendermint",
+      "version": "0.17.0",
+      "children": [],
+      "span": 1,
+      "date": "2018-03-27",
+      "notes":
+        "Tendermint 0.17.0 \"Hopper\" includes lots of P2P improvements, preparation for switching to go-amino encoding, and doc and spec updates.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.17.1"
+    },
+    {
+      "id": "tmc-0-18",
+      "title": "Tendermint",
+      "version": "0.18.0",
+      "children": [],
+      "span": 1,
+      "date": "2018-04-06",
+      "notes":
+        "Tendermint 0.18.0 \"Hamilton\" includes breaking changes to address formatting, new RPC endpoints and RPC fixes.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.18.0"
+    },
+    {
+      "id": "tmc-0-19",
+      "title": "Tendermint",
+      "version": "0.19.9",
+      "children": ["sdk-0-17", "gui-0-6"],
+      "span": 1,
+      "date": "2018-04-13",
+      "notes":
+        "Tendermint 0.19.0 upgrades go-wire to go-amino. This is a sweeping change that breaks everything that is serialized to disk or over the network.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.19.9"
+    },
+    {
+      "id": "tmc-0-20",
+      "title": "Tendermint",
+      "version": "0.20.0",
+      "children": ["hub-gaia-6"],
+      "span": 1,
+      "date": "2018-06-07",
+      "notes":
+        "Tendermint 0.20.0 upgrades ABCI to 0.11.0. The new version of ABCI supports slashing and auto-unbonding for Cosmos Validators.",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.20.0"
+    },
+    {
+      "id": "tmc-0-20",
+      "title": "Tendermint",
+      "version": "0.21.0",
+      "children": [],
+      "span": 3,
+      "date": "2018-06-22",
+      "notes":
+        "Tendermint 0.21.0 fixes a websocket memory leak, mempool processing halt, and block creation issue with `fast_sync`",
+      "url": "https://github.com/tendermint/tendermint/releases/tag/v0.21.0"
+    },
+    {
+      "id": "tmc-1-0",
+      "title": "Tendermint",
+      "version": "1.0.0",
+      "children": [],
+      "span": 1,
+      "date": "",
+      "notes":
+        "Final version of Tendermint BFT before we launch. Features are frozen.",
+      "url": ""
+    }
+  ],
+  "gui": [
+    {
+      "id": "gui-netmon",
+      "title": "Netmon UI",
+      "version": "0.0.3",
+      "children": [],
+      "span": 3,
+      "date": "2016-08-01",
+      "notes":
+        "Before Lunie, there was the web-based Tendermint Blockchain Platform UI. TMUI was designed as a multi-blockchain management interface. Components of the platform are used today in Lunie, primarily the network monitor portion.",
+      "url": ""
+    },
+    {
+      "id": "gui-basecoin",
+      "title": "Basecoin UI",
+      "version": "0.0.5",
+      "children": [],
+      "span": 2,
+      "date": "2017-04-01",
+      "notes":
+        "The Basecoin UI was conceived as a stripped down cryptocurrency wallet with send, recieve, address list, and theming functionality. The idea is that anyone can fork this wallet for their own cryptocurrency based on Basecoin.",
+      "url": ""
+    },
+    {
+      "id": "gui-delegation",
+      "title": "Delegation UI",
+      "version": "0.0.7",
+      "children": [],
+      "span": 5,
+      "date": "2017-06-01",
+      "notes":
+        "The Delegation UI is a razor-sharp focused user interface for Cosmos ATOM holders to use to bond to Cosmos validators. Functionality included viewing validators, bonding to validators, and voting on proposals.",
+      "url": ""
+    },
+    {
+      "id": "gui-0-1",
+      "title": "Cosmos UI",
+      "version": "0.1.0",
+      "children": [],
+      "span": 2,
+      "date": "2017-09-01",
+      "notes":
+        "Cosmos UI was built together from three parts: the Netmon UI, the Wallet UI, and the Delegation UI. Version 0.1.0 was the first time all three components were integrated in one Electron-based application.",
+      "url": ""
+    },
+    {
+      "id": "gui-0-2",
+      "title": "Cosmos UI",
+      "version": "0.2.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-12-14",
+      "notes":
+        "This is the first public release of Cosmos UI. In this version, you are able to create a Cosmos account. You also have the ability to send and receive tokens on the gaia-1 testnet.",
+      "url": "https://github.com/cosmos/cosmos-ui/releases/tag/0.2.0"
+    },
+    {
+      "id": "gui-0-3",
+      "title": "Cosmos UI",
+      "version": "0.3.0",
+      "children": [],
+      "span": 1,
+      "date": "2017-12-31",
+      "notes":
+        "In this version, we have updated to the gaia-2-dev testnet, which has delegation functionality, so you can now bond tokens to validator candidates. It is now a full proof-of-stake system!",
+      "url": "https://github.com/cosmos/cosmos-ui/releases/tag/0.3.0"
+    },
+    {
+      "id": "gui-0-4",
+      "title": "Cosmos UI",
+      "version": "0.4.0",
+      "children": [],
+      "span": 3,
+      "date": "2018-02-01",
+      "notes":
+        "In this release, we upgraded the UI to use the gaia-2 testnet, and added a block explorer, among many other enhancements.",
+      "url": "https://github.com/cosmos/cosmos-ui/releases/tag/0.4.0"
+    },
+    {
+      "id": "gui-0-5",
+      "title": "Lunie",
+      "version": "0.5.0",
+      "children": [],
+      "span": 3,
+      "date": "2018-05-02",
+      "notes":
+        "Lunie 0.5.0 runs on a mocked network that offers users an interactive preview of 1.0 features.",
+      "url": "https://github.com/luniehq/lunie/releases/tag/0.5.0"
+    },
+    {
+      "id": "gui-0-6",
+      "title": "Lunie",
+      "version": "0.6.0",
+      "children": [],
+      "span": 2,
+      "date": "2018-05-19",
+      "notes":
+        "Lunie 0.6.0 works with the light client daemon (LCD) from the new Cosmos SDK. Lunie now supports the gaia-5000 and gaia-5001 testnets.",
+      "url": "https://github.com/luniehq/lunie/releases/tag/0.6.0"
+    },
+    {
+      "id": "gui-0-7",
+      "title": "Lunie",
+      "version": "0.7.0",
+      "children": [],
+      "span": 1,
+      "date": "2018-06-13",
+      "notes":
+        "Lunie 0.7.0 supports the `gaia-6002` testnet, including staking for delegators.",
+      "url": "https://github.com/luniehq/lunie/releases/tag/0.7.0"
+    },
+    {
+      "id": "gui-0-8",
+      "title": "Lunie",
+      "version": "0.8.0",
+      "children": [],
+      "span": 1,
+      "date": "",
+      "notes": "To be announced.",
+      "url": ""
+    },
+    {
+      "id": "gui-1-0",
+      "title": "Lunie",
+      "version": "1.0.0",
+      "children": [],
+      "span": 1,
+      "date": "",
+      "notes":
+        "Final version of Lunie, the UI for Cosmos, before launch. Features are frozen.",
+      "url": ""
+    }
+  ]
+}

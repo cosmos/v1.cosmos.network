@@ -1,0 +1,309 @@
+<mjml>
+  <mj-head>
+    <mj-title>Make your New Year’s Resolution to Win the Cosmos Network ‘Game of Zones’</mj-title>
+    <!-- Override to make full-width block links -->
+    <mj-style inline="inline">
+      a {
+        text-decoration: none;
+        color: #5064FB;
+      }
+      .link-panel a {
+        display: block !important
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-body background-color="white"/>
+      <mj-text padding="8px 24px 16px" color="#2E3148"/>
+      <mj-image padding="16px 24px" border-radius="8px" />
+      <mj-all font-family="Helvetica Neue, Arial, Helvetica, sans-serif" line-height="24px" font-size="16px"/>
+      <mj-button padding="8px 24px" font-size="14px"/>
+      <mj-divider padding="8px 24px" border-color="#EFF0F5" border-width="1px"/>
+      <mj-social font-size="0" icon-size="32px" border-radius="24px" icon-padding="8px" mode="horizontal" inner-padding="8px" />
+      <mj-social-element background-color="#A2A3AD"/>
+      <mj-class name="btn-contained" background-color="#5064FB" color="#fff" border-radius="4px" text-transform="uppercase" font-weight="500" line-height="20px" inner-padding="12px 24px"/>
+      <mj-class name="h1" font-size="40px" line-height="48px" letter-spacing="-.02em" font-weight="700" color="#161931" padding-top="32px" padding-bottom="24px"/>
+      <mj-class name="h2" font-size="32px" line-height="40px" letter-spacing="-.01em" font-weight="700" color="#161931" padding-top="24px" padding-bottom="16px"/>
+      <mj-class name="h3" font-size="24px" line-height="32px" letter-spacing="-.01em" font-weight="500" color="#161931" padding-top="20px" padding-bottom="16px"/>
+      <mj-class name="h4" font-size="20px" line-height="28px" letter-spacing="-.01em" font-weight="500" color="#161931" padding-top="16px" padding-bottom="12px"/>
+      <mj-class name="large" font-size="20px" line-height="28px"/>
+      <mj-class name="base" font-size="16px" line-height="24px"/>
+      <mj-class name="small" font-size="13px" line-height="16px"/>
+      <mj-class name="overline" font-size="12px" line-height="16px" letter-spacing=".2em" text-transform="uppercase" />
+      <mj-class name="li" line-height="125%" padding-top="0" padding-left="32px" padding-bottom="8px" />
+      <mj-class name="link-panel" padding-top="8px" inner-padding="20px 24px" width="100%" text-align="left" align="left" background-color="#F8F9FC" border-radius="8px" color="#161931"/>
+      <mj-class name="panel-outer" padding="8px 24px"/>
+      <mj-class name="panel-inner" padding="24px 0px 16px" background-color="#F8F9FC" border-radius="8px"/>
+      <mj-class name="panel-title" padding-top="0" margin-top="0" margin-bottom="0"/>
+      <mj-class name="panel-text" padding-top="0" margin-top="0" font-size="14px" line-height="20px" />
+      <mj-class name="blockquote" padding-left="24px" padding-top="0" />
+      <mj-class name="blockquote-inner" border-left="4px solid #EFF0F5" />
+      <mj-class name="wide-image" padding-bottom="24px" />
+      <mj-class name="tweet-card" border-radius="4px"/>
+      <mj-class name="black" color="#161931" />
+      <mj-class name="primary" color="#5064FB" />
+      <mj-class name="gray-44" color="#686A79" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="24px 0">
+      <mj-column>
+        <mj-image href="https://cosmos.network" width="213px" height="40px" padding-bottom="16px" src="cosmos-wordmark.png" alt="Cosmos"/>
+        <mj-text mj-class="overline" padding-bottom="4px" align="center"><strong>Hub &amp; Spoke</strong></mj-text>
+        <mj-text mj-class="overline gray-44" padding-top="0" align="center">Community Newsletter</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="large gray-44" padding-bottom="8px" align="center">Make your New Year’s Resolution to </mj-text>
+        <mj-text mj-class="h1" padding-top="0" align="center">Win the Cosmos Network ‘Game of Zones’</mj-text>
+        <mj-image padding-top="24px" padding-bottom="32px" src="cover.jpg" alt="Game of Zones: Compete to win 100,000 ATOM by building and running Cosmos Zones." href="https://cosmos.network/goz"/>
+        <mj-text mj-class="h4">Highlights of the December Cosmos Hub &amp; Spoke Edition</mj-text>
+        <mj-text mj-class="li">✨ Win Game of Zones this New Year</mj-text>
+        <mj-text mj-class="li">✨ Cosmos Hub 3 is coming December 11th!</mj-text>
+        <mj-text mj-class="li">✨ Get GoZ ready by testing the Inter-Blockchain Communication (IBC) prototype for token transfers</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">🏅 Game of Zones: Coming January 2020</mj-text>
+        <mj-text>Game of Zones is the sequel to the first adversarial testnet in Proof-of-Stake history (Game of Stakes circa 2018) to kick off the incoming paradigm of incentivized testnets. This time, players will build and connect zones using the Inter-Blockchain Communication (IBC) protocol and try to break each others’ chains. In exchange, the Interchain Foundation is donating <strong>100,000 ATOM</strong> to the Game of Zones prize pool.</mj-text>
+        <mj-text>Get a head start by:</mj-text>
+        <mj-text mj-class="li">🌟 Familiarizing yourself with the <a href="https://github.com/cosmos/cosmos-sdk/branches/all?utf8=%E2%9C%93&query=ibc">IBC branches</a> of the Cosmos SDK on GitHub. Note: these branches will evolve over time.</mj-text>
+        <mj-text mj-class="li">🌟 Practicing by sending IBC transactions between testnets.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer" text-align="center">
+      <mj-column border-right="12px solid transparent" mj-class="panel-inner">
+        <mj-text mj-class="h1 panel-title" align="center">📣</mj-text>
+        <mj-text mj-class="panel-text" align="center">Sign up* for the Game of Zones mailing list to get updates</mj-text>
+        <mj-button mj-class="btn-contained" href="https://*">Sign up</mj-button>
+      </mj-column>
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h1 panel-title" align="center">💬</mj-text>
+        <mj-text mj-class="panel-text" align="center">Discuss with the community in the Game of Zones Riot chat room</mj-text>
+        <mj-button mj-class="btn-contained" href="https://*">Chat now</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="gray-44 small" align="center">* This isn’t part of the GoZ registration process</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-image src="cosmoshub-3.jpg" alt="Cosmos Hub 3 Upgrade - December 11th" href="https://blog.cosmos.network/cosmos-hub-3-upgrade-announcement-39c9da941aee"/>
+        <mj-text mj-class="h2">⚙️ Cosmos Hub 3 Upgrade</mj-text>
+        <mj-text mj-class="large">🗓 Mark your calendars for December 11th</mj-text>
+        <mj-text>All systems are go for the next upgrade! The community has signaled to upgrade Cosmos Hub-2 to Cosmos Hub-3 at an 84% consensus by stake-weighted voting power. State will be exported from Cosmos Hub-2 at Block Height 2902000. The Genesis of Cosmos Hub-3 will happen within 60 minutes of reaching the aforementioned Block Height.</mj-text>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://blog.cosmos.network/cosmos-hub-3-upgrade-announcement-39c9da941aee">Read more about what the upgrade means in the Cosmos Hub-3 Upgrade blog post &#8594;</mj-button>
+        <mj-spacer height="32px"/>
+        <mj-text mj-class="h2">🚀 2020 rings in the Launch of IBC to User in Era of Internet of Blockchains</mj-text>
+        <mj-text>Learn about IBC from the recently launched the <a href="https://cosmos.network/ibc">IBC webpage</a> for a high-level understanding about the technology. If you’d like to receive regular IBC-related communication, subscribe to the IBC-specific newsletter on that webpage.</mj-text>
+        <mj-text>If you’d like to be an active contributor of IBC join the technical <a href="https://zc.vg/sf/zI6BW">IBC working group</a>. The next IBC Ecosystem WG call is this week, <strong>December 19th, at 17:00 CEST</strong>. You can contribute to the agenda and <a href="https://github.com/cosmos/ics/tree/master/ecosystem">find more information</a> on Github.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="overline gray-44 panel-title">Demo</mj-text>
+        <mj-text mj-class="h3 panel-title">🕹 Try IBC today</mj-text>
+        <mj-text mj-class="panel-text">A good way to test out IBC prior to Game of Zones is with the recent demo that allows you to use an early prototype of IBC.</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://github.com/cosmos/gaia/blob/cwgoes/ibc-demo-fixes/ibc-demo.sh">IBC Demo</mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="overline gray-44 panel-title">Video</mj-text>
+        <mj-text mj-class="h3 panel-title">🍿 Chain Reaction</mj-text>
+        <mj-text mj-class="panel-text">Listen to the latest <a href="https://www.youtube.com/watch?v=DeMhlEck3E0">Chain Reaction #3: IBC Cosmos SDK demo review</a>. Catch up by listening to <a href="https://www.youtube.com/watch?v=pWsy0BD3DnY">Chain Reaction #1: Launching IBC</a> (Agoric and Tendermint) and <a href="https://www.youtube.com/watch?v=ZChn6E8Nz_s">Chain Reaction #2: Getting IBC Hackathon Ready</a>.</mj-text>
+      </mj-column>
+        </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="overline gray-44 panel-title">Podcast</mj-text>
+        <mj-text mj-class="h3 panel-title">📻 Interchain.FM</mj-text>
+        <mj-text mj-class="panel-text">Interchain podcasts on IBC  announcement covering the world of IBC - <a href="https://interchain-fm.simplecast.com/episodes/001">Interchain.FM Ep. 001</a></mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">👏 Congrats to the top 7 projects changing the game in finance</mj-text>
+        <mj-text>Over 600 people applied to the hackathon from all over the world and over 330 of them made it through the application process, landed in San Francisco, and became a part of building history. We recently published the TL;DR of the winning projects from the SFBW 2019 Cosmos DeFi hackathon. If you couldn’t make it, read all about the winning projects and sponsors on the <a href="https://blog.cosmos.network/defi-hackathon-the-top-7-projects-changing-the-game-in-finance-e66cb9af1c7f">Cosmos blog</a>.</mj-text>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://defi-hackathon.devpost.com/submissions">See the comprehensive list of project submissions on Devpost &#8594;</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-image mj-class="wide-image" src="cosmwasm.jpg" alt="Getting started with CosmWasm" href="https://docs.cosmwasm.com/docs/intro/overview"/>
+        <mj-text mj-class="h2">⚡️ Wasm comes to Cosmos</mj-text>
+        <mj-text mj-class="large">CosmWasm is a new smart contracting platform built for the cosmos ecosystem. Particularly, CosmWasm is aimed at Go developers with experience using the Cosmos SDK, as well as Rust developers looking for a blockchain platform.</mj-text>
+        <mj-text>CosmWasm was originally <a href="https://github.com/cosmos-gaians/cosmos-sdk/tree/hackatom/x/contract">prototyped by Team Gaians</a> at the <a href="https://blog.cosmos.network/cosmos-hackatom-berlin-recap-4722882e7623">Berlin Hackatom 2019</a>. In particular, <a href="https://github.com/aaronc">Aaron Craelius</a>, CTO of Regen Network, designed the architecture with respect to avoiding reentrancy attacks such as those exploited in the now-famous DAO hack, <a href="https://github.com/jtremback">Jehan Tremback</a>, founder of Althea Network, led the implementation in Rust, and <a href="https://github.com/ethanfrey">Ethan Frey</a>, founder of Confio, led the golang piece of the implementation. After the concept was successfully prototyped, the <a href="https://interchain.io/">Interchain Foundation</a> provided a grant to <a href="http://confio.tech/">Confio</a> to implement a production-ready implementation.</mj-text>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://docs.cosmwasm.com/docs/intro/overview">Read the recent documentation to familiarize yourself with CosmWasm. &#8594;</mj-button>
+        <mj-text>We’ll have more content and tutorials coming soon!</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">💫 Cosmos Events, News &amp; Meetups</mj-text>
+        <mj-spacer/>
+        <mj-text mj-class="overline gray-44" padding-top="16px" padding-bottom="0">Podcast</mj-text>
+        <mj-text>New Interchain podcast with Kate Sills from Agoric: <a href="https://interchain-fm.simplecast.com/episodes/002">Smart Contracts &amp; the Incentives for the Crowdfunding of Public Goods</a></mj-text>
+        <mj-divider padding-top="8px"/>
+        <mj-text mj-class="overline gray-44" padding-top="16px" padding-bottom="0">Meetup</mj-text>
+        <mj-text>Cosmos San Francisco is hosting an upcoming meetup mid-Dec! - <a href="https://www.meetup.com/Cosmos_SF/events/266765541/">Learn about how Binance chain, TrustWallet, Tellor, Agoric, and Cosmos</a> are thinking about using IBC.</mj-text>
+        <mj-divider padding-top="8px"/>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h3 panel-title">🎉 Cosmos Meetups</mj-text>
+        <mj-text mj-class="panel-text">Join Cosmos meetups anywhere you are in the world: Cosmos is Worldwide on Meetup.com. Don’t see a Meetup near you? Contact <a href="https://www.meetup.com/Cosmos_SF/members/284457556/">Cosmos Admin</a> on Meetup.com</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://www.meetup.com/pro/cosmos_network/">Join Cosmos Meetup</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column width="600px">
+        <mj-text mj-class="h2">💬 In the Twittersphere</mj-text>
+        <mj-spacer/>
+      </mj-column>
+      <mj-column width="300px">
+        <mj-image src="tweet1.jpg" mj-class="tweet-card" href="https://twitter.com/EverettProtocol/status/1201576372973572097?s=20"/>
+      </mj-column>
+      <mj-column width="300px">
+        <mj-image src="tweet2.jpg" mj-class="tweet-card" href="https://twitter.com/cosmos/status/1197303775154847745?s=20"/>
+      </mj-column>
+      <mj-column width="300px">
+        <mj-image src="tweet3.jpg" mj-class="tweet-card" href="https://twitter.com/TradeTalks/status/1192165761491464193?s=20"/>
+      </mj-column>
+      <mj-column width="300px">
+        <mj-image src="tweet4.jpg" mj-class="tweet-card" href="https://twitter.com/warpaul/status/1190770396406042625?s=20"/>
+      </mj-column>
+      <mj-column width="300px">
+        <mj-image src="tweet5.jpg" mj-class="tweet-card" href="https://twitter.com/DokiaC/status/1197430760933859328?s=20"/>
+      </mj-column>
+      <mj-column width="600px" padding-top="16px">
+        <mj-button mj-class="btn-contained" href="https://twitter.com/intent/tweet?screen_name=Cosmos">Tweet us @cosmos</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-spacer/>
+        <mj-text mj-class="h2">✨ Community Conversations</mj-text>
+        <mj-spacer/>
+        <mj-text mj-class="h3">The solution to live chain upgrades is here</mj-text>
+        <mj-text>Live on-chain upgrades have historically been a challenge to pull off. Tezos, along with. he teams behind Regen Network and IOV Network have pioneered on-chain upgrades. Regen and IOV have implemented a testing module for seamless software upgrades for Cosmos SDK-based chains. It is now officially part of the Cosmos SDK.</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://github.com/cosmos/cosmos-sdk/pull/4233">View GitHub PR</mj-button>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://medium.com/@regen.network/regen-network-dev-update-10-ce8baa67f71c">More details in the Regen Network November update &#8594;</mj-button>
+        <mj-divider padding-top="16px"/>
+        <mj-text mj-class="h3">Tools to improve validator alerting and monitoring</mj-text>
+        <mj-text>Cosmos Validator, Chainflow, <a href="https://chainflow.io/chainflow-receives-icf-validator-monitoring-and-alerting-grant/">received an ICF grant</a> to develop a validator monitoring and alerting tool. The tool helps validators currently validating on the Cosmos Network (or compatible ones) securely and reliably monitor their systems. If you have user feedback, open a support ticket on the associated Github issue.</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://github.com/chris-remus/chainflow-icf-validator-tool-grant/issues/2">View GitHub Issue</mj-button>
+        <mj-divider padding-top="16px"/>
+        <mj-text mj-class="h3">The community discusses a DeFi world enabled by staking derivatives</mj-text>
+        <mj-text>Chorus One’s co-founder, Meher Roy, sees utility in creating a staking derivatives market on bonded ATOMs, where supply is currently illiquid, in order to create a liquid market in which derivatives could be utilized for more vehicles than just staking. The recommendation is made based on considering three derivative inventions: delegation trading, delegation vouchers, and delegation tranches. It’s an interesting discussion in the future of validator services that can be found on the Cosmos Forum.</mj-text>
+        <mj-button mj-class="btn-contained" align="left" href="https://forum.cosmos.network/t/is-there-an-advantage-to-bonded-but-unslashable-stake-in-a-world-of-staking-derivatives/2948">View on Cosmos Forum</mj-button>
+        <mj-divider padding-top="16px"/>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">🪐 Cosmos Ecosystem</mj-text>
+        <mj-spacer/>
+        <mj-text mj-class="h3">Akash Network is the 1st peer-to-peer serverless computing</mj-text>
+        <mj-text><a href="https://akash.network/">Akash</a> Network is bringing serverless computing to <a href="https://hub.cosmos.network/">Cosmos</a> by being the world’s first peer-to-peer supercloud for serverless computing. Through Akash’s platform, developers can easily and securely access cloud computing power by integrating advanced <a href="https://techcrunch.com/2017/11/21/overclock-labs-bets-on-kubernetes-to-help-companies-automate-their-cloud-infrastructure/">containerization</a> technology with a unique staking model to accelerate adoption, built on Tendermint Core and Cosmos.</mj-text>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://blog.akash.network/2019/10/23/decentralized-serverless-computing-coming-to-cosmos/">Read more about the Akash Network Cosmos integration &#8594;</mj-button>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://blog.akash.network/2019/11/21/announcing-our-third-founding-member-challenge-earn-2000-akash-tokens/">Check out the Akash Network Founding Member Rewards Program &#8594;</mj-button>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://blog.akash.network/2019/11/13/an-invitation-to-akash-validators-genesis-10-%F0%9F%9A%80/#">Be one of Akash’s first 10 validators awarded 20% Delegation Power &#8594;</mj-button>
+        <mj-divider padding-top="16px"/>
+
+        <mj-text mj-class="h3">Oasis Labs is building an application layer protocol to enable data custodianship</mj-text>
+        <mj-text><a href="https://www.oasislabs.com/">Oasis Protocol</a>, running on Tendermint Core, is the first instance of a blockchain with no single entity owning or controlling the totality of the data. Users maintain owners of their data and  control how and with what trusted parties the data is shared. Congratulations to Oasis Labs for the launch of their recent testnet!</mj-text>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://iqlusion.blog/the-launch-of-the-oasis-testnet">Read Cosmos community member, Iqlusion’s comprehensive summary on the Oasis Testnet Launch &#8594;</mj-button>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://docs.oasis.dev/">If you are interested in joining, check out the Oasis developers onboarding documentation &#8594;</mj-button>
+        <mj-divider padding-top="16px"/>
+
+        <mj-text mj-class="h3">Kava Network launches DeFi platform on the Cosmos Network</mj-text>
+        <mj-text>Kava Network is the first DeFi platform on the Cosmos Network and serves to empower digital asset holders not only within the Cosmos community but throughout the blockchain ecosystem.  The successful <a href="https://medium.com/kava-labs/kava-mainnet-is-officially-live-making-defi-on-cosmos-a-reality-45906d734112">Kava Mainet launch</a> happened on November 14th following <a href="https://medium.com/kava-labs/kava-mainnet-launch-post-mortem-e627b5dbe243">initial challenges</a> from the first go around. </mj-text>
+        <mj-divider padding-top="16px"/>
+
+        <mj-text mj-class="h3">LikeCoin explains the move from Ethereum to Cosmos</mj-text>
+        <mj-text>LikeCoin is a decentralized protocol for digital content that realigns creativity and rewards for platforms & services across the internet. LikeCoin recently stated:</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="blockquote">
+      <mj-column mj-class="blockquote-inner">
+        <mj-text padding-top="0" padding-bottom="0">&hellip;in order for the (LikeCoin) ecosystem to expand on impact, grow as a protocol and improve on the user experience; there is a need for us to fully migrate and deploy our own Blockchain. Thanks to Cosmos and Tendermint, it provided a solid infrastructure that enables us to build our application-specific Blockchain with flexibility, security, performance, and sovereignty.</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-button mj-class="link-panel large primary" css-class="link-panel" href="https://medium.com/likecoin/why-build-a-new-blockchain-likecoin-chain-a5956ab4dc07">Read more about LikeCoin’s transition to Cosmos in their recent blog post &#8594;</mj-button>
+        <mj-divider padding-top="16px"/>
+        <mj-spacer/>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text mj-class="h2">🌟 Community Updates on Cosmos</mj-text>
+        <mj-spacer/>
+        <mj-text>Let us know if you have Cosmos coverage you want us to include!</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h4 panel-title">Figment Network</mj-text>
+        <mj-text mj-class="panel-text large"><a href="https://figment.network/resources/cosmos-november-2019-network-analysis/">November analysis over Cosmos Hub</a></mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h4 panel-title">Stake.with.us</mj-text>
+        <mj-text mj-class="panel-text large"><a href="https://mailchi.mp/a3acdc306f69/stakerdigest9">Staker Digest</a></mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h4 panel-title">Chorus One</mj-text>
+        <mj-text mj-class="panel-text large"><a href="https://stakingeconomy.substack.com/p/28-proportional-slashing">Staking economy</a></mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section mj-class="panel-outer">
+      <mj-column mj-class="panel-inner">
+        <mj-text mj-class="h4 panel-title">Paradigm</mj-text>
+        <mj-text mj-class="panel-text large"><a href="https://medium.com/paradigm-fund/state-of-stake-9-7ff2be5cbac3">State of Stake</a></mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-divider padding-top="32px" padding-bottom="32px"/>
+        <mj-image width="170px" height="32px" src="cosmos-wordmark.png" alt="Cosmos" href="https://cosmos.network/"/>
+        <mj-text align="center"><a href="https://cosmos.network/">cosmos.network</a></mj-text>
+        <mj-social>
+          <mj-social-element  name="twitter" href="https://twitter.com/cosmos">
+            Twitter
+          </mj-social-element>
+          <mj-social-element name="telegram" href="https://t.me/cosmosproject" src="social-icon-telegram.png">
+            Telegram
+          </mj-social-element>
+          <mj-social-element name="riot" href="https://riot.im/app/#/group/+cosmos:matrix.org" src="social-icon-riot.png">
+            Riot
+          </mj-social-element>
+          <mj-social-element name="youtube" href="https://www.youtube.com/c/CosmosProject">
+            YouTube
+          </mj-social-element>
+          <mj-social-element  name="cosmos-forum" href="http://forum.cosmos.network/" src="social-icon-forum.png">
+            Cosmos Forum
+          </mj-social-element>
+        </mj-social>
+        <mj-spacer/>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="97px" viewBox="0 0 73 97" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Code Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="/SDK" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cosmos_website_SDK_1920px" transform="translate(-1125.000000, -1964.000000)">
+            <g id="SDk-Features" transform="translate(-1.000000, 1213.000000)">
+                <g id="Code-Icon" transform="translate(1126.000000, 752.000000)">
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" x="1" y="34" width="71" height="61" rx="5"></rect>
+                    <path d="M57.7293764,34.0129566 L15.2662864,34.0129566 C13.4963086,11.3376522 20.5499729,1.76937839e-12 36.4272793,0 C52.3045857,-1.76780112e-12 59.4052847,11.3376522 57.7293764,34.0129566 Z" id="Path-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+                    <polygon id="Path-10" fill="#FFFFFF" points="36.3878586 61 31 74.2450366 41.9609893 74.2450366"></polygon>
+                    <ellipse id="Oval-Copy-6" fill="#FFFFFF" cx="36.6581197" cy="59.6846847" rx="4.65811966" ry="4.68468468"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

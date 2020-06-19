@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Cosmos SDK",
+    "github": "https://github.com/cosmos/cosmos-sdk",
+    "type": "core",
+    "description":
+      "Platform for building and/or interacting with blockchain applications"
+  },
+  {
+    "name": "Lunie",
+    "github": "https://github.com/luniehq/lunie",
+    "type": "core",
+    "description": "The user interface for the Cosmos Network"
+  },
+  {
+    "name": "Lotion JS",
+    "github": "https://github.com/nomic/lotion",
+    "type": "core",
+    "description": "Smooth and easy blockchain apps"
+  },
+  {
+    "name": "Cosmos Core",
+    "github": "https://github.com/cosmos/cosmos",
+    "type": "core",
+    "description": "Background information about Cosmos"
+  },
+  {
+    "name": "Testnets",
+    "github": "https://github.com/cosmos/testnets",
+    "type": "secondary",
+    "description": "Files and instructions for joining testnets"
+  },
+  {
+    "name": "Faucet",
+    "github": "https://github.com/cosmos/faucet",
+    "type": "secondary",
+    "description": "Faucet for the Cosmos Network testnets"
+  },
+  {
+    "name": "Explorer",
+    "github": "https://github.com/cosmos/explorer",
+    "type": "secondary",
+    "description": "Graphical inteface to view testnets on the Cosmos Network"
+  },
+  {
+    "name": "Ledger Cosmos",
+    "github": "https://github.com/cosmos/ledger-cosmos",
+    "type": "secondary",
+    "description": "Ledger Nano S support for Cosmos"
+  },
+  {
+    "name": "Website",
+    "github": "https://github.com/cosmos/cosmos.network",
+    "type": "secondary",
+    "description": "Source code for https://cosmos.network"
+  }
+]

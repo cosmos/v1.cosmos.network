@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="83px" height="72px" viewBox="0 0 83 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Code Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="/SDK-(NEW)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cosmos_website_SDK_1920px" transform="translate(-1120.000000, -2200.000000)">
+            <g id="SDk-Features" transform="translate(-1.000000, 1423.000000)">
+                <g id="Code-Icon" transform="translate(1121.000000, 777.000000)">
+                    <circle id="Oval-Copy-6" fill="#FFFFFF" cx="10" cy="10" r="3"></circle>
+                    <circle id="Oval-Copy-7" fill="#FFFFFF" cx="17" cy="10" r="3"></circle>
+                    <circle id="Oval-Copy-8" fill="#FFFFFF" cx="25" cy="10" r="3"></circle>
+                    <rect id="Rectangle" stroke="#FFFFFF" stroke-width="2" x="1" y="1" width="81" height="70" rx="5"></rect>
+                    <path d="M1.46428571,18.750624 L80.5357143,18.750624" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M34.6956522,65 L50,27" id="Line-Copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+                    <polyline id="Path-4" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" points="29 32 15 45.5961888 29 59"></polyline>
+                    <polyline id="Path-5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" points="52 32 66 45.3570171 52 59"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,87 @@
+{
+  "tm": {
+    "blog": "https://blog.cosmos.network/tendermint/home",
+    "chat": "https://discord.gg/cr7N47p",
+    "community": {
+      "bitcointalk": "https://bitcointalk.org/index.php?topic=1607111.0",
+      "discourse": "https://forum.cosmos.network",
+      "facebook": "https://www.facebook.com/tendermint/",
+      "irc": "http://webchat.freenode.net/?channels=%23cosmos_network",
+      "linkedin": "https://www.linkedin.com/company/tendermint",
+      "matrix": "https://discord.gg/cr7N47p",
+      "reddit": "https://reddit.com/r/cosmosnetwork",
+      "rewards": "https://contribute.cosmos.network",
+      "telegram": "https://t.me/cosmosproject",
+      "twitter": "https://twitter.com/tendermint_team"
+    },
+    "careers": "https://tendermint.com/careers",
+    "docs": {
+      "index": "https://tendermint.readthedocs.io/en/master/",
+      "ecosystem":
+        "http://tendermint.readthedocs.io/projects/tools/en/master/ecosystem.html"
+    },
+    "email": "hello@tendermint.com",
+    "facebook": "https://www.facebook.com/tendermint/",
+    "github": {
+      "coc":
+        "https://github.com/tendermint/tendermint/blob/master/CODE_OF_CONDUCT.md",
+      "organization": "https://github.com/tendermint",
+      "issues": "https://github.com/tendermint/tendermint/issues",
+      "source": "https://github.com/tendermint/tendermint"
+    },
+    "linkedin": "https://www.linkedin.com/company/tendermint",
+    "twitter": "https://twitter.com/tendermint_team",
+    "website": "https://tendermint.com"
+  },
+  "cosmos": {
+    "bitcointalk": "https://bitcointalk.org/index.php?topic=1607111.0",
+    "blog": "https://blog.cosmos.network",
+    "chat": "https://discord.gg/cr7N47p",
+    "community": {
+      "bitcointalk": "https://bitcointalk.org/index.php?topic=1607111.0",
+      "discourse": "https://forum.cosmos.network",
+      "facebook": "https://www.facebook.com/cosmosblockchain/",
+      "irc": "http://webchat.freenode.net/?channels=%23cosmos_network",
+      "matrix": "https://discord.gg/cr7N47p",
+      "reddit": "https://reddit.com/r/cosmosnetwork",
+      "telegram": "https://t.me/cosmosproject",
+      "twitter": "https://twitter.com/cosmos"
+    },
+    "email": "hello@tendermint.com",
+    "fundraiser": "https://fundraiser.cosmos.network",
+    "github": {
+      "organization": "https://github.com/cosmos",
+      "forum": "https://github.com/cosmos/cosmos-forum",
+      "sdk": "https://github.com/cosmos/cosmos-sdk",
+      "ui": "https://github.com/cosmos/cosmos-ui"
+    },
+    "hackatom": "https://cosmos.network/hackatom",
+    "hackathon": {
+      "one": "http://www.hackathon.io/cosmos-hackathon",
+      "two": "http://www.hackathon.io/cosmos-hackathon1"
+    },
+    "intro": {
+      "video":
+        "https://player.vimeo.com/video/183530279?title=0&byline=0&portrait=0"
+    },
+    "irc": "http://webchat.freenode.net/?channels=%23cosmos_network",
+    "meetups": {
+      "devchat": "https://www.meetup.com/cosmos-dev/",
+      "berlin": "https://www.meetup.com/Cosmos-Berlin/",
+      "nyc": "https://www.meetup.com/Cosmos-NYC/",
+      "seoul": "https://www.meetup.com/Cosmos-Seoul/",
+      "sf": "https://www.meetup.com/Cosmos-SanFrancisco/",
+      "shanghai": "https://www.meetup.com/Cosmos-Shanghai/",
+      "toronto": "https://www.meetup.com/Cosmos-Toronto/"
+    },
+    "reddit": "https://reddit.com/r/cosmosnetwork",
+    "twitter": "https://twitter.com/cosmos",
+    "validators": {
+      "chat": "https://discord.gg/cr7N47p"
+    },
+    "website": "https://cosmos.network"
+  },
+  "aib": {
+    "website": "https://allinbits.com"
+  }
+}

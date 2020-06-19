@@ -1,0 +1,313 @@
+<mjml>
+  <mj-head>
+    <mj-title>Cosmos | Hub &amp; Spoke Newsletter</mj-title>
+    <mj-style inline="inline">
+      a {
+        text-decoration: none;
+        color: #5064FB;
+      }
+      .container {
+        max-width: 488px !important;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      h1, .h1 {
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -.03em;
+        font-weight: 700;
+        margin-top: 56px;
+        margin-bottom: 8px;
+      }
+      h2 {
+        font-size: 28px;
+        line-height: 32px;
+        letter-spacing: -.025em;
+        font-weight: 700;
+        margin-top: 40px;
+        margin-bottom: 8px;
+      }
+      h3 {
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -.02em;
+        font-weight: 700;
+        margin-top: 28px;
+        margin-bottom: 8px;
+      }
+      h4 {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -.02em;
+        font-weight: 700;
+        margin-top: 16px;
+        margin-bottom: 4px;
+      }
+      ul,ol {
+        margin: 16px 0;
+        margin-left: 24px;
+        padding: 0;
+      }
+      .tweet {
+          border-left: 4px solid #EFF0F5;
+      }
+      .primary-light {
+        color: #66A1FF;
+      }
+      .white {
+        color: #FFFFFF;
+      }
+      .white-80 {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .bg-black {
+        background-color: #161931;
+      }
+      .bg-primary {
+        background-color: #5064FB;
+      }
+      .bg-primary-light {
+        background-color: #66A1FF;
+      }
+      .bg-secondary {
+        background-color: #BA3FD9;
+      }
+      .bg-gray-95 {
+        background-color: #F8F9FC;
+      }
+      .emoji-block {
+        border-radius: 4px;
+        padding: 32px 8px;
+      }
+    </mj-style>
+    <mj-style>
+      /* Gmail ul margin reset */
+      u + .body .glist { margin-left: 0 !important; }
+      @media only screen and (max-width: 640px) {
+        u + .body .glist { margin-left: 25px !important; }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-body background-color="#F8F9FC"/>
+      <mj-all font-family="Helvetica Neue, Arial, Helvetica, sans-serif" line-height="24px" font-size="16px"/>
+      <mj-section padding="0px 20px" background-color="#FFFFFF" />
+      <mj-text padding="8px 0" color="#161931"/>
+      <mj-image padding="24px 0px 8px" border-radius="4px" />
+      <mj-button padding="16px 0 8px" font-size="16px"/>
+      <mj-divider padding="40px 0 0" border-color="#EFF0F5" border-width="1px"/>
+      <mj-social font-size="0" icon-size="32px" border-radius="24px" icon-padding="8px" mode="horizontal" inner-padding="4px" padding-top="32px" padding-bottom="4px" />
+      <mj-social-element background-color="transparent"/>
+      <mj-class name="btn-contained" background-color="#5064FB" color="#fff" border-radius="4px" font-weight="500" line-height="20px" inner-padding="12px 24px"/>
+      <mj-class name="btn-text" background-color="none" color="#5064FB" font-weight="400" font-size="18px" line-height="24px" inner-padding="12px 0" align="left" />
+      <mj-class name="large" font-size="20px" line-height="32px"/>
+      <mj-class name="base" font-size="16px" line-height="24px"/>
+      <mj-class name="small" font-size="13px" line-height="18px"/>
+      <mj-class name="overline" font-size="12px" line-height="16px" letter-spacing=".2em" text-transform="uppercase" />
+      <mj-class name="panel-inner" padding="24px 20px" background-color="#161931" border-radius="4px" />
+      <mj-class name="blockquote" padding-left="24px" padding-top="0" />
+      <mj-class name="blockquote-inner" border-left="4px solid #EFF0F5" />
+      <mj-class name="black" color="#161931" />
+      <mj-class name="white" color="#ffffff" />
+      <mj-class name="white-80" color="rgba(255,255,255,0.8)" />
+      <mj-class name="primary" color="#5064FB" />
+      <mj-class name="primary-light" color="#66A1FF" />
+      <mj-class name="gray-44" color="#686A79" />
+      <mj-class name="bg-black"  background-color="#161931" />
+      <mj-class name="bg-white" background-color="#ffffff" />
+      <mj-class name="bg-primary" background-color="#5064FB" />
+      <mj-class name="bg-gray-44" background-color="#686A79" />
+      <mj-class name="bg-gray-95" background-color="#F8F9FC" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body width="688px" css-class="body">
+    <mj-wrapper background-color="#FFFFFF" padding="0">
+      <mj-section padding-top="16px">
+        <mj-group>
+          <mj-column vertical-align="middle" width="20%">
+            <mj-image href="https://cosmos.network" width="48px" height="48px" padding="0" border-radius="24px" src="https://campaign-image.com/zohocampaigns/447316000004114752_zc_v122_cosmos_brandmark_144.png" alt="Cosmos" align="left"/>
+          </mj-column>
+          <mj-column vertical-align="middle" width="80%">
+            <mj-text mj-class="small" vertical-align="middle" padding="0" align="right"><a href="cosmos.network" target="_blank">Cosmos</a> | Internet of Blockchains</mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-text align="center"><h1>Hub &amp; Spoke</h1></mj-text>
+          <mj-text mj-class="large" padding="0" align="center">Cosmos Community Newsletter</mj-text>
+          <mj-text mj-class="gray-44" padding-top="0" align="center">January 2020</mj-text>
+          <mj-image padding-top="32px" src="https://campaign-image.com/zohocampaigns/orbits_color_cover_zc_v1_447316000004149005.jpg" alt="Cosmos Hub &amp; Spoke Newsletter"/>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="container">
+        <mj-column>
+          <mj-text padding-top="32px">Intro welcome text… Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus gravida. Suspendisse ac urna id dui sodales sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin mauris purus, viverra interdum placerat eu, viverra eu lacus. Nullam consectetur gravida nibh feugiat placerat.</mj-text>
+          <mj-text padding-bottom="16px"><h2>Highlights</h2></mj-text>
+          <mj-text>✨ Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+          ✨ Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+          ✨ Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+          ✨ Lorem ipsum dolor sit amet, consectetur adipiscing elit.</mj-text>
+          <mj-divider/>
+          <mj-text><h2>Feature title</h2></mj-text>
+          <mj-text>Text block… Lorem ipsum dolor sit amet, <em>consectetur</em> adipiscing elit. Suspendisse ac enim pellentesque tellus cursus gravida. Suspendisse ac urna id dui sodales sodales. Vestibulum ante <b>ipsum primis</b> in faucibus orci luctus et ultrices posuere cubilia Curae; Proin mauris purus, <a href="#">viverra</a> interdum placerat eu, viverra eu lacus. Nullam consectetur gravida nibh feugiat placerat.</mj-text>
+          <mj-text>Here's an unordered list:
+            <ul align="left" type="disc">
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus gravida.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus gravida.</li>
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus gravida.</li>
+            </ul>
+            <a href="#">Read full article →</a>
+          </mj-text>
+          <mj-button mj-class="btn-contained" align="left" href="#">Button</mj-button>
+          <mj-divider/>
+          <mj-text padding-bottom="32px"><h2>Cosmos numbers snapshot</h2></mj-text>
+        </mj-column>
+        <mj-column width="40%" padding="16px 8px 16px 0" vertical-align="top" padding-top="0">
+          <mj-text><div class="h1" style="margin:0;">5162</div></mj-text>
+          <mj-text mj-class="small gray-44" padding-top="0">Transactions</mj-text>
+        </mj-column>
+        <mj-column width="60%">
+          <mj-text>Transaction volumes over the last 30 days peaked at 5162 total transactions as of yesterday (1/15/20). Relative to stablecoin volumes, for instance, this is pretty anemic, but the result is not too surprising, as the ATOM is functioning in line with its stated utility—that of a staking token.</mj-text>
+        </mj-column>
+        <mj-column width="40%" padding="16px 8px 16px 0" vertical-align="top" padding-top="0">
+          <mj-text><div class="h1" style="margin:0;">74%</div></mj-text>
+          <mj-text mj-class="small gray-44" padding-top="0">Bonded or locked up</mj-text>
+        </mj-column>
+        <mj-column width="60%">
+          <mj-text>74.13% of the entire token supply of the network is currently bonded or locked up (~185M out of a total 250M ATOMs in circulation).</mj-text>
+        </mj-column>
+        <mj-column width="40%" padding="16px 8px 16px 0" vertical-align="top" padding-top="0">
+          <mj-text><div class="h1" style="margin:0;">$4m</div></mj-text>
+          <mj-text mj-class="small gray-44" padding-top="0">in ATOM bonded Dec 23</mj-text>
+        </mj-column>
+        <mj-column width="60%">
+          <mj-text>Cosmos continues to experience a strong staking ecosystem. Peak delegation activity from the last 30-day period was on Dec 23, 2019, where 909k ATOM (~$4m at today’s prices) were bonded just days before Christmas (<a href="https://www.cosmosoutpost.io/cosmos/network/1d?bar=30&lang=en" title="Network Stats">source</a>).</mj-text>
+        </mj-column>
+        <mj-column width="100%">
+          <mj-divider/>
+          <mj-text><h2>Coverage, Events &amp; Meetups</h2></mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="container" padding-top="24px" padding-left="12px" padding-right="12px">
+        <mj-column width="15%" padding="8px 8px">
+          <mj-text padding="0" font-size="40px" line-height="1">🗓</mj-text>
+        </mj-column>
+        <mj-column width="85%" padding="8px 8px 32px">
+          <mj-text padding="0" mj-class="small gray-44">June 12</mj-text>
+          <mj-text padding="0"><h4 style="margin-top:0;">Event name</h4></mj-text>
+          <mj-text mj-class="small" padding="0">Event venue, City, Country &middot;<br><a href="#">Get involved →</a></mj-text>
+        </mj-column>
+        <mj-column width="15%" padding="8px 8px">
+          <mj-text padding="0" font-size="40px" line-height="1">🌎</mj-text>
+        </mj-column>
+        <mj-column width="85%" padding="8px 8px 32px">
+          <mj-text padding="0" mj-class="small gray-44">June 12</mj-text>
+          <mj-text padding="0"><h4 style="margin-top:0;">Meetup name</h4></mj-text>
+          <mj-text mj-class="small" padding="0">Meetup venue, City, Country &middot;<br><a href="#">Get involved →</a></mj-text>
+        </mj-column>
+        <mj-column width="15%" padding="8px 8px">
+          <mj-text padding="0" font-size="40px" line-height="1">🗓</mj-text>
+        </mj-column>
+        <mj-column width="85%" padding="8px 8px 32px">
+          <mj-text padding="0" mj-class="small gray-44">June 12</mj-text>
+          <mj-text padding="0"><h4 style="margin-top:0;">Event name</h4></mj-text>
+          <mj-text mj-class="small" padding="0">Event venue, City, Country &middot;<br><a href="#">Get involved →</a></mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="24px" padding-bottom="24px" css-class="container">
+        <mj-column mj-class="panel-inner">
+          <mj-text align="center" mj-class="white"><div class="h1" style="margin-top:0;">🌎</div><h3 style="margin:0;">Cosmos Meetups</h3></mj-text>
+          <mj-text align="center" mj-class="white-80">Join Cosmos meetups anywhere you are in the world: Cosmos is Worldwide on Meetup.com. Don’t see a Meetup near you? <a class="primary-light" href="https://www.meetup.com/Cosmos_SF/members/284457556/">Contact Cosmos Admin</a></mj-text>
+          <mj-button mj-class="btn-contained" align="center" href="https://www.meetup.com/pro/cosmos_network/">Join Cosmos Meetup</mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="container" padding-top="24px" padding-left="12px" padding-right="12px">
+        <mj-column width="30%" padding="8px 8px 0">
+          <mj-text align="center" padding="0" font-size="40px" line-height="1"><div class="bg-black emoji-block">🚀</div></mj-text>
+        </mj-column>
+        <mj-column width="70%" padding="12px 8px 32px">
+          <mj-text padding="0"><h4 style="margin-top:0;">Feature title</h4></mj-text>
+          <mj-text padding="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus. <a href="#">Read more →</a></mj-text>
+        </mj-column>
+        <mj-column width="30%" padding="8px 8px 0">
+          <mj-text align="center" padding="0" font-size="40px" line-height="1"><div class="bg-primary emoji-block">🍿</div></mj-text>
+        </mj-column>
+        <mj-column width="70%" padding="12px 8px 32px">
+          <mj-text padding="0"><h4 style="margin-top:0;">Video title</h4></mj-text>
+          <mj-text padding="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus. <a href="#">Watch now →</a></mj-text>
+        </mj-column>
+        <mj-column width="30%" padding="8px 8px 0">
+          <mj-text align="center" padding="0" font-size="40px" line-height="1"><div class="bg-secondary emoji-block">🎙</div></mj-text>
+        </mj-column>
+        <mj-column width="70%" padding="12px 8px 32px">
+          <mj-text padding="0"><h4 style="margin-top:0;">Podcast title</h4></mj-text>
+          <mj-text padding="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus. <a href="#">Tune in →</a></mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="container">
+        <mj-column>
+          <mj-text padding-bottom="24px"><h2>Twittersphere</h2></mj-text>
+          <mj-text css-class="tweet" mj-class="gray-44 small" padding-bottom="0" padding-left="20px"><a href="#"><strong>Twitter User</strong></a> <span>@username</span></mj-text>
+          <mj-text css-class="tweet" padding-top="4px" padding-left="20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus gravida.</mj-text>
+          <mj-spacer height="32px"/>
+          <mj-text css-class="tweet" mj-class="gray-44 small" padding-bottom="0" padding-left="20px"><a href="#"><strong>Twitter User</strong></a> <span>@username</span></mj-text>
+          <mj-text css-class="tweet" padding-top="4px" padding-left="20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus gravida.</mj-text>
+          <mj-spacer height="32px"/>
+          <mj-text css-class="tweet" mj-class="gray-44 small" padding-bottom="0" padding-left="20px"><a href="#"><strong>Twitter User</strong></a> <span>@username</span></mj-text>
+          <mj-text css-class="tweet" padding-top="4px" padding-left="20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus gravida.</mj-text>
+          <mj-divider/>
+          <mj-text><h2>Community Conversations</h2></mj-text>
+          <mj-text padding-bottom="0"><h4>Feature title</h4></mj-text>
+          <mj-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus.</mj-text>
+          <mj-text padding-bottom="0"><h4>Feature title</h4></mj-text>
+          <mj-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus.</mj-text>
+          <mj-text padding-bottom="0"><h4>Feature title</h4></mj-text>
+          <mj-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus.</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section css-class="container">
+        <mj-column>
+          <mj-divider/>
+          <mj-text><h2>Community News</h2></mj-text>
+          <mj-text mj-class="large" padding-top="16px" padding-bottom="0" line-height="0">⚡️</mj-text>
+          <mj-text padding-top="0" padding-left="20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus.</mj-text>
+          <mj-text mj-class="large" padding-top="16px" padding-bottom="0" line-height="0">⚡️</mj-text>
+          <mj-text padding-top="0" padding-left="20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus.</mj-text>
+          <mj-text mj-class="large" padding-top="16px" padding-bottom="0" line-height="0">⚡️</mj-text>
+          <mj-text padding-top="0" padding-left="20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac enim pellentesque tellus cursus.</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section padding-top="24px" padding-bottom="64px" css-class="container">
+        <mj-column mj-class="panel-inner bg-gray-95">
+          <mj-text align="center">📣 <a href="mailto:hello@tendermint.com">Let us know</a> if you have Cosmos news you want us to include.</mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-section mj-class="bg-black">
+      <mj-column padding-top="24px" padding-bottom="16px" css-class="container">
+        <mj-image align="center" width="121px" height="24px" src="https://campaign-image.com/zohocampaigns/447316000004146635_1_72.png" alt="Cosmos"/>
+        <mj-text align="center" mj-class="white large" padding="16px 32px">Join the <b>most powerful</b> ecosystem of connected blockchains</mj-text>
+        <mj-button mj-class="btn-contained" href="https://cosmos.network">Learn more</mj-button>
+        <mj-social>
+          <mj-social-element name="cosmos-forum" href="http://forum.cosmos.network/" src="https://campaign-image.com/zohocampaigns/social_icon_forum_outlined_zc_v9_447316000004149286.png" alt="Forum" title="Cosmos Forum">
+            Cosmos Forum
+          </mj-social-element>
+          <mj-social-element name="riot" href="https://riot.im/app/#/group/+cosmos:matrix.org" src="https://campaign-image.com/zohocampaigns/social_icon_riot_outlined_zc_v9_447316000004149286.png" alt="Riot" title="Riot">
+            Riot
+          </mj-social-element>
+          <mj-social-element name="telegram" href="https://t.me/cosmosproject" src="https://campaign-image.com/zohocampaigns/social_icon_telegram_outlined_zc_v9_447316000004149286.png" alt="Telegram" title="Telegram">
+            Telegram
+          </mj-social-element>
+          <mj-social-element name="twitter-noshare" href="http://twitter.com/cosmos" src="https://campaign-image.com/zohocampaigns/social_icon_twitter_outlined_zc_v9_447316000004149286.png" alt="Twitter" title="Twitter">
+            Twitter
+          </mj-social-element>
+          <mj-social-element name="youtube" href="https://www.youtube.com/channel/UC8HFOUdnMnpoWmQMgeKoB3A" src="https://campaign-image.com/zohocampaigns/social_icon_youtube_outlined_zc_v9_447316000004149286.png" alt="YouTube" title="YouTube">
+            YouTube
+          </mj-social-element>
+        </mj-social>
+        <mj-text align="center" padding-top="0"><a href="https://cosmos.network/" title="Cosmos Network" class="white-80">cosmos.network</a></mj-text>
+        <mj-spacer/>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
