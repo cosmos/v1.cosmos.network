@@ -23,10 +23,6 @@ const routes = [
       "/dev/wallet",
       `${hub}/master/hub-overview/overview.html#cosmos-hub-wallets`
     ],
-    [
-      "/developers/wallet",
-      `${hub}/master/hub-overview/overview.html#cosmos-hub-wallets`
-    ],
     ["/docs", `${docs}`],
     [
       "/docs/cosmos-hub/delegator-guide-cli.html",
@@ -137,8 +133,7 @@ const routes = [
     ["/whatiscosmos", "/intro"],
     ["/whatscosmos", "/intro"],
     ["/whitepaper", "/resources/whitepaper"],
-    ["/whitepaper/en-US", "/resources/whitepaper"],
-    ["/developers", "/tools"]
+    ["/whitepaper/en-US", "/resources/whitepaper"]
   ].map(([path, redirect]) => ({ path, redirect })),
   // PAGES
   {
@@ -211,9 +206,9 @@ const routes = [
       },
       {
         path: "all",
-        name: "events-all",
+        name: "page-events-all",
         component: () =>
-          import(/* webpackChunkName: "events-all" */ "./views/EventsAll.vue")
+          import(/* webpackChunkName: "page-events-all" */ "./views/EventsAll.vue")
       },
       {
         path: ":event",
