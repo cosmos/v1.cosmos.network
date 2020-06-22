@@ -30,7 +30,7 @@ Scaling is another open issue for blockchains. Both Ethereum and Bitcoin support
 
 <div class="image"><img src="/images/diagrams/ex_evm_upgrading.png"></div>
 
-Cosmos was designed with developers in mind. It comes with a powerful toolkit based on Tendermint that enables you to easily build decentralized applications. If your application requires sovereignty and flexibility, you can deploy your own blockchain without having to deal with the complicated networking and consensus parts of the software--thanks to Tendermint and its Application-Blockchain Interface (ABCI). If your application doesn't need its own chain and validator set, you can deploy it on Ethermint, which allows you to do everything Ethereum does--but with far greater performance. Finally, if you want to retain full privacy and control over your application, Tendermint enables you to deploy private blockchains. You can learn more in our [developer](/developers) page.
+Cosmos was designed with developers in mind. It comes with a powerful toolkit based on Tendermint that enables you to easily build decentralized applications. If your application requires sovereignty and flexibility, you can deploy your own blockchain without having to deal with the complicated networking and consensus parts of the software--thanks to Tendermint and its Application-Blockchain Interface (ABCI). If your application doesn't need its own chain and validator set, you can deploy it on Ethermint, which allows you to do everything Ethereum does--but with far greater performance. Finally, if you want to retain full privacy and control over your application, Tendermint enables you to deploy private blockchains. You can learn more in our [developer](/tools) page.
 
 ## Decentralized
 

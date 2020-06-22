@@ -20,7 +20,7 @@ header.app-header
           span Ecosystem
         router-link(:to="{ name: 'tools' }" @click.native="close")
           span Tools
-        a(href="https://hub.cosmos.network" @click.native="close" target="_blank" rel="noreferrer noopener")
+        a(href="https://hub.cosmos.network" @click="close" target="_blank" rel="noreferrer noopener")
           span Cosmos Hub
         router-link(:to="{ name: 'ibc' }" @click.native="close")
           span IBC

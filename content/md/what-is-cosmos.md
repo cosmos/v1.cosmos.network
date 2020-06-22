@@ -226,4 +226,4 @@ More than anything, Cosmos is not a product but an **ecosystem** built on a set 
 ### Going Further
 
 - Read the [Cosmos whitepaper](/whitepaper)
-- Start [developing on Cosmos](/developers)
+- Start [developing on Cosmos](/tools)

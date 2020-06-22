@@ -127,7 +127,7 @@
             a(href="https://hub.cosmos.network/ko/delegator-guide-cli.html" target="_blank" rel="noreferrer noopener") 위임자 가이드라인
             a(href="https://hub.cosmos.network/zh/delegator-guide-cli.html" target="_blank" rel="noreferrer noopener") 委托人指南
           li #[strong I have ATOM. How can I secure them? ] #[router-link(to="/atom-protection") Read security tips]
-          li #[strong I'm a blockchain developer. How can I use Cosmos?] #[router-link(:to="{ name: 'developers' }") Go to the Developer Portal]
+          li #[strong I'm a blockchain developer. How can I use Cosmos?] #[router-link(:to="{ name: 'tools' }") Go to the Developer Portal]
           li #[strong Who is building on Cosmos?] #[router-link(:to="{ path: 'ecosystem' }") See projects building on the ecosystem]
           li #[strong Why are mainnet halts considered normal?] #[a(href="https://blog.cosmos.network/the-4-classes-of-faults-on-mainnet-bfabfbd2726c" target="_blank" rel="noreferrer noopener") Learn about mainnet halts]
           li #[strong What can we expect post-launch?] #[a(href="https://blog.cosmos.network/the-3-phases-of-the-cosmos-hub-mainnet-fdff3a68c4c0") ATOM transfers enabled and more]
