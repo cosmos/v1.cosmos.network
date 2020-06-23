@@ -15,7 +15,7 @@
           .resources__item #[a(href="https://docs.cosmos.network" target="_blank" rel="noreferrer noopener") Documentation]
           .resources__item #[a(href="https://godoc.org/github.com/cosmos/cosmos-sdk" target="_blank" rel="noreferrer noopener") API]
           .resources__item #[a(href="https://cosmos.network/rpc" target="_blank" rel="noreferrer noopener") REST docs]
-          .resources__item #[a(href="https://discord.gg/cr7N47p" target="_blank" rel="noreferrer noopener") Developer chat]
+          .resources__item #[a(href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener") Developer chat]
           .resources__item #[a(href="https://forum.cosmos.network/c/cosmos-sdk" target="_blank" rel="noreferrer noopener") Forum]
       .image
         a(href="https://github.com/cosmos/cosmos-sdk" target="_blank" rel="noreferrer noopener")
@@ -84,7 +84,7 @@
         .p The inter-blockchain communication protocol is a reliable & secure inter-module communication protocol that allows blockchains to connect to one another.
         tm-btn(size="lg" value="learn about ibc" color="dark" type="anchor"  href="https://github.com/cosmos/ics/tree/master/ibc" target="_blank" rel="noreferrer noopener").gtm__tools__ibc__learn-about-ibc
         .resources
-          .resources__item #[a(href="https://discord.gg/cr7N47p" target="_blank" rel="noreferrer noopener") Developer chat]
+          .resources__item #[a(href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener") Developer chat]
           .resources__item #[router-link(:to="{ name: 'ibc-signup' }") Get updates]
       .image
         a(href="https://github.com/cosmos/ics" target="_blank" rel="noreferrer noopener")
@@ -103,7 +103,7 @@
         .resources
           .resources__item #[a(href="https://godoc.org/github.com/tendermint/tendermint" target="_blank" rel="noreferrer noopener") API (godocs)]
           .resources__item #[a(href="https://docs.tendermint.com/master/rpc" target="_blank" rel="noreferrer noopener") REST docs]
-          .resources__item #[a(href="https://discord.gg/cr7N47p" target="_blank" rel="noreferrer noopener") Developer chat]
+          .resources__item #[a(href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener") Developer chat]
           .resources__item #[a(href="https://forum.cosmos.network/c/tendermint" target="_blank" rel="noreferrer noopener") Forum]
       .image
         a(href="https://github.com/tendermint/tendermint" target="_blank" rel="noreferrer noopener")

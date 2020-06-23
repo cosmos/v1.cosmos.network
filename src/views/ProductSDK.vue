@@ -100,7 +100,7 @@
       subtitle="Discuss the SDK with the community in the unofficial chat.")
       img(slot="icon" src="~images/sdk/icon-footer-discord.svg" alt="chat")
       tm-btn(value="Chat Now" size="lg" type="anchor"
-        target="_blank" rel="noreferrer noopener" href="https://discord.gg/cr7N47p")
+        target="_blank" rel="noreferrer noopener" href="https://discord.gg/W8trcGV")
 </template>
 
 <script>

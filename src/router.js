@@ -65,7 +65,7 @@ const routes = [
       "https://tutorials.cosmos.network/nameservice/tutorial/02-app-init.html"
     ],
     ["/join-testnet", `${hub}/master/gaia-tutorials/join-testnet.html`],
-    ["/discord", "https://discord.gg/cr7N47p"],
+    ["/discord", "https://discord.gg/W8trcGV"],
     ["/resources/delegator", `${hub}/master/delegators/delegator-faq.html`],
     ["/security", "https://tendermint.com/security"],
     ["/staking", `${hub}/master/validators/overview.html`],

@@ -161,7 +161,7 @@
       subtitle="Have questions? Get them answered here.")
       img(slot="icon" src="~images/sdk/icon-footer-discord.svg" alt="Forum")
       tm-btn(value="Chat now" size="lg" type="anchor"
-        target="_blank" rel="noreferrer noopener" href="https://discord.gg/cr7N47p")
+        target="_blank" rel="noreferrer noopener" href="https://discord.gg/W8trcGV")
 </template>
 
 <script>
@@ -220,7 +220,7 @@ export default {
       },
       {
         title: "Developer Chat",
-        url: "https://discord.gg/cr7N47p",
+        url: "https://discord.gg/W8trcGV",
         icon: "discord-light"
       },
       {
