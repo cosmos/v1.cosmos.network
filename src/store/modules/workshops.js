@@ -81,7 +81,7 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
       "Debug a Cosmos-SDK application: first steps (GDB, Delve, GDBGui, gdlv)",
     host: "Alessio Treglia",
     company: "Cosmos | Tendermint Inc",
-    replay: "",
+    replay: "https://www.youtube.com/watch?v=qnMQDID5HME",
     description: `
 Learn how to effectively debug Cosmos SDK applications. General overview of debuggers and how to configure them to work with Go data types.
 
