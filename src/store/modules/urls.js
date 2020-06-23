@@ -16,7 +16,7 @@ const state = {
   },
   linkedin: "https://www.linkedin.com/company/tendermint/",
   medium: "https://blog.cosmos.network",
-  discord: "https://discord.gg/cr7N47p",
+  discord: "https://discord.gg/W8trcGV",
   reddit: "https://reddit.com/r/cosmosnetwork",
   slideshare: "https://www.slideshare.net/tendermint",
   telegram: "https://t.me/cosmosproject",

@@ -6,9 +6,6 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5abbcc2b-7b81-4bae-b0c0-cf66bab9e758/deploy-status)](https://app.netlify.com/sites/cosmos-network/deploys)
 
-Live: https://cosmos.network <br>
-Staging: https://cosmos-network.netlify.app
-
 ## Run this locally
 
 1. `$ git clone https://github.com/cosmos/cosmos.network.git`

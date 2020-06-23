@@ -75,7 +75,7 @@ export default {
           },
           {
             title: "Discord",
-            url: "https://discord.gg/cr7N47p"
+            url: "https://discord.gg/W8trcGV"
           },
           {
             title: "YouTube",
