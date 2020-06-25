@@ -48,8 +48,8 @@ div
         img.profile-img(src='~assets/images/ibc/team-jae.jpg')
         div.team-profile
           p.name Jae Kwon
-          p.title Co-founder & CEO
-          p.company Tendermint | Cosmos
+          p.title CTO & Founder of Cosmos
+          p.company Tendermint
       li
         img.profile-img(src='~assets/images/ibc/team-christopher.jpg')
         div.team-profile
@@ -91,7 +91,7 @@ div
         div.team-profile
           p.name Joon Yun
           p.title Software Developer
-          p.company Interchain Berlin
+          p.company Tendermint
       li
         img.profile-img(src='~assets/images/ibc/team-haifeng.jpg')
         div.team-profile

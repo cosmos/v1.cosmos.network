@@ -140,6 +140,15 @@ export default {
           twitter: "DeanTribble"
         },
         {
+          id: "host-elizabeth",
+          name: "Elizabeth Binks",
+          company: "Chainsafe",
+          social: {
+            title: "GitHub",
+            url: "https://github.com/noot"
+          }
+        },
+        {
           id: "host-ethan",
           name: "Ethan Frey",
           company: "Confio | CosmWasm",
@@ -242,6 +251,7 @@ export default {
 a
   color #5064FB
   text-decoration none
+  cursor pointer
 
 .center-section
   max-width 64rem
