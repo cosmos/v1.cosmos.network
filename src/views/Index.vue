@@ -42,7 +42,7 @@ div
           template(slot="solution-subtitle") Interblockchain Communication (IBC) is a TCP/IP-like messaging protocol for blockchains.
 
       tm-btn(
-        value="Developer Portal" size="lg" type="link" :to="{ name: 'tools' }"
+        value="Tools" size="lg" type="link" :to="{ name: 'tools' }"
         icon="arrow_forward" icon-pos="right")
 
     tm-section#section-sdk(layout="split" theme="dark")
