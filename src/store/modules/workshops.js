@@ -153,7 +153,7 @@ We also hope to schedule a follow-up workshop to show how to build custom web in
   },
   {
     id: "host-elizabeth",
-    slug: "ethermint-tutorial",
+    slug: "developing-on-ethermint",
     date: "7/21/2020",
     time: "1pm PDT / 4pm EDT / 10pm CEST",
     title: "Developing on Ethermint",
@@ -176,7 +176,7 @@ Preinstalllation requirements: Go 1.14, Node.js, NPM
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
     coverImg: "/images/workshop/code-with-us-workshop-5.jpg",
-    href: "https://cosmos.network/series/code-with-us/custom-tokens-cosmwasm",
+    href: "https://cosmos.network/series/code-with-us/developing-on-ethermint",
     subtitle: "July 21 · Online event",
     dateStart: "7/21/2020",
     dateEnd: "7/21/2020",
