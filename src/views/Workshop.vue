@@ -30,6 +30,7 @@ import MarkdownIt from "markdown-it"
 import { Modal, SeriesSignup } from "@cosmos-ui/vue"
 import TmBtn from "common/TmBtn"
 import TmSection from "common/TmSection"
+import TmContent from "common/TmContent"
 
 export default {
   name: "page-event",
@@ -40,7 +41,8 @@ export default {
     Modal,
     SeriesSignup,
     TmBtn,
-    TmSection
+    TmSection,
+    TmContent
   },
   data: () => ({
     moment: moment,
