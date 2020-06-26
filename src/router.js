@@ -99,6 +99,7 @@ const routes = [
     ["/design/assets", "/assets"],
     ["/design/trademark", "/trademark"],
     ["/dev", "/tools"],
+    ["/developers", "/tools"],
     ["/dev/hackatom", "/events"],
     ["/dev/scaling-eth", "/resources/whitepaper#use-cases"],
     ["/dev/whitepaper", "/resources/whitepaper"],
@@ -194,7 +195,7 @@ const routes = [
   },
   {
     path: "/events",
-    name: "events",
+    name: "",
     component: () =>
       import(/* webpackChunkName: "events" */ "./views/Events.vue"),
     children: [

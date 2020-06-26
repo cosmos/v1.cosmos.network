@@ -13,13 +13,13 @@ Learn how to build a working game with its own internal economy using the Cosmos
 
 ### Host
 
-Billy Rennekamp – Grants Manager, Interchain Foundation.
+Billy Rennekamp – Grants Manager, Interchain Foundation
 
 ### Resources
 
 Get a headstart by familiarizing yourself with the resources you'll be using in this workshop.
 
-&nbsp;&nbsp;• <a href="https://tutorials.cosmos.network/scavenge/tutorial/01-background.html" target="_blank" ref="noreferrer noopener">'Scavenge' tutorial</a>
+- <a href="https://tutorials.cosmos.network/scavenge/tutorial/01-background.html" target="_blank" ref="noreferrer noopener">'Scavenge' tutorial</a>
 
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
@@ -49,14 +49,14 @@ Learn how to change lower level functionality of transactions in the SDK. Be abl
 
 ### Host
 
-Sunny Aggarwal – Researcher, Cosmos | Tendermint Inc.
+Sunny Aggarwal – Researcher, Cosmos | Tendermint Inc
 
 ### Resources
 
 Get a headstart by familiarizing yourself with the resources you'll be using in this workshop.
 
-&nbsp;&nbsp;• <a href="https://github.com/heystraightedge/straightedge/tree/master/x/togglerouter" target="_blank" ref="noreferrer noopener">straightedge/x/togglerouter</a><br>
-&nbsp;&nbsp;• <a href="https://tutorials.cosmos.network/hellochain/" target="_blank" ref="noreferrer noopener">HelloChain tutorial</a>
+- <a href="https://github.com/heystraightedge/straightedge/tree/master/x/togglerouter" target="_blank" ref="noreferrer noopener">straightedge/x/togglerouter</a><br>
+- <a href="https://tutorials.cosmos.network/hellochain/" target="_blank" ref="noreferrer noopener">HelloChain tutorial</a>
 
 🔮 Part of the [*Code with Us*](https://cosmos.network/series/code-with-us) online workshops series."
 `,
@@ -93,7 +93,7 @@ Alessio Treglia – Head of EMEA Partnerships, Cosmos | Tendermint Inc.
 
 Get a headstart by familiarizing yourself with the resources you'll be using in this workshop.
 
-&nbsp;&nbsp;• <a href="https://github.com/cosmos/cosmos-sdk/" target="_blank" ref="noreferrer noopener">cosmos/cosmos-sdk</a>
+- <a href="https://github.com/cosmos/cosmos-sdk/" target="_blank" ref="noreferrer noopener">cosmos/cosmos-sdk</a>
 
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
@@ -123,7 +123,7 @@ Learn how to add more advanced functionality, like minting, burning, and bonding
 
 ### Host
 
-Ethan Frey – CEO / Founder, Confio | CosmWasm.
+Ethan Frey – CEO / Founder, Confio | CosmWasm
 
 ### Resources
 
@@ -136,6 +136,8 @@ We will not be covering the basic structure of the CosmWasm contract in much det
 We will be starting with some example token code that Ethan Frey wrote [cosmwasm-plus](https://github.com/CosmWasm/cosmwasm-plus), explaining the design and how it works. And we will extend those basic contracts to create customized tokens, as an intro into DeFi on CosmWasm.
 
 We also hope to schedule a follow-up workshop to show how to build custom web interfaces (dApps) to interact with the contracts.
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
     coverImg: "/images/workshop/code-with-us-workshop-4.jpg",
     href: "https://cosmos.network/series/code-with-us/custom-tokens-cosmwasm",
@@ -146,6 +148,45 @@ We also hope to schedule a follow-up workshop to show how to build custom web in
       {
         type: "image/jpeg",
         url: "/images/workshop/code-with-us-workshop-4.jpg"
+      }
+    ]
+  },
+  {
+    id: "host-elizabeth",
+    slug: "developing-on-ethermint",
+    date: "7/21/2020",
+    time: "1pm PDT / 4pm EDT / 10pm CEST",
+    title: "Developing on Ethermint",
+    host: "Elizabeth Binks",
+    company: "Chainsafe",
+    replay: "",
+    description: `
+
+Learn how to set up an Ethermint development environment and use Ethereum tooling on Ethermint!
+
+### Host
+
+Elizabeth Binks – Software Developer, Chainsafe
+
+### Resources
+
+Get a headstart by familiarizing yourself with the resources you'll be using in this workshop.
+
+- Repository: <a href="https://github.com/ChainSafe/ethermint" target="_blank" ref="noreferrer noopener">Chainsafe/ethermint</a>
+
+- Preinstalllation requirements: Go 1.14, Node.js, NPM
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-5.jpg",
+    href: "https://cosmos.network/series/code-with-us/developing-on-ethermint",
+    subtitle: "July 21 · Online event",
+    dateStart: "7/21/2020",
+    dateEnd: "7/21/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-5.jpg"
       }
     ]
   }
