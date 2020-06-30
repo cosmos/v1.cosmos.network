@@ -117,7 +117,7 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
     title: "Custom tokens with CosmWasm",
     host: "Ethan Frey",
     company: "Confio | CosmWasm",
-    replay: "",
+    replay: "https://www.youtube.com/watch?v=pm6VX5ueT2k",
     description: `
 Learn how to add more advanced functionality, like minting, burning, and bonding curves to a base ERC20-like contract.
 
