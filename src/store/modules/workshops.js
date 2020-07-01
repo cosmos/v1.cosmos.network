@@ -189,6 +189,45 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
         url: "/images/workshop/code-with-us-workshop-5.jpg"
       }
     ]
+  },
+  {
+    id: "host-marko",
+    slug: "developing-on-ethermint",
+    date: "7/09/2020",
+    time: "1pm PDT / 4pm EDT / 10pm CEST",
+    title: "How to set up a validator and join a network",
+    host: "Marko Baricevic",
+    company: "Interchain GmbH",
+    replay: "",
+    description: `
+
+Learn how to set up an Ethermint development environment and use Ethereum tooling on Ethermint!
+
+### Host
+
+Marko Baricevic – Software Engineer, Interchain GmbH
+
+### Resources
+
+Get a headstart by familiarizing yourself with the resources you'll be using in this workshop.
+
+- Repository: <a href="https://github.com/ChainSafe/ethermint" target="_blank" ref="noreferrer noopener">Chainsafe/ethermint</a>
+
+- Preinstalllation requirements: Go 1.14, Node.js, NPM
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-6.jpg",
+    href: "https://cosmos.network/series/code-with-us/developing-on-ethermint",
+    subtitle: "July 21 · Online event",
+    dateStart: "7/21/2020",
+    dateEnd: "7/21/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-6.jpg"
+      }
+    ]
   }
 ]
 
