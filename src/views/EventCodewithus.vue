@@ -158,6 +158,15 @@ export default {
           }
         },
         {
+          id: "host-marko",
+          name: "Marko Baricevic",
+          company: "Interchain GmbH",
+          social: {
+            title: "GitHub",
+            url: "https://github.com/marbar3778"
+          }
+        },
+        {
           id: "host-sai",
           name: "Sai Krishna Sunkari",
           company: "Cosmic Compass",
