@@ -153,10 +153,10 @@ We also hope to schedule a follow-up workshop to show how to build custom web in
   },
   {
     id: "host-marko",
-    slug: "setting-up-a-validator",
+    slug: "setting-up-a-cosmos-validator",
     date: "7/09/2020",
     time: "9am PDT / 12pm EDT / 6pm CEST",
-    title: "Setting up a validator",
+    title: "Setting up a Cosmos validator",
     host: "Marko Baricevic",
     company: "Interchain GmbH",
     replay: "",
@@ -171,7 +171,8 @@ Marko Baricevic – Software Engineer, Interchain GmbH
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
     coverImg: "/images/workshop/code-with-us-workshop-6.jpg",
-    href: "https://cosmos.network/series/code-with-us/setting-up-a-validator",
+    href:
+      "https://cosmos.network/series/code-with-us/setting-up-a-cosmos-validator",
     subtitle: "July 09 · Online event",
     dateStart: "7/09/2020",
     dateEnd: "7/09/2020",
