@@ -152,6 +152,38 @@ We also hope to schedule a follow-up workshop to show how to build custom web in
     ]
   },
   {
+    id: "host-marko",
+    slug: "setting-up-a-cosmos-validator",
+    date: "7/09/2020",
+    time: "9am PDT / 12pm EDT / 6pm CEST",
+    title: "Setting up a Cosmos validator",
+    host: "Marko Baricevic",
+    company: "Interchain GmbH",
+    replay: "",
+    description: `
+
+Lean how to set up a validator to join a network and how to secure your validator keys using the KMS.
+
+### Host
+
+Marko Baricevic – Software Engineer, Interchain GmbH
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-6.jpg",
+    href:
+      "https://cosmos.network/series/code-with-us/setting-up-a-cosmos-validator",
+    subtitle: "July 09 · Online event",
+    dateStart: "7/09/2020",
+    dateEnd: "7/09/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-6.jpg"
+      }
+    ]
+  },
+  {
     id: "host-elizabeth",
     slug: "developing-on-ethermint",
     date: "7/21/2020",
