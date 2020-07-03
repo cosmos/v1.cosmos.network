@@ -252,17 +252,11 @@ Contributors: Ravali Gangasani, Prashanth Shirmishetty, Dayakar Reddy N
 
 ### Resources
 
-1. Go through/watch the other workshop tutorials, especially the one by Billy Rennekamp - https://cosmos.network/series/code-with-us/scavenger-hunt
-
-2. Do go through the Cosmos SDK (https://github.com/cosmos/cosmos-sdk) to understand and know more about Cosmos, but prior know about Cosmos is not required if you understand how blockchains (POS or POW) work
-
-3. Cosmos Non-fungible Tokens (https://github.com/cosmos/modules/tree/master/incubator/nft) & Cosmos IBC (https://github.com/iqlusioninc/relayer)
-
-4. FreeFlix Media Hub Repo (for blockchain setup)
-(github.com/FreeFlixMedia/freeflix-media-hub/)
-
-5. Modules repo with nfts and xnfts modules
-(github.com/FreeFlixMedia/modules/)
+- Go through/watch the other workshop tutorials, especially the one by <a href="https://cosmos.network/series/code-with-us/scavenger-hunt" target="_blank" ref="noreferrer noopener">Billy Rennekamp</a>
+- Do go through the <a href="https://github.com/cosmos/cosmos-sdk" target="_blank" ref="noreferrer noopener">Cosmos SDK</a> to understand and know more about Cosmos, but prior know about Cosmos is not required if you understand how blockchains (POS or POW) work
+- <a href="https://github.com/cosmos/modules/tree/master/incubator/nft" target="_blank" ref="noreferrer noopener">Cosmos Non-fungible Tokens<a> & <a href="https://github.com/iqlusioninc/relayer" target="_blank" ref="noreferrer noopener">Cosmos IBC</a>
+- <a href="https://github.com/FreeFlixMedia/freeflix-media-hub" target="_blank" ref="noreferrer noopener">FreeFlix Media Hub Repo</a> (for blockchain setup)
+- <a href="https://github.com/FreeFlixMedia/modules/" target="_blank" ref="noreferrer noopener">Modules repo with nfts and xnfts modules</a>
 
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
