@@ -41,7 +41,10 @@ div
         .row-mid
           .row-mid__title #[router-link(:to="{ name: 'series-workshop', params: { workshop: i.slug }}") {{ i.title }}]
         .row-end
-          img(:src="`/profiles/${i.id}.jpg`").row-end__img
+          img(:src="`/profiles/${i.id}.jpg`" v-if="i.id").row-end__img
+          div(v-else-if="i.ids")
+            img(:src="`/profiles/${i.ids[0]}.jpg`" ).row-end__img
+            img(:src="`/profiles/${i.ids[1]}.jpg`" ).row-end__img__overlay
           .row-end__profile
             .row-end__profile__host {{ i.host }}
             .row-end__profile__company {{ i.company }}
@@ -422,6 +425,16 @@ a
         display flex
         justify-content center
         align-items center
+        &__overlay
+          float left
+          width 3rem
+          height 3rem
+          border-radius 50%
+          display flex
+          justify-content center
+          align-items center
+          position relative
+          left -5px
       &__profile
         display flex
         flex-direction column
