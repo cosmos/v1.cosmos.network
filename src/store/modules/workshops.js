@@ -180,7 +180,7 @@ Marko Baricevic – Software Engineer, Interchain GmbH
     coverImg: "/images/workshop/code-with-us-workshop-6.jpg",
     href:
       "https://cosmos.network/series/code-with-us/setting-up-a-cosmos-validator",
-    subtitle: "July 09 · Online event",
+    subtitle: "July 9 · Online event",
     dateStart: "7/09/2020",
     dateEnd: "7/09/2020",
     logo: [
@@ -263,7 +263,7 @@ Contributors: Ravali Gangasani, Prashanth Shirmishetty, Dayakar Reddy N
     coverImg: "/images/workshop/code-with-us-workshop-7.jpg",
     href:
       "https://cosmos.network/series/code-with-us/experiment-with-cross-chain-nft-minting",
-    subtitle: "August 04 · Online event",
+    subtitle: "August 4 · Online event",
     dateStart: "8/04/2020",
     dateEnd: "8/04/2020",
     logo: [
