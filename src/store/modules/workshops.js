@@ -162,11 +162,18 @@ We also hope to schedule a follow-up workshop to show how to build custom web in
     replay: "",
     description: `
 
-Lean how to set up a validator to join a network and how to secure your validator keys using the KMS.
+In this Code with Us session we will be walking through setting up servers to run a cosmos validator. We will discuss the recommended validator setup, sentry node architecture, how to join a network, how to have a secure setup and how to monitor you servers.
 
 ### Host
 
 Marko Baricevic – Software Engineer, Interchain GmbH
+
+### Resources
+
+- [Tendermint Core - Metrics](https://docs.tendermint.com/master/tendermint-core/metrics.html)
+- [Tendermint Core - Validators](https://docs.tendermint.com/master/tendermint-core/validators.html)
+- [Cosmos Hub - Validator FAQ](https://hub.cosmos.network/master/validators/validator-faq.html)
+- [Cosmos Hub - Validator Security](https://hub.cosmos.network/master/validators/security.html)
 
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
