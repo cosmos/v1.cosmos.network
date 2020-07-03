@@ -162,18 +162,25 @@ We also hope to schedule a follow-up workshop to show how to build custom web in
     replay: "",
     description: `
 
-Lean how to set up a validator to join a network and how to secure your validator keys using the KMS.
+In this Code with Us session we will be walking through setting up servers to run a cosmos validator. We will discuss the recommended validator setup, sentry node architecture, how to join a network, how to have a secure setup and how to monitor you servers.
 
 ### Host
 
 Marko Baricevic – Software Engineer, Interchain GmbH
+
+### Resources
+
+- [Tendermint Core - Metrics](https://docs.tendermint.com/master/tendermint-core/metrics.html)
+- [Tendermint Core - Validators](https://docs.tendermint.com/master/tendermint-core/validators.html)
+- [Cosmos Hub - Validator FAQ](https://hub.cosmos.network/master/validators/validator-faq.html)
+- [Cosmos Hub - Validator Security](https://hub.cosmos.network/master/validators/security.html)
 
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
     coverImg: "/images/workshop/code-with-us-workshop-6.jpg",
     href:
       "https://cosmos.network/series/code-with-us/setting-up-a-cosmos-validator",
-    subtitle: "July 09 · Online event",
+    subtitle: "July 9 · Online event",
     dateStart: "7/09/2020",
     dateEnd: "7/09/2020",
     logo: [
@@ -219,6 +226,50 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
       {
         type: "image/jpeg",
         url: "/images/workshop/code-with-us-workshop-5.jpg"
+      }
+    ]
+  },
+  {
+    ids: ["host-sai", "host-sistla"],
+    slug: "experiment-with-cross-chain-nft-minting",
+    date: "8/04/2020",
+    time: "8:30pm IST / 8am PDT / 11am EDT / 5pm CEST",
+    title:
+      "Experiment with cross chain NFT minting & round trip tx with Cosmos IBC",
+    host: "Sai Krishna & Sistla V Abhishek",
+    company: "Cosmic Compass",
+    replay: "",
+    description: `
+
+Dig deep into a media use case of blockchain where you setup a Cosmos SDK based chain, install the NFT module & use Cosmos IBC to mint a custom NFT
+
+### Hosts
+
+- Sai Krishna (CoCo & FreeFlix Media)
+- Sistla V Abhishek (CoCo & FreeFlix Media)
+
+Contributors: Ravali Gangasani, Prashanth Shirmishetty, Dayakar Reddy N
+
+### Resources
+
+- Go through/watch the other workshop tutorials, especially the one by <a href="https://cosmos.network/series/code-with-us/scavenger-hunt" target="_blank" ref="noreferrer noopener">Billy Rennekamp</a>
+- Do go through the <a href="https://github.com/cosmos/cosmos-sdk" target="_blank" ref="noreferrer noopener">Cosmos SDK</a> to understand and know more about Cosmos, but prior know about Cosmos is not required if you understand how blockchains (POS or POW) work
+- <a href="https://github.com/cosmos/modules/tree/master/incubator/nft" target="_blank" ref="noreferrer noopener">Cosmos Non-fungible Tokens<a> & <a href="https://github.com/iqlusioninc/relayer" target="_blank" ref="noreferrer noopener">Cosmos IBC</a>
+- <a href="https://github.com/FreeFlixMedia/freeflix-media-hub" target="_blank" ref="noreferrer noopener">FreeFlix Media Hub Repo</a> (for blockchain setup)
+- <a href="https://github.com/FreeFlixMedia/modules/" target="_blank" ref="noreferrer noopener">Modules repo with nfts and xnfts modules</a>
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-7.jpg",
+    href:
+      "https://cosmos.network/series/code-with-us/experiment-with-cross-chain-nft-minting",
+    subtitle: "August 4 · Online event",
+    dateStart: "8/04/2020",
+    dateEnd: "8/04/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-7.jpg"
       }
     ]
   }
