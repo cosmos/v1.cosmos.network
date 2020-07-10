@@ -159,7 +159,7 @@ We also hope to schedule a follow-up workshop to show how to build custom web in
     title: "Setting up a Cosmos validator",
     host: "Marko Baricevic",
     company: "Interchain GmbH",
-    replay: "",
+    replay: "https://www.youtube.com/watch?v=N8KaORM1UIk",
     description: `
 
 In this Code with Us session we will be walking through setting up servers to run a cosmos validator. We will discuss the recommended validator setup, sentry node architecture, how to join a network, how to have a secure setup and how to monitor you servers.
