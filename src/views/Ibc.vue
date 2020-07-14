@@ -188,8 +188,9 @@ export default {
         h1: "Sign up for IBC updates",
         h2:
           "Get engineering, development and ecosystem updates on IBC (Inter-Blockchain Communciation protocol) - straight to your inbox.",
-        zcld: "16352f88328053f9",
-        zc_formIx: "4ef47fbb86ab6668b78ce576d7aa791940fbf6cd35f5c50c",
+        requestURL: "https://app.mailerlite.com/webforms/submit/y2i9q3",
+        callback: "jQuery183003200065485233239_1594158714190",
+        _: "1594158730789",
         svg: "/images/icons/icon-ibc.svg",
         background:
           'url("/images/background-stars.svg") repeat, linear-gradient(137.58deg, #161931 9.49%, #2D1731 91.06%)'

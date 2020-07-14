@@ -31,16 +31,20 @@ export default {
             h1: "Tools & technology",
             h2:
               "Engineering and development updates on Cosmos SDK, Tendermint, IBC and more.",
-            zcld: "16352f8832a25ec1",
-            zc_formIx: "4ef47fbb86ab6668aa0d5017850d35fbf4ad4b279730a79d",
+            requestURL: "https://app.mailerlite.com/webforms/submit/o0t6d7",
+            callback: "jQuery18307296239382192573_1594158619276",
+            _: "1594158625563",
+            groups: "103455779",
             svg: "/images/icons/icon-window-code.svg"
           },
           {
             h1: "Ecosystem & community",
             h2:
               "General news and updates from the Cosmos ecosystem and community.",
-            zcld: "16352f8832a25f5b",
-            zc_formIx: "4ef47fbb86ab6668aa0d5017850d35fbcd58b642c14f9e39",
+            requestURL: "https://app.mailerlite.com/webforms/submit/o0t6d7",
+            callback: "jQuery18307296239382192573_1594158619276",
+            _: "1594158625563",
+            groups: "103455777",
             svg: "/images/icons/icon-network.svg"
           }
         ]
