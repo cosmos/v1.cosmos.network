@@ -26,8 +26,9 @@ export default {
         h1: "Get Cosmos tools & technology updates",
         h2:
           "Get engineering and development updates on Cosmos SDK, Tendermint Core, IBC and more - straight to your inbox.",
-        zcld: "16352f8832a25ec1",
-        zc_formIx: "4ef47fbb86ab6668aa0d5017850d35fbf4ad4b279730a79d",
+        requestURL: "https://app.mailerlite.com/webforms/submit/u3s3t9",
+        callback: "jQuery1830889145586852685_1594158789750",
+        _: "1594158795317",
         svg: "/images/icons/icon-terminal-window.svg"
       }
     }
