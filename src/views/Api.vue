@@ -25,7 +25,7 @@
   display flex
   justify-content flex-end
   font-size 1rem
-  margin-bottom .5rem
+  margin-bottom 0.5rem
 
 .dropdown
   box-siging border-box
@@ -35,45 +35,45 @@
 select
   font-family inherit
   font-size inherit
-  margin-left .5rem
+  margin-left 0.5rem
   border 1px solid rgba(140, 145, 177, 0.32)
-  background rgba(0,0,0,0)
+  background rgba(0, 0, 0, 0)
   line-height 1.75
 
 input
   font-size inherit
   border 1px solid rgba(140, 145, 177, 0.32)
-  margin-top .25rem
+  margin-top 0.25rem
 
 .input-url
   align-items center
-  gap .5rem
+  gap 0.5rem
   grid-auto-flow column
 
 .input-url__label
-  margin-right .5rem
+  margin-right 0.5rem
 
 .input-url__input
   line-height 1.75
   width 250px
-  padding 0 .25rem
-  margin .5rem .5rem .5rem 0
+  padding 0 0.25rem
+  margin 0.5rem 0.5rem 0.5rem 0
 
 .input-url__button
   font-size inherit
   border 1px solid rgba(140, 145, 177, 0.32)
   background none
   cursor pointer
-  padding 0 .5rem
+  padding 0 0.5rem
   border-radius 4px
   line-height 1.75
-  transition all .25s
+  transition all 0.25s
 
   &:hover
     border 1px solid rgba(140, 145, 177, 0.5)
 
   &:active
-    opacity .5
+    opacity 0.5
 
 #swagger
   min-height 100vh
@@ -111,6 +111,7 @@ export default {
       const version = find(versionList, ["key", v])
       const yaml = (await axios.get(version.url)).data
       const spec = YAML.parse(yaml)
+      spec.schemes = ["https", "http"]
       const dom_id = "#swagger"
       if (host) {
         spec.host = host
