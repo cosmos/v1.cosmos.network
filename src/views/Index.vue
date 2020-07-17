@@ -58,11 +58,10 @@ div
         .desktop
 
     tm-section(layout="split" theme="stars")
-      div(slot="suptitle") #cosmoslaunch
-      div(slot="title") BLASTOFF! The Cosmos Hub Is Live
-      p The Cosmos Hub blockchain launched in March 2019. Learn about the ATOM token and read guides & documentation on the brand-new Cosmos Hub website.
-      tm-btn(size="lg" value="Cosmos Hub" type="anchor"  icon="arrow_forward"
-        icon-pos="right" href="https://hub.cosmos.network" target="_blank" rel="noreferrer noopener")
+      div(slot="title") Cosmos Stargate
+      p Stargate is a set of upgrades that complete the original roadmap laid out in the Cosmos Whitepaper. For the first time ever, Cosmos blockchains will be able to connect with each other using the first standardized protocol for inter-blockchain communication (IBC).
+      tm-btn(size="lg" value="Stargate" type="anchor"  icon="arrow_forward"
+        icon-pos="right" href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener")
       div(slot="image")
         img(src="~assets/images/home/section-launch.svg" alt="Launch")
 
