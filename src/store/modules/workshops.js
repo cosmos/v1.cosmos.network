@@ -230,6 +230,42 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
     ]
   },
   {
+    id: "host-denis",
+    slug: "creating-your-first-cosmos-app",
+    date: "7/31/2020",
+    time: "7am GMT+5 ",
+    title: "Creating your first Cosmos app",
+    host: "Denis Fadeev",
+    company: "Tendermint",
+    replay: "",
+    description: `
+
+At Tendermint, we’ve built Starport, a rapid prototyping tool that lets developers scaffold and launch a Cosmos application in minutes. In this tutorial we will be building a simple poll application based on Cosmos SDK. The app will allow signed in users to create polls (creating a poll will cost tokens), cast votes and see the results in a browser-based UI. We will be using Starport CLI to scaffold the code and launch the app and some JavaScript to wire up the UI. This is a beginner-friendly session that doesn’t require any prior knowledge of Cosmos SDK (only some experience with Go or JS, and a Unix-like console).
+
+### Hosts
+
+- Denis Fadeev - Director of Developer Experience, Tendermint
+
+### Resources
+
+- <a href="https://github.com/tendermint/starport" target="_blank" ref="noreferrer noopener">https://github.com/tendermint/starport</a>
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-8.jpg",
+    href:
+      "https://cosmos.network/series/code-with-us/creating-your-first-cosmos-app",
+    subtitle: "July 31 · Online event",
+    dateStart: "7/31/2020",
+    dateEnd: "7/31/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-8.jpg"
+      }
+    ]
+  },
+  {
     ids: ["host-sai", "host-sistla"],
     slug: "experiment-with-cross-chain-nft-minting",
     date: "8/04/2020",
