@@ -1,7 +1,7 @@
 <template lang="pug">
 div
-  a.launch-banner
-    .launch-banner__title Calling all Cosmonauts! Prepare for #[a(href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener") Stargate testnet], coming soon!
+  a(href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener").launch-banner
+    .launch-banner__title Calling all Cosmonauts! Prepare for #[strong Stargate testnet], coming soon!
 </template>
 
 <style lang="stylus">
@@ -22,7 +22,6 @@ div
   display flex
   justify-content center
   align-items center
-  cursor auto
   &:hover
     color var(--dark-txt)
 
