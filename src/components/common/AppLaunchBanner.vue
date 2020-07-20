@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   a.launch-banner
-    .launch-banner__title Calling all Cosmonauts! Prepare for #[a(href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener") Stargate testnet], coming soonl
+    .launch-banner__title Calling all Cosmonauts! Prepare for #[a(href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener") Stargate testnet], coming soon!
 </template>
 
 <style lang="stylus">
