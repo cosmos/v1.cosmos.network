@@ -198,6 +198,12 @@ export default {
           name: "Valery Litvin",
           company: "Cyber_Devs",
           twitter: "litvintech"
+        },
+        {
+          id: "host-denis",
+          name: "Denis Fadeev",
+          company: "Tendermint",
+          twitter: "fadeev"
         }
       ],
       questions: [
