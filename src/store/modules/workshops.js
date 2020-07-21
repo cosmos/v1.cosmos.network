@@ -233,7 +233,7 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
     id: "host-denis",
     slug: "creating-your-first-cosmos-app",
     date: "7/31/2020",
-    time: "7am GMT+5 ",
+    time: "9am GMT+5",
     title: "Creating your first Cosmos app",
     host: "Denis Fadeev",
     company: "Tendermint",
