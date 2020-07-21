@@ -9,6 +9,8 @@ mixin tm-section-header
       slot(v-else name='project-title')
     .tm-section__goz-wordmark(v-if="$slots['goz-wordmark']")
       slot(v-if name='goz-wordmark')
+    .tm-section__stargate-title(v-if="$slots['stargate-title']")
+      slot(v-if name='stargate-title')
     .tm-section__title(v-if="$slots['title'] || title")
       template(v-if='title') {{ title }}
       slot(v-else name='title')
@@ -72,7 +74,8 @@ export default {
     "layout",
     "overlay",
     "project-title",
-    "goz-wordmark"
+    "goz-wordmark",
+    "stargate-title"
   ]
 }
 </script>
@@ -333,6 +336,14 @@ export default {
     height 4.25rem
     display inline-block
 
+.tm-section__stargate-title
+  font-weight 500
+  font-size 1.1875rem
+  line-height 1.75rem
+  letter-spacing 0.2em
+  color #FFFFFF
+  margin-bottom 2rem
+
 .tm-section--dark, .tm-section--stars
   .tm-btn
     .tm-btn__container:not(.tm-btn--primary)
@@ -361,6 +372,11 @@ export default {
 .tm-section__suptitle + .tm-section__title
 .tm-section__title + .tm-section__subtitle
   margin-top 1rem
+
+.tm-section.tm-section--stars
+  .tm-section__text
+    z-index 1
+    position relative
 
 @media screen and (max-width: 375px)
   .tm-section__image

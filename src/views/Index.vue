@@ -58,12 +58,16 @@ div
         .desktop
 
     tm-section(layout="split" theme="stars")
-      div(slot="title") Cosmos Stargate
-      p Stargate is a set of upgrades that complete the original roadmap laid out in the Cosmos Whitepaper. For the first time ever, Cosmos blockchains will be able to connect with each other using the first standardized protocol for inter-blockchain communication (IBC).
-      tm-btn(size="lg" value="Stargate" type="anchor"  icon="arrow_forward"
+      div(slot="stargate-title") STARGATE
+      div(slot="title") The Internet of Blockchains is on the horizon
+      p Stargate is a set of upgrades that complete the original roadmap laid out in the Cosmos Whitepaper. For the first time ever, Cosmos blockchains will be able to connect with each other.
+      tm-btn(size="lg" value="prepare for testnet" type="anchor"  icon="arrow_forward"
         icon-pos="right" href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener")
       div(slot="image")
-        img(src="~assets/images/home/section-launch.svg" alt="Launch")
+        .phone: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
+        .tablet: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
+        .laptop: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
+        .desktop: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
 
     section-news
     section-logos
@@ -128,13 +132,26 @@ export default {
 <style lang="stylus" scoped>
 @import '~variables'
 
+img.stargate
+  position absolute
+  bottom 0
+  left 180px
+  max-width 59.9375rem
+  height 34.8125rem
+  width unset
+
+.phone
+  img.stargate
+    top 0
+    left 90px
+
 .modal__content
   background black
   width 100%
   line-height 0
   display flex
   align-items center
-  height: 100%
+  height 100%
 
 @media screen and (max-width: 900px)
   .modal__content iframe
