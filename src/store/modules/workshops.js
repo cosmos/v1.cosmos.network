@@ -198,7 +198,7 @@ Marko Baricevic – Software Engineer, Interchain GmbH
     title: "Developing on Ethermint",
     host: "Elizabeth Binks",
     company: "Chainsafe",
-    replay: "",
+    replay: "https://www.youtube.com/watch?v=cH-4Mq-S4BA",
     description: `
 
 Learn how to set up an Ethermint development environment and use Ethereum tooling on Ethermint!
