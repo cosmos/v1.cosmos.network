@@ -58,10 +58,10 @@ div
         .desktop
 
     tm-section(layout="split" theme="stars")
-      div(slot="stargate-title") STARGATE
+      div(slot="stargate-title") stargate
       div(slot="title") The Internet of Blockchains is on the horizon
       p Stargate is a set of upgrades that complete the original roadmap laid out in the Cosmos Whitepaper. For the first time ever, Cosmos blockchains will be able to connect with each other.
-      tm-btn(size="lg" value="prepare for testnet" type="anchor"  icon="arrow_forward"
+      tm-btn(size="lg" value="get ready" type="anchor"  icon="arrow_forward"
         icon-pos="right" href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener")
       div(slot="image")
         .phone: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
@@ -135,14 +135,13 @@ export default {
 img.stargate
   position absolute
   bottom 0
-  left 180px
+  right 24%
   max-width 59.9375rem
   height 34.8125rem
   width unset
 
 .phone
   img.stargate
-    top 0
     left 90px
 
 .modal__content
@@ -152,6 +151,18 @@ img.stargate
   display flex
   align-items center
   height 100%
+
+@media screen and (max-width: 1023px)
+  img.stargate
+    right auto
+    left 24%
+    bottom -10%
+
+@media screen and (max-width: 767px)
+  img.stargate
+    right auto
+    bottom -20%
+    left 10%
 
 @media screen and (max-width: 900px)
   .modal__content iframe

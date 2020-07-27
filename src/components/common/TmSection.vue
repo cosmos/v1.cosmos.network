@@ -113,6 +113,7 @@ export default {
   width 100%
   margin 0 auto
   position relative
+  overflow hidden
   &__container
     position relative
   &:nth-of-type(2n -1)
@@ -337,7 +338,8 @@ export default {
     display inline-block
 
 .tm-section__stargate-title
-  font-weight 500
+  text-transform uppercase
+  font-weight var(--fw-semibold)
   font-size 1.1875rem
   line-height 1.75rem
   letter-spacing 0.2em
