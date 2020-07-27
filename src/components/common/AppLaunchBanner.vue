@@ -1,7 +1,7 @@
 <template lang="pug">
 div
-  a.launch-banner
-    .launch-banner__title New to Cosmos tech? Check out ‘Code with Us’ online workshops. #[router-link(:to="{ name: 'series-code-with-us' }") #[strong Register now]]
+  a(href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener").launch-banner
+    .launch-banner__title Calling all Cosmonauts! Prepare for #[strong Stargate testnet], coming soon!
 </template>
 
 <style lang="stylus">
@@ -22,7 +22,6 @@ div
   display flex
   justify-content center
   align-items center
-  cursor auto
   &:hover
     color var(--dark-txt)
 

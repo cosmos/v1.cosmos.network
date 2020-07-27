@@ -58,13 +58,16 @@ div
         .desktop
 
     tm-section(layout="split" theme="stars")
-      div(slot="suptitle") #cosmoslaunch
-      div(slot="title") BLASTOFF! The Cosmos Hub Is Live
-      p The Cosmos Hub blockchain launched in March 2019. Learn about the ATOM token and read guides & documentation on the brand-new Cosmos Hub website.
-      tm-btn(size="lg" value="Cosmos Hub" type="anchor"  icon="arrow_forward"
-        icon-pos="right" href="https://hub.cosmos.network" target="_blank" rel="noreferrer noopener")
+      div(slot="stargate-title") stargate
+      div(slot="title") The Internet of Blockchains is on the horizon
+      p Stargate is a set of upgrades that complete the original roadmap laid out in the Cosmos Whitepaper. For the first time ever, Cosmos blockchains will be able to connect with each other.
+      tm-btn(size="lg" value="get ready" type="anchor"  icon="arrow_forward"
+        icon-pos="right" href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener")
       div(slot="image")
-        img(src="~assets/images/home/section-launch.svg" alt="Launch")
+        .phone: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
+        .tablet: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
+        .laptop: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
+        .desktop: img(src="~assets/images/home/section-planet.svg" alt="planet").stargate
 
     section-news
     section-logos
@@ -129,13 +132,37 @@ export default {
 <style lang="stylus" scoped>
 @import '~variables'
 
+img.stargate
+  position absolute
+  bottom 0
+  right 24%
+  max-width 59.9375rem
+  height 34.8125rem
+  width unset
+
+.phone
+  img.stargate
+    left 90px
+
 .modal__content
   background black
   width 100%
   line-height 0
   display flex
   align-items center
-  height: 100%
+  height 100%
+
+@media screen and (max-width: 1023px)
+  img.stargate
+    right auto
+    left 24%
+    bottom -10%
+
+@media screen and (max-width: 767px)
+  img.stargate
+    right auto
+    bottom -20%
+    left 10%
 
 @media screen and (max-width: 900px)
   .modal__content iframe

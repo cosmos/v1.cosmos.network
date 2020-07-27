@@ -79,7 +79,8 @@ const routes = [
     ["/validators", `${hub}/master/validators/overview.html`],
     ["/validators/faq", `${hub}/master/validators/validator-faq.html`],
     ["/validators/tutorial", `${hub}/master/validators/overview.html`],
-    ["/wallet", `${hub}/#cosmos-hub-wallets`]
+    ["/wallet", `${hub}/#cosmos-hub-wallets`],
+    ["/roadmap", "https://stargate.cosmos.network"]
   ].map(([path, url]) => ({
     path,
     beforeEnter: () => window.location.assign(url)
@@ -299,12 +300,12 @@ const routes = [
     name: "product-sdk",
     component: ProductSDK
   },
-  {
-    path: "/roadmap",
-    name: "roadmap",
-    component: () =>
-      import(/* webpackChunkName: "roadmap" */ "./views/Roadmap.vue")
-  },
+  // {
+  //   path: "/roadmap",
+  //   name: "roadmap",
+  //   component: () =>
+  //     import(/* webpackChunkName: "roadmap" */ "./views/Roadmap.vue")
+  // },
   {
     path: "/subscribe",
     name: "subscribe",
