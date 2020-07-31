@@ -113,7 +113,7 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
     id: "host-ethan",
     slug: "custom-tokens-cosmwasm",
     date: "2020-06-29",
-    time: "01:00",
+    time: "13:00",
     title: "Custom tokens with CosmWasm",
     host: "Ethan Frey",
     company: "Confio | CosmWasm",
