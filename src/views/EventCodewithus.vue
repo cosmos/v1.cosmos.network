@@ -33,9 +33,8 @@ div
     .schedule-container
       .row(v-for="i in workshops")
         .row-start
-          .row-start__date {{ i.date === "TBC" ? "Date TBC*" :  moment(i.date).format("MMM DD")}}
-          .row-start__time(v-if="moment(i.date) > moment() || !i.replay")  {{ i.time }}
-          .row-start__time(v-else-if="i.date === 'TBC'")
+          .row-start__date {{ moment(i.date).format("MMM DD")}}
+          .row-start__time(v-if="moment(i.date) > moment() || !i.replay")  {{ toTimezone(i.date, i.time) }}
           .row-start__time(v-else)
             a(:href="`${i.replay}`" target="_blank" rel="noreferrer noopener") Watch replay
         .row-mid
@@ -101,7 +100,7 @@ div
 </template>
 
 <script>
-import moment from "moment"
+import moment from "moment-timezone"
 import MarkdownIt from "markdown-it"
 import { mapGetters } from "vuex"
 import { Modal, SeriesSignup } from "@cosmos-ui/vue"
@@ -239,11 +238,25 @@ export default {
       return workshop
     },
     pastWorkshops() {
-      const workshop = this.workshops.filter(e => moment(e.date) <= moment())
+      const workshop = this.workshops
+        .filter(e => moment(e.date) <= moment())
+        .filter(e => Boolean(e.replay))
       return workshop
     }
   },
   methods: {
+    toTimezone(date, time) {
+      return (
+        moment
+          // set base time with PDT
+          // get timezone with i18n API - Intl.DateTimeFormat().resolvedOptions().timeZone
+          // usage: 2020-08-04 08:00
+          .tz(`${date} ${time}`, "America/Los_Angeles")
+          // use client's local time zone
+          .tz(moment.tz.guess())
+          .format("h:mma z")
+      )
+    },
     markdown(value) {
       const md = new MarkdownIt({
         linkify: true,

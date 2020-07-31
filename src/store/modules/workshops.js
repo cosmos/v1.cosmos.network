@@ -2,8 +2,8 @@ const state = [
   {
     id: "host-billy",
     slug: "scavenger-hunt",
-    date: "5/11/2020",
-    time: "10am PDT / 1pm EDT / 7pm CEST",
+    date: "2020-05-11",
+    time: "10:00",
     title: "Scavenger Hunt Tutorial",
     host: "Billy Rennekamp",
     company: "Interchain GmbH",
@@ -38,8 +38,8 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
   {
     id: "host-sunny",
     slug: "its-on-me",
-    date: "5/26/2020",
-    time: "10am PDT / 1pm EDT / 7pm CEST",
+    date: "2020-05-26",
+    time: "10:00",
     title: "“It’s on Me” fee payments & Togglerouter",
     host: "Sunny Aggarwal",
     company: "Cosmos | Tendermint Inc",
@@ -75,8 +75,8 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
   {
     id: "host-alessio",
     slug: "debug-a-cosmos-sdk",
-    date: "6/22/2020",
-    time: "10am PDT / 1pm EDT / 7pm CEST",
+    date: "2020-06-22",
+    time: "10:00",
     title:
       "Debug a Cosmos-SDK application: first steps (GDB, Delve, GDBGui, gdlv)",
     host: "Alessio Treglia",
@@ -112,8 +112,8 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
   {
     id: "host-ethan",
     slug: "custom-tokens-cosmwasm",
-    date: "6/29/2020",
-    time: "1am PDT / 4am EDT / 10am CEST / 1:30pm IST / 4pm CST / 5pm KST/JST",
+    date: "2020-06-29",
+    time: "13:00",
     title: "Custom tokens with CosmWasm",
     host: "Ethan Frey",
     company: "Confio | CosmWasm",
@@ -232,8 +232,8 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
   {
     id: "host-denis",
     slug: "creating-your-first-cosmos-app",
-    date: "7/31/2020",
-    time: "9am GMT+5",
+    date: "2020-07-30",
+    time: "21:00",
     title: "Creating your first Cosmos app",
     host: "Denis Fadeev",
     company: "Tendermint",
@@ -268,8 +268,8 @@ At Tendermint, we’ve built Starport, a rapid prototyping tool that lets develo
   {
     ids: ["host-sai", "host-sistla"],
     slug: "experiment-with-cross-chain-nft-minting",
-    date: "8/04/2020",
-    time: "8:30pm IST / 8am PDT / 11am EDT / 5pm CEST",
+    date: "2020-08-04",
+    time: "08:00",
     title:
       "Experiment with cross chain NFT minting & round trip tx with Cosmos IBC",
     host: "Sai Krishna & Sistla V Abhishek",
