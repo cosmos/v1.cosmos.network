@@ -232,8 +232,8 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
   {
     id: "host-denis",
     slug: "creating-your-first-cosmos-app",
-    date: "2020-07-31",
-    time: "09:00",
+    date: "2020-07-30",
+    time: "21:00",
     title: "Creating your first Cosmos app",
     host: "Denis Fadeev",
     company: "Tendermint",
