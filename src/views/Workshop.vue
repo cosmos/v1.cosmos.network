@@ -7,8 +7,8 @@
     .page-event__heading #[router-link(:to="{ name: 'series-code-with-us'}") Code with Us online workshops]
     .page-event__text
       .page-event__title {{ workshop.title }}
-      .page-event__date {{ workshop.date === "TBC" ? "Date TBC*" :  moment(workshop.date).format("MMM DD")}}
-      .page-event__date(v-if="workshop.time") {{ workshop.time }}
+      .page-event__date {{ moment(workshop.date).format("MMM DD") }}
+      .page-event__date(v-if="workshop.time") {{ toTimezone(workshop.date, workshop.time) }}
     .page-event__btn(v-if="moment(workshop.date) > moment() || workshop.date === 'TBC' || !workshop.replay")
       tm-btn(size="lg" value="sign up now" color="primary" @click.native="openModal(true)")
     .page-event__btn(v-else)
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import moment from "moment"
+import moment from "moment-timezone"
 import { mapGetters } from "vuex"
 import MarkdownIt from "markdown-it"
 import { Modal, SeriesSignup } from "@cosmos-ui/vue"
@@ -67,6 +67,18 @@ export default {
   methods: {
     openModal(bool) {
       this.signup = bool
+    },
+    toTimezone(date, time) {
+      return (
+        moment
+          // set base time with PDT
+          // get timezone with i18n API - Intl.DateTimeFormat().resolvedOptions().timeZone
+          // usage: 2020-08-04 08:00
+          .tz(`${date} ${time}`, "America/Los_Angeles")
+          // use client's local time zone
+          .tz(moment.tz.guess())
+          .format("h:mma z")
+      )
     }
   }
 }
