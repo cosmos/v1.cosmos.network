@@ -237,7 +237,7 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
     title: "Creating your first Cosmos app",
     host: "Denis Fadeev",
     company: "Tendermint",
-    replay: "",
+    replay: "https://www.youtube.com/watch?v=h6Ur_40LB9k",
     description: `
 
 At Tendermint, we’ve built Starport, a rapid prototyping tool that lets developers scaffold and launch a Cosmos application in minutes. In this tutorial we will be building a simple poll application based on Cosmos SDK. The app will allow signed in users to create polls (creating a poll will cost tokens), cast votes and see the results in a browser-based UI. We will be using Starport CLI to scaffold the code and launch the app and some JavaScript to wire up the UI. This is a beginner-friendly session that doesn’t require any prior knowledge of Cosmos SDK (only some experience with Go or JS, and a Unix-like console).
