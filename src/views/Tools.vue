@@ -47,7 +47,7 @@
         .tool-item__inner
           .tool-item__box
             a(href="https://github.com/CosmWasm/cosmwasm" target="_blank" rel="noreferrer noopener")
-              img(src="~assets/brands/color/github-dark.svg" alt="GitHub").tool-item__box__github
+              img(src="~assets/brands/color/github-light.svg" alt="GitHub").tool-item__box__github
             img(src="~/assets/images/tools/tools-cosmwasm.svg" alt="CosmWasm").tool-item__box__img
           .tool-item__content
             .tool-item__title CosmWasm
@@ -56,7 +56,7 @@
             tm-btn(value="learn more" color="link" type="anchor" href="https://www.cosmwasm.com" target="_blank" rel="noreferrer noopener").gtm__tools__smart-contracts__cosmwasm__learn-more
             .tool-item__resources
               .tool-item__resources__item #[a(href="https://t.me/joinchat/AkZriEhk9qcRw5A5U2MapA" target="_blank" rel="noreferrer noopener") Developer chat]
-              .tool-item__resources__item #[a(href="https://www.cosmwasm.com/docs/intro/overview" target="_blank" rel="noreferrer noopener") Documentation]
+              .tool-item__resources__item #[a(href="https://docs.cosmwasm.com" target="_blank" rel="noreferrer noopener") Documentation]
       .tool-item.tool-item-ethermint
         .tool-item__heading Run solidity code on proof of stake
         .tool-item__inner
@@ -376,7 +376,7 @@ export default {
     &-agoric .tool-item__box
       background linear-gradient(90deg, #B12029 0%, #C04A51 100%)
     &-cosmwasm .tool-item__box
-      background linear-gradient(90deg, #CED1DE 0%, #E2E4F1 100%)
+      background linear-gradient(240.92deg, #332F24 0%, #331C1C 26.04%, #331C2C 52.08%, #191133 75.52%, #172633 100%)
     &-ethermint .tool-item__box
       background linear-gradient(90deg, #336699 0%, #CCD9E6 100%)
     &__content
