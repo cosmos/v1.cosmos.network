@@ -61,8 +61,6 @@
           :type="i.type"
           :href="i.href"
           :to="{ name: 'event', params: { event: i.slug }}")
-    tm-box.tm-box--outline
-      div(slot="main") #[strong Want to host your own Cosmos event? ] We can help you start a meetup, host a hackathon, and more. #[a(href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener") Get in touch]
     .cwu-section
       .content
         .text
@@ -72,6 +70,8 @@
         .btn
           tm-btn(value="Get involved" size="lg" color="primary" type="anchor" href="https://cosmos.network/series/code-with-us" target="blank_" rel="noopener noreferrer"
           icon="arrow_forward" icon-pos="right")
+    tm-box.tm-box--outline
+      div(slot="main") #[strong Want to host your own Cosmos event? ] We can help you start a meetup, host a hackathon, and more. #[a(href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener") Get in touch]
 
   tm-section.section-meetup-dark-blue(layout="split" theme="dark")
     div(slot="suptitle") Cosmos Meetups
@@ -358,12 +358,12 @@ export default {
 
 <style lang="stylus" scoped>
 .cwu-section
-  margin-top 4rem
   background-image url('~assets/images/home/section-codewithus.jpg')
   background-size cover
   background-repeat no-repeat
   background-position center center
   border-radius 0.25rem
+  margin-top -1rem
   .content
     padding 4rem
     display grid
@@ -396,6 +396,9 @@ export default {
       align-items center
       justify-content flex-end
 
+.tm-box--outline
+  margin-top 4rem
+
 .note
   margin-top 2rem
   font-size 14px
@@ -411,7 +414,7 @@ export default {
 
 .cosmonauts-img
   position absolute
-  bottom 0
+  bottom -1%
 
 .section-hero-dark-blue
   background url('~images/site/bg-tile-stars.svg'), linear-gradient(133.28deg, #0F0D20 9.49%, #0D0D17 32%, #1E1F48 53.67%, #202854 91.06%)
@@ -660,6 +663,12 @@ export default {
     margin-top 2rem
 
 @media screen and (max-width: 1023px)
+  .cosmonauts-img
+    width 46vw
+    max-height 13rem
+    right -5%
+    bottom -1%
+
   .slide-container
     margin-top 4rem
     margin-bottom -7.2rem
