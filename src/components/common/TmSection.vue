@@ -364,6 +364,11 @@ export default {
 
 .tm-section__suptitle
   color var(--secondary)
+  text-transform uppercase
+  font-weight var(--fw-bold)
+  font-size 1rem
+  letter-spacing var(--tracking-2-wide)
+  line-height 1.25rem
 
 .tm-section__title
   font-size 2rem

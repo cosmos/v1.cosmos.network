@@ -1,7 +1,7 @@
 <template lang="pug">
 .page-community
   tm-section.section-hero-dark-blue.section-hero(theme="dark")
-    div(slot="suptitle").suptitle Community
+    div(slot="suptitle") Community
     h1(slot="title").title Become a star in the Cosmos
     div(slot="subtitle").subtitle Connect with a fast-growing community of developers and innovators all over the world, building the new era of the internet.
     .channels-container
@@ -28,6 +28,7 @@
         .p #[router-link(:to="{ name: 'events-all' }") View past events &rarr;]
     tm-box.tm-box--outline
       div(slot="main") #[strong Want to host your own Cosmos event? ] We can help you start a meetup, host a hackathon, and more. #[a(href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener") Get in touch]
+  
   tm-section(v-else)
     div(slot="title") Upcoming Events
     div(slot="subtitle") Check out the community events featuring or hosted by the Cosmos team. #[router-link(:to="{ name: 'events-all' }") View all events &rarr;]
@@ -62,6 +63,15 @@
           :to="{ name: 'event', params: { event: i.slug }}")
     tm-box.tm-box--outline
       div(slot="main") #[strong Want to host your own Cosmos event? ] We can help you start a meetup, host a hackathon, and more. #[a(href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener") Get in touch]
+    .cwu-section
+      .content
+        .text
+          .text__suptitle Online workshops
+          .text__title Code with Us
+          .text__p Live, interactive workshops, designed to educate and provide real-time practice to developers in the Cosmos community.
+        .btn
+          tm-btn(value="Get involved" size="lg" color="primary" type="anchor" href="https://cosmos.network/series/code-with-us" target="blank_" rel="noopener noreferrer"
+          icon="arrow_forward" icon-pos="right")
 
   tm-section.section-meetup-dark-blue(layout="split" theme="dark")
     div(slot="suptitle") Cosmos Meetups
@@ -126,27 +136,31 @@
         :subtitle="moment(i.publishedAt).format('MMM DD')")
 
   tm-section(layout="split")
+    div(slot="suptitle").suptitle Developers
     div(slot="title") Build a Cosmos Zone
     p Build a sovereign blockchain application in a matter of hours. Connect to the Cosmos Hub once IBC launches. Note that you don’t need ATOM to create a Cosmos Zone.
-    img(slot="image" src="~images/community/community-section-sdk.svg" alt="SDK")
+    img(slot="image" src="~images/community/community-section-sdk-chain.svg" alt="SDK")
     tm-btn(
-      value="Get started" size="lg" type="anchor" href="https://tutorials.cosmos.network/hellochain/tutorial/00-intro.html" target="blank_" rel="noopener noreferrer"
+      value="Install starport" size="lg" type="anchor" href="https://github.com/tendermint/starport#installation" target="blank_" rel="noopener noreferrer"
+      icon="arrow_forward" icon-pos="right")
+    .note #[strong Note:] You don’t need ATOM tokens to create a Cosmos Zone.
+
+  tm-section.section-meetup-dark-blue(layout="split" theme="dark")
+    div(slot="suptitle") Community Contributor Microgrants
+    div(slot="title") Become a Cosmonaut
+    p Apply now to get funding for your contribution to the Cosmos ecosystem, whether development work, hosting an event, research, or creating media.
+    img(slot="image" src="~images/community/community-section-cosmonaut.svg" alt="Cosmonaut").cosmonauts-img
+    tm-btn(
+      value="Get a grant" size="lg" type="anchor" href="https://github.com/interchainio/funding" target="blank_" rel="noopener noreferrer"
       icon="arrow_forward" icon-pos="right")
 
   tm-section(layout="split")
-    div(slot="title") What are ATOM used for?
-    p ATOM is the primary token of the Cosmos Hub blockchain. You can stake your ATOM to a Cosmos Hub validator to passively earn more ATOM. ATOM staked on the Cosmos Hub may be used to vote for on-chain governance proposals. This allows ATOM holders to alter the future of the network.
-    img(slot="image" src="~images/community/community-section-atom.svg" alt="Atom")
+    div(slot="suptitle").suptitle Token Holders
+    div(slot="title") What are ATOM tokens used for?
+    p The ATOM token is the primary token of the Cosmos Hub blockchain. You can stake your ATOMs to a Cosmos Hub validator to passively earn more ATOMs. ATOMs staked on the Cosmos Hub may be used to vote for on-chain governance proposals. This allows ATOM token holders to collectively steer the future of the network.
+    img(slot="image" src="~images/community/community-section-atom-stacks.png" alt="Atom")
     tm-btn(
       value="Learn more" size="lg" type="anchor" href="https://hub.cosmos.network" target="blank_" rel="noopener noreferrer"
-      icon="arrow_forward" icon-pos="right")
-
-  tm-section(layout="split")
-    div(slot="title") Get an ICF grant to build on Cosmos
-    p Cosmos is building an open, distributed network of interoperable blockchains. <b>The Interchain Foundation</b> is supporting teams helping to improve the ecosystem for social good &amp; community, engineering &amp; product, and research.
-    img(slot="image" src="~images/community/community-section-icf.svg" alt="ICF")
-    tm-btn(
-      value="Grants & Bounties" size="lg" type="anchor" href="https://github.com/interchainio/funding" target="blank_" rel="noopener noreferrer"
       icon="arrow_forward" icon-pos="right")
 
   tm-section: .tm-columns
@@ -343,8 +357,61 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.cwu-section
+  margin-top 4rem
+  background-image url('~assets/images/home/section-codewithus.jpg')
+  background-size cover
+  background-repeat no-repeat
+  background-position center center
+  border-radius 0.25rem
+  .content
+    padding 4rem
+    display grid
+    grid-template-columns 80% 20%
+    grid-template-rows 1fr
+    .text
+      max-width 39.6875rem
+      .text__suptitle
+        color var(--secondary)
+        text-transform uppercase
+        font-weight var(--fw-bold)
+        font-size 1rem
+        letter-spacing var(--tracking-2-wide)
+        line-height 1.25rem
+      .text__title
+        margin-top 0.5rem
+        font-weight 500
+        font-size 2rem
+        line-height 2.5rem
+        letter-spacing -0.03em
+        color #FFFFFF
+      .text__p
+        margin-top 1rem
+        font-size 1.125rem
+        line-height 1.6875rem
+        letter-spacing -0.01em
+        color #FFFFFF
+    .btn
+      display flex
+      align-items center
+      justify-content flex-end
+
+.note
+  margin-top 2rem
+  font-size 14px
+  line-height 20px
+  letter-spacing 0.01em
+  color rgba(0, 0, 0, 0.667)
+
+.suptitle
+  color var(--primary-alt)
+
 .subtitle
   max-width 38.25rem
+
+.cosmonauts-img
+  position absolute
+  bottom 0
 
 .section-hero-dark-blue
   background url('~images/site/bg-tile-stars.svg'), linear-gradient(133.28deg, #0F0D20 9.49%, #0D0D17 32%, #1E1F48 53.67%, #202854 91.06%)
@@ -458,12 +525,6 @@ export default {
 
 .section-hero
   padding-top 4rem
-  .suptitle
-    text-transform uppercase
-    font-weight bold
-    font-size 1rem
-    letter-spacing 0.07em
-    line-height 1.25rem
   .title
     font-size 3rem
     line-height 4rem
@@ -591,6 +652,13 @@ export default {
   .tm-card-hz
     max-width unset
 
+@media screen and (max-width: 1200px)
+  .cwu-section .content
+    grid-template-columns auto
+  .cwu-section .content .btn
+    justify-content flex-start
+    margin-top 2rem
+
 @media screen and (max-width: 1023px)
   .slide-container
     margin-top 4rem
@@ -679,6 +747,9 @@ export default {
       display none
 
 @media screen and (max-width: 767px)
+  .cwu-section .content
+    padding 2rem
+
   .container
     flex-direction column
     margin unset

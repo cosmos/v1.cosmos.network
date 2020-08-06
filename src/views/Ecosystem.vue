@@ -28,41 +28,6 @@
       .ecosystem-community__content
         p The community maintains a much larger list of projects that are building on top of Cosmos and Tendermint. Note that we have not officially vetted or contacted these projects for proof.
         tm-btn(type="anchor" href="https://cosmonauts.world" value="View More Projects" target="_blank" rel="noreferrer noopener")
-
-  tm-section
-    div(slot="title") Resources
-    div(slot="subtitle") Here are materials you can use to run your own community meetup, create Cosmos-related content, or build your own Cosmos project.
-    .tm-cards-hz.tm-cards-hz--landscape
-      tm-card-hz(
-        icon="photo"
-        landscape="true"
-        subtitle="Cosmos logos"
-        title="Cosmos Design Kit"
-        href="https://drive.google.com/open?id=1q1b9IhlxGHBG7wRByuBISHULu5o_D3hO")
-      tm-card-hz(
-        icon="photo"
-        landscape="true"
-        subtitle="Tendermint logos"
-        title="Tendermint Design Kit"
-        href="https://drive.google.com/open?id=1rLKHqZvYDJX1nlneYtMnnZDFzhQTD9wM")
-      tm-card-hz(
-        icon="people"
-        landscape="true"
-        subtitle="Speaker headshots and bios"
-        title="Cosmos Speakers Kit"
-        href="https://drive.google.com/open?id=1bPeSP_uakN0sfi3Q71KJZaq20AgO5mlR")
-      tm-card-hz(
-        icon="public"
-        landscape="true"
-        subtitle="Essential Cosmos info for publications"
-        title="Press Kit"
-        :to="{ name: 'presskit' }")
-      tm-card-hz(
-        icon="flare"
-        landscape="true"
-        subtitle="Host your own launch party"
-        title="Launch Party Kit"
-        href="https://drive.google.com/open?id=1ZdpF92qTk70tlPabh4j4_ceE2wtaGItr")
 </template>
 
 <script>
