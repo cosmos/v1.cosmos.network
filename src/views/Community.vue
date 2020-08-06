@@ -756,8 +756,13 @@ export default {
       display none
 
 @media screen and (max-width: 767px)
-  .cwu-section .content
-    padding 2rem
+  .cwu-section
+    margin-top 2rem
+    .content
+      padding 2rem
+
+  .tm-box--outline
+    margin-bottom 2rem
 
   .container
     flex-direction column
