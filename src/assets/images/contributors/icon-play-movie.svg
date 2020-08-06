@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M61 8H3V56H61V8Z" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M3 17H61" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M61 47H3" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M32 8V17" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M32 47V56" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M52 8V17" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M42 8V17" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M22 8V17" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M12 8V17" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M52 47V56" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M42 47V56" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M22 47V56" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M12 47V56" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M27 24L41 32L27 40V24Z" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+</svg>

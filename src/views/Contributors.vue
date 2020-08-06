@@ -3,40 +3,91 @@ div
   tm-section.component__hero__container(theme="dark" layout="split")
     div(slot="suptitle") Contributors
     div(slot="title").title Grab your spacesuit
-    div(slot="subtitle").subtitle Like a Space Program, becoming a Cosmonaut in Cosmos means that you are not only at the forefront of the blockchain space race but you are pioneering the pursuit of blockchain space exploration itself. #[br] #[br]
-    div(slot="subtitle").subtitle Apply for a microgrant for development work, hosting an event, or creating some media.
+    div(slot="subtitle").subtitle Contributors, assemble! Like a Space Program, becoming a Cosmonaut in Cosmos means that you are not only at the forefront of the blockchain space race but you are pioneering the pursuit of blockchain space exploration itself.
     img(slot="image" src="~images/community/community-section-cosmonaut.svg" alt="Cosmonauts").cosmonauts-img
 
   tm-section
+    div(slot="title") Community Contributors Microgrants
+    div(slot="subtitle").section-width Apply for a microgrant for your valued contributions to the prosperity of the Cosmos ecosystem.
+    .grants-section
+      .panel
+        img(src="~/assets/images/contributors/icon-code-editor.svg" alt="code editor icon").panel__icon
+        .panel__title Build something
+        .panel__list
+          .panel__list__item Build an integration
+          .panel__list__item Translate documentation
+          .panel__list__item Create tutorials
+          .panel__list__item Other contributions
+        tm-btn(value="Apply" size="lg" color="primary" type="anchor" href="https://github.com/interchainio/funding" target="blank_" rel="noopener noreferrer").panel__btn
+        .panel__footer
+          .panel__footer__text Applications funded and processed by
+          a(href="https://interchain.io" target="_blank" rel="noreferrer noopener")
+            img(src="/images/logos/icf-horizontal-logo.svg" alt="ICF horizontal logo").panel__footer__logo
+      .panel
+        img(src="~/assets/images/contributors/icon-show.svg" alt="show icon").panel__icon
+        .panel__title Host an event
+        .panel__list
+          .panel__list__item Host a meetup / workshop
+          .panel__list__item Host a conference / hackathon
+          .panel__list__item Create a VR world
+          .panel__list__item Other events
+        tm-btn(value="Apply" size="lg" color="primary" type="anchor" href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform" target="blank_" rel="noopener noreferrer").panel__btn
+        .panel__footer
+          .panel__footer__text Applications funded and processed by
+          a(href="https://www.tendermint.com" target="_blank" rel="noreferrer noopener")
+            img(src="/images/logos/tendermint-logo-horizontal.svg" alt="Tendermint horizontal logo").panel__footer__logo
+      .panel
+        img(src="~/assets/images/contributors/icon-play-movie.svg" alt="play movie icon").panel__icon
+        .panel__title Create media / content
+        .panel__list
+          .panel__list__item Product / marketing video
+          .panel__list__item GIF / animation / meme
+          .panel__list__item Technical blog post
+          .panel__list__item Other media
+        tm-btn(value="Submit" size="lg" color="primary" type="anchor" href="https://docs.google.com/forms/d/e/1FAIpQLSfhrKufDANtlOM66PxLz2HYdGruj5V7WP0oRuG8RvgJIx8kBw/viewform" target="blank_" rel="noopener noreferrer").panel__btn
+        .panel__footer
+          .panel__footer__text Submissions funded and processed by
+          a(href="https://www.tendermint.com" target="_blank" rel="noreferrer noopener")
+            img(src="/images/logos/tendermint-logo-horizontal.svg" alt="Tendermint horizontal logo").panel__footer__logo
+
+    tm-box.tm-box--outline
+      div(slot="main") #[strong Got something else to contribute?] We’d love to hear about it! #[a(href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener") Get in touch with Tendermint].
+
+  tm-section
     div(slot="title") Resources
-    div(slot="subtitle") Here are materials you can use to run your own community meetup, create Cosmos-related content, or build your own Cosmos project.
+    div(slot="subtitle").section-width Here are some materials you can use to run your own community meetup, create Cosmos-related content, or build your own Cosmos project.
     .tm-cards-hz.tm-cards-hz--landscape
       tm-card-hz(
-        icon="photo"
+        icon="img-stack"
+        iconType="svg"
         landscape="true"
         subtitle="Cosmos logos"
         title="Cosmos Design Kit"
         href="https://drive.google.com/open?id=1q1b9IhlxGHBG7wRByuBISHULu5o_D3hO")
       tm-card-hz(
-        icon="photo"
+        icon="img-stack"
+        iconType="svg"
         landscape="true"
         subtitle="Tendermint logos"
         title="Tendermint Design Kit"
         href="https://drive.google.com/open?id=1rLKHqZvYDJX1nlneYtMnnZDFzhQTD9wM")
       tm-card-hz(
-        icon="people"
+        icon="voice-record"
+        iconType="svg"
         landscape="true"
         subtitle="Speaker headshots and bios"
         title="Cosmos Speakers Kit"
         href="https://drive.google.com/open?id=1bPeSP_uakN0sfi3Q71KJZaq20AgO5mlR")
       tm-card-hz(
-        icon="public"
+        icon="news"
+        iconType="svg"
         landscape="true"
         subtitle="Essential Cosmos info for publications"
         title="Press Kit"
         :to="{ name: 'presskit' }")
       tm-card-hz(
-        icon="flare"
+        icon="fireworks"
+        iconType="svg"
         landscape="true"
         subtitle="Host your own launch party"
         title="Launch Party Kit"
@@ -45,11 +96,10 @@ div
 </template>
 
 <script>
-// import moment from "moment-timezone"
-// import { mapGetters } from "vuex"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
 import TmCardHz from "cards/TmCardHz"
+import TmBox from "common/TmBox"
 
 export default {
   name: "contributors",
@@ -57,20 +107,19 @@ export default {
   components: {
     TmSection,
     TmBtn,
-    TmCardHz
+    TmCardHz,
+    TmBox
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-a
-  color #5064FB
-  text-decoration none
-  cursor pointer
-
 .cosmonauts-img
   position absolute
   bottom 0
+
+.section-width
+  max-width 38.25rem
 
 .title
   font-weight 300
@@ -90,4 +139,54 @@ a
   background url('~images/site/bg-tile-stars.svg'), linear-gradient(135deg, rgb(15,13,32,1) 0%, rgb(4,4,5) 25%, rgb(33,34,77) 53%, rgb(68,110,183) 100%)
   background-size 256px 256px, auto
   padding-top 4rem
+
+.tm-box--outline
+  margin-top 4rem
+
+.grants-section
+  display grid
+  grid-template-columns repeat(3, 1fr)
+  gap 2rem
+  margin-top 4rem
+  .panel
+    &__icon
+      width 4rem
+      height 4rem
+    &__title
+      margin-top 1.5rem
+      font-weight 500
+      font-size 1.5rem
+      line-height 2rem
+      letter-spacing -0.02em
+      color #000000
+    &__list
+      margin-top 24px
+      &__item
+        margin-top 0.5rem
+        font-size 1rem
+        line-height 1.5rem
+        color #000000
+    &__btn
+      margin-top 2rem
+    &__footer
+      margin-top 2rem
+      &__text
+        font-size 1rem
+        line-height 1.5rem
+        color rgba(0, 0, 0, 0.667)
+      &__logo
+        margin-top 1rem
+
+@media screen and (max-width: 1023px)
+  .cosmonauts-img
+    display none
+
+  .grants-section
+    grid-template-columns repeat(2, 1fr)
+    grid-row-gap 4rem
+
+@media screen and (max-width: 900px)
+  .grants-section
+    grid-template-columns repeat(1, 1fr)
+    grid-row-gap 6rem
 </style>
