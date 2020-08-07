@@ -48,6 +48,10 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://cosmos.network/contributors</loc>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://cosmos.network/goz</loc>
     <changefreq>daily</changefreq>
   </url>
