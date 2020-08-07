@@ -3,21 +3,21 @@ div
   tm-section.component__hero__container(theme="dark" layout="split")
     div(slot="suptitle") Contributors
     div(slot="title").title Grab your spacesuit
-    div(slot="subtitle").subtitle Contributors, assemble! Like a Space Program, becoming a Cosmonaut in Cosmos means that you are not only at the forefront of the blockchain space race but you are pioneering the pursuit of blockchain space exploration itself.
+    div(slot="subtitle").subtitle Contributors, assemble! Like a Space Program, becoming a Cosmonaut means that you are not only at the forefront of the blockchain space race but you are pushing the boundaries into deep space exploration itself.
     img(slot="image" src="~images/community/community-section-cosmonaut.svg" alt="Cosmonauts").cosmonauts-img
 
   tm-section
     div(slot="title") Community Contributors Microgrants
-    div(slot="subtitle").section-width Apply for a microgrant for your valued contributions to the prosperity of the Cosmos ecosystem.
+    div(slot="subtitle").section-width Apply for a microgrant to kickstart your adventure into the Cosmos.
     .grants-section
       .panel
         img(src="~/assets/images/contributors/icon-code-editor.svg" alt="code editor icon").panel__icon
         .panel__title Build something
-        .panel__list
-          .panel__list__item Build an integration
-          .panel__list__item Translate documentation
-          .panel__list__item Create tutorials
-          .panel__list__item Other contributions
+        ul.panel__list
+          li.panel__list__item Build an integration
+          li.panel__list__item Translate documentation
+          li.panel__list__item Create tutorials
+          li.panel__list__item Other contributions
         tm-btn(value="Apply" size="lg" color="primary" type="anchor" href="https://github.com/interchainio/funding" target="blank_" rel="noopener noreferrer").panel__btn
         .panel__footer
           .panel__footer__text Applications funded and processed by
@@ -26,11 +26,11 @@ div
       .panel
         img(src="~/assets/images/contributors/icon-show.svg" alt="show icon").panel__icon
         .panel__title Host an event
-        .panel__list
-          .panel__list__item Host a meetup / workshop
-          .panel__list__item Host a conference / hackathon
-          .panel__list__item Create a VR world
-          .panel__list__item Other events
+        ul.panel__list
+          li.panel__list__item Host a meetup / workshop
+          li.panel__list__item Host a conference / hackathon
+          li.panel__list__item Create a VR world
+          li.panel__list__item Other events
         tm-btn(value="Apply" size="lg" color="primary" type="anchor" href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform" target="blank_" rel="noopener noreferrer").panel__btn
         .panel__footer
           .panel__footer__text Applications funded and processed by
@@ -39,11 +39,11 @@ div
       .panel
         img(src="~/assets/images/contributors/icon-play-movie.svg" alt="play movie icon").panel__icon
         .panel__title Create media / content
-        .panel__list
-          .panel__list__item Product / marketing video
-          .panel__list__item GIF / animation / meme
-          .panel__list__item Technical blog post
-          .panel__list__item Other media
+        ul.panel__list
+          li.panel__list__item Product / marketing video
+          li.panel__list__item GIF / animation / meme
+          li.panel__list__item Technical blog post
+          li.panel__list__item Other media
         tm-btn(value="Submit" size="lg" color="primary" type="anchor" href="https://docs.google.com/forms/d/e/1FAIpQLSfhrKufDANtlOM66PxLz2HYdGruj5V7WP0oRuG8RvgJIx8kBw/viewform" target="blank_" rel="noopener noreferrer").panel__btn
         .panel__footer
           .panel__footer__text Submissions funded and processed by
@@ -51,7 +51,7 @@ div
             img(src="/images/logos/tendermint-logo-horizontal.svg" alt="Tendermint horizontal logo").panel__footer__logo
 
     tm-box.tm-box--outline
-      div(slot="main") #[strong Got something else to contribute?] We’d love to hear about it! #[a(href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener") Get in touch with Tendermint].
+      div(slot="main") #[strong Got something else to contribute?] We'd love to hear about it! #[a(href="mailto:hello@tendermint.com" target="_blank" rel="noreferrer noopener") Get in touch with Tendermint].
 
   tm-section
     div(slot="title") Resources
@@ -117,6 +117,7 @@ export default {
 .cosmonauts-img
   position absolute
   bottom 0
+  right 5%
 
 .section-width
   max-width 38.25rem
@@ -138,7 +139,7 @@ export default {
 .component__hero__container
   background url('~images/site/bg-tile-stars.svg'), linear-gradient(135deg, rgb(15,13,32,1) 0%, rgb(4,4,5) 25%, rgb(33,34,77) 53%, rgb(68,110,183) 100%)
   background-size 256px 256px, auto
-  padding-top 4rem
+  padding-top 8rem
 
 .tm-box--outline
   margin-top 4rem
@@ -161,11 +162,17 @@ export default {
       color #000000
     &__list
       margin-top 24px
+      display block
+      list-style-image url('/images/icons/icon-rect.svg')
+      margin-left 0
+      margin-right 0
+      padding-left 1.25rem
       &__item
-        margin-top 0.5rem
+        margin-top 0.75rem
         font-size 1rem
         line-height 1.5rem
         color #000000
+        padding-left 0.5rem
     &__btn
       margin-top 2rem
     &__footer
