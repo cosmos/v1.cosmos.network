@@ -123,23 +123,20 @@ export default {
   max-width 38.25rem
 
 .title
+  font-size 3rem
+  line-height 4rem
   font-weight 300
-  font-size 2.5rem
-  line-height 3rem
-  letter-spacing -0.03em
-  color #FFFFFF
 
 .subtitle
-  max-width 38.25rem
   font-size 1.125rem
   line-height 1.6875rem
-  letter-spacing -0.01em
+  letter-spacing var(--tracking-1-tight)
   color #BFBFBF
 
 .component__hero__container
-  background url('~images/site/bg-tile-stars.svg'), linear-gradient(135deg, rgb(15,13,32,1) 0%, rgb(4,4,5) 25%, rgb(33,34,77) 53%, rgb(68,110,183) 100%)
+  background url('~images/site/bg-tile-stars.svg'), linear-gradient(144.85deg,#202854 9.49%,#070811 91.06%)
   background-size 256px 256px, auto
-  padding-top 8rem
+  padding-top 4rem
 
 .tm-box--outline
   margin-top 4rem
@@ -155,10 +152,10 @@ export default {
       height 4rem
     &__title
       margin-top 1.5rem
-      font-weight 500
+      font-weight var(--fw-semibold)
       font-size 1.5rem
       line-height 2rem
-      letter-spacing -0.02em
+      letter-spacing var(--tracking-0)
       color #000000
     &__list
       margin-top 24px

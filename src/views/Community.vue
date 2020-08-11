@@ -138,7 +138,7 @@
   tm-section(layout="split")
     div(slot="suptitle").suptitle Developers
     div(slot="title") Build a Cosmos Zone
-    p Build a sovereign blockchain application in a matter of hours. Connect to the Cosmos Hub once IBC launches. Note that you don’t need ATOM to create a Cosmos Zone.
+    p Get up and running with your own sovereign blockchain application in a matter of minutes. Connect to the Cosmos Hub once IBC launches and join the Internet of Blockchains!
     img(slot="image" src="~images/community/community-section-sdk-chain.svg" alt="SDK")
     tm-btn(
       value="Install starport" size="lg" type="anchor" href="https://github.com/tendermint/starport#installation" target="blank_" rel="noopener noreferrer"
@@ -380,16 +380,14 @@ export default {
         line-height 1.25rem
       .text__title
         margin-top 0.5rem
-        font-weight 500
+        font-weight var(--fw-semibold)
         font-size 2rem
         line-height 2.5rem
-        letter-spacing -0.03em
         color #FFFFFF
       .text__p
         margin-top 1rem
         font-size 1.125rem
         line-height 1.6875rem
-        letter-spacing -0.01em
         color #FFFFFF
     .btn
       display flex
@@ -403,7 +401,7 @@ export default {
   margin-top 2rem
   font-size 14px
   line-height 20px
-  letter-spacing 0.01em
+  letter-spacing var(--tracking-0)
   color rgba(0, 0, 0, 0.667)
 
 .suptitle
@@ -535,7 +533,7 @@ export default {
   .subtitle
     font-size 1.125rem
     line-height 1.6875rem
-    letter-spacing -0.01em
+    letter-spacing var(--tracking-1-tight)
     color #BFBFBF
 
 .wrapper
