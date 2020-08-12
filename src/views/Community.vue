@@ -26,6 +26,7 @@
         .p Please check again later.
         br
         .p #[router-link(:to="{ name: 'events-all' }") View past events &rarr;]
+    section-banner.section-banner
     tm-box.tm-box--outline
       div(slot="main") #[strong Want to host your own Cosmos event? ] We can help you start a meetup, host a hackathon, and more. #[a(href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener") Get in touch]
   
@@ -61,15 +62,7 @@
           :type="i.type"
           :href="i.href"
           :to="{ name: 'event', params: { event: i.slug }}")
-    .cwu-section
-      .content
-        .text
-          .text__suptitle Online workshops
-          .text__title Code with Us
-          .text__p Live, interactive workshops, designed to educate and provide real-time practice to developers in the Cosmos community.
-        .btn
-          tm-btn(value="Get involved" size="lg" color="primary" type="anchor" href="https://cosmos.network/series/code-with-us" target="blank_" rel="noopener noreferrer"
-          icon="arrow_forward" icon-pos="right")
+    section-banner.section-banner
     tm-box.tm-box--outline
       div(slot="main") #[strong Want to host your own Cosmos event? ] We can help you start a meetup, host a hackathon, and more. #[a(href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform?usp=sf_link" target="_blank" rel="noreferrer noopener") Get in touch]
 
@@ -191,6 +184,7 @@ import TmCardTags from "cards/TmCardTags"
 import TmColumn from "common/TmColumn"
 import TmSection from "common/TmSection"
 import TmBox from "common/TmBox"
+import SectionBanner from "sections/SectionBanner"
 import { IconCalendar } from "@cosmos-ui/vue"
 
 const apiKey = process.env.VUE_APP_YOUTUBE_API_KEY
@@ -205,6 +199,7 @@ export default {
     TmColumn,
     TmSection,
     TmBox,
+    SectionBanner,
     IconCalendar
   },
   data: () => ({
@@ -357,42 +352,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.cwu-section
-  background-image url('~assets/images/home/section-codewithus.jpg')
-  background-size cover
-  background-repeat no-repeat
-  background-position center center
-  border-radius 0.25rem
+.section-banner
   margin-top -1rem
-  .content
-    padding 4rem
-    display grid
-    grid-template-columns 80% 20%
-    grid-template-rows 1fr
-    .text
-      max-width 39.6875rem
-      .text__suptitle
-        color var(--secondary)
-        text-transform uppercase
-        font-weight var(--fw-bold)
-        font-size 1rem
-        letter-spacing var(--tracking-2-wide)
-        line-height 1.25rem
-      .text__title
-        margin-top 0.5rem
-        font-weight var(--fw-semibold)
-        font-size 2rem
-        line-height 2.5rem
-        color #FFFFFF
-      .text__p
-        margin-top 1rem
-        font-size 1.125rem
-        line-height 1.6875rem
-        color #FFFFFF
-    .btn
-      display flex
-      align-items center
-      justify-content flex-end
 
 .tm-box--outline
   margin-top 4rem
@@ -653,13 +614,6 @@ export default {
   .tm-card-hz
     max-width unset
 
-@media screen and (max-width: 1200px)
-  .cwu-section .content
-    grid-template-columns auto
-  .cwu-section .content .btn
-    justify-content flex-start
-    margin-top 2rem
-
 @media screen and (max-width: 1023px)
   .cosmonauts-img
     width 46vw
@@ -754,10 +708,8 @@ export default {
       display none
 
 @media screen and (max-width: 767px)
-  .cwu-section
-    margin-top 2rem
-    .content
-      padding 2rem
+  .section-banner
+    margin-top 1.5rem
 
   .tm-box--outline
     margin-bottom 2rem
