@@ -11,6 +11,7 @@
     div(slot="title") Upcoming Events
     div(slot="subtitle") These are community events that we are either hosting or attending.
     cards-event(:events="upcomingEvents")
+    section-banner.section-banner
 
   tm-section(v-if="pastEvents.length > 0")
     div(slot="title") Past Events
@@ -25,6 +26,8 @@ import CardsEvent from "cards/CardsEvent"
 import TmBtn from "common/TmBtn"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
+import SectionBanner from "sections/SectionBanner"
+
 export default {
   name: "page-events-all",
   metaInfo: { title: "All Events" },
@@ -32,7 +35,8 @@ export default {
     CardsEvent,
     TmBtn,
     TmHeader,
-    TmSection
+    TmSection,
+    SectionBanner
   },
   computed: {
     ...mapGetters(["events", "urls", "workshops", "meetup"]),
@@ -101,3 +105,9 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.section-banner
+  margin-top 3rem
+  margin-bottom 3rem
+</style>
