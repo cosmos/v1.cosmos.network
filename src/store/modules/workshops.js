@@ -274,7 +274,7 @@ At Tendermint, we’ve built Starport, a rapid prototyping tool that lets develo
       "Experiment with cross chain NFT minting & round trip tx with Cosmos IBC",
     host: "Sai Krishna & Sistla V Abhishek",
     company: "Cosmic Compass",
-    replay: "",
+    replay: "https://www.youtube.com/watch?v=gYRvxhIUJWo",
     description: `
 
 Dig deep into a media use case of blockchain where you setup a Cosmos SDK based chain, install the NFT module & use Cosmos IBC to mint a custom NFT
@@ -306,6 +306,41 @@ Contributors: Ravali Gangasani, Prashanth Shirmishetty, Dayakar Reddy N
       {
         type: "image/jpeg",
         url: "/images/workshop/code-with-us-workshop-7.jpg"
+      }
+    ]
+  },
+  {
+    id: "host-billy",
+    slug: "front-end-name-service",
+    date: "2020-08-31",
+    time: "10:00",
+    title: "Front End Name Service Application",
+    host: "Billy Rennekamp",
+    company: "Interchain GmbH",
+    replay: "",
+    description: `
+Learn how to build front ends that interact with Cosmos SDK applications. This will take the Name Service application as the running backend and build a front end that will query and interact with the running blockchain.
+
+### Host
+
+Billy Rennekamp – Grants Manager, Interchain Foundation
+
+### Resources
+
+- <a href="https://github.com/okwme/talkshop" target="_blank" ref="noreferrer noopener">Talkshop</a>
+- <a href="https://tutorials.cosmos.network/nameservice/tutorial/00-intro.html" target="_blank" ref="noreferrer noopener">Nameservice - Cosmos SDK Tutorials</a>
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-9.jpg",
+    href: "https://cosmos.network/series/code-with-us/scavenger-hunt",
+    subtitle: "May 11 · Online event",
+    dateStart: "5/11/2020",
+    dateEnd: "5/11/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-9.jpg"
       }
     ]
   }
