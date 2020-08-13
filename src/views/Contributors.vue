@@ -182,8 +182,12 @@ export default {
         margin-top 1rem
 
 @media screen and (max-width: 1023px)
+  /deep/
+    .tm-section__container
+      padding-bottom 0
+
   .cosmonauts-img
-    display none
+    position static
 
   .grants-section
     grid-template-columns repeat(2, 1fr)
