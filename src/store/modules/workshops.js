@@ -314,7 +314,7 @@ Contributors: Ravali Gangasani, Prashanth Shirmishetty, Dayakar Reddy N
     slug: "front-end-name-service",
     date: "2020-08-31",
     time: "10:00",
-    title: "Front End Name Service Application",
+    title: "Front end name service application",
     host: "Billy Rennekamp",
     company: "Interchain GmbH",
     replay: "",
