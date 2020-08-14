@@ -333,10 +333,10 @@ Billy Rennekamp – Grants Manager, Interchain Foundation
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
     coverImg: "/images/workshop/code-with-us-workshop-9.jpg",
-    href: "https://cosmos.network/series/code-with-us/scavenger-hunt",
-    subtitle: "May 11 · Online event",
-    dateStart: "5/11/2020",
-    dateEnd: "5/11/2020",
+    href: "https://cosmos.network/series/code-with-us/front-end-name-service",
+    subtitle: "August 31 · Online event",
+    dateStart: "08/31/2020",
+    dateEnd: "08/31/2020",
     logo: [
       {
         type: "image/jpeg",
