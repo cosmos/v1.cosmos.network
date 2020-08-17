@@ -38,7 +38,7 @@ export default {
 
 .tm-header__suptitle
   margin-bottom 1rem
-  color #46509F
+  color var(--primary-alt)
   font-weight var(--fw-bold)
   font-size 1rem
   line-height 1.25rem

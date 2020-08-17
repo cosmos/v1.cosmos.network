@@ -21,6 +21,8 @@ tm-section
         :key="`post-${i.value.title}`"
         :subtitle="`Published ${hf.date(i.value.isoDate)}`"
         :title="i.value.title")
+
+  section-banner.section-banner
 </template>
 
 <script>
@@ -30,11 +32,14 @@ import { orderBy, reverse } from "lodash"
 import { mapGetters } from "vuex"
 import TmCardHz from "cards/TmCardHz"
 import TmSection from "common/TmSection"
+import SectionBanner from "sections/SectionBanner"
+
 export default {
   name: "section-news",
   components: {
     TmCardHz,
-    TmSection
+    TmSection,
+    SectionBanner
   },
   data: () => ({
     hf: hf
@@ -120,3 +125,8 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.section-banner
+  margin 5rem auto
+</style>

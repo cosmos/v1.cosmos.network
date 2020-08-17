@@ -143,6 +143,10 @@ export default {
                 href: "/community"
               },
               {
+                h1: "Contributors",
+                href: "/contributors"
+              },
+              {
                 h1: "Design & Assets",
                 href: "/design"
               },
