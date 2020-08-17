@@ -144,7 +144,7 @@
     p Apply now to get funding for your contribution to the Cosmos ecosystem, whether development work, hosting an event, research, or creating media.
     img(slot="image" src="~images/community/community-section-cosmonaut.svg" alt="Cosmonaut").cosmonauts-img
     tm-btn(
-      value="Get a grant" size="lg" type="anchor" href="https://github.com/interchainio/funding" target="blank_" rel="noopener noreferrer"
+      value="Get a grant" size="lg" type="link" :to="{ name: 'contributors' }" target="blank_" rel="noopener noreferrer"
       icon="arrow_forward" icon-pos="right")
 
   tm-section(layout="split")

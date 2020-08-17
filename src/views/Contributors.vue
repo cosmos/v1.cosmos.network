@@ -102,7 +102,7 @@ import TmCardHz from "cards/TmCardHz"
 import TmBox from "common/TmBox"
 
 export default {
-  name: "contributors",
+  name: "page-contributors",
   metaInfo: { title: "Contributors" },
   components: {
     TmSection,
