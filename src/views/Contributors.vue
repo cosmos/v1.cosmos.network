@@ -24,7 +24,7 @@ div
           a(href="https://interchain.io" target="_blank" rel="noreferrer noopener")
             img(src="/images/logos/icf-horizontal-logo.svg" alt="ICF horizontal logo").panel__footer__logo
       .panel
-        img(src="~/assets/images/contributors/icon-show.svg" alt="show icon").panel__icon
+        img(src="~/assets/images/contributors/icon-calendar-event.svg" alt="show icon").panel__icon
         .panel__title Host an event
         ul.panel__list
           li.panel__list__item Host a meetup / workshop
@@ -186,6 +186,10 @@ export default {
     .tm-section__container
       padding-bottom 0
 
+  .tm-box--outline
+    margin-top 4rem
+    margin-bottom 5.75rem
+
   .cosmonauts-img
     position static
 
@@ -197,9 +201,4 @@ export default {
   .grants-section
     grid-template-columns repeat(1, 1fr)
     grid-row-gap 6rem
-
-@media screen and (max-width: 767px)
-  .tm-box--outline
-    margin-top 2rem
-    margin-bottom 2rem
 </style>
