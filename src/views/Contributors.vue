@@ -197,4 +197,9 @@ export default {
   .grants-section
     grid-template-columns repeat(1, 1fr)
     grid-row-gap 6rem
+
+@media screen and (max-width: 767px)
+  .tm-box--outline
+    margin-top 2rem
+    margin-bottom 2rem
 </style>
