@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M10 27H16" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M10 39H14" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M10 33H12" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M10 45H12" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M10 51H16" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M32 27H37" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M36 33H44" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M40 39H54" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M36 45H44" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M32 51H37" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M24 20V58" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M10 13H14" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M2 20H62" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M62 6H2V58H62V6Z" stroke="#5064FB" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

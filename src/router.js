@@ -7,6 +7,7 @@ import Index from "./views/Index.vue"
 import Intro from "./views/Intro.vue"
 import ProductSDK from "./views/ProductSDK.vue"
 import Community from "./views/Community.vue"
+import Contributors from "./views/Contributors.vue"
 import Ecosystem from "./views/Ecosystem.vue"
 import Tools from "./views/Tools.vue"
 import Ibc from "./views/Ibc.vue"
@@ -244,6 +245,11 @@ const routes = [
     path: "/community",
     name: "community",
     component: Community
+  },
+  {
+    path: "/contributors",
+    name: "contributors",
+    component: Contributors
   },
   {
     path: "/goz/*",

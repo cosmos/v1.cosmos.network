@@ -2,7 +2,7 @@
 .page-developers
 
   tm-section.section-hero-dark-blue.section-hero(theme="dark")
-    div(slot="suptitle").suptitle Tools
+    div(slot="suptitle") Tools
     h1(slot="title").title What will you build?
     .feature-container.feature-container__sdk
       .text
@@ -74,7 +74,7 @@
               .tool-item__resources__item #[a(href="https://forum.cosmos.network/c/ethermint" target="_blank" rel="noreferrer noopener") Forum]
 
   tm-section(theme="stars")
-    div(slot="suptitle").suptitle Explore the Cosmos
+    div(slot="suptitle") Explore the Cosmos
     h2(slot="title").title Connect to other blockchains
     .feature-container.feature-container__ibc
       .text
@@ -164,13 +164,6 @@ export default {
   letter-spacing var(--tracking-0)
   color var(--dim)
   margin-bottom 4rem
-
-.suptitle
-  text-transform uppercase
-  font-weight var(--fw-bold)
-  font-size 1rem
-  letter-spacing var(--tracking-2-wide)
-  line-height 1.25rem
 
 .title
   margin-bottom 4.5rem
@@ -316,7 +309,7 @@ export default {
 
     .text
       .overline
-        color #46509F
+        color var(--primary-alt)
       .h3
         color #000000
       .p
