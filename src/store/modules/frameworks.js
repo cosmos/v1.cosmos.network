@@ -33,7 +33,7 @@ const state = [
     title: "CosmWasm",
     url: "https://www.cosmwasm.com/",
     img: "/images/logos/logo-cosmwasm.svg",
-    color: "#d9dbe8"
+    color: "#172633"
   }
 ]
 
