@@ -317,7 +317,7 @@ Contributors: Ravali Gangasani, Prashanth Shirmishetty, Dayakar Reddy N
     title: "Front end name service application",
     host: "Billy Rennekamp",
     company: "Interchain GmbH",
-    replay: "",
+    replay: "https://www.youtube.com/watch?v=ooc9ODGxqcA",
     description: `
 Learn how to build front ends that interact with Cosmos SDK applications. This will take the Name Service application as the running backend and build a front end that will query and interact with the running blockchain.
 
