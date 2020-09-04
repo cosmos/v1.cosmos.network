@@ -40,7 +40,6 @@
           :flush="hf.isFlush(hf.optionalImg(i.logo).type)"
           :ended="hf.pastDate(i.dateEnd)"
           :img-src="hf.optionalImg(i.logo).src"
-          :img-bg-src="hf.optionalImg(i.bg).src"
           :key="`event-${i.id}`"
           :subtitle="subtitle(i)"
           :title="i.title"
@@ -55,7 +54,6 @@
           :flush="hf.isFlush(hf.optionalImg(i.logo).type)"
           :ended="hf.pastDate(i.dateEnd)"
           :img-src="hf.optionalImg(i.logo).src"
-          :img-bg-src="hf.optionalImg(i.bg).src"
           :key="`event-${i.id}`"
           :subtitle="subtitle(i)"
           :title="i.title"
@@ -257,9 +255,6 @@ export default {
         .filter(e => !e.featured)
 
       let meetupEvents = this.meetup.meetupEvents.map(e => {
-        // TODO: some created events don't have country and venue
-        // const country = e.event.venue.country
-        // const venue = e.event.venue.name
         return {
           type: "Meetup",
           date: e.event.local_date,
@@ -267,7 +262,6 @@ export default {
           featured: true,
           dateStart: e.event.time,
           dateEnd: e.event.time,
-          // location: `${venue}${country ? ", " + country : ""}`,
           location: "Online event",
           title: e.event.name,
           href: e.event.link,
@@ -318,16 +312,13 @@ export default {
       }
       if (event.dateStart && event.dateEnd) {
         let value = `${this.hf.dates(event.dateStart, event.dateEnd)}`
-        if (
-          event.type === "Webinar" ||
-          event.type === "AMA" ||
-          event.type === "Podcast"
-        ) {
+        if (event.type) {
           return `${value} · ${event.type}`
         }
-        if (event.location) {
-          return (value += " · " + event.location)
-        }
+        //- TODO: uncomment to use event.location (post-covid)
+        //- if (event.location) {
+        //-   return (value += " · " + event.location)
+        //- }
         return value
       }
       return `TBD · ${event.location}`
