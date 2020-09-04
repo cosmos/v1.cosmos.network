@@ -6,12 +6,14 @@ Airtable.configure({
   endpointUrl: "https://api.airtable.com",
   apiKey: `${apiKey}`
 })
+
 let base = Airtable.base("app6cmf6dU89OHtUP")
 
 let gatherRecords = function(commit, baseName, mutationName) {
   base(baseName)
     .select()
-    .firstPage((err, records) => {
+    // firstPage() returns first 100 of records in each request
+    .all((err, records) => {
       if (err) {
         return
       }
