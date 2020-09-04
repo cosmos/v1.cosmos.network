@@ -7,14 +7,12 @@
   .page-event__container: .page-event__container-padding
     .page-event__text
       .page-event__title {{ conf.title }}
-
-      .page-event__location(v-if="venue.includes('Online')") Online event
-      .page-event__location(v-else) #[a(:href="googleMap" target="_blank" rel="noreferrer noopener") {{ venue }}] in {{ conf.location }}
-
+      .page-event__location {{ conf.type }}
+      //- TODO: uncomment to use event location
+      //- .page-event__location #[a(:href="googleMap" target="_blank" rel="noreferrer noopener") {{ venue }}] in {{ conf.location }}
       .page-event__date
         template(v-if="conf.dateStart") {{ hf.dates(conf.dateStart, conf.dateEnd) }}
         template(v-else) {{ conf.type }} on TBD
-
     .page-event__btns
       tm-btn(type="anchor" :href="conf.url" value="join event"
         target="_blank" rel="noreferrer noopener" icon="arrow_forward" icon-pos="right" v-if="conf.url")

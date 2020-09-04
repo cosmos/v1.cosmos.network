@@ -5,7 +5,6 @@
     :flush="hf.isFlush(hf.optionalImg(i.logo).type)"
     :ended="hf.pastDate(i.dateEnd)"
     :img-src="hf.optionalImg(i.logo).src"
-    :img-bg-src="hf.optionalImg(i.bg).src"
     :key="`event-${i.id}`"
     :subtitle="subtitle(i)"
     :title="i.title"
@@ -32,16 +31,12 @@ export default {
       }
       if (event.dateStart && event.dateEnd) {
         let value = `${this.hf.dates(event.dateStart, event.dateEnd)}`
-        if (
-          event.type === "Webinar" ||
-          event.type === "AMA" ||
-          event.type === "Podcast"
-        ) {
+        if (event.type) {
           return `${value} · ${event.type}`
         }
-        if (event.location) {
-          return (value += " · " + event.location)
-        }
+        // if (event.location) {
+        //   return (value += " · " + event.location)
+        // }
         return value
       }
       return `TBD · ${event.location}`
