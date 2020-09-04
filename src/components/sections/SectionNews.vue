@@ -7,9 +7,8 @@ tm-section
         v-if="i.type === 'conference'"
         :flush="hf.isFlush(hf.optionalImg(i.value.logo).type)"
         :img-src="hf.optionalImg(i.value.logo).src"
-        :img-bg-src="hf.optionalImg(i.value.bg).src"
         :key="`event-${i.value.id}`"
-        :subtitle="`${hf.dates(i.value.dateStart, i.value.dateEnd)} · ${i.value.location}`"
+        :subtitle="`${hf.dates(i.value.dateStart, i.value.dateEnd)} · ${i.value.type}`"
         :title="i.value.title"
         :href="i.value.link ? i.value.link : false"
         :to="{ name: 'event', params: { event: i.value.slug }}")
