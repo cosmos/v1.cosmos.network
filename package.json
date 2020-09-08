@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@cosmos-ui/vue": "^0.34.0",
-    "airtable": "0.5.6",
+    "airtable": "^0.9.0",
     "axios": "^0.19.0",
     "cookieconsent": "^3.1.0",
     "disable-scroll": "0.4.0",
@@ -78,8 +78,7 @@
     "textlint-rule-stop-words": "1.0.3",
     "tiny-cookie": "^2.3.1",
     "vue-lazyload": "1.2.6",
-    "vue-template-compiler": "^2.6.10",
-    "vuepress": "0.14.8"
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,

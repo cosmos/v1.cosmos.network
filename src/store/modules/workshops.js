@@ -343,6 +343,50 @@ Billy Rennekamp – Grants Manager, Interchain Foundation
         url: "/images/workshop/code-with-us-workshop-9.jpg"
       }
     ]
+  },
+  {
+    id: "host-kate",
+    slug: "building-a-composable-defi-contract",
+    date: "2020-09-11",
+    time: "08:30",
+    title: "Building a Composable DeFi Contract",
+    host: "Kate Sills",
+    company: "Agoric",
+    replay: "",
+    description: `
+
+Dive into DeFi on the Agoric smart contract platform. We will walk you through building an “over-the-counter” market maker, inspired by <a href="https://medium.com/dragonfly-research/unbundling-uniswap-the-future-of-on-chain-market-making-1c7d6948d570" target="_blank" ref="noreferrer noopener">this article</a>. The example introduces the key concepts of safe smart contracts on Agoric, and shows how to combine DeFi legos to rapidly produce a new DeFi dapp.
+
+### Hosts
+
+- Kate Sills - Software Engineer, Agoric
+
+### Resources
+
+- Developer documentation: <a href="https://agoric.com/documentation/getting-started/" target="_blank" ref="noreferrer noopener">https://agoric.com/documentation/getting-started/</a>
+- Github repository: <a href="https://github.com/Agoric/agoric-sdk" target="_blank" ref="noreferrer noopener">https://github.com/Agoric/agoric-sdk</a>
+- The article that inspired the example: <a href="https://medium.com/dragonfly-research/unbundling-uniswap-the-future-of-on-chain-market-making-1c7d6948d570" target="_blank" ref="noreferrer noopener">https://medium.com/dragonfly-research/unbundling-uniswap-the-future-of-on-chain-market-making-1c7d6948d570</a>
+
+### Installation
+
+- Follow the <a href="https://agoric.com/documentation/getting-started/before-using-agoric.html" target="_blank" ref="noreferrer noopener">Before Using Agoric</a> instructions in the <a href="https://agoric.com/documentation/getting-started/" target="_blank" ref="noreferrer noopener">getting started</a>.
+- Follow the <a href="https://agoric.com/documentation/getting-started/start-a-project.html" target="_blank" ref="noreferrer noopener">Starting a Project</a> instructions in the <a href="https://agoric.com/documentation/getting-started/" target="_blank" ref="noreferrer noopener">getting started</a>, just to make sure everything is wired up correctly
+- Reach out to Agoric in our KeyBase support channel: <a href="https://keybase.io/team/agoric.support#general" target="_blank" ref="noreferrer noopener">https://keybase.io/team/agoric.support#general</a>
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-10.jpg",
+    href:
+      "https://cosmos.network/series/code-with-us/building-a-composable-defi-contract",
+    subtitle: "September 11 · Workshop",
+    dateStart: "9/11/2020",
+    dateEnd: "9/11/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-10.jpg"
+      }
+    ]
   }
 ]
 
