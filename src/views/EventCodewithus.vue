@@ -203,6 +203,12 @@ export default {
           name: "Denis Fadeev",
           company: "Tendermint",
           twitter: "fadeev"
+        },
+        {
+          id: "host-kate",
+          name: "Kate Sills",
+          company: "Agoric",
+          twitter: "kate_sills"
         }
       ],
       questions: [
