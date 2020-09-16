@@ -352,7 +352,7 @@ Billy Rennekamp – Grants Manager, Interchain Foundation
     title: "Building a Composable DeFi Contract",
     host: "Kate Sills",
     company: "Agoric",
-    replay: "",
+    replay: "https://www.youtube.com/watch?v=faxrecQgEio",
     description: `
 
 Dive into DeFi on the Agoric smart contract platform. We will walk you through building an “over-the-counter” market maker, inspired by <a href="https://medium.com/dragonfly-research/unbundling-uniswap-the-future-of-on-chain-market-making-1c7d6948d570" target="_blank" ref="noreferrer noopener">this article</a>. The example introduces the key concepts of safe smart contracts on Agoric, and shows how to combine DeFi legos to rapidly produce a new DeFi dapp.
