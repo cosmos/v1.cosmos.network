@@ -26,8 +26,8 @@ let gatherRecords = function(commit, baseName, mutationName) {
 const state = {
   media: [],
   videos: [],
-  events: [],
-  ecosystem: []
+  events: []
+  // ecosystem: []
 }
 
 const actions = {
@@ -39,10 +39,10 @@ const actions = {
   },
   initCommunityEvents({ commit }) {
     gatherRecords(commit, "events", "addCommunityEvent")
-  },
-  initCommunityEcosystem({ commit }) {
-    gatherRecords(commit, "ecosystem", "addCommunityProject")
   }
+  // initCommunityEcosystem({ commit }) {
+  //   gatherRecords(commit, "ecosystem", "addCommunityProject")
+  // }
 }
 
 const mutations = {
@@ -54,10 +54,10 @@ const mutations = {
   },
   addCommunityEvent(state, value) {
     state.events.push(value.fields)
-  },
-  addCommunityProject(state, value) {
-    state.ecosystem.push(value.fields)
   }
+  // addCommunityProject(state, value) {
+  //   state.ecosystem.push(value.fields)
+  // }
 }
 
 export default { state, actions, mutations }
