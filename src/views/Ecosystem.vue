@@ -11,14 +11,18 @@
 
     .grid-container
       .grid-item(v-for="item in apps")
-        a(:href="item.website" target="_blank" rel="noreferrer noopener").name {{ item.name }}
-        code.status(v-if="!item.status || item.status !== '?'") {{ item.status }}
+        .name
+          a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website == undefined") {{ item.name }}
+          div(v-else) {{ item.name }}
+        .status(v-if="!item.status || item.status !== '?'") {{ item.status }}
         .category(v-if="!item.category || item.category !== '?'") {{ item.category }}
         .list
-          a(:href="item.github" target="_blank" rel="noreferrer noopener" v-if="item.github !== 'x'")
-            img(src="~assets/brands/color/github.svg" alt="GitHub").logo
+          a(:href="item.docs" target="_blank" rel="noreferrer noopener")
+            img(src="~assets/brands/white/docs.svg" alt="Docs" v-if="item.docs !== 'x'").logo
+          a(:href="item.github" target="_blank" rel="noreferrer noopener")
+            img(src="~assets/brands/color/github.svg" alt="GitHub" v-if="item.github !== 'x'").logo
           a(:href="item.chat" target="_blank" rel="noreferrer noopener")
-            img(src="~assets/brands/color/telegram.svg" alt="Chat").logo
+            img(src="~assets/brands/white/chat.svg" alt="Chat" v-if="item.chat !== 'x'").logo
           a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-if="item.twitter !== 'x'")
             img(src="~assets/brands/color/twitter.svg" alt="Twitter").logo
 
@@ -43,6 +47,9 @@ export default {
     ...mapGetters(["ecosystem"]),
     apps() {
       if (this.ecosystem.apps.length > 0) {
+        // let projects = this.ecosystem.apps.filter(
+        //   e => e.status !== "Deprecated"
+        // )
         let projects = this.ecosystem.apps
         return orderBy(projects, i => i.name.toLowerCase(), "asc")
       } else {
@@ -74,8 +81,7 @@ export default {
 .name
   font-weight bold
 
-code
-  font-family monospace
+.status
   font-size 0.875rem
 
 .category
