@@ -1,7 +1,6 @@
 /* eslint-disable */
 import Router from "vue-router"
 import urls from "./store/modules/urls.js"
-import NewsletterSupernova from "./views/NewsletterSupernova.vue"
 import Newsletters from "./views/Newsletters.vue"
 import Index from "./views/Index.vue"
 import Intro from "./views/Intro.vue"
@@ -408,10 +407,6 @@ const routes = [
     name: "ibc-signup",
     component: () =>
       import(/* webpackChunkName: "404" */ "./views/NewslettersSignupIbc.vue")
-  },
-  {
-    path: "/newsletter/supernova",
-    component: NewsletterSupernova
   },
   {
     path: "/rpc",
