@@ -209,6 +209,18 @@ export default {
           name: "Kate Sills",
           company: "Agoric",
           twitter: "kate_sills"
+        },
+        {
+          id: "host-miguel",
+          name: "Miguel Dingli",
+          company: "Simply VC",
+          twitter: "MiguelDingli"
+        },
+        {
+          id: "host-shaun",
+          name: "Shaun Conway",
+          company: "ixo",
+          twitter: "ixoworld"
         }
       ],
       questions: [
