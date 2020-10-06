@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   a(href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener").launch-banner
-    .launch-banner__title Calling all Cosmonauts! Prepare for #[strong Stargate testnet], coming soon!
+    .launch-banner__title Looking forward to HackAtom V? Brush up on your skills with #[strong Stargate testnet]
 </template>
 
 <style lang="stylus">
