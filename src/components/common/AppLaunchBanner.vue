@@ -1,13 +1,8 @@
 <template lang="pug">
 div
-  a(href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener").launch-banner
-    .launch-banner__title Looking forward to HackAtom V? Brush up on your skills with #[strong Stargate testnet]
+  .launch-banner
+    .launch-banner__title Show off your skills with #[a(href="https://stargate.cosmos.network" target="_blank" rel="noreferrer noopener") #[strong Stargate testnet] ] and win prizes in #[a(href="https://five.hackatom.org" target="_blank" rel="noreferrer noopener") #[strong HackAtom V] ]
 </template>
-
-<style lang="stylus">
-.launch-banner
-  background linear-gradient(90deg,rgb(35, 38, 82),rgba(105, 68, 183, 0.3))
-</style>
 
 <style lang="stylus" scoped>
 @import '~variables'
@@ -15,8 +10,9 @@ div
 .launch-banner
   width 100%
   color var(--dark-txt)
+  background linear-gradient(90deg,#bf513f,#641179)
   position absolute
-  top 4rem
+  top 0
   left 0
   padding 0.75rem var(--pad320)
   display flex
@@ -32,12 +28,12 @@ div
   strong
     font-weight var(--fw-semibold)
     color #fff
-  &:after
-    font-family 'Material Icons'
-    content '\e5c8'
-    padding-left 0.3rem
-    vertical-align bottom
-    font-size 1.1em
+  // &:after
+  //   font-family 'Material Icons'
+  //   content '\e5c8'
+  //   padding-left 0.3rem
+  //   vertical-align bottom
+  //   font-size 1.1em
 
 @media screen and (min-width:768px)
   .launch-banner
