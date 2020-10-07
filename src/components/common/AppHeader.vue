@@ -115,7 +115,7 @@ export default {
   transform translateY(-100%)
 
 .app-header
-  position fixed
+  position sticky
   top 0
   left 0
   z-index var(--z-app-header)
