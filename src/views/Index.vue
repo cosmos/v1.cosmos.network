@@ -133,8 +133,13 @@ export default {
 @import '~variables'
 
 /deep/
-.launch-banner
-  top 4rem
+  .launch-banner
+    top 4rem
+
+/deep/
+  @media screen and (max-width: 768px)
+    .tm-section__text
+      margin-top 8rem
 
 img.stargate
   position absolute

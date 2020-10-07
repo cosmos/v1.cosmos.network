@@ -158,7 +158,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
 .h4
   400
   font-size 1.5rem
