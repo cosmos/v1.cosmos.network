@@ -200,12 +200,11 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-.launch-banner
-  background linear-gradient(90deg, #232652, rgba(48, 24, 99, 0.3))
-</style>
-
 <style lang="stylus" scoped>
+/deep/
+.launch-banner
+  top 4rem
+
 a
   color var(--secondary)
 

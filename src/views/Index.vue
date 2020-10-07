@@ -6,7 +6,7 @@ div
   div
     tm-section#section-hero(theme="dark" layout="hero")
       app-launch-banner
-      div(slot="suptitle" :style="`marginTop: 8rem`") The foundation for a new token economy
+      div(slot="suptitle") The foundation for a new token economy
       div(slot="title")
         .phone Join the #[strong most powerful] ecosystem of connected blockchains
         .tablet.laptop.desktop Join the #[strong most {{ adjectiveCurrent }}] #[br] ecosystem of connected blockchains
@@ -131,6 +131,10 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~variables'
+
+/deep/
+.launch-banner
+  top 4rem
 
 img.stargate
   position absolute

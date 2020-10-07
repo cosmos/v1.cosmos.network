@@ -1,6 +1,7 @@
 <template lang="pug">
 .tm-page
   tm-header#sdk-header
+    app-launch-banner
     div(slot="project-title") SDK
     div(slot="title") The world's most used framework for building blockchains
     tm-btn(value="Cosmos SDK Docs" type="anchor" href="https://docs.cosmos.network" target="_blank" rel="noreferrer noopener")
@@ -106,6 +107,7 @@
 <script>
 import hf from "scripts/helpers"
 import { mapGetters } from "vuex"
+import AppLaunchBanner from "common/AppLaunchBanner"
 import TmBtn from "common/TmBtn"
 import TmCardIcon from "cards/TmCardIcon"
 import TmCardHz from "cards/TmCardHz"
@@ -122,6 +124,7 @@ export default {
     title: "Cosmos SDK"
   },
   components: {
+    AppLaunchBanner,
     TmBtn,
     TmCardIcon,
     TmCardHz,
@@ -158,6 +161,19 @@ export default {
 
 <style lang="stylus">
 @require '~variables'
+
+/deep/
+.launch-banner
+  top 4rem
+
+.tm-header
+  padding-top 4rem
+
+.tm-header__text
+  margin-top 4rem
+
+.tm-header__container
+  position relative
 
 @media screen and (min-width: 768px)
   #section-sdk-cta

@@ -1,7 +1,7 @@
 <template lang="pug">
 .page-developers
-
   tm-section.section-hero-dark-blue.section-hero(theme="dark")
+    app-launch-banner
     div(slot="suptitle") Tools
     h1(slot="title").title What will you build?
     .feature-container.feature-container__sdk
@@ -117,6 +117,7 @@
 </template>
 
 <script>
+import AppLaunchBanner from "common/AppLaunchBanner"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBox from "common/TmBox"
@@ -128,6 +129,7 @@ export default {
     title: "Tools"
   },
   components: {
+    AppLaunchBanner,
     TmHeader,
     TmSection,
     TmBox,
