@@ -7,7 +7,7 @@ tm-section
         v-if="i.type === 'conference'"
         :flush="hf.isFlush(hf.optionalImg(i.value.logo).type)"
         :img-src="hf.optionalImg(i.value.logo).src"
-        :key="`event-${i.value.id}`"
+        :key="i.value.id"
         :subtitle="`${hf.dates(i.value.dateStart, i.value.dateEnd)} · ${i.value.type}`"
         :title="i.value.title"
         :href="i.value.link ? i.value.link : false"
