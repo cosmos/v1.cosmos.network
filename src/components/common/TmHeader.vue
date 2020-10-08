@@ -28,7 +28,6 @@ export default {
 <style lang="stylus">
 .tm-header
   background var(--app-fg)
-  padding-top 8vh
 
 .tm-header__container
   padding var(--pad320)

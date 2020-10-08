@@ -1,8 +1,7 @@
 <template lang="pug">
 div
   tm-section.section-hero-star-color(theme="dark" layout="hero")
-    app-launch-banner
-    div(slot="suptitle" :style="`marginTop: 8rem`") Coming soon &#x2026;
+    div(slot="suptitle") Coming soon &#x2026;
     div(slot="title")
       .phone Inter-Blockchain Communication
       .tablet.laptop.desktop Inter-Blockchain Communication
@@ -155,7 +154,6 @@ div
 
 <script>
 import { mapGetters } from "vuex"
-import AppLaunchBanner from "common/AppLaunchBanner"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
@@ -167,7 +165,6 @@ export default {
   name: "page-ibc",
   metaInfo: { title: "Inter-Blockchain Communication" },
   components: {
-    AppLaunchBanner,
     TmHeader,
     TmSection,
     TmBtn,
@@ -199,11 +196,6 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-.launch-banner
-  background linear-gradient(90deg, #232652, rgba(48, 24, 99, 0.3))
-</style>
 
 <style lang="stylus" scoped>
 a

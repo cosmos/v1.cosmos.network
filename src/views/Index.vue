@@ -5,8 +5,7 @@ div
       iframe(width="100%" height="510" src="https://www.youtube.com/embed/Eb8xkDi_PUg?autoplay=1&controls=1&rel=0&modestbranding=1&fs=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
   div
     tm-section#section-hero(theme="dark" layout="hero")
-      app-launch-banner
-      div(slot="suptitle" :style="`marginTop: 8rem`") The foundation for a new token economy
+      div(slot="suptitle") The foundation for a new token economy
       div(slot="title")
         .phone Join the #[strong most powerful] ecosystem of connected blockchains
         .tablet.laptop.desktop Join the #[strong most {{ adjectiveCurrent }}] #[br] ecosystem of connected blockchains
@@ -75,7 +74,6 @@ div
 
 <script>
 import { mapGetters } from "vuex"
-import AppLaunchBanner from "common/AppLaunchBanner"
 import TmBtn from "common/TmBtn"
 import TmCardIssue from "cards/TmCardIssue"
 import TmSection from "common/TmSection"
@@ -88,7 +86,6 @@ export default {
   components: {
     SectionNews: () => import("sections/SectionNews"),
     SectionLogos,
-    AppLaunchBanner,
     TmBtn,
     TmCardIssue,
     TmSection,
@@ -131,6 +128,11 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~variables'
+
+/deep/
+  @media screen and (max-width: 768px)
+    .tm-section__text
+      margin-top 8rem
 
 img.stargate
   position absolute
