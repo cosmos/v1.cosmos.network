@@ -5,7 +5,7 @@
     :flush="hf.isFlush(hf.optionalImg(i.logo).type)"
     :ended="hf.pastDate(i.dateEnd)"
     :img-src="hf.optionalImg(i.logo).src"
-    :key="`event-${i.id}`"
+    :key="i.id"
     :subtitle="subtitle(i)"
     :title="i.title"
     :type="i.type"
