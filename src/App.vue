@@ -1,6 +1,7 @@
 <template lang="pug">
 #app
   cookie-banner(v-if="showHeader")
+  app-top-banner
   app-header(v-if="showHeader")
   main#app-content: router-view(@header="showHeader = $event" @newsletter="newsletterShow = $event")
   cosmos-newsletter-signup(v-bind="{...newsletter}" v-if="newsletterShow")
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import AppTopBanner from "common/AppTopBanner"
 import AppHeader from "common/AppHeader.vue"
 import store from "@/store/index.js"
 import { CookieBanner, Footer, CosmosNewsletterSignup } from "@cosmos-ui/vue"
@@ -17,6 +19,7 @@ import { CookieBanner, Footer, CosmosNewsletterSignup } from "@cosmos-ui/vue"
 export default {
   name: "app",
   components: {
+    AppTopBanner,
     AppHeader,
     CookieBanner,
     "app-footer": Footer,

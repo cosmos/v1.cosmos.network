@@ -1,6 +1,5 @@
 <template lang="pug">
 .page-developers
-
   tm-section.section-hero-dark-blue.section-hero(theme="dark")
     div(slot="suptitle") Tools
     h1(slot="title").title What will you build?
@@ -156,9 +155,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
 .h4
-  400
   font-size 1.5rem
   line-height 2rem
   letter-spacing var(--tracking-0)
@@ -173,7 +170,6 @@ export default {
   background-size 256px 256px, auto
 
 .section-hero
-  padding-top 4rem
   .title
     font-size 3rem
     line-height 4rem

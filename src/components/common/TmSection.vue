@@ -125,8 +125,7 @@ export default {
     text-align center
 
 .tm-section--hero
-  min-height 100vh
-  /* makes sure the page is at least 100vh tall */
+  min-height 90vh
 
   .tm-section__title
     font-weight var(--fw-light)
