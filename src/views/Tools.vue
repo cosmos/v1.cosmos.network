@@ -170,7 +170,6 @@ export default {
   background-size 256px 256px, auto
 
 .section-hero
-  padding-top 4rem
   .title
     font-size 3rem
     line-height 4rem
