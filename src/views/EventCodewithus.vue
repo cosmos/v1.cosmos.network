@@ -221,6 +221,15 @@ export default {
           name: "Shaun Conway",
           company: "ixo",
           twitter: "ixoworld"
+        },
+        {
+          id: "host-paddy",
+          name: "Paddy McHale",
+          company: "Tendermint",
+          social: {
+            title: "GitHub",
+            url: "https://github.com/PaddyMc"
+          }
         }
       ],
       questions: [
