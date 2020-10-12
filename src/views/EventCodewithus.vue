@@ -328,8 +328,6 @@ a
   background-size cover
   background-repeat no-repeat
   background-position center center
-  &:first-child
-    margin-top 4rem
   .hero-title
     font-weight var(--fw-semibold)
     font-size 3rem

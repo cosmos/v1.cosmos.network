@@ -452,16 +452,16 @@ Let’s code together on the consensus module of the Cosmos-SDK. We’ll start b
 
 ### Resources
 
-Modules Overview: https://github.com/cosmos/cosmos-sdk/tree/master/docs/building-modules
+Modules Overview: <a href="https://github.com/cosmos/cosmos-sdk/tree/master/docs/building-modules" target="_blank" ref="noreferrer noopener">https://github.com/cosmos/cosmos-sdk/tree/master/docs/building-modules</a>
 
-POA module: https://github.com/allinbits/modules/tree/master/poa
+POA module: <a href="https://github.com/allinbits/modules/tree/master/x/poa" target="_blank" ref="noreferrer noopener">https://github.com/allinbits/modules/tree/master/x/poa</a>
 
-- Step 1: https://github.com/allinbits/modules/pull/4/files
-- Step 2: https://github.com/allinbits/modules/pull/5/files
+- Step 1: <a href="https://github.com/allinbits/modules/pull/4/files" target="_blank" ref="noreferrer noopener">https://github.com/allinbits/modules/pull/4/files</a>
+- Step 2: <a href="https://github.com/allinbits/modules/pull/5/files" target="_blank" ref="noreferrer noopener">https://github.com/allinbits/modules/pull/5/files</a>
 
 ### Installation
 
-Please install starport: https://github.com/tendermint/starport
+Please install starport: <a href="https://github.com/tendermint/starport" target="_blank" ref="noreferrer noopener">https://github.com/tendermint/starport</a>
 
 🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
 `,
