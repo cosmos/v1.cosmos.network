@@ -42,14 +42,14 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
     time: "10:00",
     title: "“It’s on Me” fee payments & Togglerouter",
     host: "Sunny Aggarwal",
-    company: "Cosmos | Tendermint Inc",
+    company: "Cosmos | Tendermint",
     replay: "https://www.youtube.com/watch?v=M2GS10qoslU",
     description: `
 Learn how to change lower level functionality of transactions in the SDK. Be able to turn and off different tx types, change the fee payer, and create antehandler modules.
 
 ### Host
 
-Sunny Aggarwal – Researcher, Cosmos | Tendermint Inc
+Sunny Aggarwal – Researcher, Cosmos | Tendermint
 
 ### Resources
 
@@ -80,14 +80,14 @@ Get a headstart by familiarizing yourself with the resources you'll be using in 
     title:
       "Debug a Cosmos-SDK application: first steps (GDB, Delve, GDBGui, gdlv)",
     host: "Alessio Treglia",
-    company: "Cosmos | Tendermint Inc",
+    company: "Cosmos | Tendermint",
     replay: "https://www.youtube.com/watch?v=qnMQDID5HME",
     description: `
 Learn how to effectively debug Cosmos SDK applications. General overview of debuggers and how to configure them to work with Go data types.
 
 ### Host
 
-Alessio Treglia – Head of EMEA Partnerships, Cosmos | Tendermint Inc.
+Alessio Treglia – Head of EMEA Partnerships, Cosmos | Tendermint.
 
 ### Resources
 
@@ -389,51 +389,6 @@ Dive into DeFi on the Agoric smart contract platform. We will walk you through b
     ]
   },
   {
-    ids: ["host-miguel", "host-shaun"],
-    slug: "make-your-own-automated-market-maker",
-    date: "2020-11-03",
-    time: "08:00",
-    title:
-      "Make your own Automated Market-Maker, using the new Cosmos SDK Bonds Module",
-    host: "Miguel Dingli & Shaun Conway",
-    company: "Simply VC & ixo",
-    replay: "",
-    description: `
-
-- Discover the new Cosmos-SDK Bonds module, the Automated Market-Maker (AMM) with universal bonding curves. The workshop will be hosted by Miguel Dingli, the lead developer of this module.
-- Learn how to configure your first AMM using a simple bonding curve for algorithmic pricing. Then we will move onto more advanced types such as Uniswap-type token pair swappers and Augmented Bonding Curves.
-
-### Hosts
-
-- Miguel Dingli (Software Developer, Simply VC)
-- Shaun Conway (Founder, ixo)
-
-### Resources
-
-- Code With Us to create your own Automated Market-Maker using the new Cosmos-SDK Bonds Module, presented by <a href="https://twitter.com/MiguelDingli" target="_blank" ref="noreferrer noopener">@MiguelDingli</a> <a href="https://twitter.com/Simply_VC" target="_blank" ref="noreferrer noopener">@Simply_VC</a> and <a href="https://twitter.com/ixoworld" target="_blank" ref="noreferrer noopener">@ixoworld</a>
-- <a href="https://github.com/ixoworld/bonds/" target="_blank" ref="noreferrer noopener">GitHub</a>
-- <a href="https://medium.com/ixo-blog/cosmic-bonding-4f948dd4c2e4" target="_blank" ref="noreferrer noopener">Medium</a>
-
-### Installation
-
-- <a href="https://golang.org/dl/" target="_blank" ref="noreferrer noopener">Golang 1.13+</a>
-
-🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
-`,
-    coverImg: "/images/workshop/code-with-us-workshop-11.jpg",
-    href:
-      "https://cosmos.network/series/code-with-us/make-your-own-automated-market-maker",
-    subtitle: "November 03 · Workshop",
-    dateStart: "11/03/2020",
-    dateEnd: "11/03/2020",
-    logo: [
-      {
-        type: "image/jpeg",
-        url: "/images/workshop/code-with-us-workshop-11.jpg"
-      }
-    ]
-  },
-  {
     id: "host-paddy",
     slug: "code-together-on-consensus",
     date: "2020-10-15",
@@ -475,6 +430,51 @@ Please install starport: <a href="https://github.com/tendermint/starport" target
       {
         type: "image/jpeg",
         url: "/images/workshop/code-with-us-workshop-12.jpg"
+      }
+    ]
+  },
+  {
+    ids: ["host-miguel", "host-shaun"],
+    slug: "make-your-own-automated-market-maker",
+    date: "2020-11-03",
+    time: "08:00",
+    title:
+      "Make your own Automated Market-Maker, using the new Cosmos SDK Bonds Module",
+    host: "Miguel Dingli & Shaun Conway",
+    company: "Simply VC & ixo",
+    replay: "",
+    description: `
+
+- Discover the new Cosmos-SDK Bonds module, the Automated Market-Maker (AMM) with universal bonding curves. The workshop will be hosted by Miguel Dingli, the lead developer of this module.
+- Learn how to configure your first AMM using a simple bonding curve for algorithmic pricing. Then we will move onto more advanced types such as Uniswap-type token pair swappers and Augmented Bonding Curves.
+
+### Hosts
+
+- Miguel Dingli (Software Developer, Simply VC)
+- Shaun Conway (Founder, ixo)
+
+### Resources
+
+- Code With Us to create your own Automated Market-Maker using the new Cosmos-SDK Bonds Module, presented by <a href="https://twitter.com/MiguelDingli" target="_blank" ref="noreferrer noopener">@MiguelDingli</a> <a href="https://twitter.com/Simply_VC" target="_blank" ref="noreferrer noopener">@Simply_VC</a> and <a href="https://twitter.com/ixoworld" target="_blank" ref="noreferrer noopener">@ixoworld</a>
+- <a href="https://github.com/ixoworld/bonds/" target="_blank" ref="noreferrer noopener">GitHub</a>
+- <a href="https://medium.com/ixo-blog/cosmic-bonding-4f948dd4c2e4" target="_blank" ref="noreferrer noopener">Medium</a>
+
+### Installation
+
+- <a href="https://golang.org/dl/" target="_blank" ref="noreferrer noopener">Golang 1.13+</a>
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-11.jpg",
+    href:
+      "https://cosmos.network/series/code-with-us/make-your-own-automated-market-maker",
+    subtitle: "November 03 · Workshop",
+    dateStart: "11/03/2020",
+    dateEnd: "11/03/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-11.jpg"
       }
     ]
   }
