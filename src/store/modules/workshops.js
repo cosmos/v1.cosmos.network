@@ -454,7 +454,7 @@ Let’s code together on the consensus module of the Cosmos-SDK. We’ll start b
 
 Modules Overview: <a href="https://github.com/cosmos/cosmos-sdk/tree/master/docs/building-modules" target="_blank" ref="noreferrer noopener">https://github.com/cosmos/cosmos-sdk/tree/master/docs/building-modules</a>
 
-POA module: <a href="https://github.com/allinbits/modules/tree/master/poa" target="_blank" ref="noreferrer noopener">https://github.com/allinbits/modules/tree/master/poa</a>
+POA module: <a href="https://github.com/allinbits/modules/tree/master/x/poa" target="_blank" ref="noreferrer noopener">https://github.com/allinbits/modules/tree/master/x/poa</a>
 
 - Step 1: <a href="https://github.com/allinbits/modules/pull/4/files" target="_blank" ref="noreferrer noopener">https://github.com/allinbits/modules/pull/4/files</a>
 - Step 2: <a href="https://github.com/allinbits/modules/pull/5/files" target="_blank" ref="noreferrer noopener">https://github.com/allinbits/modules/pull/5/files</a>
