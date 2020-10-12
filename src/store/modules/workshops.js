@@ -432,6 +432,51 @@ Dive into DeFi on the Agoric smart contract platform. We will walk you through b
         url: "/images/workshop/code-with-us-workshop-11.jpg"
       }
     ]
+  },
+  {
+    id: "host-paddy",
+    slug: "code-together-on-consensus",
+    date: "2020-10-15",
+    time: "11:00",
+    title: "Code Together On Consensus: Proof of Authority SDK Module",
+    host: "Paddy McHale",
+    company: "Tendermint",
+    replay: "",
+    description: `
+
+Let’s code together on the consensus module of the Cosmos-SDK. We’ll start by scaffolding an application using <a href="https://github.com/tendermint/starport" target="_blank" ref="noreferrer noopener">startport</a>, then we’re going to swap out the <a href="https://github.com/cosmos/cosmos-sdk/blob/master/x/staking/spec/README.md" target="_blank" ref="noreferrer noopener">Staking consensus module</a> in the Cosmos SDK in favor of a <a href="https://github.com/allinbits/modules/tree/master/poa" target="_blank" ref="noreferrer noopener">Proof of Authority consensus module</a>.
+
+### Hosts
+
+- Paddy McHale - Protocol Developer, Tendermint
+
+### Resources
+
+Modules Overview: https://github.com/cosmos/cosmos-sdk/tree/master/docs/building-modules
+
+POA module: https://github.com/allinbits/modules/tree/master/poa
+
+- Step 1: https://github.com/allinbits/modules/pull/4/files
+- Step 2: https://github.com/allinbits/modules/pull/5/files
+
+### Installation
+
+Please install starport: https://github.com/tendermint/starport
+
+🔮 Part of the [*Code with Us*](/series/code-with-us) online workshops series.
+`,
+    coverImg: "/images/workshop/code-with-us-workshop-12.jpg",
+    href:
+      "https://cosmos.network/series/code-with-us/code-together-on-consensus",
+    subtitle: "October 15 · Workshop",
+    dateStart: "10/15/2020",
+    dateEnd: "10/15/2020",
+    logo: [
+      {
+        type: "image/jpeg",
+        url: "/images/workshop/code-with-us-workshop-12.jpg"
+      }
+    ]
   }
 ]
 
