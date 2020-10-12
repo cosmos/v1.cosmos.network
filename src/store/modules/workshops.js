@@ -399,7 +399,7 @@ Dive into DeFi on the Agoric smart contract platform. We will walk you through b
     replay: "",
     description: `
 
-Let’s code together on the consensus module of the Cosmos-SDK. We’ll start by scaffolding an application using <a href="https://github.com/tendermint/starport" target="_blank" ref="noreferrer noopener">starport</a>, then we’re going to swap out the <a href="https://github.com/cosmos/cosmos-sdk/blob/master/x/staking/spec/README.md" target="_blank" ref="noreferrer noopener">Staking consensus module</a> in the Cosmos SDK in favor of a <a href="https://github.com/allinbits/modules/tree/master/poa" target="_blank" ref="noreferrer noopener">Proof of Authority consensus module</a>.
+Let’s code together on the consensus module of the Cosmos-SDK. We’ll start by scaffolding an application using <a href="https://github.com/tendermint/starport" target="_blank" ref="noreferrer noopener">starport</a>, then we’re going to swap out the <a href="https://github.com/cosmos/cosmos-sdk/blob/master/x/staking/spec/README.md" target="_blank" ref="noreferrer noopener">Staking consensus module</a> in the Cosmos SDK in favor of a <a href="https://github.com/allinbits/modules/tree/master/x/poa" target="_blank" ref="noreferrer noopener">Proof of Authority consensus module</a>.
 
 ### Hosts
 
