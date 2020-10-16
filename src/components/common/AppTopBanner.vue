@@ -1,7 +1,7 @@
 <template lang="pug">
   transition(name="fade" v-on:before-leave="beforeLeave" appear)
     .banner(v-if="show")
-      .banner__content(v-html="this.md.render(this.content)")
+      a(:href="this.url" target='_blank' rel='noreferrer noopener').banner__content(v-html="this.md.render(this.content)")
       a.banner__dismiss(@click.prevent="close" href="#")
         .banner__dismiss__icon
           svg(width='16', height='16', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
@@ -20,8 +20,9 @@ export default {
         html: true
       }),
       show: null,
+      url: "https://stargate.cosmos.network",
       content:
-        "Show off your skills with <a href='https://stargate.cosmos.network' target='_blank' rel='noreferrer noopener'><strong>Stargate testnet</strong></a> and win prizes in <a href='https://five.hackatom.org' target='_blank' rel='noreferrer noopener'><strong>HackAtom V</strong></a>"
+        "Brush up on your skills with <strong>Stargate testnet</strong> &#8594;"
     }
   },
   mounted() {
