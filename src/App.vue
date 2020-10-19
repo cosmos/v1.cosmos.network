@@ -40,6 +40,7 @@ export default {
             requestURL: "https://app.mailerlite.com/webforms/submit/o0t6d7",
             callback: "jQuery18307296239382192573_1594158619276",
             _: "1594158625563",
+            groups: "103455779",
             svg: "/images/icons/icon-window-code.svg"
           },
           {
@@ -49,6 +50,7 @@ export default {
             requestURL: "https://app.mailerlite.com/webforms/submit/o0t6d7",
             callback: "jQuery18307296239382192573_1594158619276",
             _: "1594158625563",
+            groups: "103455777",
             svg: "/images/icons/icon-network.svg"
           }
         ]
