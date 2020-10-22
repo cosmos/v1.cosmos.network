@@ -8,7 +8,6 @@ export const launch = state => state.launch
 export const links = state => state.links
 export const media = state => state.media
 export const modals = state => state.modals
-export const people = state => state.people
 export const roadmap = state => state.roadmap
 export const urls = state => state.urls
 export const frameworks = state => state.frameworks

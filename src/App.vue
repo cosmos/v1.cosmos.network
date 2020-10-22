@@ -195,7 +195,6 @@ export default {
     this.$store.commit("initMeetupEvents")
     this.$store.dispatch("initCommunityEvents")
     this.$store.dispatch("initializeRoadmap")
-    this.$store.dispatch("initializePeople")
     this.$store.dispatch("initializeEmail")
   },
   store
