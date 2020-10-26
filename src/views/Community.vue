@@ -243,7 +243,7 @@ export default {
     ]
   }),
   computed: {
-    ...mapGetters(["events", "community", "workshops", "blog", "meetup"]),
+    ...mapGetters(["events", "community", "blog", "meetup", "cwu"]),
     upcomingEvents() {
       // left - featured (max: 3 items)
       let featuredEvents = this.events.filter(e => e.featured).slice(0, 3)
@@ -253,6 +253,24 @@ export default {
         .filter(e => e.dateStart !== undefined)
         .filter(e => moment(e.dateEnd).add(1, "days") >= moment())
         .filter(e => !e.featured)
+
+      let cwuEvents = this.cwu.cwu.map(e => {
+        return {
+          type: "Live Session",
+          id: e.id,
+          featured: false,
+          dateStart: e.date,
+          dateEnd: e.date,
+          title: e.title,
+          href: `https://cosmos.network/series/code-with-us/${e.slug}`,
+          logo: [
+            {
+              type: "image/jpeg",
+              url: e.coverImg[0].url
+            }
+          ]
+        }
+      })
 
       let meetupEvents = this.meetup.meetupEvents.map(e => {
         return {
@@ -275,7 +293,7 @@ export default {
       })
 
       let sortedEvents = orderBy(
-        [...airtableEvents, ...this.workshops, ...meetupEvents],
+        [...airtableEvents, ...meetupEvents, ...cwuEvents],
         [e => moment(e.dateStart)],
         "asc"
       ).filter(e => moment(e.dateEnd).add(1, "days") >= moment())

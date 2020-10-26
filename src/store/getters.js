@@ -8,16 +8,15 @@ export const launch = state => state.launch
 export const links = state => state.links
 export const media = state => state.media
 export const modals = state => state.modals
-export const people = state => state.people
 export const roadmap = state => state.roadmap
 export const urls = state => state.urls
 export const frameworks = state => state.frameworks
 export const resources = state => state.resources
 export const social = state => state.social
 export const visualizers = state => state.visualizers
-export const workshops = state => state.workshops
 export const meetup = state => state.meetup
 export const liveness = state => state.liveness
+export const cwu = state => state.cwu
 
 // toc
 export const toc = state => state.toc

@@ -39,15 +39,33 @@ export default {
     SectionBanner
   },
   computed: {
-    ...mapGetters(["events", "urls", "workshops", "meetup"]),
+    ...mapGetters(["events", "urls", "cwu", "meetup"]),
     datedEvents() {
-      return [...this.workshops, ...this.events].filter(
-        e => e.dateStart !== undefined
-      )
+      return [...this.events].filter(e => e.dateStart !== undefined)
+    },
+    cwuEvents() {
+      let cwuEvents = this.cwu.cwu.map(e => {
+        return {
+          type: "Live Session",
+          id: e.id,
+          featured: false,
+          dateStart: e.date,
+          dateEnd: e.date,
+          title: e.title,
+          href: `https://cosmos.network/series/code-with-us/${e.slug}`,
+          logo: [
+            {
+              type: "image/jpeg",
+              url: e.coverImg[0].url
+            }
+          ]
+        }
+      })
+      return cwuEvents
     },
     upcomingEvents() {
       // fuzz search to current and future events within 1 day of today
-      let events = this.datedEvents.filter(
+      let events = [...this.datedEvents, ...this.cwuEvents].filter(
         e => moment(e.dateEnd).add(1, "days") >= moment()
       )
 

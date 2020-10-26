@@ -26,12 +26,11 @@ div
             a(:href="`https://twitter.com/${i.twitter}`" target="_blank" rel="noreferrer noopener") @{{ i.twitter }}
           .profile__social(v-else-if="i.social")
             a(:href="`${i.social.url}`" target="_blank" rel="noreferrer noopener") {{ i.social.title }}
-    .note More hosts to be announced.
 
   tm-section
     div(slot="title") Workshops
     .schedule-container
-      .row(v-for="i in workshops")
+      .row(v-for="i in sortedWorkshops")
         .row-start
           .row-start__date {{ moment(i.date).format("MMM DD")}}
           .row-start__time(v-if="moment(i.date) > moment() || !i.replay")  {{ toTimezone(i.date, i.time) }}
@@ -40,15 +39,14 @@ div
         .row-mid
           .row-mid__title #[router-link(:to="{ name: 'series-workshop', params: { workshop: i.slug }}") {{ i.title }}]
         .row-end
-          img(:src="`/profiles/${i.id}.jpg`" v-if="i.id").row-end__img
-          div(v-else-if="i.ids")
-            img(:src="`/profiles/${i.ids[0]}.jpg`" ).row-end__img
-            img(:src="`/profiles/${i.ids[1]}.jpg`" ).row-end__img__overlay
+          img(:src="`/profiles/${i.id}.jpg`" v-if="i.id.length == 1").row-end__img
+          div(v-else)
+            img(:src="`/profiles/${i.id[0]}.jpg`" ).row-end__img
+            img(:src="`/profiles/${i.id[1]}.jpg`" ).row-end__img__overlay
           .row-end__profile
             .row-end__profile__host {{ i.host }}
             .row-end__profile__company {{ i.company }}
     .future-workshops More workshops to be announced
-    .unconfirmed-note(style="max-width: 44rem;") * Unconfirmed (TBD) dates and times will be decided based on the timezone of participants. Let us know where you are based when you sign up.
 
   tm-section(layout="center")
     div(slot="title").center-title How to join
@@ -83,7 +81,7 @@ div
         flush="true"
         :key="i.id"
         :title="`Code with us - ${i.title} with ${i.host}`"
-        :img-src="i.coverImg"
+        :img-src="i.coverImg[0].url"
         :href="i.replay")
         template(slot="subtitle") {{ moment(i.date).format("MMM DD, YYYY") }}
 
@@ -102,6 +100,7 @@ div
 <script>
 import moment from "moment-timezone"
 import MarkdownIt from "markdown-it"
+import { orderBy } from "lodash"
 import { mapGetters } from "vuex"
 import { Modal, SeriesSignup } from "@cosmos-ui/vue"
 import TmSection from "common/TmSection"
@@ -126,7 +125,7 @@ export default {
         {
           id: "host-alessio",
           name: "Alessio Treglia",
-          company: "Cosmos | Tendermint Inc",
+          company: "Tendermint",
           twitter: "alessiotreglia"
         },
         {
@@ -189,7 +188,7 @@ export default {
         {
           id: "host-sunny",
           name: "Sunny Aggarwal",
-          company: "Cosmos | Tendermint Inc",
+          company: "Tendermint",
           twitter: "sunnya97"
         },
         {
@@ -257,15 +256,18 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["workshops"]),
+    ...mapGetters(["cwu"]),
+    sortedWorkshops() {
+      return orderBy(this.cwu.cwu, e => e.date, "asc")
+    },
     nextWorkshop() {
-      const workshop = this.workshops
+      const workshop = this.cwu.cwu
         .filter(e => moment(e.date) >= moment())
         .slice(0, 1)
       return workshop
     },
     pastWorkshops() {
-      const workshop = this.workshops
+      const workshop = this.cwu.cwu
         .filter(e => moment(e.date) <= moment())
         .filter(e => Boolean(e.replay))
       return workshop
@@ -275,10 +277,10 @@ export default {
     toTimezone(date, time) {
       return (
         moment
-          // set base time with PDT
+          // set base time with UTC
           // get timezone with i18n API - Intl.DateTimeFormat().resolvedOptions().timeZone
           // usage: 2020-08-04 08:00
-          .tz(`${date} ${time}`, "America/Los_Angeles")
+          .tz(`${date} ${time}`, "UTC")
           // use client's local time zone
           .tz(moment.tz.guess())
           .format("h:mma z")
@@ -406,25 +408,6 @@ a
       font-size 1rem
       line-height 1.5rem
       color #5064FB
-.note
-  margin-top 4.5rem
-  display flex
-  font-size 1.125rem
-  line-height 1.6875rem
-  display flex
-  align-items center
-  letter-spacing var(--tracking-0)
-  color rgba(0, 0, 0, 0.667)
-
-.unconfirmed-note
-  margin-top 4.5rem
-  display flex
-  font-size 0.875rem
-  line-height 1.25rem
-  display flex
-  align-items center
-  letter-spacing var(--tracking-0)
-  color rgba(0, 0, 0, 0.667)
 
 .schedule-container
   margin-top 4rem
@@ -638,8 +621,6 @@ a
       margin 2rem auto
 
 @media screen and (max-width: 700px)
-  .note
-    text-align center
   .hosts-container, .schedule-container
     margin-top 2rem
   .schedule-container
