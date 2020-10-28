@@ -39,10 +39,10 @@ div
         .row-mid
           .row-mid__title #[router-link(:to="{ name: 'series-workshop', params: { workshop: i.slug }}") {{ i.title }}]
         .row-end
-          img(:src="`/profiles/${i.id}.jpg`" v-if="i.id.length == 1").row-end__img
+          img(:src="i.headshot_1[0].url" v-if="i.id.length == 1").row-end__img
           div(v-else)
-            img(:src="`/profiles/${i.id[0]}.jpg`" ).row-end__img
-            img(:src="`/profiles/${i.id[1]}.jpg`" ).row-end__img__overlay
+            img(:src="i.headshot_1[0].url").row-end__img
+            img(:src="i.headshot_2[0].url").row-end__img__overlay
           .row-end__profile
             .row-end__profile__host {{ i.host }}
             .row-end__profile__company {{ i.company }}
@@ -79,7 +79,7 @@ div
       tm-card-hz(
         v-for="i in pastWorkshops"
         flush="true"
-        :key="i.id"
+        :key="i.autonumber"
         :title="`Code with us - ${i.title} with ${i.host}`"
         :img-src="i.coverImg[0].url"
         :href="i.replay")

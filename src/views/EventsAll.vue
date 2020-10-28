@@ -47,7 +47,7 @@ export default {
       let cwuEvents = this.cwu.cwu.map(e => {
         return {
           type: "Live Session",
-          id: e.id,
+          id: e.autonumber,
           featured: false,
           dateStart: e.date,
           dateEnd: e.date,
