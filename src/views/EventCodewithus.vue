@@ -270,7 +270,7 @@ export default {
       const workshop = this.cwu.cwu
         .filter(e => moment(e.date) <= moment())
         .filter(e => Boolean(e.replay))
-      return workshop
+      return orderBy(workshop, e => e.date, "asc")
     }
   },
   methods: {
