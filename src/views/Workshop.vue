@@ -1,7 +1,7 @@
 <template lang="pug">
 .page-event
   .page-event__header
-    .page-event__image(:style="{ backgroundImage: `url(${coverImgSrc})`}")
+    .page-event__image(:style="{ backgroundImage: `url(${workshop.coverImg[0].url})`}")
 
   .page-event__container: .page-event__container-padding
     .page-event__heading #[router-link(:to="{ name: 'series-code-with-us'}") Code with Us online workshops]
@@ -62,9 +62,6 @@ export default {
           slug: ""
         }
       }
-    },
-    coverImgSrc() {
-      return this.workshop.coverImg[0].url
     }
   },
   methods: {
