@@ -1,7 +1,7 @@
 <template lang="pug">
 .page-event
   .page-event__header
-    .page-event__image(:style="{ backgroundImage: `url(${workshop.coverImg})`}")
+    .page-event__image(:style="{ backgroundImage: `url(${workshop.coverImg[0].url})`}")
 
   .page-event__container: .page-event__container-padding
     .page-event__heading #[router-link(:to="{ name: 'series-code-with-us'}") Code with Us online workshops]
@@ -53,10 +53,10 @@ export default {
     signup: null
   }),
   computed: {
-    ...mapGetters(["workshops"]),
+    ...mapGetters(["cwu"]),
     workshop() {
-      if (this.workshops && this.workshops.length > 0) {
-        return this.workshops.find(e => e.slug === this.$route.params.workshop)
+      if (this.cwu.cwu && this.cwu.cwu.length > 0) {
+        return this.cwu.cwu.find(e => e.slug === this.$route.params.workshop)
       } else {
         return {
           slug: ""
@@ -71,10 +71,10 @@ export default {
     toTimezone(date, time) {
       return (
         moment
-          // set base time with PDT
+          // set base time with UTC
           // get timezone with i18n API - Intl.DateTimeFormat().resolvedOptions().timeZone
           // usage: 2020-08-04 08:00
-          .tz(`${date} ${time}`, "America/Los_Angeles")
+          .tz(`${date} ${time}`, "UTC")
           // use client's local time zone
           .tz(moment.tz.guess())
           .format("h:mma z")
