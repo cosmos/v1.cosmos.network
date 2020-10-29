@@ -37,7 +37,7 @@ div
           .row-start__time(v-else)
             a(:href="`${i.replay}`" target="_blank" rel="noreferrer noopener") Watch replay
         .row-mid
-          .row-mid__title #[router-link(:to="{ name: 'series-workshop', params: { workshop: i.slug }}") {{ i.title }}]
+          router-link(:to="{ name: 'series-workshop', params: { workshop: i.slug }}").row-mid__title {{ i.title }}
         .row-end
           img(:src="i.headshot_1[0].url" v-if="i.id.length == 1").row-end__img
           div(v-else)
@@ -436,12 +436,12 @@ a
         color rgba(0, 0, 0, 0.667)
     .row-mid
       align-self center
+      max-width 30em
       &__title
         font-weight var(--fw-semibold)
         font-size 1.5rem
         line-height 2rem
         letter-spacing var(--tracking-1-wide)
-        color #000000
     .row-end
       align-self center
       &__img
@@ -626,7 +626,7 @@ a
   .schedule-container
     .row
       .row-start, .row-start__time, .row-mid, .row-end
-        margin 0.5rem auto
+        margin 0.5rem 0
   .steps-container, .faq-container
     padding-top 2rem
     gap 4rem
