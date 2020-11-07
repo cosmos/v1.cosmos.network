@@ -167,6 +167,12 @@
       img(slot="icon" src="~images/sdk/icon-footer-discord.svg" alt="Forum")
       tm-btn(value="Chat now" size="lg" type="anchor"
         target="_blank" rel="noreferrer noopener" href="https://discord.gg/W8trcGV")
+    tm-column(
+      title="Cosmos Jobs"
+      subtitle="Climb aboard the fleet of vessels, headed for the stars.")
+      img(slot="icon" src="~images/sdk/icon-footer-briefcase.svg" alt="Jobs")
+      tm-btn(value="Search jobs" size="lg" type="anchor"
+        target="_blank" rel="noreferrer noopener" href="https://jobs.cosmos.network")
 </template>
 
 <script>

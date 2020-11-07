@@ -99,7 +99,11 @@ export default {
               },
               {
                 h1: "Blog",
-                href: "https://blog.cosmos.network/"
+                href: "https://blog.cosmos.network"
+              },
+              {
+                h1: "Jobs",
+                href: "https://jobs.cosmos.network"
               },
               {
                 h1: "Media",
