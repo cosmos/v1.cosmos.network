@@ -115,9 +115,9 @@ export default {
   position relative
   overflow hidden
   &__container
-    position relative
+  background var(--app-fg)
   &:nth-of-type(2n -1)
-    background var(--app-fg)
+    background transparent
   &.tm-section--dark, &.tm-section--stars
     background var(--dark-bg)
     color var(--dark-txt)

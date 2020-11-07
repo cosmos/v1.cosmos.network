@@ -62,7 +62,7 @@ export default {
   line-height 1.25rem
   letter-spacing 0.01em
   color var(--dark-txt)
-  background linear-gradient(90deg,#bf513f,#641179)
+  background linear-gradient(90deg,#5064fb,#641179)
   text-align center
   display flex
   flex auto
@@ -75,6 +75,7 @@ export default {
   &:hover,
   &:focus
     background-color #F1F2F7
+    opacity 0.96
 
 .banner__dismiss
   position absolute

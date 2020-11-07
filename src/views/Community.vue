@@ -245,10 +245,11 @@ export default {
   computed: {
     ...mapGetters(["events", "community", "blog", "meetup", "cwu"]),
     upcomingEvents() {
-      // left - featured (max: 3 items)
-      let featuredEvents = this.events.filter(e => e.featured).slice(0, 3)
+      let featuredEvents = this.events
+        .filter(e => e.featured)
+        .filter(e => moment(e.dateEnd).add(1, "days") >= moment())
+        .slice(0, 3)
 
-      // right - airtable and meetup in asc order (max: 1 item)
       let airtableEvents = this.events
         .filter(e => e.dateStart !== undefined)
         .filter(e => moment(e.dateEnd).add(1, "days") >= moment())
