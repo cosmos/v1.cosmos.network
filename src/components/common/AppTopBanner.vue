@@ -20,9 +20,9 @@ export default {
         html: true
       }),
       show: null,
-      url: "https://stargate.cosmos.network",
+      url: "https://jobs.cosmos.network",
       content:
-        "Brush up on your skills with <strong>Stargate testnet</strong> &#8594;"
+        "Start your mission of space exploration today. <strong>Browse Cosmos jobs</strong> &#8594;"
     }
   },
   mounted() {
