@@ -147,6 +147,12 @@ export default {
           description: "Haskell implementation of ABCI server on Tendermint.",
           full_name: "f-o-a-m/kepler",
           url: "https://github.com/f-o-a-m/kepler"
+        },
+        {
+          title: "CosmosSwift",
+          description: "Swift implementation on Tendermint.",
+          full_name: "CosmosSwift",
+          url: "https://github.com/CosmosSwift"
         }
       ]
     }

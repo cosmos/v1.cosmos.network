@@ -167,7 +167,7 @@ export default {
   align-items center
   justify-content center
 
-  background var(--dark-fg)
+  background transparent
 
   border-radius 0.25rem
 
