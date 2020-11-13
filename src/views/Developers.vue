@@ -19,7 +19,7 @@
           a(target="_blank" rel="noreferrer noopener" href="https://cosmos.network/rpc/") REST docs
           a(target="_blank" rel="noreferrer noopener" href="https://hub.cosmos.network/master/gaia-tutorials/join-testnet.html") Join Cosmos Hub mainnet
           a(target="_blank" rel="noreferrer noopener" href="https://hub.cosmos.network/master/gaia-tutorials/deploy-testnet.html") Deploy your own testnet
-        div(slot="footer") Can't find what you're looking for? Ask in #[a(href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener") chat] or our #[a(href="https://forum.cosmos.network/c/cosmos-sdk") forum].
+        div(slot="footer") Can't find what you're looking for? Ask in #[a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener") chat] or our #[a(href="https://forum.cosmos.network/c/cosmos-sdk") forum].
 
       tm-box.tm-box--outline
         div(slot="title") Other Frameworks
@@ -39,7 +39,7 @@
           a(target="_blank" rel="noreferrer noopener" href="https://docs.tendermint.com/") Tendermint docs
           a(target="_blank" rel="noreferrer noopener" href="https://godoc.org/github.com/tendermint/tendermint") API reference (godocs)
           a(target="_blank" rel="noreferrer noopener" href="https://docs.tendermint.com/master/rpc/") RPC docs
-        div(slot="footer") Looking for help with Tendermint? Ask in #[a(href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener") chat] or our #[a(href="https://forum.cosmos.network/c/tendermint") forum].
+        div(slot="footer") Looking for help with Tendermint? Ask in #[a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener") chat] or our #[a(href="https://forum.cosmos.network/c/tendermint") forum].
 
       tm-box.tm-box--gray
         div(slot="title") ABCI

@@ -3,7 +3,7 @@ const state = [
     title: "Community Chat",
     subtitle: "Talk to Cosmos developers",
     icon: "discord",
-    href: "https://discord.gg/W8trcGV"
+    href: "https://discord.gg/vcExX9T"
   },
   {
     title: "Official Forum",
