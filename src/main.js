@@ -7,6 +7,7 @@ import VueMeta from "vue-meta"
 import VueRouter from "vue-router"
 import VueScrollTo from "vue-scrollto"
 import { Tooltip } from "@cosmos-ui/vue"
+import InstantSearch from "vue-instantsearch"
 
 import App from "./App"
 //import "./registerServiceWorker"
@@ -44,6 +45,7 @@ Vue.use(VueScrollTo, {
   x: false,
   y: true
 })
+Vue.use(InstantSearch)
 
 Vue.config.productionTip = false
 
