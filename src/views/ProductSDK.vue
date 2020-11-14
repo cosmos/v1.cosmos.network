@@ -40,15 +40,15 @@
   tm-section
     div(slot="title") Built with the Cosmos SDK
     div(slot="subtitle") This is a showcase of application-specific blockchains that have been built with the Cosmos SDK. #[router-link(:to="{ name: 'ecosystem' }") View more &rarr;]
-    .tm-cards-hz
-      tm-card-hz(
-        v-for="i in featuredProjects"
-        flush="true"
-        :img-src="hf.optionalImg(i.imgFeature).src"
-        :key="i.slug"
-        :subtitle="i.tags[0]"
-        :title="i.title"
-        :href="i.projectUrl")
+    //- .tm-cards-hz
+    //-   tm-card-hz(
+    //-     v-for="i in featuredProjects"
+    //-     flush="true"
+    //-     :img-src="hf.optionalImg(i.imgFeature).src"
+    //-     :key="i.slug"
+    //-     :subtitle="i.tags[0]"
+    //-     :title="i.title"
+    //-     :href="i.projectUrl")
 
   tm-section(layout="center")
     div(slot="title") What Will You Build?
