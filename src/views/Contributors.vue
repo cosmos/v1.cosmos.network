@@ -32,6 +32,8 @@ div
           li.panel__list__item Create a VR world
           li.panel__list__item Other events
         tm-btn(value="Apply" size="lg" color="primary" type="anchor" href="https://docs.google.com/forms/d/e/1FAIpQLSfg8OrPeuRciyW8Iw-BW7JEvZvr_7ZYXQTpLeXXfzbxUwBM_w/viewform" target="blank_" rel="noopener noreferrer").panel__btn
+        .panel__guidelines
+          a(href="https://docs.google.com/document/d/1A0niIiQi5uZ2PwKS3YCzS5px7fRcNeXFwLrO-t11tsY" target="_blank" rel="noreferrer noopener") Guidelines for meetups &#8599;
         .panel__footer
           .panel__footer__text Applications funded and processed by
           a(href="https://www.tendermint.com" target="_blank" rel="noreferrer noopener")
@@ -45,6 +47,8 @@ div
           li.panel__list__item Technical blog post
           li.panel__list__item Other media
         tm-btn(value="Submit" size="lg" color="primary" type="anchor" href="https://docs.google.com/forms/d/e/1FAIpQLSfhrKufDANtlOM66PxLz2HYdGruj5V7WP0oRuG8RvgJIx8kBw/viewform" target="blank_" rel="noopener noreferrer").panel__btn
+        .panel__guidelines
+          a(href="https://docs.google.com/document/d/1e0JTy2Xn4nywW24IneFLCAd9d2rEnyfBUv0yoWxKuEU" target="_blank" rel="noreferrer noopener") Guidelines for media and content &#8599;
         .panel__footer
           .panel__footer__text Submissions funded and processed by
           a(href="https://www.tendermint.com" target="_blank" rel="noreferrer noopener")
@@ -172,6 +176,10 @@ export default {
         padding-left 0.5rem
     &__btn
       margin-top 2rem
+    &__guidelines
+      margin-top 2rem
+      font-size 1rem
+      line-height 1.5rem
     &__footer
       margin-top 2rem
       &__text
