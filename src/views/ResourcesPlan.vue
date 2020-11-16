@@ -2,7 +2,7 @@
 page(
   title="Fundraiser Plan"
   subtitle="Our original plan and roadmap for the April 2017 fundraiser.")
-  div(slot="menu"): tm-btn(icon="chat" value="Developer Chat" type="anchor" href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener" color="primary")
+  div(slot="menu"): tm-btn(icon="chat" value="Community Chat" type="anchor" href="https://t.me/cosmosproject" target="_blank" rel="noreferrer noopener" color="primary")
   tm-content: text-content
 </template>
 

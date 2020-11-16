@@ -1,6 +1,6 @@
 <template lang="pug">
 page(title="Resources" subtitle="A curated list of resources about the Cosmos Network.")
-  div(slot="menu"): tm-btn(icon="chat" value="Developer Chat" type="anchor" href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener" color="primary")
+  div(slot="menu"): tm-btn(icon="chat" value="Community Chat" type="anchor" href="https://t.me/cosmosproject" target="_blank" rel="noreferrer noopener" color="primary")
   part(title="Cosmos Network")
     tm-list-item(:to="{ name: 'whitepaper' }" title="Cosmos Whitepaper" icon="description")
     tm-list-item(:to="{ name: 'faq' }" title="Cosmos FAQ" icon="description")

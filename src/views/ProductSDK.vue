@@ -97,7 +97,7 @@
         target="_blank" rel="noreferrer noopener" href="https://forum.cosmos.network/c/cosmos-sdk")
     tm-column(
       title="SDK Chat"
-      subtitle="Discuss the SDK with the community in the unofficial chat.")
+      subtitle="Discuss the SDK with developers in the unofficial chat.")
       img(slot="icon" src="~images/sdk/icon-footer-discord.svg" alt="chat")
       tm-btn(value="Chat Now" size="lg" type="anchor"
         target="_blank" rel="noreferrer noopener" href="https://discord.gg/vcExX9T")
