@@ -40,7 +40,7 @@
             .tool-item__desc Agoric's Cosmic SwingSet enables developers to test smart contracts build with ERTP in various blockchain setup environments.
             tm-btn(value="get started" type="anchor" color="primary" href="https://agoric.com/documentation/getting-started/" target="_blank" rel="noreferrer noopener").tool-item__first-btn.gtm__tools__smart-contracts__agoric__get-started
             .tool-item__resources
-              .tool-item__resources__item(style="margin-top: 1rem;") #[a(href="https://t.me/agoricsystems" target="_blank" rel="noreferrer noopener") Developer chat]
+              .tool-item__resources__item #[a(href="https://t.me/agoricsystems" target="_blank" rel="noreferrer noopener") Developer chat]
       .tool-item.tool-item-cosmwasm
         .tool-item__heading Write multi-chain smart contracts in Rust
         .tool-item__inner
@@ -390,7 +390,7 @@ export default {
       display flex
       flex-wrap wrap
       justify-content flex-start
-      margin-top 1rem
+      margin-top 2rem
       font-size 1rem
       line-height 1.5rem
       &__item
