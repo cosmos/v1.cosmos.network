@@ -1,6 +1,6 @@
 <template lang="pug">
 page(title="Cosmos FAQ" subtitle="Answers to frequently asked questions about the Cosmos Network.")
-  div(slot="menu"): tm-btn(icon="chat" value="Community Chat" type="anchor" href="https://t.me/cosmosproject" target="_blank" rel="noreferrer noopener" color="primary")
+  div(slot="menu"): tm-btn(icon="chat" value="Developer Chat" type="anchor" href="https://t.me/cosmosproject" target="_blank" rel="noreferrer noopener" color="primary")
   tm-content: text-content
 </template>
 

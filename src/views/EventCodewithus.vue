@@ -63,8 +63,8 @@ div
       .item
         .item__num 3
         .item__title Join the call
-        .item__desc Make sure to install the #[a(href="https://zoom.us/download" target="_blank" rel="noreferrer noopener") Zoom] app beforehand and join the Cosmos community chat on Discord.
-        a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener").item__cta community chat
+        .item__desc Make sure to install the #[a(href="https://zoom.us/download" target="_blank" rel="noreferrer noopener") Zoom] app beforehand and join the Cosmos developer chat on Discord.
+        a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener").item__cta developer chat
 
   tm-section
     div(slot="title") FAQ
@@ -250,7 +250,7 @@ export default {
         {
           question: "Still have questions?",
           answer:
-            "Reach out on the [community chat](https://discord.gg/vcExX9T) (#code-with-us-workshops channel) for assistance."
+            "Reach out on the [developer chat](https://discord.gg/vcExX9T) (#code-with-us-workshops channel) for assistance."
         }
       ]
     }

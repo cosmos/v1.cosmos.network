@@ -1,6 +1,6 @@
 const state = [
   {
-    title: "Community Chat",
+    title: "Developer Chat",
     subtitle: "Talk to Cosmos developers",
     icon: "discord",
     href: "https://discord.gg/vcExX9T"
