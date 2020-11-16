@@ -162,11 +162,11 @@
       tm-btn(value="Get started" size="lg" type="anchor"
         target="_blank" rel="noreferrer noopener" href="https://hub.cosmos.network/master/validators/overview.html")
     tm-column(
-      title="Community Chat"
+      title="Developer Chat"
       subtitle="Have questions? Get them answered here.")
       img(slot="icon" src="~images/sdk/icon-footer-discord.svg" alt="Forum")
       tm-btn(value="Chat now" size="lg" type="anchor"
-        target="_blank" rel="noreferrer noopener" href="https://discord.gg/W8trcGV")
+        target="_blank" rel="noreferrer noopener" href="https://discord.gg/vcExX9T")
     tm-column(
       title="Cosmos Jobs"
       subtitle="Climb aboard the fleet of vessels, headed for the stars.")
@@ -227,13 +227,13 @@ export default {
         icon: "reddit-light"
       },
       {
-        title: "Community Chat",
+        title: "Developer Chat",
         url: "https://t.me/cosmosproject",
         icon: "telegram-light"
       },
       {
         title: "Developer Chat",
-        url: "https://discord.gg/W8trcGV",
+        url: "https://discord.gg/vcExX9T",
         icon: "discord-light"
       },
       {

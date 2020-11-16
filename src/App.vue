@@ -82,7 +82,7 @@ export default {
           },
           {
             title: "Discord",
-            url: "https://discord.gg/W8trcGV"
+            url: "https://discord.gg/vcExX9T"
           },
           {
             title: "YouTube",

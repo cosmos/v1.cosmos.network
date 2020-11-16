@@ -14,7 +14,7 @@
           .resources__item #[a(href="https://docs.cosmos.network" target="_blank" rel="noreferrer noopener") Documentation]
           .resources__item #[a(href="https://godoc.org/github.com/cosmos/cosmos-sdk" target="_blank" rel="noreferrer noopener") API]
           .resources__item #[a(href="https://cosmos.network/rpc" target="_blank" rel="noreferrer noopener") REST docs]
-          .resources__item #[a(href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener") Developer chat]
+          .resources__item #[a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener") Developer chat]
           .resources__item #[a(href="https://forum.cosmos.network/c/cosmos-sdk" target="_blank" rel="noreferrer noopener") Forum]
       .image
         a(href="https://github.com/cosmos/cosmos-sdk" target="_blank" rel="noreferrer noopener")
@@ -38,9 +38,9 @@
           .tool-item__content
             .tool-item__title Agoric Swingset
             .tool-item__desc Agoric's Cosmic SwingSet enables developers to test smart contracts build with ERTP in various blockchain setup environments.
-            tm-btn(value="get started" type="anchor" color="primary" href="https://agoric.com/documentation/manual-setup" target="_blank" rel="noreferrer noopener").tool-item__first-btn.gtm__tools__smart-contracts__agoric__get-started
+            tm-btn(value="get started" type="anchor" color="primary" href="https://agoric.com/documentation/getting-started/" target="_blank" rel="noreferrer noopener").tool-item__first-btn.gtm__tools__smart-contracts__agoric__get-started
             .tool-item__resources
-              .tool-item__resources__item(style="margin-top: 1rem;") #[a(href="https://t.me/agoricsystems" target="_blank" rel="noreferrer noopener") Developer chat]
+              .tool-item__resources__item #[a(href="https://t.me/agoricsystems" target="_blank" rel="noreferrer noopener") Developer chat]
       .tool-item.tool-item-cosmwasm
         .tool-item__heading Write multi-chain smart contracts in Rust
         .tool-item__inner
@@ -51,23 +51,20 @@
           .tool-item__content
             .tool-item__title CosmWasm
             .tool-item__desc A WASM-based Smart Contract Module for the Cosmos SDK.
-            tm-btn(value="get started" color="primary" type="anchor" href="https://github.com/CosmWasm/cosmwasm#creating-a-smart-contract" target="_blank" rel="noreferrer noopener").tool-item__first-btn.gtm__tools__smart-contracts__cosmwasm__get-started
-            tm-btn(value="learn more" color="link" type="anchor" href="https://www.cosmwasm.com" target="_blank" rel="noreferrer noopener").gtm__tools__smart-contracts__cosmwasm__learn-more
+            tm-btn(value="get started" color="primary" type="anchor" href="https://docs.cosmwasm.com/" target="_blank" rel="noreferrer noopener").tool-item__first-btn.gtm__tools__smart-contracts__cosmwasm__get-started
             .tool-item__resources
               .tool-item__resources__item #[a(href="https://t.me/joinchat/AkZriEhk9qcRw5A5U2MapA" target="_blank" rel="noreferrer noopener") Developer chat]
-              .tool-item__resources__item #[a(href="https://docs.cosmwasm.com" target="_blank" rel="noreferrer noopener") Documentation]
       .tool-item.tool-item-ethermint
         .tool-item__heading Run solidity code on proof of stake
         .tool-item__inner
           .tool-item__box
-            a(href="https://github.com/chainsafe/ethermint" target="_blank" rel="noreferrer noopener")
+            a(href="https://github.com/cosmos/ethermint" target="_blank" rel="noreferrer noopener")
               img(src="~assets/brands/color/github-dark.svg" alt="GitHub").tool-item__box__github
             img(src="~/assets/images/tools/tools-ethermint.svg" alt="Ethermint").tool-item__box__img
           .tool-item__content
             .tool-item__title Ethermint
             .tool-item__desc The Ethereum Virtual Machine implemented as a Cosmos SDK module, making it possible to deploy proof-of-stake blockchains that support Ethereum smart contracts.
-            tm-btn(value="get started" color="primary" type="anchor" href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener").tool-item__first-btn.gtm__tools__smart-contracts__ethermint__get-started
-            tm-btn(value="learn more" color="link" type="anchor" href="https://ethermint.zone" target="_blank" rel="noreferrer noopener").gtm__tools__smart-contracts__ethermint__learn-more
+            tm-btn(value="get started" color="primary" type="anchor" href="https://docs.ethermint.zone" target="_blank" rel="noreferrer noopener").tool-item__first-btn.gtm__tools__smart-contracts__ethermint__get-started
             .tool-item__resources
               .tool-item__resources__item #[a(href="https://t.me/joinchat/AkZriEhk9qcRw5A5U2MapA" target="_blank" rel="noreferrer noopener") Developer chat]
               .tool-item__resources__item #[a(href="https://forum.cosmos.network/c/ethermint" target="_blank" rel="noreferrer noopener") Forum]
@@ -83,7 +80,7 @@
         .p The inter-blockchain communication protocol is a reliable & secure inter-module communication protocol that allows blockchains to connect to one another.
         tm-btn(size="lg" value="learn about ibc" color="dark" type="anchor"  href="https://github.com/cosmos/ics/tree/master/ibc" target="_blank" rel="noreferrer noopener").gtm__tools__ibc__learn-about-ibc
         .resources
-          .resources__item #[a(href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener") Developer chat]
+          .resources__item #[a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener") Developer chat]
           .resources__item #[router-link(:to="{ name: 'ibc-signup' }") Get updates]
       .image
         a(href="https://github.com/cosmos/ics" target="_blank" rel="noreferrer noopener")
@@ -102,7 +99,7 @@
         .resources
           .resources__item #[a(href="https://godoc.org/github.com/tendermint/tendermint" target="_blank" rel="noreferrer noopener") API (godocs)]
           .resources__item #[a(href="https://docs.tendermint.com/master/rpc" target="_blank" rel="noreferrer noopener") REST docs]
-          .resources__item #[a(href="https://discord.gg/W8trcGV" target="_blank" rel="noreferrer noopener") Developer chat]
+          .resources__item #[a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener") Developer chat]
           .resources__item #[a(href="https://forum.cosmos.network/c/tendermint" target="_blank" rel="noreferrer noopener") Forum]
       .image
         a(href="https://github.com/tendermint/tendermint" target="_blank" rel="noreferrer noopener")
@@ -393,7 +390,7 @@ export default {
       display flex
       flex-wrap wrap
       justify-content flex-start
-      margin-top 1rem
+      margin-top 2rem
       font-size 1rem
       line-height 1.5rem
       &__item
