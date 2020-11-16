@@ -73,6 +73,8 @@ import algoliasearch from "algoliasearch"
 
 import "instantsearch.css/themes/algolia-min.css"
 
+const apiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
+
 export default {
   name: "page-ecosystem",
   metaInfo: {
@@ -86,10 +88,7 @@ export default {
   data() {
     return {
       hf: hf,
-      searchClient: algoliasearch(
-        "ME7376U3XW",
-        "63301964fb56270871d8246f4272bf1b"
-      )
+      searchClient: algoliasearch("ME7376U3XW", apiKey)
     }
   },
   computed: {
