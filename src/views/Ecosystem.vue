@@ -3,45 +3,47 @@
   tm-header
     div(slot="suptitle") Ecosystem
     div(slot="title") Explore Cosmos Network
-    div(slot="subtitle") Welcome, Cosmonauts! Discover a wide variety of apps and blockchains built in the Cosmos ecosystem by developers and contributors from across the globe.
+    div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of apps and blockchains built in the Cosmos ecosystem by developers and contributors from across the globe.
 
     //- .grid-container
     //-   .grid-item(v-for="item in apps")
     //-     img(v-lazy="hf.optionalImg(item.logo).src" alt="App logo").logo
-    //-     .name
-    //-       a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website !== 'x'") {{ item.name }}
-    //-       div(v-else) {{ item.name }}
     //-     .status(v-if="!item.status || item.status !== '?'") {{ item.status }}
     //-     .category(v-if="!item.category || item.category !== '?'") {{ item.category }}
-    //-     .list
-    //-       a(:href="item.docs" target="_blank" rel="noreferrer noopener")
-    //-         img(src="~assets/brands/white/docs.svg" alt="Docs" v-if="item.docs !== 'x'").icon
-    //-       a(:href="item.github" target="_blank" rel="noreferrer noopener")
-    //-         img(src="~assets/brands/color/github.svg" alt="GitHub" v-if="item.github !== 'x'").icon
-    //-       a(:href="item.chat" target="_blank" rel="noreferrer noopener")
-    //-         img(src="~assets/brands/white/chat.svg" alt="Chat" v-if="item.chat !== 'x'").icon
-    //-       a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-if="item.twitter !== 'x'")
-    //-         img(src="~assets/brands/color/twitter.svg" alt="Twitter").icon
 
   tm-section
-    .container
-      ais-instant-search(:search-client="searchClient" index-name="apps")
-        .search-panel
-          .search-panel__filters
-            .category Categories
+    ais-instant-search(:search-client="searchClient" index-name="apps")
+      .search-panel
+        .search-panel__filters
+          .category Categories
             ais-refinement-list(attribute="category")
-            .category.status Status
+          .category.status Status
             ais-refinement-list(attribute="status")
 
-          .search-panel__results
-            .search-panel__results__title Cosmos apps and projects
-            ais-search-box(placeholder="Search here" class="searchbox")
-            ais-hits
-              template(slot="item" slot-scope="{ item }")
-                ais-highlight(:hit="item" attribute="name")
+        .search-panel__results
+          .search-panel__results__title Cosmos apps and projects
+          ais-search-box(placeholder="Search here" class="searchbox")
+          ais-stats
+          ais-hits
+            template(slot="item" slot-scope="{ item }")
+              //- ais-highlight(:hit="item" attribute="name")
+              img(:src="getImgUrl(item.logo)" alt="App logo").logo
+              .name
+                a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website !== 'x'") {{ item.name }}
+                div(v-else) {{ item.name }}
+              ais-highlight(:hit="item" attribute="category")
+              .list
+                a(:href="item.docs" target="_blank" rel="noreferrer noopener").list-item
+                  img(src="~assets/brands/gray/docs.svg" alt="Docs" v-if="item.docs !== 'x'").icon
+                a(:href="item.github" target="_blank" rel="noreferrer noopener").list-item
+                  img(src="~assets/brands/gray/github.svg" alt="GitHub" v-if="item.github !== 'x'").icon
+                a(:href="item.chat" target="_blank" rel="noreferrer noopener").list-item
+                  img(src="~assets/brands/gray/chat.svg" alt="Chat" v-if="item.chat !== 'x'").icon
+                a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-if="item.twitter !== 'x'").list-item
+                  img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
 
-            .pagination
-              ais-pagination
+          //- .pagination
+          //-   ais-pagination
 
   tm-section
     .cta-container
@@ -63,15 +65,10 @@
 </template>
 
 <script>
-import hf from "scripts/helpers"
-// import { orderBy } from "lodash"
-// import { mapGetters } from "vuex"
+import algoliasearch from "algoliasearch"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
-import algoliasearch from "algoliasearch"
-
-import "instantsearch.css/themes/algolia-min.css"
 
 const apiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
 
@@ -87,32 +84,38 @@ export default {
   },
   data() {
     return {
-      hf: hf,
       searchClient: algoliasearch("ME7376U3XW", apiKey)
     }
   },
-  computed: {
-    // ...mapGetters(["ecosystem"]),
-    // apps() {
-    //   if (this.ecosystem.apps.length > 0) {
-    //     // let projects = this.ecosystem.apps.filter(
-    //     //   e => e.status !== "Deprecated"
-    //     // )
-    //     let projects = this.ecosystem.apps
-    //     return orderBy(projects, i => i.name.toLowerCase(), "asc")
-    //   } else {
-    //     return []
-    //   }
-    // }
+  methods: {
+    getImgUrl(input) {
+      const findUrlRegex = /(?:(?:https?:\/\/)|(?:www\.))[^\s]+.(?:jpg|jpeg|svg|png)/g
+      const match = findUrlRegex.exec(input)
+      return match
+    }
   }
 }
 </script>
 
+<style src="../styles/algolia.css" lang="css"></style>
+
 <style lang="stylus" scoped>
-// /deep/
-//   a[href]
-//     color inherit
-//     text-decoration none
+/deep/
+  a[href]
+    color inherit
+    text-decoration none
+
+  .tm-section__main
+    p, ul, ol
+      max-width unset
+
+  .ais-Hits-list
+    display grid
+    grid-template-columns repeat(3, 1fr)
+    gap 2rem
+
+.subtitle
+  max-width 40em
 
 .cta-container
   display grid
@@ -123,24 +126,18 @@ export default {
     &__btn
       margin-top 2rem
 
-.grid-container
-  display grid
-  grid-template-columns repeat(4, 1fr)
-  gap 4rem
+// .grid-container
+//   display grid
+//   grid-template-columns repeat(4, 1fr)
+//   gap 4rem
 
-.grid-item
-  display inline-grid
-  gap 0.5rem
+// .grid-item
+//   display inline-grid
+//   gap 0.5rem
 
 .logo
-  width 4rem
-  height 4rem
-
-.name
-  font-weight bold
-
-.status
-  font-size 0.875rem
+  width 4.5rem
+  height 4.5rem
 
 .category
   color var(--dim)
@@ -156,16 +153,13 @@ export default {
 .list
   display inline-flex
   flex-direction row
-  gap 0.5rem
+
+  .list-item + .list-item
+    margin-left 0.5rem
 
 .icon
-  width 2rem
-  height 2rem
-
-.container
-  max-width 1200px
-  margin 0 auto
-  padding 1rem
+  width 1.5rem
+  height 1.5rem
 
 .search-panel
   display flex
@@ -185,10 +179,10 @@ export default {
     color #000000
     margin-bottom 2rem
 
-.searchbox
-  margin-bottom 2rem
+//- .searchbox
+//-   margin-bottom 2rem
 
-.pagination
-  margin 2rem auto
-  text-align center
+//- .pagination
+//-   margin 2rem auto
+//-   text-align center
 </style>
