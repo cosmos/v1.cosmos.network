@@ -14,8 +14,7 @@
 export default {
   props: {
     iconColor: {
-      type: String,
-      default: "currentColor"
+      type: String
     }
   }
 }
