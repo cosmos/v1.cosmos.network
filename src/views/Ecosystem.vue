@@ -38,7 +38,7 @@
                       icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
                     .text__top__name(v-else) {{ item.name }}
                       icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
-                  ais-highlight(:hit="item" attribute="category")
+                  .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
                   .text__list
                     a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'").list-item
                       img(src="~assets/brands/gray/docs.svg" alt="Docs" v-if="item.docs !== 'x'").icon
