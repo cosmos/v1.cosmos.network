@@ -44,6 +44,7 @@
     "scroll-to": "0.0.2",
     "swagger-ui": "3.25.0",
     "twix": "1.2.1",
+    "v-tooltip": "^2.0.3",
     "vue": "^2.6.10",
     "vue-gtm": "^2.2.0",
     "vue-instantsearch": "^3.4.2",
