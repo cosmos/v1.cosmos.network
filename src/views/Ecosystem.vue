@@ -40,14 +40,14 @@
                       icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
                   .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
                   .text__list
-                    a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'").list-item
-                      img(src="~assets/brands/gray/docs.svg" alt="Docs" v-if="item.docs !== 'x'").icon
-                    a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'").list-item
-                      img(src="~assets/brands/gray/github.svg" alt="GitHub" v-if="item.github !== 'x'").icon
-                    a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'").list-item
-                      img(src="~assets/brands/gray/chat.svg" alt="Chat" v-if="item.chat !== 'x'").icon
-                    a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'").list-item
-                      img(src="~assets/brands/gray/twitter.svg" alt="Twitter" v-if="item.twitter !== 'x'").icon
+                    a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs").list-item
+                      img(src="~assets/brands/gray/docs.svg" alt="Docs").icon
+                    a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github").list-item
+                      img(src="~assets/brands/gray/github.svg" alt="GitHub").icon
+                    a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat").list-item
+                      img(src="~assets/brands/gray/chat.svg" alt="Chat").icon
+                    a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter").list-item
+                      img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
 
           .pagination
             ais-pagination
@@ -120,10 +120,6 @@ export default {
 
 <style lang="stylus" scoped>
 /deep/
-  //- a[href]
-  //-   color inherit
-  //-   text-decoration none
-
   .tm-section__main
     p, ul, ol
       max-width unset
@@ -181,7 +177,13 @@ export default {
   margin-top 2rem
 
 .search-panel
-  display flex
+  display grid
+  width 100%
+  grid-template-columns var(--sidebar-width) calc(100% - var(--sidebar-width))
+  max-width var(--layout-max-width,1540px)
+  margin-left auto
+  margin-right auto
+  position relative
 
 .search-panel__filters
   flex 1
@@ -237,6 +239,9 @@ export default {
     justify-content flex-start
     flex-direction row
     margin-top 2.6563rem
+
+.list-item + .list-item
+  margin-left 0.5rem
 
 .icon
   width 1.5rem
