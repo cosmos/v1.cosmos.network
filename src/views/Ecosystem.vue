@@ -5,12 +5,6 @@
     div(slot="title") Explore Cosmos Network
     div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of apps and blockchains built in the Cosmos ecosystem by developers and contributors from across the globe.
 
-    //- .grid-container
-    //-   .grid-item(v-for="item in apps")
-    //-     img(v-lazy="hf.optionalImg(item.logo).src" alt="App logo").logo
-    //-     .status(v-if="!item.status || item.status !== '?'") {{ item.status }}
-    //-     .category(v-if="!item.category || item.category !== '?'") {{ item.category }}
-
   tm-section
     ais-instant-search(:search-client="searchClient" index-name="apps")
       .search-panel
@@ -19,48 +13,61 @@
             ais-refinement-list(attribute="category")
           .category.status Status
             ais-refinement-list(attribute="status")
+          .faq
+            .faq__title Be Advised
+            .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
 
         .search-panel__results
           .search-panel__results__title Cosmos apps and projects
           ais-search-box(placeholder="Search here" class="searchbox")
           ais-stats
+
+          //- ais-state-results
+          //-   template(slot-scope="{ query, hits }")
+          //-     p.no-results(v-if="hits.length === 0") No results found matching <em>{{ query }}</em>.
+
           ais-hits
             template(slot="item" slot-scope="{ item }")
-              //- ais-highlight(:hit="item" attribute="name")
-              img(:src="getImgUrl(item.logo)" alt="App logo").logo
-              .name
-                a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website !== 'x'") {{ item.name }}
-                div(v-else) {{ item.name }}
-              ais-highlight(:hit="item" attribute="category")
-              .list
-                a(:href="item.docs" target="_blank" rel="noreferrer noopener").list-item
-                  img(src="~assets/brands/gray/docs.svg" alt="Docs" v-if="item.docs !== 'x'").icon
-                a(:href="item.github" target="_blank" rel="noreferrer noopener").list-item
-                  img(src="~assets/brands/gray/github.svg" alt="GitHub" v-if="item.github !== 'x'").icon
-                a(:href="item.chat" target="_blank" rel="noreferrer noopener").list-item
-                  img(src="~assets/brands/gray/chat.svg" alt="Chat" v-if="item.chat !== 'x'").icon
-                a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-if="item.twitter !== 'x'").list-item
-                  img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
+              .item
+                .logo-wrapper
+                  img(:src="getImgUrl(item.logo)" alt="App logo" v-if="item.logo").logo-wrapper__item
+                  img(src="~assets/images/ecosystem/avatar-placeholder.svg" v-else).logo-wrapper__item
+                .text
+                  .text__top
+                    a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website !== 'x'").text__top__name {{ item.name }}
+                      icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
+                    .text__top__name(v-else) {{ item.name }}
+                      icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
+                  ais-highlight(:hit="item" attribute="category")
+                  .text__list
+                    a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'").list-item
+                      img(src="~assets/brands/gray/docs.svg" alt="Docs" v-if="item.docs !== 'x'").icon
+                    a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'").list-item
+                      img(src="~assets/brands/gray/github.svg" alt="GitHub" v-if="item.github !== 'x'").icon
+                    a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'").list-item
+                      img(src="~assets/brands/gray/chat.svg" alt="Chat" v-if="item.chat !== 'x'").icon
+                    a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'").list-item
+                      img(src="~assets/brands/gray/twitter.svg" alt="Twitter" v-if="item.twitter !== 'x'").icon
 
-          //- .pagination
-          //-   ais-pagination
+          .pagination
+            ais-pagination
 
   tm-section
     .cta-container
       .cta-container__item
         .cta-container__item__title Want to build your own Cosmos app?
         tm-btn(
-          value="Build now" size="lg" type="anchor" href="https://tutorials.cosmos.network/" target="_blank" rel="noreferrer noopener"
+          value="Build now" size="lg" type="link" :to="{ name: 'tools' }"
           icon="arrow_forward" icon-pos="right").cta-container__item__btn
       .cta-container__item
         .cta-container__item__title Need funding to build your great idea?
         tm-btn(
-          value="Get a grant" size="lg" type="anchor" href="https://tutorials.cosmos.network/" target="_blank" rel="noreferrer noopener"
+          value="Get a grant" size="lg" type="link" :to="{ name: 'contributors' }"
           icon="arrow_forward" icon-pos="right").cta-container__item__btn
       .cta-container__item
         .cta-container__item__title Built something with Cosmos tools?
         tm-btn(
-          value="Submit a project" size="lg" type="anchor" href="https://tutorials.cosmos.network/" target="_blank" rel="noreferrer noopener"
+          value="Submit a project" size="lg" type="anchor" href="https://tutorials.cosmos.network" target="_blank" rel="noreferrer noopener"
           icon="arrow_forward" icon-pos="right").cta-container__item__btn
 </template>
 
@@ -69,6 +76,7 @@ import algoliasearch from "algoliasearch"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
+import IconDot from "common/IconDot"
 
 const apiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
 
@@ -80,30 +88,41 @@ export default {
   components: {
     TmHeader,
     TmSection,
-    TmBtn
+    TmBtn,
+    IconDot
   },
   data() {
     return {
-      searchClient: algoliasearch("ME7376U3XW", apiKey)
+      searchClient: algoliasearch("ME7376U3XW", apiKey),
+      dotColor: {
+        mainnet: "#4ACF4A",
+        testnet: "#66A1FF",
+        development: "#FF9500",
+        proofofconcept: "rgba(59, 66, 125, 0.12)",
+        beta: "linear-gradient(95.47deg, #086108 0%, #018A01 100%)",
+        alpha: "linear-gradient(95.47deg, #086108 0%, #018A01 100%)"
+      }
     }
   },
   methods: {
     getImgUrl(input) {
       const findUrlRegex = /(?:(?:https?:\/\/)|(?:www\.))[^\s]+.(?:jpg|jpeg|svg|png)/g
       const match = findUrlRegex.exec(input)
+
       return match
+    },
+    cleanTxt(item) {
+      return item.replace(/\s+/g, "").toLowerCase()
     }
   }
 }
 </script>
 
-<style src="../styles/algolia.css" lang="css"></style>
-
 <style lang="stylus" scoped>
 /deep/
-  a[href]
-    color inherit
-    text-decoration none
+  //- a[href]
+  //-   color inherit
+  //-   text-decoration none
 
   .tm-section__main
     p, ul, ol
@@ -113,6 +132,9 @@ export default {
     display grid
     grid-template-columns repeat(3, 1fr)
     gap 2rem
+
+.dot
+  margin-left 5px
 
 .subtitle
   max-width 40em
@@ -126,19 +148,6 @@ export default {
     &__btn
       margin-top 2rem
 
-// .grid-container
-//   display grid
-//   grid-template-columns repeat(4, 1fr)
-//   gap 4rem
-
-// .grid-item
-//   display inline-grid
-//   gap 0.5rem
-
-.logo
-  width 4.5rem
-  height 4.5rem
-
 .category
   color var(--dim)
   text-transform uppercase
@@ -147,19 +156,29 @@ export default {
   letter-spacing var(--tracking-2-wide)
   line-height 1.25rem
 
+.faq
+  margin-top 3rem
+  color rgba(0, 0, 0, 0.8)
+  font-size 1rem
+  letter-spacing var(--tracking-2-wide)
+  line-height 1.25rem
+  padding 1.25rem
+  background rgba(176, 180, 207, 0.087)
+  border-radius 0.5rem
+
+  &__title
+    text-transform uppercase
+    font-weight var(--fw-bold)
+
+  &__desc
+    margin-top 0.5rem
+    font-size 0.8125rem
+    line-height 1.125rem
+    letter-spacing 0.03em
+    color rgba(0, 0, 0, 0.667)
+
 .status
   margin-top 2rem
-
-.list
-  display inline-flex
-  flex-direction row
-
-  .list-item + .list-item
-    margin-left 0.5rem
-
-.icon
-  width 1.5rem
-  height 1.5rem
 
 .search-panel
   display flex
@@ -179,10 +198,54 @@ export default {
     color #000000
     margin-bottom 2rem
 
-//- .searchbox
-//-   margin-bottom 2rem
+.item
+  display grid
+  grid-auto-flow column
+  grid-template-columns min-content 1fr
+  text-decoration none
+  border-radius .5rem
+  transition all .25s
+  gap 1.5rem
 
-//- .pagination
-//-   margin 2rem auto
-//-   text-align center
+.logo-wrapper
+  background-color #EEEEEE
+  width fit-content
+  height fit-content
+  padding 1.25rem
+  border-radius 1.25rem
+  display flex
+  align-items center
+
+  &__item
+    width 4.5rem
+    height 4.5rem
+
+.text
+  display flex
+  flex-direction column
+
+  &__top
+
+    &__name
+      font-weight bold
+      font-size 1.125rem
+      line-height 1.6875rem
+      color #5064FB
+
+  &__list
+    display inline-flex
+    justify-content flex-start
+    flex-direction row
+    margin-top 2.6563rem
+
+.icon
+  width 1.5rem
+  height 1.5rem
+
+.pagination
+  margin 2rem auto
+  text-align center
 </style>
+
+<style src="../styles/algolia.css" lang="css" />
+<style src="../styles/tooltip.css" lang="css" />

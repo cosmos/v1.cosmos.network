@@ -438,11 +438,18 @@ a[class^="ais-"] {
 .ais-Menu-count,
 .ais-RefinementList-count,
 .ais-ToggleRefinement-count {
-  padding: 0.1rem 0.4rem;
-  font-size: 0.8rem;
-  color: #3a4570;
-  background-color: #dfe2ee;
-  border-radius: 8px;
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #777;
+  border-radius: 10px;
 }
 .ais-HierarchicalMenu-showMore,
 .ais-Menu-showMore,
@@ -605,8 +612,8 @@ a[class^="ais-"] {
 }
 .ais-Pagination-item--selected .ais-Pagination-link {
   color: #fff;
-  background-color: #0096db;
-  border-color: #0096db;
+  background-color: #777;
+  border-color: #777;
 }
 .ais-Pagination-item--selected .ais-Pagination-link:focus,
 .ais-Pagination-item--selected .ais-Pagination-link:hover {
@@ -792,4 +799,12 @@ a[class^="ais-"] {
   color: #a5aed1;
   cursor: not-allowed;
   background: inherit;
+}
+
+.ais-RefinementList-item {
+  margin-top: 6px;
+}
+
+.ais-RefinementList-labelText {
+  text-transform: capitalize;
 }
