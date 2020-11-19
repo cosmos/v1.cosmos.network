@@ -9,9 +9,16 @@
     ais-instant-search(:search-client="searchClient" index-name="apps")
       .layout
         .layout__sidebar
-          .category Categories
-            ais-refinement-list(attribute="category" :sort-by="['name:asc']" :class-names="{'ais-refinement-list__count': 'badge','ais-refinement-list__item': 'checkbox'}")
-          .category.status Status
+          ais-search-box(placeholder="Search here" class="searchbox")
+          .clear
+            ais-clear-refinements
+          .header
+            .header__title Categories
+            span.sr-only Filter
+            ais-refinement-list(attribute="category" :sort-by="['name:asc']" :limit="20")
+          .header
+            .header__title Status
+            span.sr-only Filter
             ais-refinement-list(attribute="status" :sort-by="['name:asc']")
           .faq
             .faq__title Be Advised
@@ -19,8 +26,6 @@
 
         .layout__results
           .layout__results__title Cosmos apps and projects
-          ais-search-box(placeholder="Search here" class="searchbox")
-          ais-stats
           
           ais-results
             ais-hits
@@ -80,6 +85,8 @@ import IconDot from "common/IconDot"
 
 const apiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
 
+const searchClient = algoliasearch("ME7376U3XW", apiKey)
+
 export default {
   name: "page-ecosystem",
   metaInfo: {
@@ -93,7 +100,7 @@ export default {
   },
   data() {
     return {
-      searchClient: algoliasearch("ME7376U3XW", apiKey),
+      searchClient: searchClient,
       dotColor: {
         mainnet: "#4ACF4A",
         testnet: "#66A1FF",
@@ -143,6 +150,13 @@ export default {
       padding 0
       width min-content
 
+.sr-only
+  position absolute
+  height 1px
+  width 1px
+  overflow hidden
+  clip rect(1px, 1px, 1px, 1px)
+
 .dot
   margin-left 5px
 
@@ -164,13 +178,21 @@ export default {
       line-height 2rem
       color #000000
 
-.category
+.clear
+  margin-top 2rem
+
+.header
+  margin-top 2rem
   color var(--dim)
   text-transform uppercase
   font-weight var(--fw-bold)
   font-size 1rem
   letter-spacing var(--tracking-2-wide)
   line-height 1.25rem
+
+  &__title
+    padding-left 0.9063rem
+    padding-right 0.9063rem
 
 .faq
   margin-top 3rem
@@ -192,9 +214,6 @@ export default {
     line-height 1.125rem
     letter-spacing 0.03em
     color rgba(0, 0, 0, 0.667)
-
-.status
-  margin-top 2rem
 
 .layout
   display grid
@@ -230,11 +249,11 @@ export default {
   gap 1.5rem
 
 .logo-wrapper
-  background-color #EEEEEE
+  background linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%);
   width fit-content
   height fit-content
   padding 1.25rem
-  border-radius 1.25rem
+  border-radius 1.5rem
   display flex
   align-items center
 
@@ -270,6 +289,9 @@ export default {
 .pagination
   margin 2rem auto
   text-align center
+  display flex
+  justify-content center
+  align-items center
 
 .no-results
   margin-top 2rem
@@ -287,10 +309,12 @@ export default {
   .cta-container
     display flex
     flex-direction column
-    justify-content center
-    align-items center
-    text-align left
+    justify-content flex-start
+    align-items flex-start
     margin 2rem 0
+
+    &__item + &__item
+      margin-top 3rem
 
 @media screen and (max-width: 600px)
   .cta-container
