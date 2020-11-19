@@ -7,50 +7,50 @@
 
   tm-section
     ais-instant-search(:search-client="searchClient" index-name="apps")
-      .search-panel
-        .search-panel__filters
+      .layout
+        .layout__sidebar
           .category Categories
-            ais-refinement-list(attribute="category")
+            ais-refinement-list(attribute="category" :sort-by="['name:asc']" :class-names="{'ais-refinement-list__count': 'badge','ais-refinement-list__item': 'checkbox'}")
           .category.status Status
-            ais-refinement-list(attribute="status")
+            ais-refinement-list(attribute="status" :sort-by="['name:asc']")
           .faq
             .faq__title Be Advised
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
 
-        .search-panel__results
-          .search-panel__results__title Cosmos apps and projects
+        .layout__results
+          .layout__results__title Cosmos apps and projects
           ais-search-box(placeholder="Search here" class="searchbox")
           ais-stats
+          
+          ais-results
+            ais-hits
+              template(slot="item" slot-scope="{ item }")
+                .item
+                  .logo-wrapper
+                    img(:src="getImgUrl(item.logo)" alt="App logo" v-if="item.logo").logo-wrapper__item
+                    img(src="~assets/images/ecosystem/avatar-placeholder.svg" v-else).logo-wrapper__item
+                  .text
+                    .text__top
+                      a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website !== 'x'").text__top__name {{ item.name }}
+                        icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
+                      .text__top__name(v-else) {{ item.name }}
+                        icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
+                    .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
+                    .text__list
+                      a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs").list-item
+                        img(src="~assets/brands/gray/docs.svg" alt="Docs").icon
+                      a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github").list-item
+                        img(src="~assets/brands/gray/github.svg" alt="GitHub").icon
+                      a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat").list-item
+                        img(src="~assets/brands/gray/chat.svg" alt="Chat").icon
+                      a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter").list-item
+                        img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
 
-          //- ais-state-results
-          //-   template(slot-scope="{ query, hits }")
-          //-     p.no-results(v-if="hits.length === 0") No results found matching <em>{{ query }}</em>.
+            ais-state-results
+              .no-results(slot-scope="{ state: { query }, results: { hits } }" v-show="!hits.length") No results found matching <em>{{ query }}</em>.
 
-          ais-hits
-            template(slot="item" slot-scope="{ item }")
-              .item
-                .logo-wrapper
-                  img(:src="getImgUrl(item.logo)" alt="App logo" v-if="item.logo").logo-wrapper__item
-                  img(src="~assets/images/ecosystem/avatar-placeholder.svg" v-else).logo-wrapper__item
-                .text
-                  .text__top
-                    a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website !== 'x'").text__top__name {{ item.name }}
-                      icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
-                    .text__top__name(v-else) {{ item.name }}
-                      icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
-                  .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
-                  .text__list
-                    a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs").list-item
-                      img(src="~assets/brands/gray/docs.svg" alt="Docs").icon
-                    a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github").list-item
-                      img(src="~assets/brands/gray/github.svg" alt="GitHub").icon
-                    a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat").list-item
-                      img(src="~assets/brands/gray/chat.svg" alt="Chat").icon
-                    a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter").list-item
-                      img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
-
-          .pagination
-            ais-pagination
+            .pagination
+              ais-pagination
 
   tm-section
     .cta-container
@@ -120,14 +120,25 @@ export default {
 
 <style lang="stylus" scoped>
 /deep/
-  .tm-section__main
-    p, ul, ol
-      max-width unset
-
   .ais-Hits-list
     display grid
     grid-template-columns repeat(3, 1fr)
-    gap 2rem
+    row-gap 3rem
+    column-gap 2rem
+
+  @media screen and (max-width: 1450px)
+    .ais-Hits-list
+      grid-template-columns repeat(2, 1fr)
+
+  @media screen and (max-width: 1050px)
+    .ais-Hits-list
+      grid-template-columns repeat(1, 1fr)
+      row-gap 1rem
+
+  @media screen and (max-width: 400px)
+    .ais-Hits-item
+      padding 0
+      width min-content
 
 .dot
   margin-left 5px
@@ -143,6 +154,12 @@ export default {
   &__item
     &__btn
       margin-top 2rem
+
+    &__title
+      font-weight 600
+      font-size 1.5rem
+      line-height 2rem
+      color #000000
 
 .category
   color var(--dim)
@@ -176,7 +193,7 @@ export default {
 .status
   margin-top 2rem
 
-.search-panel
+.layout
   display grid
   width 100%
   grid-template-columns var(--sidebar-width) calc(100% - var(--sidebar-width))
@@ -185,11 +202,11 @@ export default {
   margin-right auto
   position relative
 
-.search-panel__filters
+.layout__sidebar
   flex 1
   margin-right 1em
 
-.search-panel__results
+.layout__results
   flex 3
 
   &__title
@@ -238,10 +255,10 @@ export default {
     display inline-flex
     justify-content flex-start
     flex-direction row
-    margin-top 2.6563rem
+    margin-top 2.375rem
 
 .list-item + .list-item
-  margin-left 0.5rem
+  margin-left 1rem
 
 .icon
   width 1.5rem
@@ -250,6 +267,37 @@ export default {
 .pagination
   margin 2rem auto
   text-align center
+
+.no-results
+  margin-top 2rem
+
+@media screen and (max-width: 832px)
+  .layout
+    display block
+
+    &__results
+      margin-top 2rem
+
+  .ais-Hits-list
+    grid-template-columns repeat(2, 1fr)
+
+  .cta-container
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    text-align left
+    margin 2rem 0
+
+@media screen and (max-width: 600px)
+  .cta-container
+
+    &__item + &__item
+      margin-top 1rem
+
+@media screen and (max-width: 400px)
+  .item
+    gap 1rem
 </style>
 
 <style src="../styles/algolia.css" lang="css" />
