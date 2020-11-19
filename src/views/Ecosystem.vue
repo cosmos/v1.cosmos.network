@@ -203,6 +203,8 @@ export default {
   padding 1.25rem
   background rgba(176, 180, 207, 0.087)
   border-radius 0.5rem
+  margin-left 0.9063rem
+  margin-right 0.9063rem
 
   &__title
     text-transform uppercase
@@ -320,7 +322,7 @@ export default {
   .cta-container
 
     &__item + &__item
-      margin-top 1rem
+      margin-top 2rem
 
 @media screen and (max-width: 400px)
   .item

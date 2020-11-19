@@ -812,7 +812,7 @@ input.ais-RefinementList-checkbox {
 .ais-RefinementList-item--selected {
   font-weight: bold;
   background: rgba(80, 100, 251, 0.12);
-  border-radius: 4px;  
+  border-radius: 4px;
 }
 
 label.ais-RefinementList-label {
@@ -825,4 +825,5 @@ label.ais-RefinementList-label {
 
 .ais-SearchBox, .clear {
   padding-left: 14.5px;
+  padding-right: 14.5px;
 }
