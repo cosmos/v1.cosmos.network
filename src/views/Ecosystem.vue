@@ -120,6 +120,9 @@ export default {
 
 <style lang="stylus" scoped>
 /deep/
+  .tm-section__main ol
+    max-width fit-content
+
   .ais-Hits-list
     display grid
     grid-template-columns repeat(3, 1fr)
