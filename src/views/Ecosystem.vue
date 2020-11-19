@@ -19,7 +19,7 @@
           .header
             .header__title Status
             span.sr-only Filter
-            ais-refinement-list(attribute="status" :sort-by="['name:asc']")
+            ais-refinement-list(attribute="status" :sort-by="['count:desc']")
           .faq
             .faq__title Be Advised
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
@@ -72,7 +72,7 @@
       .cta-container__item
         .cta-container__item__title Built something with Cosmos tools?
         tm-btn(
-          value="Submit a project" size="lg" type="anchor" href="https://tutorials.cosmos.network" target="_blank" rel="noreferrer noopener"
+          value="Submit a project" size="lg" type="anchor" href="https://airtable.com/tblii5D2VeOOFZA4c/viwDRWlFKDPpHZOII" target="_blank" rel="noreferrer noopener"
           icon="arrow_forward" icon-pos="right").cta-container__item__btn
 </template>
 
@@ -128,7 +128,7 @@ export default {
 <style lang="stylus" scoped>
 /deep/
   .tm-section__main ol
-    max-width fit-content
+    max-width -webkit-fill-available
 
   @media screen and (max-width: 400px)
     .tm-section__main ol
@@ -263,7 +263,7 @@ export default {
     display inline-flex
     justify-content flex-start
     flex-direction row
-    margin-top 2.375rem
+    margin-top auto
 
 .list-item + .list-item
   margin-left 1rem
@@ -289,9 +289,6 @@ export default {
     &__results
       margin-top 2rem
 
-  .ais-Hits-list
-    grid-template-columns repeat(2, 1fr)
-
   .cta-container
     display flex
     flex-direction column
@@ -311,6 +308,21 @@ export default {
 @media screen and (max-width: 400px)
   .item
     gap 1rem
+
+  .logo-wrapper
+
+    &__item
+      width 2.5rem
+      height 2.5rem
+
+  .text
+
+    &__top
+      &__name
+        font-size 1rem
+
+    &__list
+      margin-top 1rem
 </style>
 
 <style src="../styles/algolia.css" lang="css" />
