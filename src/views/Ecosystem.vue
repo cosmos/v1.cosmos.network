@@ -9,7 +9,7 @@
     ais-instant-search(:search-client="searchClient" index-name="apps")
       .layout
         .layout__sidebar
-          ais-search-box(placeholder="Search here" class="searchbox")
+          ais-search-box(placeholder="Search apps..." class="searchbox")
           .clear
             ais-clear-refinements
           .header
@@ -130,26 +130,7 @@ export default {
   .tm-section__main ol
     max-width fit-content
 
-  .ais-Hits-list
-    display grid
-    grid-template-columns repeat(3, 1fr)
-    row-gap 3rem
-    column-gap 2rem
-
-  @media screen and (max-width: 1450px)
-    .ais-Hits-list
-      grid-template-columns repeat(2, 1fr)
-
-  @media screen and (max-width: 1050px)
-    .ais-Hits-list
-      grid-template-columns repeat(1, 1fr)
-      row-gap 1rem
-
   @media screen and (max-width: 400px)
-    .ais-Hits-item
-      padding 0
-      width min-content
-
     .tm-section__main ol
       margin auto
 
