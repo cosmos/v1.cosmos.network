@@ -27,7 +27,7 @@
         .layout__results
           .layout__results__title Cosmos apps and projects
           
-          ais-results
+          div
             ais-hits
               template(slot="item" slot-scope="{ item }")
                 .item
@@ -149,6 +149,9 @@ export default {
     .ais-Hits-item
       padding 0
       width min-content
+
+    .tm-section__main ol
+      margin auto
 
 .sr-only
   position absolute
