@@ -440,7 +440,6 @@ a[class^="ais-"] {
 .ais-ToggleRefinement-count {
   display: inline-block;
   min-width: 10px;
-  padding: 3px 7px;
   font-size: 0.75rem;
   line-height: 1;
   color: var(--dim);
@@ -796,8 +795,20 @@ a[class^="ais-"] {
   cursor: pointer;
 }
 
+.ais-RefinementList-item:hover .ais-RefinementList-labelText {
+  color: #5064FB;
+}
+
+.ais-RefinementList-item:focus .ais-RefinementList-labelText {
+  color: #5064FB;
+}
+
 .ais-RefinementList-labelText {
   text-transform: capitalize;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.03em;
+  color: #000000;
 }
 
 .ais-Stats {
@@ -814,8 +825,12 @@ input.ais-RefinementList-checkbox {
   border-radius: 4px;
 }
 
+.ais-RefinementList-item--selected > .ais-RefinementList-label > .ais-RefinementList-count {
+  font-weight: normal;
+}
+
 label.ais-RefinementList-label {
-  margin: 6px 16px;
+  padding: 6px 16px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;

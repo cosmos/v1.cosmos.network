@@ -9,7 +9,7 @@
     ais-instant-search(:search-client="searchClient" index-name="apps")
       .layout
         .layout__sidebar
-          ais-search-box(placeholder="Search apps..." class="searchbox")
+          ais-search-box(placeholder="Search" class="searchbox")
           .clear
             ais-clear-refinements
           .header
@@ -170,9 +170,9 @@ export default {
   color var(--dim)
   text-transform uppercase
   font-weight var(--fw-bold)
-  font-size 1rem
+  font-size 0.75rem
+  line-height 1.125rem
   letter-spacing var(--tracking-2-wide)
-  line-height 1.25rem
 
   &__title
     padding-left 0.9063rem
@@ -235,7 +235,7 @@ export default {
   gap 1.5rem
 
 .logo-wrapper
-  background linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%);
+  background linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)
   width fit-content
   height fit-content
   padding 1.25rem
