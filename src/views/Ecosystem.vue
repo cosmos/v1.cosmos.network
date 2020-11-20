@@ -10,8 +10,6 @@
       .layout
         .layout__sidebar
           ais-search-box(placeholder="Search" class="searchbox")
-          .clear
-            ais-clear-refinements
           .header
             .header__title Categories
             span.sr-only Filter
@@ -31,8 +29,8 @@
             ais-hits
               template(slot="item" slot-scope="{ item }")
                 .item
-                  .logo-wrapper
-                    img(:src="getImgUrl(item.logo)" alt="App logo" v-if="item.logo").logo-wrapper__item
+                  .logo-wrapper(:style="{'--average-color': getAverageColor(item.logo)}")
+                    img(:src="getImgUrl(item.logo)" alt="App logo" v-if="item.logo" ref="averageColor").logo-wrapper__item
                     img(src="~assets/images/ecosystem/avatar-placeholder.svg" v-else).logo-wrapper__item
                   .text
                     .text__top
@@ -56,6 +54,14 @@
 
             .pagination
               ais-pagination
+                template(slot="first" slot-scope="{ refine, isFirstPage }")
+                  div(@click="refine" :disabled="isFirstPage") first
+                template(slot="previous" slot-scope="{ refine, isFirstPage }")
+                  div(@click="refine" :disabled="isFirstPage") previous
+                template(slot="next" slot-scope="{ refine, isLastPage }")
+                  div(@click="refine" :disabled="isLastPage") next
+                template(slot="last" slot-scope="{ refine, isLastPage }")
+                  div(@click="refine" :disabled="isLastPage") last
 
   tm-section
     .cta-container
@@ -78,6 +84,7 @@
 
 <script>
 import algoliasearch from "algoliasearch"
+import FastAverageColor from "fast-average-color"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
@@ -120,6 +127,28 @@ export default {
     },
     cleanTxt(item) {
       return item.replace(/\s+/g, "").toLowerCase()
+    },
+    getAverageColor() {
+      const fac = new FastAverageColor()
+
+      //- const imgUrl = this.getImgUrl(img)
+
+      //- return imgUrl
+
+      fac
+        .getColorAsync(
+          "https://dl.airtable.com/.attachments/671b67fd887831fbce48e34144504fea/4dcdc5cf/vocdoni.png",
+          { algorithm: "dominant" }
+        )
+        .then(color => {
+          // eslint-disable-next-line
+          console.log(color.hex)
+          return color.hex
+        })
+        .catch(e => {
+          // eslint-disable-next-line
+          console.log(e)
+        })
     }
   }
 }
@@ -161,9 +190,6 @@ export default {
       font-size 1.5rem
       line-height 2rem
       color #000000
-
-.clear
-  margin-top 2rem
 
 .header
   margin-top 2rem
@@ -235,7 +261,7 @@ export default {
   gap 1.5rem
 
 .logo-wrapper
-  background linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)
+  background var(--average-color)
   width fit-content
   height fit-content
   padding 1.25rem
@@ -246,6 +272,8 @@ export default {
   &__item
     width 4.5rem
     height 4.5rem
+    //- mix-blend-mode color
+    //- color var(--average-color)
 
 .text
   display flex
@@ -273,7 +301,7 @@ export default {
   height 1.5rem
 
 .pagination
-  margin 2rem auto
+  margin-top 4rem
   text-align center
   display flex
   justify-content center

@@ -229,7 +229,7 @@ a[class^="ais-"] {
 .ais-Menu-link,
 .ais-Pagination-link,
 .ais-RatingMenu-link {
-  color: #0096db;
+  color: #5064FB;
   transition: color 0.2s ease-out;
 }
 .ais-Breadcrumb-link:focus,
@@ -578,16 +578,28 @@ a[class^="ais-"] {
 .ais-Pagination-item + .ais-Pagination-item {
   margin-left: 0.3rem;
 }
+.ais-Pagination-item--firstPage,
+.ais-Pagination-item--previousPage,
+.ais-Pagination-item--nextPage,
+.ais-Pagination-item--lastPage {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #5064FB;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
 .ais-Pagination-link {
-  padding: 0.3rem 0.6rem;
+  padding: 0.625rem 0.75rem;
   display: block;
-  border: 1px solid #c4c8d8;
-  border-radius: 5px;
   transition: background-color 0.2s ease-out;
 }
 .ais-Pagination-link:focus,
 .ais-Pagination-link:hover {
-  background-color: #e3e5ec;
+  background-color: #fff;
 }
 .ais-Pagination-item--disabled .ais-Pagination-link {
   opacity: 0.6;
@@ -600,13 +612,11 @@ a[class^="ais-"] {
   background-color: #fff;
 }
 .ais-Pagination-item--selected .ais-Pagination-link {
-  color: #fff;
-  background-color: #777;
-  border-color: #777;
+  font-weight: bold;
 }
 .ais-Pagination-item--selected .ais-Pagination-link:focus,
 .ais-Pagination-item--selected .ais-Pagination-link:hover {
-  color: #fff;
+  color: #5064FB;
 }
 .ais-PoweredBy-text,
 .ais-Stats-text,
@@ -699,12 +709,18 @@ a[class^="ais-"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 0.3rem 1.7rem;
+  padding: 0.3rem 2rem;
   width: 100%;
   position: relative;
   background-color: #fff;
-  border: 1px solid #c4c8d8;
-  border-radius: 5px;
+  border: 2px solid rgba(176, 180, 207, 0.175);
+  border-radius: 24px;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-template-columns: 1.5rem 1fr 1.25rem;
+  gap: 1rem;
+  box-sizing: border-box;
 }
 .ais-SearchBox-input::-webkit-input-placeholder {
   color: #a5aed1;
@@ -734,10 +750,10 @@ a[class^="ais-"] {
   transform: translateY(-50%);
 }
 .ais-SearchBox-submit {
-  left: 0.3rem;
+  left: 0.75rem;
 }
 .ais-SearchBox-reset {
-  right: 0.3rem;
+  right: 0.75rem;
 }
 .ais-SearchBox-loadingIcon,
 .ais-SearchBox-resetIcon,
