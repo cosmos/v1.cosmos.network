@@ -12,12 +12,12 @@
           ais-search-box(placeholder="Search" class="searchbox")
           .header
             .header__title Categories
-            span.sr-only Filter
-            ais-refinement-list(attribute="category" :sort-by="['name:asc']" :limit="20")
+            span.sr-only Categories Filter
+            ais-refinement-list(attribute="category" :limit="20" :sort-by="['count:desc']" :transform-items="transformItems")
           .header
             .header__title Status
-            span.sr-only Filter
-            ais-refinement-list(attribute="status" :sort-by="['count:desc']")
+            span.sr-only Status Filter
+            ais-refinement-list(attribute="status" :sort-by="['count:desc']" :transform-items="transformItems")
           .faq
             .faq__title Be Advised
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
@@ -119,6 +119,23 @@ export default {
     }
   },
   methods: {
+    moveToTheEnd(arr, word) {
+      arr.map((elem, index) => {
+        if (elem.label.toLowerCase() === word.toLowerCase()) {
+          arr.splice(index, 1)
+          arr.push(elem)
+        }
+      })
+      return arr
+    },
+    transformItems(items) {
+      this.moveToTheEnd(items, "Uncategorized")
+      this.moveToTheEnd(items, "Unknown")
+
+      return items.map(item => ({
+        ...item
+      }))
+    },
     getImgUrl(input) {
       const findUrlRegex = /(?:(?:https?:\/\/)|(?:www\.))[^\s]+.(?:jpg|jpeg|svg|png)/g
       const match = findUrlRegex.exec(input)
@@ -132,7 +149,6 @@ export default {
       const fac = new FastAverageColor()
 
       //- const imgUrl = this.getImgUrl(img)
-
       //- return imgUrl
 
       fac
