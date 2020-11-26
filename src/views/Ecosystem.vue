@@ -10,6 +10,8 @@
       .layout
         .layout__sidebar
           ais-search-box(placeholder="Search" class="searchbox")
+          ais-clear-refinements
+            div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").clear Clear filters
           .header
             .header__title Categories
             span.sr-only Categories Filter
@@ -28,16 +30,17 @@
           div
             ais-hits
               template(slot="item" slot-scope="{ item }")
-                .item
-                  .logo-wrapper(:style="{'--average-color': getAverageColor(item.logo)}")
-                    img(:src="getImgUrl(item.logo)" alt="App logo" v-if="item.logo" ref="averageColor").logo-wrapper__item
-                    img(src="~assets/images/ecosystem/avatar-placeholder.svg" v-else).logo-wrapper__item
+                .item 
+                  .logo-wrapper(:style="{'--average-color': item.logo ? `${getAverageColor(getImgUrl(item.logo))}` : 'linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)'}")
+                    img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
+                    img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-else).logo-wrapper__base
+                    .logo-wrapper__color
                   .text
                     .text__top
-                      a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website !== 'x'").text__top__name {{ item.name }}
-                        icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
-                      .text__top__name(v-else) {{ item.name }}
-                        icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanTxt(item.status)]}`}" v-tooltip.top="item.status").dot
+                      a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website").text__top__name {{ item.name }}
+                        icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}" v-tooltip.top="item.status").dot
+                      .text__top__name__none(v-else) {{ item.name }}
+                        icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}" v-tooltip.top="item.status").dot
                     .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
                     .text__list
                       a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs").list-item
@@ -85,14 +88,17 @@
 <script>
 import algoliasearch from "algoliasearch"
 import FastAverageColor from "fast-average-color"
+//- import { mapGetters } from "vuex"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
 import IconDot from "common/IconDot"
 
-const apiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
+const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
+//- const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
 
-const searchClient = algoliasearch("ME7376U3XW", apiKey)
+const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
+//- const client = algoliasearch("ME7376U3XW", adminApiKey)
 
 export default {
   name: "page-ecosystem",
@@ -115,10 +121,49 @@ export default {
         proofofconcept: "rgba(59, 66, 125, 0.12)",
         beta: "linear-gradient(95.47deg, #086108 0%, #018A01 100%)",
         alpha: "linear-gradient(95.47deg, #086108 0%, #018A01 100%)"
-      }
+      },
+      status: null
     }
   },
+  mounted() {
+    //- const index = client.initIndex("apps")
+    //- this method can significantly increase your indexing operations count
+    //- https://www.algolia.com/doc/api-reference/api-methods/replace-all-objects/
+    //- index
+    //-   .replaceAllObjects(this.ecosystem.apps, {
+    //-     autoGenerateObjectIDIfNotExist: true
+    //-   })
+    //-   .then(({ objectIDs }) => {
+    //-     // eslint-disable-next-line
+    //-     console.log(objectIDs)
+    //-   })
+    //-   .catch(err => {
+    //-     // eslint-disable-next-line
+    //-     console.log(err)
+    //-   })
+  },
+  computed: {
+    //- ...mapGetters(["ecosystem"])
+  },
   methods: {
+    async getAverageColor(img) {
+      const fac = new FastAverageColor()
+
+      const color = await fac
+        .getColorAsync(img[0], {
+          algorithm: "dominant"
+        })
+        .then(result => {
+          return result.hex
+        })
+        .catch(e => {
+          // eslint-disable-next-line no-console
+          console.log(e)
+        })
+
+      // eslint-disable-next-line no-console
+      console.log(color)
+    },
     moveToTheEnd(arr, word) {
       arr.map((elem, index) => {
         if (elem.label.toLowerCase() === word.toLowerCase()) {
@@ -142,29 +187,13 @@ export default {
 
       return match
     },
-    cleanTxt(item) {
+    cleanText(item) {
       return item.replace(/\s+/g, "").toLowerCase()
     },
-    getAverageColor() {
-      const fac = new FastAverageColor()
-
-      //- const imgUrl = this.getImgUrl(img)
-      //- return imgUrl
-
-      fac
-        .getColorAsync(
-          "https://dl.airtable.com/.attachments/671b67fd887831fbce48e34144504fea/4dcdc5cf/vocdoni.png",
-          { algorithm: "dominant" }
-        )
-        .then(color => {
-          // eslint-disable-next-line
-          console.log(color.hex)
-          return color.hex
-        })
-        .catch(e => {
-          // eslint-disable-next-line
-          console.log(e)
-        })
+    bouncer(items) {
+      return items.filter(Boolean).map(i => {
+        return i
+      })
     }
   }
 }
@@ -187,7 +216,16 @@ export default {
   clip rect(1px, 1px, 1px, 1px)
 
 .dot
-  margin-left 5px
+  margin-left 0.3125rem
+
+.clear
+  margin-top 2rem
+  cursor pointer
+  padding 1.25rem
+  background rgba(176,180,207,0.087)
+  border-radius 0.5rem
+  text-align center
+  font-weight 600
 
 .subtitle
   max-width 40em
@@ -195,11 +233,18 @@ export default {
 .cta-container
   display grid
   grid-template-columns repeat(auto-fit, minmax(0, 1fr))
-  gap 2rem
+  gap 9.625rem
 
   &__item
+    display flex
+    flex-direction column
+    min-height 10rem
+
     &__btn
-      margin-top 2rem
+      display inline-flex
+      justify-content flex-start
+      flex-direction row
+      margin-top auto
 
     &__title
       font-weight 600
@@ -277,19 +322,28 @@ export default {
   gap 1.5rem
 
 .logo-wrapper
-  background var(--average-color)
   width fit-content
   height fit-content
   padding 1.25rem
   border-radius 1.5rem
   display flex
   align-items center
+  background var(--average-color, linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%))
 
-  &__item
+  &__color
+    //- mix-blend-mode color
+    //- background linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)
     width 4.5rem
     height 4.5rem
-    //- mix-blend-mode color
-    //- color var(--average-color)
+
+  &__base
+    width 4.5rem
+    height 4.5rem
+    position absolute
+
+  //- &__item
+  //-   width 4.5rem
+  //-   height 4.5rem
 
 .text
   display flex
@@ -302,6 +356,12 @@ export default {
       font-size 1.125rem
       line-height 1.6875rem
       color #5064FB
+
+      &__none
+        font-weight bold
+        font-size 1.125rem
+        line-height 1.6875rem
+        color rgba(0,0,0,0.8)
 
   &__list
     display inline-flex
@@ -318,10 +378,13 @@ export default {
 
 .pagination
   margin-top 4rem
+  margin-left auto
+  margin-right auto
   text-align center
   display flex
   justify-content center
   align-items center
+  width fit-content
 
 .no-results
   margin-top 2rem

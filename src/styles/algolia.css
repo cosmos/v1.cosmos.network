@@ -858,6 +858,11 @@ label.ais-RefinementList-label {
   padding-right: 14.5px;
 }
 
+.ais-ClearRefinements {
+  padding-left: 14.5px;
+  padding-right: 14.5px;
+}
+
 .ais-Hits-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
