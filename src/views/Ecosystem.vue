@@ -31,10 +31,17 @@
             ais-hits
               template(slot="item" slot-scope="{ item }")
                 .item
-                  a(:href="item.website" target="_blank" rel="noreferrer noopener")
+                  a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website")
                     .logo-wrapper(:style="{'--average-color': item.logo ? 'transparent' : 'linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)'}")
                       img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-else).logo-wrapper__base
+                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-else).logo-wrapper__top
+                      .logo-wrapper__color
+                  div(v-else)
+                    .logo-wrapper(:style="{'--average-color': item.logo ? 'transparent' : 'linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)'}")
+                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
+                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-else).logo-wrapper__top
                       .logo-wrapper__color
                   .text
                     .text__top
@@ -317,6 +324,8 @@ export default {
   display flex
   align-items center
   background var(--average-color, linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%))
+  overflow hidden
+  filter blur(0px)
 
   &__color
     width 4.5rem
@@ -326,6 +335,15 @@ export default {
     width 4.5rem
     height 4.5rem
     position absolute
+    filter blur(16px)
+    transform scale(2)
+
+  &__top
+    width 4.5rem
+    height 4.5rem
+    position absolute
+    overflow hidden
+    filter blur(0px)
 
 .text
   display flex
@@ -354,8 +372,11 @@ export default {
 .list-item + .list-item
   margin-left 1rem
 
-.list-item:hover
-  opacity 0.75
+.list-item
+  opacity 0.4
+
+  &:hover
+    opacity 1
 
 .icon
   width 1.5rem
