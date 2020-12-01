@@ -30,17 +30,20 @@
           div
             ais-hits
               template(slot="item" slot-scope="{ item }")
-                .item 
-                  .logo-wrapper(:style="{'--average-color': item.logo ? `${getAverageColor(getImgUrl(item.logo))}` : 'linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)'}")
-                    img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
-                    img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-else).logo-wrapper__base
-                    .logo-wrapper__color
+                .item
+                  a(:href="item.website" target="_blank" rel="noreferrer noopener")
+                    .logo-wrapper(:style="{'--average-color': item.logo ? 'transparent' : 'linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)'}")
+                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-else).logo-wrapper__base
+                      .logo-wrapper__color
                   .text
                     .text__top
                       a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website").text__top__name {{ item.name }}
-                        icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}" v-tooltip.top="item.status").dot
+                        span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
+                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}").
                       .text__top__name__none(v-else) {{ item.name }}
-                        icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}" v-tooltip.top="item.status").dot
+                        span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
+                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
                     .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
                     .text__list
                       a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs").list-item
@@ -70,24 +73,26 @@
     .cta-container
       .cta-container__item
         .cta-container__item__title Want to build your own Cosmos app?
-        tm-btn(
-          value="Build now" size="lg" type="link" :to="{ name: 'tools' }"
-          icon="arrow_forward" icon-pos="right").cta-container__item__btn
+        .cta-container__item__btn
+          tm-btn(
+            value="Build now" size="lg" type="link" :to="{ name: 'tools' }"
+            icon="arrow_forward" icon-pos="right")
       .cta-container__item
         .cta-container__item__title Need funding to build your great idea?
-        tm-btn(
-          value="Get a grant" size="lg" type="link" :to="{ name: 'contributors' }"
-          icon="arrow_forward" icon-pos="right").cta-container__item__btn
+        .cta-container__item__btn
+          tm-btn(
+            value="Get a grant" size="lg" type="link" :to="{ name: 'contributors' }"
+            icon="arrow_forward" icon-pos="right")
       .cta-container__item
         .cta-container__item__title Built something with Cosmos tools?
-        tm-btn(
-          value="Submit a project" size="lg" type="anchor" href="https://airtable.com/tblii5D2VeOOFZA4c/viwDRWlFKDPpHZOII" target="_blank" rel="noreferrer noopener"
-          icon="arrow_forward" icon-pos="right").cta-container__item__btn
+        .cta-container__item__btn
+          tm-btn(
+            value="Submit a project" size="lg" type="anchor" href="https://airtable.com/tblii5D2VeOOFZA4c/viwDRWlFKDPpHZOII" target="_blank" rel="noreferrer noopener"
+            icon="arrow_forward" icon-pos="right")
 </template>
 
 <script>
 import algoliasearch from "algoliasearch"
-import FastAverageColor from "fast-average-color"
 //- import { mapGetters } from "vuex"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
@@ -116,11 +121,11 @@ export default {
       searchClient: searchClient,
       dotColor: {
         mainnet: "#4ACF4A",
-        testnet: "#66A1FF",
+        testnet: "#BA3FD9",
         development: "#FF9500",
-        proofofconcept: "rgba(59, 66, 125, 0.12)",
-        beta: "linear-gradient(95.47deg, #086108 0%, #018A01 100%)",
-        alpha: "linear-gradient(95.47deg, #086108 0%, #018A01 100%)"
+        proofofconcept: "#3B427D",
+        beta: "#66A1FF",
+        alpha: "#BCE7FF"
       },
       status: null
     }
@@ -146,24 +151,6 @@ export default {
     //- ...mapGetters(["ecosystem"])
   },
   methods: {
-    async getAverageColor(img) {
-      const fac = new FastAverageColor()
-
-      const color = await fac
-        .getColorAsync(img[0], {
-          algorithm: "dominant"
-        })
-        .then(result => {
-          return result.hex
-        })
-        .catch(e => {
-          // eslint-disable-next-line no-console
-          console.log(e)
-        })
-
-      // eslint-disable-next-line no-console
-      console.log(color)
-    },
     moveToTheEnd(arr, word) {
       arr.map((elem, index) => {
         if (elem.label.toLowerCase() === word.toLowerCase()) {
@@ -216,12 +203,12 @@ export default {
   clip rect(1px, 1px, 1px, 1px)
 
 .dot
-  margin-left 0.3125rem
+  padding 0.25rem
 
 .clear
   margin-top 2rem
   cursor pointer
-  padding 1.25rem
+  padding 0.75rem 1.25rem
   background rgba(176,180,207,0.087)
   border-radius 0.5rem
   text-align center
@@ -262,8 +249,8 @@ export default {
   letter-spacing var(--tracking-2-wide)
 
   &__title
-    padding-left 0.9063rem
-    padding-right 0.9063rem
+    padding-left 1rem
+    padding-right 1rem
 
 .faq
   margin-top 3rem
@@ -271,15 +258,14 @@ export default {
   font-size 1rem
   letter-spacing var(--tracking-2-wide)
   line-height 1.25rem
-  padding 1.25rem
+  padding 1rem
   background rgba(176, 180, 207, 0.087)
   border-radius 0.5rem
-  margin-left 0.9063rem
-  margin-right 0.9063rem
 
   &__title
     text-transform uppercase
     font-weight var(--fw-bold)
+    font-size 0.75rem
 
   &__desc
     margin-top 0.5rem
@@ -291,8 +277,8 @@ export default {
 .layout
   display grid
   width 100%
-  grid-template-columns var(--sidebar-width) calc(100% - var(--sidebar-width))
-  max-width var(--layout-max-width,1540px)
+  grid-template-columns var(--sidebar-width) 1fr
+  gap 3rem
   margin-left auto
   margin-right auto
   position relative
@@ -300,8 +286,10 @@ export default {
 .layout__sidebar
   flex 1
   margin-right 1em
+  margin-left -1rem
 
 .layout__results
+  max-width var(--layout-max-width,1540px)
   flex 3
 
   &__title
@@ -310,7 +298,7 @@ export default {
     line-height 2.5rem
     letter-spacing -0.01em
     color #000000
-    margin-bottom 2rem
+    margin-bottom 3rem
 
 .item
   display grid
@@ -331,8 +319,6 @@ export default {
   background var(--average-color, linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%))
 
   &__color
-    //- mix-blend-mode color
-    //- background linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)
     width 4.5rem
     height 4.5rem
 
@@ -340,10 +326,6 @@ export default {
     width 4.5rem
     height 4.5rem
     position absolute
-
-  //- &__item
-  //-   width 4.5rem
-  //-   height 4.5rem
 
 .text
   display flex
@@ -371,6 +353,9 @@ export default {
 
 .list-item + .list-item
   margin-left 1rem
+
+.list-item:hover
+  opacity 0.75
 
 .icon
   width 1.5rem

@@ -17,7 +17,7 @@ export const visualizers = state => state.visualizers
 export const meetup = state => state.meetup
 export const liveness = state => state.liveness
 export const cwu = state => state.cwu
-export const ecosystem = state => state.ecosystem
+// export const ecosystem = state => state.ecosystem
 
 // toc
 export const toc = state => state.toc

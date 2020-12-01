@@ -722,6 +722,9 @@ a[class^="ais-"] {
   gap: 1rem;
   box-sizing: border-box;
 }
+.ais-SearchBox-input:focus {
+  border-color: var(--input-bc-hover);
+}
 .ais-SearchBox-input::-webkit-input-placeholder {
   color: #a5aed1;
 }
@@ -805,16 +808,16 @@ a[class^="ais-"] {
   cursor: not-allowed;
   background: inherit;
 }
-
-.ais-RefinementList-item {
+.ais-RefinementList {
   margin-top: 0.375rem;
+}
+.ais-RefinementList-item {
+  margin-top: 0.0625rem;
   cursor: pointer;
 }
-
 .ais-RefinementList-item:hover .ais-RefinementList-labelText {
   color: #5064FB;
 }
-
 .ais-RefinementList-item:focus .ais-RefinementList-labelText {
   color: #5064FB;
 }
@@ -832,7 +835,16 @@ a[class^="ais-"] {
 }
 
 input.ais-RefinementList-checkbox {
-  display: none;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  appearance: none;
+}
+
+.ais-RefinementList-checkbox:focus ~ * {
+  color: var(--link);
 }
 
 .ais-RefinementList-item--selected {
@@ -854,13 +866,13 @@ label.ais-RefinementList-label {
 }
 
 .ais-SearchBox, .clear {
-  padding-left: 14.5px;
-  padding-right: 14.5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .ais-ClearRefinements {
-  padding-left: 14.5px;
-  padding-right: 14.5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .ais-Hits-list {
