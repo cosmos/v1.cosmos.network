@@ -40,15 +40,6 @@
   tm-section
     div(slot="title") Built with the Cosmos SDK
     div(slot="subtitle") This is a showcase of application-specific blockchains that have been built with the Cosmos SDK. #[router-link(:to="{ name: 'ecosystem' }") View more &rarr;]
-    //- .tm-cards-hz
-    //-   tm-card-hz(
-    //-     v-for="i in featuredProjects"
-    //-     flush="true"
-    //-     :img-src="hf.optionalImg(i.imgFeature).src"
-    //-     :key="i.slug"
-    //-     :subtitle="i.tags[0]"
-    //-     :title="i.title"
-    //-     :href="i.projectUrl")
 
   tm-section(layout="center")
     div(slot="title") What Will You Build?
@@ -105,7 +96,6 @@
 
 <script>
 import hf from "scripts/helpers"
-import { mapGetters } from "vuex"
 import TmBtn from "common/TmBtn"
 import TmCardIcon from "cards/TmCardIcon"
 import TmCardHz from "cards/TmCardHz"
@@ -131,23 +121,10 @@ export default {
     TmStep,
     TmUseCase
   },
-  computed: {
-    ...mapGetters(["community"]),
-    featuredProjects() {
-      if (this.community.ecosystem.length > 0) {
-        return this.community.ecosystem.filter(e => e.featured)
-      }
-      return []
-    }
-  },
   data: () => ({
     hf: hf
   }),
   mounted() {
-    if (this.community.ecosystem.length === 0) {
-      this.$store.dispatch("initCommunityEcosystem")
-    }
-
     jarallaxElement()
     jarallax(this.$el.querySelectorAll(".jarallax"), {
       speed: 0.67
