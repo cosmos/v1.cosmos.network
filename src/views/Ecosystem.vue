@@ -70,13 +70,13 @@
             .pagination
               ais-pagination
                 template(slot="first" slot-scope="{ refine, isFirstPage }")
-                  div(@click="refine" :disabled="isFirstPage") first
+                  div(@click="refine" :disabled="isFirstPage" v-show="!isFirstPage")
                 template(slot="previous" slot-scope="{ refine, isFirstPage }")
-                  div(@click="refine" :disabled="isFirstPage") previous
+                  div(@click="refine" :disabled="isFirstPage" v-show="!isFirstPage") previous
                 template(slot="next" slot-scope="{ refine, isLastPage }")
-                  div(@click="refine" :disabled="isLastPage") next
+                  div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") next
                 template(slot="last" slot-scope="{ refine, isLastPage }")
-                  div(@click="refine" :disabled="isLastPage") last
+                  div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") last
 
   tm-section
     .cta-container
@@ -229,7 +229,7 @@ export default {
 .cta-container
   display grid
   grid-template-columns repeat(auto-fit, minmax(0, 1fr))
-  gap 9.625rem
+  gap 4rem
 
   &__item
     display flex
@@ -411,6 +411,7 @@ export default {
     justify-content flex-start
     align-items flex-start
     margin 2rem 0
+    gap 2rem
 
     &__item + &__item
       margin-top 3rem

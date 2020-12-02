@@ -574,6 +574,8 @@ a[class^="ais-"] {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 .ais-Pagination-item + .ais-Pagination-item {
   margin-left: 0.3rem;
@@ -613,10 +615,11 @@ a[class^="ais-"] {
 }
 .ais-Pagination-item--selected .ais-Pagination-link {
   font-weight: bold;
+  color: #000000;
 }
 .ais-Pagination-item--selected .ais-Pagination-link:focus,
 .ais-Pagination-item--selected .ais-Pagination-link:hover {
-  color: #5064FB;
+  color: #000000;
 }
 .ais-PoweredBy-text,
 .ais-Stats-text,
@@ -905,6 +908,10 @@ label.ais-RefinementList-label {
 @media screen and (max-width: 700px) {
   .ais-Hits-list {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ais-Pagination-item--firstPage, .ais-Pagination-item--previousPage {
+    display: none;
   }
 }
 
