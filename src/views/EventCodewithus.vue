@@ -239,12 +239,12 @@ export default {
         {
           id: "host-reuven-podmazo",
           name: "Reuven Podmazo",
-          company: "Enigma MPC"
+          company: "Secret Network"
         },
         {
           id: "host-tom-langer",
           name: "Tom Langer",
-          company: "Enigma MPC"
+          company: "Secret Network"
         }
       ],
       questions: [
