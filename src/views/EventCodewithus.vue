@@ -5,7 +5,7 @@ div
     div(slot="title").hero-title Code with Us
     div(slot="subtitle").hero-subtitle Join us in a live, interactive workshop program designed to educate and provide real-time practice to developers in the Cosmos community.
     tm-btn(size="lg" value="sign up now" color="primary" @click.native="openModal(true)")
-    .next-workshop(v-for="i in nextWorkshop")
+    router-link(:to="{ name: 'series-workshop', params: { workshop: i.slug }}" v-for="i in nextWorkshop").next-workshop
       .next-workshop__display Next workshop
       .next-workshop__title {{ i.title }}
       .next-workshop__date {{ moment(i.date).format("MMM DD") }}
@@ -42,7 +42,7 @@ div
           img(:src="i.headshot_1[0].url" v-if="i.id.length == 1").row-end__img
           div(v-else)
             img(:src="i.headshot_1[0].url").row-end__img
-            img(:src="i.headshot_2[0].url").row-end__img__overlay
+            img(:src="i.headshot_2[0].url").row-end__img
           .row-end__profile
             .row-end__profile__host {{ i.host }}
             .row-end__profile__company {{ i.company }}
@@ -198,37 +198,53 @@ export default {
           twitter: "litvintech"
         },
         {
-          id: "host-denis",
+          id: "host-denis-fadeev",
           name: "Denis Fadeev",
           company: "Tendermint",
           twitter: "fadeev"
         },
         {
-          id: "host-kate",
+          id: "host-kate-sills",
           name: "Kate Sills",
           company: "Agoric",
           twitter: "kate_sills"
         },
         {
-          id: "host-miguel",
+          id: "host-miguel-dingli",
           name: "Miguel Dingli",
           company: "Simply VC",
           twitter: "MiguelDingli"
         },
         {
-          id: "host-shaun",
+          id: "host-shaun-conway",
           name: "Shaun Conway",
           company: "ixo",
           twitter: "ixoworld"
         },
         {
-          id: "host-paddy",
+          id: "host-paddy-mchale",
           name: "Paddy McHale",
           company: "Tendermint",
           social: {
             title: "GitHub",
             url: "https://github.com/PaddyMc"
           }
+        },
+        {
+          id: "host-jacob-gadikian",
+          name: "Jacob Gadikian",
+          company: "Tendermint",
+          twitter: "gadikian"
+        },
+        {
+          id: "host-reuven-podmazo",
+          name: "Reuven Podmazo",
+          company: "Enigma MPC"
+        },
+        {
+          id: "host-tom-langer",
+          name: "Tom Langer",
+          company: "Enigma MPC"
         }
       ],
       questions: [
@@ -347,13 +363,23 @@ a
 
 .next-workshop
   margin-top 7rem
+  max-width 30rem
+  display block
+  color rgba(255, 255, 255, 0.75)
+  border-left 0.25rem solid #fff
+  padding-left 2rem
+  transition transform .2s ease-out, border-left-color .2s ease-out, color .2s ease-out
+  &:hover,
+  &:focus
+    color #fff
+    border-left-color var(--secondary)
+    transform translateX(3px)
   &__display
     font-weight var(--fw-bold)
     font-size 1rem
     line-height 1.25rem
     letter-spacing var(--tracking-2-wide)
     text-transform uppercase
-    color #BFBFBF
   &__title
     margin-top 0.5rem
     font-weight var(--fw-bold)
@@ -362,7 +388,7 @@ a
     display flex
     align-items center
     letter-spacing var(--tracking-1-wide)
-    color #FFFFFF
+    color var(--dark-txt)
   &__date
     margin-top 0.5rem
     font-size 0.875rem
@@ -370,7 +396,6 @@ a
     display flex
     align-items center
     letter-spacing var(--tracking-1-wide)
-    color #BFBFBF
 
 .hosts-container
   margin auto
@@ -413,7 +438,8 @@ a
   margin-top 4rem
   .row
     display grid
-    grid-template-columns 30% 50% 20%
+    grid-template-columns 1fr 3fr minmax(16em, 2fr)
+    gap 2rem
     margin auto
     padding-top 2.9063rem
     padding-bottom 2.9063rem
@@ -421,6 +447,7 @@ a
     &:first-child
       border-top 1px solid rgba(59,66,125,0.12)
     .row-start
+      grid-column span 1
       &__date
         font-weight var(--fw-bold)
         font-size 1rem
@@ -436,14 +463,16 @@ a
         color rgba(0, 0, 0, 0.667)
     .row-mid
       align-self center
-      max-width 30em
       &__title
         font-weight var(--fw-semibold)
         font-size 1.5rem
         line-height 2rem
         letter-spacing var(--tracking-1-wide)
+        max-width 30em
     .row-end
       align-self center
+      display flex
+      flex-wrap wrap
       &__img
         float left
         width 3rem
@@ -452,21 +481,16 @@ a
         display flex
         justify-content center
         align-items center
-        &__overlay
-          float left
-          width 3rem
-          height 3rem
-          border-radius 50%
-          display flex
-          justify-content center
-          align-items center
-          position relative
-          left -5px
+        margin 0.5rem 1rem 0.5rem 0
+        + .row-end__img
+          margin-left -1.25rem
+          box-shadow 0 0 0 2px var(--app-bg)
       &__profile
         display flex
         flex-direction column
         text-align start
-        padding-left 1rem
+        min-width 10em
+        margin-top 0.5rem
         &__host
           font-weight var(--fw-bold)
           font-size 1rem
@@ -612,6 +636,9 @@ a
   .schedule-container
     .row
       display block
+      &-mid,
+      &-end
+        margin-top 0.5rem
 
 @media screen and (max-width: 900px)
   .hosts-container
