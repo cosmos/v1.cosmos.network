@@ -1,6 +1,6 @@
 # [cosmos.network](https://cosmos.network)
 
-> The website for Cosmos - Internet of Blockchains
+> The website for Cosmos - Internet of Blockchains.
 
 [![banner](public/og-image.jpg)](https://cosmos.network)
 
