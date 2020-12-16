@@ -1,6 +1,6 @@
 <template lang="pug">
 mixin image
-  .tm-card-hz__image-outer
+  .tm-card-hz__image-outer(v-if="!newsletters")
     .tm-card-hz__play(v-if="type === 'video'"): i.material-icons play_circle_outline
     .tm-card-hz__image-inner(v-if="imgSrc" :style="imgBgStyle")
       img(v-if="lazy" v-lazy="imgSrc" alt="Image")
@@ -103,7 +103,8 @@ export default {
     "tags",
     "to",
     "type",
-    "theme"
+    "theme",
+    "newsletters"
   ]
 }
 </script>

@@ -227,7 +227,7 @@ export default {
         icon: "reddit-light"
       },
       {
-        title: "Developer Chat",
+        title: "Community Chat",
         url: "https://t.me/cosmosproject",
         icon: "telegram-light"
       },
