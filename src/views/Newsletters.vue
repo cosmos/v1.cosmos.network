@@ -9,7 +9,7 @@
     tm-section
       div(slot="title") Engineering Updates
       .tm-cards-hz.tm-cards-hz--horizontal.tm-section-margin
-        tm-card-hz(v-for="item in filtered('engineering')" :key="item[0]" :title="title(item)" :subtitle="date(item)" :href="`/newsletters/engineering/${item[0]}/`" :img-src="true" :img-bg-src="`/newsletters/engineering/${item[0]}/cover.jpg`")
+        tm-card-hz(v-for="item in filtered('engineering')" :key="item[0]" :title="title(item)" :subtitle="date(item)" :href="`/newsletters/engineering/${item[0]}/`" :newsletters="true")
 </template>
 
 <style lang="stylus" scoped>
