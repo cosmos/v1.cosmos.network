@@ -55,13 +55,13 @@
                           icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
                     .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
                     .text__list
-                      a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs").list-item
+                      a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs && item.docs !== 'x'").list-item
                         img(src="~assets/brands/gray/docs.svg" alt="Docs").icon
-                      a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github").list-item
+                      a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github && item.github !== 'x'").list-item
                         img(src="~assets/brands/gray/github.svg" alt="GitHub").icon
-                      a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat").list-item
+                      a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat && item.chat !== 'x'").list-item
                         img(src="~assets/brands/gray/chat.svg" alt="Chat").icon
-                      a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter").list-item
+                      a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter && item.twitter !== 'x'").list-item
                         img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
 
             ais-state-results
