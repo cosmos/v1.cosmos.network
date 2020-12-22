@@ -15,11 +15,11 @@
           .header
             .header__title Categories
             span.sr-only Categories Filter
-            ais-refinement-list(attribute="category" :limit="20" :sort-by="['count:desc']" :transform-items="transformItems")
+            ais-refinement-list(attribute="category" operator="or" :limit="20" :sort-by="['count:desc']" :transform-items="transformItems")
           .header
             .header__title Status
             span.sr-only Status Filter
-            ais-refinement-list(attribute="status" :sort-by="['count:desc']" :transform-items="transformItems")
+            ais-refinement-list(attribute="status" operator="or" :sort-by="['count:desc']" :transform-items="transformItems")
           .faq
             .faq__title Be Advised
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
