@@ -31,7 +31,7 @@
             ais-hits
               template(slot="item" slot-scope="{ item }")
                 .item
-                  a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website")
+                  a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'")
                     .logo-wrapper
                       img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
                       img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
@@ -47,7 +47,7 @@
                       .logo-wrapper__color
                   .text
                     .text__top
-                      a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website").text__top__name {{ item.name }}
+                      a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'").text__top__name {{ item.name }}
                         span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
                           icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}").
                       .text__top__name__none(v-else) {{ item.name }}
