@@ -325,7 +325,7 @@ export default {
   border-radius 1.5rem
   display flex
   align-items center
-  background linear-gradient(135deg, #EEEEEE 0%, #E0E0E0 100%, #E0E0E0 100%)
+  background linear-gradient(135deg,#fff,#e0e0e0)
   overflow hidden
   filter blur(0px)
   position relative
@@ -339,7 +339,7 @@ export default {
     height 4.5rem
     position absolute
     filter blur(16px)
-    transform scale(2)
+    transform scale(2.3)
 
   &__top
     width 4.5rem
@@ -376,7 +376,7 @@ export default {
   margin-left 1rem
 
 .list-item
-  opacity 0.4
+  opacity 0.7
 
   &:hover
     opacity 1
