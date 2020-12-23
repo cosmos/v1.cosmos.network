@@ -37,9 +37,17 @@
       value="Start Tutorial" size="lg" type="anchor" href="https://tutorials.cosmos.network/"
       icon="arrow_forward" icon-pos="right")
 
-  tm-section
-    div(slot="title") Built with the Cosmos SDK
-    div(slot="subtitle") This is a showcase of application-specific blockchains that have been built with the Cosmos SDK. #[router-link(:to="{ name: 'ecosystem' }") View more &rarr;]
+  tm-section(layout="center").ecosystem
+    div(slot="title") The Cosmos Ecosystem
+    div(slot="subtitle") Discover an ever-expanding universe of application-specific blockchains built with Cosmos SDK
+    tm-btn(
+      value="Explore" size="lg" type="link" :to="{ name: 'ecosystem' }"
+      icon="arrow_forward" icon-pos="right")
+    .logos-container
+      .logos-container__left
+        img(src="~images/sdk/section-ecosystem-logos-1.svg" alt="Section ecosystem logos")
+      .logos-container__right
+        img(src="~images/sdk/section-ecosystem-logos-2.svg" alt="Section ecosystem logos")
 
   tm-section(layout="center")
     div(slot="title") What Will You Build?
@@ -136,6 +144,15 @@ export default {
 <style lang="stylus">
 @require '~variables'
 
+.ecosystem
+  background-color #F8F9FC
+  height 30rem
+
+.logos-container
+  display flex
+  flex-direction row
+  justify-content space-between
+
 @media screen and (min-width: 768px)
   #section-sdk-cta
     background url('~images/home/section-sdk-desktop.svg') right center no-repeat
@@ -147,4 +164,13 @@ export default {
 
     .tm-section__container
       flex-flow row
+
+@media screen and (max-width: 600px)
+  .ecosystem
+    height 34rem
+
+  .logos-container
+    margin-top 2rem
+    &__left
+      margin-right 1rem
 </style>
