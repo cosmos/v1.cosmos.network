@@ -340,6 +340,7 @@ export default {
     position absolute
     filter blur(16px)
     transform scale(2.3)
+    opacity 0.7
 
   &__top
     max-width 4.5rem
