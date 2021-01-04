@@ -165,12 +165,15 @@ export default {
     .tm-section__container
       flex-flow row
 
+@media screen and (max-width: 945px)
+  .logos-container
+    &__left
+      margin-right 1rem
+
 @media screen and (max-width: 600px)
   .ecosystem
     height 34rem
 
   .logos-container
     margin-top 2rem
-    &__left
-      margin-right 1rem
 </style>
