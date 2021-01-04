@@ -33,17 +33,17 @@
                 .item
                   a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'")
                     .logo-wrapper
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__top
+                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
+                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
                       .logo-wrapper__color
                   div(v-else)
                     .logo-wrapper
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__top
+                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
+                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
                       .logo-wrapper__color
                   .text
                     .text__top
