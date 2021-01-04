@@ -1,24 +1,44 @@
 <svg width="368" height="240" viewBox="0 0 368 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="128" y="0" width="112" height="112">
 <rect x="128" width="112" height="112" rx="24" fill="url(#paint0_linear)"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="122" y="-6" width="124" height="124" rx="24" fill="url(#paint1_linear)"/>
 <g style="mix-blend-mode:color">
-<rect x="128" width="112" height="112" rx="24" fill="#044D54"/>
+<rect x="122" y="-6" width="124" height="124" rx="24" fill="#044D54"/>
+</g>
 </g>
 <rect x="148" y="20" width="72" height="72" fill="url(#pattern0)"/>
-<rect x="256" y="53" width="112" height="112" rx="24" fill="url(#paint1_linear)"/>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="256" y="53" width="112" height="112">
+<rect x="256" y="53" width="112" height="112" rx="24" fill="url(#paint2_linear)"/>
+</mask>
+<g mask="url(#mask1)">
+<rect x="250" y="47" width="124" height="124" rx="24" fill="url(#paint3_linear)"/>
 <g style="mix-blend-mode:color">
-<rect x="256" y="53" width="112" height="112" rx="24" fill="#18E3D1"/>
+<rect x="250" y="47" width="124" height="124" rx="24" fill="#18E3D1"/>
+</g>
 </g>
 <rect x="276" y="103.837" width="72" height="10.3267" fill="url(#pattern1)"/>
-<rect y="53" width="112" height="112" rx="24" fill="url(#paint2_linear)"/>
+<mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="53" width="112" height="112">
+<rect y="53" width="112" height="112" rx="24" fill="url(#paint4_linear)"/>
+</mask>
+<g mask="url(#mask2)">
+<rect x="-6" y="47" width="124" height="124" rx="24" fill="url(#paint5_linear)"/>
 <g style="mix-blend-mode:color">
-<rect y="53" width="112" height="112" rx="24" fill="#8E9AFD"/>
+<rect x="-6" y="47" width="124" height="124" rx="24" fill="#8E9AFD"/>
 </g>
-<circle cx="56" cy="109" r="30.375" fill="url(#paint3_radial)"/>
-<path d="M24.7988 104.609C21.8651 106.244 20.2265 108.062 20.3118 109.917C20.5702 115.539 36.5754 119.371 56.0605 118.476C75.5456 117.58 91.1319 112.296 90.8735 106.674C90.7964 104.995 89.3153 103.476 86.7569 102.194C86.8429 102.581 86.9215 102.97 86.9929 103.361C87.1021 103.424 87.2085 103.487 87.3118 103.551C89.0314 104.612 89.8029 105.693 89.8502 106.721C89.8974 107.748 89.2282 108.896 87.6133 110.11C86.0081 111.316 83.5958 112.486 80.5054 113.534C74.3349 115.626 65.6824 117.157 56.0203 117.601C46.3583 118.045 37.6018 117.314 31.2654 115.797C28.092 115.037 25.5825 114.093 23.8734 113.039C22.1539 111.978 21.3823 110.897 21.3351 109.87C21.2879 108.842 21.9571 107.695 23.572 106.481C23.9011 106.233 24.2641 105.987 24.66 105.744C24.6992 105.365 24.7455 104.987 24.7988 104.609Z" fill="white" fill-opacity="0.75"/>
+</g>
+<circle cx="56" cy="109" r="30.375" fill="url(#paint6_radial)"/>
+<path d="M24.7988 104.609C21.8651 106.244 20.2265 108.062 20.3118 109.917C20.5702 115.539 36.5754 119.371 56.0605 118.476C75.5456 117.58 91.1319 112.296 90.8735 106.674C90.7964 104.995 89.3153 103.476 86.7569 102.194C86.8428 102.581 86.9215 102.97 86.9929 103.361C87.1021 103.424 87.2085 103.487 87.3118 103.551C89.0314 104.612 89.8029 105.693 89.8502 106.721C89.8974 107.748 89.2282 108.896 87.6133 110.11C86.0081 111.316 83.5958 112.486 80.5054 113.534C74.3349 115.626 65.6824 117.157 56.0203 117.601C46.3583 118.045 37.6018 117.314 31.2654 115.797C28.092 115.037 25.5825 114.093 23.8734 113.039C22.1539 111.978 21.3823 110.897 21.3351 109.87C21.2879 108.842 21.9571 107.695 23.572 106.481C23.9011 106.233 24.2641 105.987 24.66 105.744C24.6992 105.365 24.7455 104.987 24.7988 104.609Z" fill="white" fill-opacity="0.75"/>
 <path d="M26.0211 118.697C22.8438 123.404 21.7537 127.463 23.4157 130.037C27.3385 136.113 45.1071 131.62 63.1029 120.001C81.0986 108.383 92.507 94.0384 88.5842 87.9625C86.9213 85.3867 82.7701 84.7104 77.1683 85.6711C77.5181 85.9889 77.8606 86.3144 78.1956 86.6473C80.074 86.3753 81.7375 86.3109 83.1461 86.4527C85.4795 86.6877 86.9221 87.4622 87.6391 88.5727C88.3561 89.6832 88.4681 91.3167 87.7218 93.54C86.9801 95.7498 85.4445 98.359 83.1825 101.203C78.6661 106.882 71.4162 113.295 62.4927 119.056C53.5691 124.817 44.7405 128.785 37.7061 130.564C34.1831 131.455 31.1731 131.78 28.8539 131.547C26.5205 131.312 25.0778 130.537 24.3609 129.427C23.6439 128.316 23.5319 126.683 24.2781 124.46C24.7279 123.12 25.4696 121.633 26.4882 120.036C26.3227 119.594 26.1669 119.148 26.0211 118.697Z" fill="white" fill-opacity="0.75"/>
-<rect x="128" y="128" width="112" height="112" rx="24" fill="url(#paint4_linear)"/>
+<mask id="mask3" mask-type="alpha" maskUnits="userSpaceOnUse" x="128" y="128" width="112" height="112">
+<rect x="128" y="128" width="112" height="112" rx="24" fill="url(#paint7_linear)"/>
+</mask>
+<g mask="url(#mask3)">
+<rect x="122" y="122" width="124" height="124" rx="24" fill="url(#paint8_linear)"/>
 <g style="mix-blend-mode:color">
-<rect x="128" y="128" width="112" height="112" rx="24" fill="black"/>
+<rect x="122" y="122" width="124" height="124" rx="24" fill="black"/>
+</g>
 </g>
 <rect x="148" y="148" width="72" height="72" fill="url(#pattern2)"/>
 <defs>
@@ -36,22 +56,42 @@
 <stop offset="1" stop-color="#E0E0E0"/>
 <stop offset="1" stop-color="#E0E0E0"/>
 </linearGradient>
-<linearGradient id="paint1_linear" x1="256" y1="53" x2="368" y2="165" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear" x1="122" y1="-6" x2="246" y2="118" gradientUnits="userSpaceOnUse">
 <stop stop-color="#EEEEEE"/>
 <stop offset="1" stop-color="#E0E0E0"/>
 <stop offset="1" stop-color="#E0E0E0"/>
 </linearGradient>
-<linearGradient id="paint2_linear" x1="0" y1="53" x2="112" y2="165" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear" x1="256" y1="53" x2="368" y2="165" gradientUnits="userSpaceOnUse">
 <stop stop-color="#EEEEEE"/>
 <stop offset="1" stop-color="#E0E0E0"/>
 <stop offset="1" stop-color="#E0E0E0"/>
 </linearGradient>
-<radialGradient id="paint3_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.99 88.345) rotate(45) scale(67.0125)">
+<linearGradient id="paint3_linear" x1="250" y1="47" x2="374" y2="171" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEEEEE"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+</linearGradient>
+<linearGradient id="paint4_linear" x1="0" y1="53" x2="112" y2="165" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEEEEE"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+</linearGradient>
+<linearGradient id="paint5_linear" x1="-6" y1="47" x2="118" y2="171" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEEEEE"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+</linearGradient>
+<radialGradient id="paint6_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(38.99 88.345) rotate(45) scale(67.0125)">
 <stop stop-color="#66A1FF"/>
 <stop offset="0.427083" stop-color="#5064FB" stop-opacity="0.58"/>
 <stop offset="0.807692" stop-color="#9214B1" stop-opacity="0"/>
 </radialGradient>
-<linearGradient id="paint4_linear" x1="128" y1="128" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint7_linear" x1="128" y1="128" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEEEEE"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+</linearGradient>
+<linearGradient id="paint8_linear" x1="122" y1="122" x2="246" y2="246" gradientUnits="userSpaceOnUse">
 <stop stop-color="#EEEEEE"/>
 <stop offset="1" stop-color="#E0E0E0"/>
 <stop offset="1" stop-color="#E0E0E0"/>
