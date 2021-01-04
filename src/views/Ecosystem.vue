@@ -342,8 +342,9 @@ export default {
     transform scale(2.3)
 
   &__top
-    width 4.5rem
-    height 4.5rem
+    max-width 4.5rem
+    max-height 4.5rem
+    width 100%
     position absolute
     overflow hidden
     filter blur(0px)
