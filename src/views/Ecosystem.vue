@@ -10,14 +10,19 @@
       .layout
         .layout__sidebar
           ais-search-box(placeholder="Search" class="searchbox")
-          ais-clear-refinements
-            div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").clear Clear filters
           .header
-            .header__title Categories
+            .heading
+              .heading__title Categories
+              ais-clear-refinements
+                div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Categories Filter
-            ais-refinement-list(attribute="category" operator="or" :limit="20" :sort-by="['count:desc']" :transform-items="transformItems")
+            ais-menu(attribute="category" :sort-by="['count:desc']" :transform-items="transformItems")
+
           .header
-            .header__title Status
+            .heading
+              .heading__title Status
+              ais-clear-refinements
+                div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Status Filter
             ais-refinement-list(attribute="status" operator="or" :sort-by="['count:desc']" :transform-items="transformItems")
           .faq
@@ -26,7 +31,6 @@
 
         .layout__results
           .layout__results__title Cosmos apps and projects
-          
           div
             ais-hits
               template(slot="item" slot-scope="{ item }")
@@ -211,17 +215,26 @@ export default {
   overflow hidden
   clip rect(1px, 1px, 1px, 1px)
 
+.heading
+  display flex
+  justify-content space-between
+
+  &__title
+    padding-left 1rem
+    padding-right 1rem
+
+  &__clear
+    color var(--link)
+    text-transform uppercase
+    font-weight var(--fw-bold)
+    font-size 0.75rem
+    line-height 1.125rem
+    letter-spacing var(--tracking-2-wide)
+    cursor pointer
+    padding-right 1rem
+
 .dot
   padding 0.25rem
-
-.clear
-  margin-top 2rem
-  cursor pointer
-  padding 0.75rem 1.25rem
-  background rgba(176,180,207,0.087)
-  border-radius 0.5rem
-  text-align center
-  font-weight 600
 
 .subtitle
   max-width 40em
@@ -256,10 +269,6 @@ export default {
   font-size 0.75rem
   line-height 1.125rem
   letter-spacing var(--tracking-2-wide)
-
-  &__title
-    padding-left 1rem
-    padding-right 1rem
 
 .faq
   margin-top 3rem
