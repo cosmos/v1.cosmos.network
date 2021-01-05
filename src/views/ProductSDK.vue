@@ -176,4 +176,5 @@ export default {
 
   .logos-container
     margin-top 2rem
+    justify-content center
 </style>
