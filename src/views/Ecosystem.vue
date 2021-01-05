@@ -333,7 +333,7 @@ export default {
   width fit-content
   height fit-content
   padding 1.25rem
-  border-radius 1.5rem
+  border-radius 20%
   display flex
   align-items center
   background linear-gradient(135deg,#fff,#e0e0e0)
@@ -457,7 +457,6 @@ export default {
 @media screen and (max-width: 320px)
   .logo-wrapper
     padding 0.75rem
-    border-radius 0.75rem
 
     &__base
       max-width 3rem
