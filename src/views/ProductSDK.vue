@@ -42,7 +42,7 @@
     div(slot="subtitle") Discover an ever-expanding universe of application-specific blockchains built with Cosmos SDK
     tm-btn(
       value="Explore" size="lg" type="link" :to="{ name: 'ecosystem' }"
-      icon="arrow_forward" icon-pos="right")
+      icon="arrow_forward" icon-pos="right" color="transparent-bg")
     .logos-container
       .logos-container__left
         img(src="~images/sdk/section-ecosystem-logos-1.svg" alt="Section ecosystem logos")
