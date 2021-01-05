@@ -935,7 +935,6 @@ label.ais-RefinementList-label {
   }
 
   .ais-RefinementList-item {
-    /* spacing styles */
     -ms-flex-preferred-size: 7.5rem;
     flex-basis: 7.5rem; /* sets the initial main size of a each menu item */ 
     -ms-flex-negative: 0; 
@@ -945,11 +944,8 @@ label.ais-RefinementList-label {
     flex-grow: 1; /* allow items to grow up to 150px wide if the container is big enough */
     max-width: 9.375rem;
     margin: 0 2px;
-    
-    /* additional styles */
-    border: 1px solid lightgray;
     border-radius: 3px;
-    background: white;
+    background: var(--gray-950);
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
   }
