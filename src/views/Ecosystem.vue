@@ -30,7 +30,9 @@
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
 
         .layout__results
-          .layout__results__title Cosmos apps and projects
+          ais-stats
+            .layout__results__title(slot-scope="{ nbHits }") Cosmos apps and projects ({{ nbHits }})
+
           div
             ais-hits
               template(slot="item" slot-scope="{ item }")
