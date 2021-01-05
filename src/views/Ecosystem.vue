@@ -451,6 +451,35 @@ export default {
 
     &__list
       margin-top 1rem
+
+@media screen and (max-width: 320px)
+  .logo-wrapper
+    padding 0.75rem
+    border-radius 0.75rem
+
+    &__base
+      max-width 3rem
+      max-height 3rem
+
+    &__top
+      max-width 3rem
+      max-height 3rem
+
+    &__color
+      max-width 3rem
+      max-height 3rem
+
+  .text
+    &__list
+      margin-top 0.5rem
+    &__top__name
+      font-size 0.75rem
+    &__category
+      font-size 0.75rem
+
+  .icon
+    width 1rem
+    height 1rem
 </style>
 
 <style src="../styles/algolia.css" lang="css" />

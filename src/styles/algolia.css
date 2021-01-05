@@ -971,4 +971,8 @@ label.ais-RefinementList-label, .ais-Menu-link {
     padding: 0;
     width: min-content;
   }
+
+  .ais-Hits-list {
+    row-gap: 2rem;
+  }
 }
