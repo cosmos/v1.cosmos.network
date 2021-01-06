@@ -13,15 +13,15 @@
           .header
             .heading
               .heading__title Categories
-              ais-clear-refinements
+              ais-clear-refinements(:excluded-attributes="['status']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Categories Filter
-            ais-menu(attribute="category" :sort-by="['count:desc']" :transform-items="transformItems")
+            ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :limit="20" :transform-items="transformItems")
 
           .header
             .heading
               .heading__title Status
-              ais-clear-refinements
+              ais-clear-refinements(:excluded-attributes="['category']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Status Filter
             ais-refinement-list(attribute="status" operator="or" :sort-by="['count:desc']" :transform-items="transformItems")
@@ -31,7 +31,8 @@
 
         .layout__results
           ais-stats
-            .layout__results__title(slot-scope="{ nbHits }") Cosmos apps and projects ({{ nbHits }})
+            //- .layout__results__title(slot-scope="{ nbHits }") Cosmos apps and projects <span class="hits">{{ nbHits }}</span>
+            .layout__results__title Cosmos apps and projects
 
           div
             ais-hits
@@ -84,26 +85,26 @@
                 template(slot="last" slot-scope="{ refine, isLastPage }")
                   div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") last
 
-  tm-section
+  tm-section.cta-bg
     .cta-container
       .cta-container__item
         .cta-container__item__title Want to build your own Cosmos app?
         .cta-container__item__btn
           tm-btn(
             value="Build now" size="lg" type="link" :to="{ name: 'tools' }"
-            icon="arrow_forward" icon-pos="right")
+            icon="arrow_forward" icon-pos="right" color="transparent-bg")
       .cta-container__item
         .cta-container__item__title Need funding to build your great idea?
         .cta-container__item__btn
           tm-btn(
             value="Get a grant" size="lg" type="link" :to="{ name: 'contributors' }"
-            icon="arrow_forward" icon-pos="right")
+            icon="arrow_forward" icon-pos="right" color="transparent-bg")
       .cta-container__item
         .cta-container__item__title Built something with Cosmos tools?
         .cta-container__item__btn
           tm-btn(
             value="Submit a project" size="lg" type="anchor" href="https://airtable.com/tblii5D2VeOOFZA4c/viwDRWlFKDPpHZOII" target="_blank" rel="noreferrer noopener"
-            icon="arrow_forward" icon-pos="right")
+            icon="arrow_forward" icon-pos="right" color="transparent-bg")
 </template>
 
 <script>
@@ -217,6 +218,12 @@ export default {
   overflow hidden
   clip rect(1px, 1px, 1px, 1px)
 
+.hits
+  color var(--dim)
+
+.cta-bg
+  background-color var(--app-fg)
+
 .heading
   display flex
   justify-content space-between
@@ -249,13 +256,12 @@ export default {
   &__item
     display flex
     flex-direction column
-    min-height 10rem
 
     &__btn
       display inline-flex
       justify-content flex-start
       flex-direction row
-      margin-top auto
+      margin-top 2rem
 
     &__title
       font-weight 600
@@ -319,6 +325,8 @@ export default {
     letter-spacing -0.01em
     color #000000
     margin-bottom 3rem
+    display flex
+    justify-content space-between
 
 .item
   display grid
@@ -377,7 +385,10 @@ export default {
         font-weight bold
         font-size 1.125rem
         line-height 1.6875rem
-        color rgba(0,0,0,0.8)
+        color var(--txt)
+
+  &__category
+    color var(--dim)
 
   &__list
     display inline-flex
@@ -424,7 +435,6 @@ export default {
     justify-content flex-start
     align-items flex-start
     margin 2rem 0
-    gap 2rem
 
     &__item + &__item
       margin-top 3rem

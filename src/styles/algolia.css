@@ -229,7 +229,7 @@ a[class^="ais-"] {
 .ais-Menu-link,
 .ais-Pagination-link,
 .ais-RatingMenu-link {
-  color: #5064FB;
+  color: var(--link);
   transition: color 0.2s ease-out;
 }
 .ais-Breadcrumb-link:focus,
@@ -588,7 +588,7 @@ a[class^="ais-"] {
   padding-right: 0.625rem;
   cursor: pointer;
   text-transform: uppercase;
-  color: #5064FB;
+  color: var(--link);
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
@@ -811,21 +811,25 @@ a[class^="ais-"] {
   cursor: not-allowed;
   background: inherit;
 }
-.ais-RefinementList, .ais-Menu {
+.ais-RefinementList,
+.ais-Menu {
   margin-top: 0.375rem;
 }
-.ais-RefinementList-item, .ais-Menu-item {
+.ais-RefinementList-item,
+.ais-Menu-item {
   margin-top: 0.0625rem;
   cursor: pointer;
 }
-.ais-RefinementList-item:hover .ais-RefinementList-labelText {
-  color: #5064FB;
-}
-.ais-RefinementList-item:focus .ais-RefinementList-labelText {
-  color: #5064FB;
+.ais-RefinementList-item:hover .ais-RefinementList-labelText,
+.ais-RefinementList-item:focus .ais-RefinementList-labelText,
+.ais-Menu-link:focus .ais-Menu-label,
+.ais-Menu-link:focus .ais-Menu-count,
+.ais-RefinementList-checkbox:focus ~ * {
+  color: var(--link);
 }
 
-.ais-RefinementList-labelText, .ais-Menu-label {
+.ais-RefinementList-labelText,
+.ais-Menu-label {
   text-transform: capitalize;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -846,11 +850,8 @@ input.ais-RefinementList-checkbox {
   appearance: none;
 }
 
-.ais-RefinementList-checkbox:focus ~ * {
-  color: var(--link);
-}
-
-.ais-RefinementList-item--selected, .ais-Menu-item--selected {
+.ais-RefinementList-item--selected,
+.ais-Menu-item--selected {
   font-weight: bold;
   background: rgba(80, 100, 251, 0.12);
   border-radius: 4px;
@@ -905,12 +906,6 @@ label.ais-RefinementList-label, .ais-Menu-link {
 
 @media screen and (max-width: 832px) {
   .ais-Hits-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .ais-Hits-list {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -918,7 +913,8 @@ label.ais-RefinementList-label, .ais-Menu-link {
     display: none;
   }
 
-  .ais-RefinementList, .ais-Menu {
+  .ais-RefinementList,
+  .ais-Menu {
     box-sizing: content-box;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -929,22 +925,21 @@ label.ais-RefinementList-label, .ais-Menu-link {
     margin-right: -3rem;
   }
 
-  .ais-RefinementList::-webkit-scrollbar {
-    display: none;
-  }
-
+  .ais-RefinementList::-webkit-scrollbar,
   .ais-Menu::-webkit-scrollbar {
     display: none;
   }
 
-  .ais-RefinementList-list, .ais-Menu-list {
+  .ais-RefinementList-list,
+  .ais-Menu-list {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  .ais-RefinementList-item, .ais-Menu-item {
+  .ais-RefinementList-item,
+  .ais-Menu-item {
     -ms-flex-preferred-size: 7.5rem;
     flex-basis: 7.5rem; /* sets the initial main size of a each menu item */ 
     -ms-flex-negative: 0; 
@@ -960,7 +955,8 @@ label.ais-RefinementList-label, .ais-Menu-link {
     text-overflow: ellipsis;
   }
 
-  .ais-RefinementList-label, .ais-Menu-link {
+  .ais-RefinementList-label,
+  .ais-Menu-link {
     flex-direction: column;
     align-items: flex-start !important;
   }

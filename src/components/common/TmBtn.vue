@@ -71,7 +71,7 @@ export default {
   color var(--bright, #333) !important
   padding 0 0.75em
   margin 0
-  background var(--app-bg, #fff)
+  background transparent
   border 2px solid var(--bc, #ddd)
   border-radius 0.25rem
   cursor pointer
