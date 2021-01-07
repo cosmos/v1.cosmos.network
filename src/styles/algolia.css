@@ -822,6 +822,7 @@ a[class^="ais-"] {
 }
 .ais-RefinementList-item:hover .ais-RefinementList-labelText,
 .ais-RefinementList-item:focus .ais-RefinementList-labelText,
+.ais-Menu-link:hover .ais-Menu-label,
 .ais-Menu-link:focus .ais-Menu-label,
 .ais-Menu-link:focus .ais-Menu-count,
 .ais-RefinementList-checkbox:focus ~ * {
@@ -950,7 +951,7 @@ label.ais-RefinementList-label, .ais-Menu-link {
     max-width: 9.375rem;
     margin: 0 2px;
     border-radius: 3px;
-    background: var(--gray-950);
+    background: var(--app-fg);
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
   }
@@ -965,7 +966,7 @@ label.ais-RefinementList-label, .ais-Menu-link {
 @media screen and (max-width: 400px) {
   .ais-Hits-item {
     padding: 0;
-    width: min-content;
+    width: 100%;
   }
 
   .ais-Hits-list {

@@ -285,8 +285,9 @@ export default {
   letter-spacing var(--tracking-2-wide)
   line-height 1.25rem
   padding 1rem
-  background rgba(176, 180, 207, 0.087)
+  background var(--app-fg)
   border-radius 0.5rem
+  max-width 24rem
 
   &__title
     text-transform uppercase
@@ -426,6 +427,9 @@ export default {
   .layout
     display block
 
+    &__sidebar
+      margin-right -1rem
+
     &__results
       margin-top 2rem
 
@@ -483,14 +487,11 @@ export default {
   .text
     &__list
       margin-top 0.5rem
-    &__top__name
-      font-size 0.75rem
+    &__top__name,
+    &__top__name__none
+      font-size 1rem
     &__category
       font-size 0.75rem
-
-  .icon
-    width 1rem
-    height 1rem
 </style>
 
 <style src="../styles/algolia.css" lang="css" />
