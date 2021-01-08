@@ -103,7 +103,7 @@
         .cta-container__item__title Built something with Cosmos tools?
         .cta-container__item__btn
           tm-btn(
-            value="Submit a project" size="lg" type="anchor" href="https://airtable.com/tblii5D2VeOOFZA4c/viwDRWlFKDPpHZOII" target="_blank" rel="noreferrer noopener"
+            value="Submit a project" size="lg" type="anchor" href="https://airtable.com/shrHJJ4U4ChUxjILk" target="_blank" rel="noreferrer noopener"
             icon="arrow_forward" icon-pos="right" color="transparent-bg")
 </template>
 
