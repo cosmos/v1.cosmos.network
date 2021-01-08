@@ -119,7 +119,7 @@ export default {
   top 0
   left 0
   z-index var(--z-app-header)
-  width 100vw
+  width 100%
   background var(--app-nav)
 
   font-family var(--ff-brand)

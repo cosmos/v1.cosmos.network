@@ -37,18 +37,17 @@
       value="Start Tutorial" size="lg" type="anchor" href="https://tutorials.cosmos.network/"
       icon="arrow_forward" icon-pos="right")
 
-  tm-section
-    div(slot="title") Built with the Cosmos SDK
-    div(slot="subtitle") This is a showcase of application-specific blockchains that have been built with the Cosmos SDK. #[router-link(:to="{ name: 'ecosystem' }") View more &rarr;]
-    .tm-cards-hz
-      tm-card-hz(
-        v-for="i in featuredProjects"
-        flush="true"
-        :img-src="hf.optionalImg(i.imgFeature).src"
-        :key="i.slug"
-        :subtitle="i.tags[0]"
-        :title="i.title"
-        :href="i.projectUrl")
+  tm-section(layout="center").ecosystem
+    div(slot="title") The Cosmos Ecosystem
+    div(slot="subtitle") Discover an ever-expanding universe of application-specific blockchains built with Cosmos SDK
+    tm-btn(
+      value="Explore" size="lg" type="link" :to="{ name: 'ecosystem' }"
+      icon="arrow_forward" icon-pos="right" color="transparent-bg")
+    .logos-container
+      .logos-container__left
+        img(src="~images/sdk/section-ecosystem-logos-1.svg" alt="Section ecosystem logos")
+      .logos-container__right
+        img(src="~images/sdk/section-ecosystem-logos-2.svg" alt="Section ecosystem logos")
 
   tm-section(layout="center")
     div(slot="title") What Will You Build?
@@ -105,7 +104,6 @@
 
 <script>
 import hf from "scripts/helpers"
-import { mapGetters } from "vuex"
 import TmBtn from "common/TmBtn"
 import TmCardIcon from "cards/TmCardIcon"
 import TmCardHz from "cards/TmCardHz"
@@ -131,23 +129,10 @@ export default {
     TmStep,
     TmUseCase
   },
-  computed: {
-    ...mapGetters(["community"]),
-    featuredProjects() {
-      if (this.community.ecosystem.length > 0) {
-        return this.community.ecosystem.filter(e => e.featured)
-      }
-      return []
-    }
-  },
   data: () => ({
     hf: hf
   }),
   mounted() {
-    if (this.community.ecosystem.length === 0) {
-      this.$store.dispatch("initCommunityEcosystem")
-    }
-
     jarallaxElement()
     jarallax(this.$el.querySelectorAll(".jarallax"), {
       speed: 0.67
@@ -158,6 +143,15 @@ export default {
 
 <style lang="stylus">
 @require '~variables'
+
+.ecosystem
+  background-color #F8F9FC
+  height 30rem
+
+.logos-container
+  display flex
+  flex-direction row
+  justify-content space-between
 
 @media screen and (min-width: 768px)
   #section-sdk-cta
@@ -170,4 +164,17 @@ export default {
 
     .tm-section__container
       flex-flow row
+
+@media screen and (max-width: 945px)
+  .logos-container
+    &__left
+      margin-right 1rem
+
+@media screen and (max-width: 600px)
+  .ecosystem
+    height 34rem
+
+  .logos-container
+    margin-top 2rem
+    justify-content center
 </style>

@@ -208,14 +208,14 @@ a
   background-image url('~images/site/bg-tile-stars-multicolor.svg'), linear-gradient(rgb(5, 5, 7, 0.6))
   position relative
 
-  &:before
-    content ''
-    position absolute
-    top 0
-    left 0
-    right 0
-    bottom 0
-    background linear-gradient(180deg, rgb(5, 5, 7) 5%, rgba(5, 5, 7, 0) 60%)
+  // &:before
+  //   content ''
+  //   position absolute
+  //   top 0
+  //   left 0
+  //   right 0
+  //   bottom 0
+  //   background linear-gradient(180deg, rgb(5, 5, 7) 5%, rgba(5, 5, 7, 0) 60%)
 
   .image
     position relative

@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   tm-section.component__hero__container(theme="dark")
-    div(slot="suptitle").hero-suptitle May - Dec 2020 · Online series
+    div(slot="suptitle").hero-suptitle May 2020 - Dec 2021 · Online series
     div(slot="title").hero-title Code with Us
     div(slot="subtitle").hero-subtitle Join us in a live, interactive workshop program designed to educate and provide real-time practice to developers in the Cosmos community.
     tm-btn(size="lg" value="sign up now" color="primary" @click.native="openModal(true)")
