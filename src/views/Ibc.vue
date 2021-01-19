@@ -7,7 +7,7 @@ div
       .tablet.laptop.desktop Inter-Blockchain Communication
     div(slot="subtitle") The interoperability protocol connecting the global economy to blockchain technology
     tm-btn(size="lg" value="get updates" type="anchor" icon="arrow_forward"
-      icon-pos="right" color="primary" href="https://zc.vg/sf/zI6BW" target="_blank" rel="noreferrer noopener")
+      icon-pos="right" color="primary" href="https://cosmos.network/newsletters/signup/ibc")
     tm-btn(size="lg" value="learn more" v-scroll-to="'.section-hero-black'"
       icon="arrow_downward" icon-pos="right")
     div(slot="image")
@@ -117,7 +117,7 @@ div
         .title Join the IBC Working Group
         .subtitle Discuss the future of IBC with the team building it.
       .right
-        a(href="https://zc.vg/sf/zI6BW" target="_blank" rel="noreferrer noopener").chevron-text
+        a(href="https://cosmos.network/newsletters/signup/ibc").chevron-text
           span Join working group
 
   tm-section.section-hero-dark(theme="dark" layout="center")
@@ -132,7 +132,7 @@ div
         img.top-right-logo(src="~assets/brands/color/ibc-grey.svg" alt="IBC")
         h1 IBC Working Group
         p Get updates on Working Group activity.
-        a(href="https://zc.vg/sf/zI6BW" target="_blank" rel="noreferrer noopener")
+        a(href="https://cosmos.network/newsletters/signup/ibc")
           span Join working group
       .impact-card
         img.top-right-logo(src="~assets/brands/color/github-grey.svg" alt="Github")

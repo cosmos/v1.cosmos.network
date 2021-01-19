@@ -32,7 +32,7 @@ const state = [
   },
   {
     title: "Get updates",
-    url: "https://zc.vg/sf/zI6BW",
+    url: "https://cosmos.network/newsletters/signup/ibc",
     img: "/images/logos/logo-notifications.svg",
     color: "#161931"
   }
