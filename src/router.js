@@ -8,6 +8,7 @@ import ProductSDK from "./views/ProductSDK.vue"
 import Community from "./views/Community.vue"
 import Contributors from "./views/Contributors.vue"
 import Ecosystem from "./views/Ecosystem.vue"
+import Wallets from "./views/Wallets.vue"
 import Tools from "./views/Tools.vue"
 import Ibc from "./views/Ibc.vue"
 import Api from "./views/Api.vue"
@@ -187,6 +188,11 @@ const routes = [
     path: "/ecosystem",
     name: "ecosystem",
     component: Ecosystem
+  },
+  {
+    path: "/wallets",
+    name: "wallets",
+    component: Wallets
   },
   {
     path: "/epicenter",
