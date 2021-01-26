@@ -831,7 +831,7 @@ a[class^="ais-"] {
 
 .ais-RefinementList-labelText,
 .ais-Menu-label {
-  text-transform: capitalize;
+  text-transform: initial;
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: 0.03em;

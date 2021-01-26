@@ -1,38 +1,39 @@
 <template lang="pug">
 .page-projects
   tm-header
-    div(slot="suptitle") Ecosystem
+    div(slot="suptitle") Wallets
     div(slot="title") Explore Cosmos Network
-    div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of apps and blockchains built in the Cosmos ecosystem by developers and contributors from across the globe.
+    div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of wallets built in the Cosmos ecosystem by developers and contributors from across the globe.
 
   tm-section
-    ais-instant-search(:search-client="searchClient" index-name="apps")
+    ais-instant-search(:search-client="searchClient" index-name="wallets")
       .layout
         .layout__sidebar
           ais-search-box(placeholder="Search" class="searchbox")
           .header
             .heading
-              .heading__title Categories
-              ais-clear-refinements(:excluded-attributes="['status']")
+              .heading__title Operating Systems
+              ais-clear-refinements(:excluded-attributes="['networks']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Categories Filter
-            ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :limit="20" :transform-items="transformItems")
+            span.sr-only Tags Filter
+            ais-menu(attribute="tags" :sort-by="['count:desc', 'name:asc']" :limit="10" :transform-items="transformItems")
 
           .header
             .heading
-              .heading__title Status
-              ais-clear-refinements(:excluded-attributes="['category']")
+              .heading__title Supported Features
+              ais-clear-refinements(:excluded-attributes="['networks']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Status Filter
-            ais-refinement-list(attribute="status" operator="or" :sort-by="['count:desc']" :transform-items="transformItems")
+            span.sr-only Tags Filter
+            ais-menu(attribute="isLedger" :sort-by="['name:asc']" :transform-items="ledgerItems")
+            ais-menu(attribute="isVoting" :sort-by="['name:asc']" :transform-items="votingItems")
+
           .faq
             .faq__title Be Advised
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
 
         .layout__results
           ais-stats
-            //- .layout__results__title(slot-scope="{ nbHits }") Cosmos apps and projects <span class="hits">{{ nbHits }}</span>
-            .layout__results__title Cosmos apps and projects
+            .layout__results__title Cosmos wallets
 
           div
             ais-hits
@@ -55,19 +56,17 @@
                   .text
                     .text__top
                       a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'").text__top__name {{ item.name }}
-                        span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}").
+                        //- span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
+                        //-   icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}").
                       .text__top__name__none(v-else) {{ item.name }}
-                        span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
-                    .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
+                        //- span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
+                        //-   icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
+                    //- .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
                     .text__list
-                      a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs && item.docs !== 'x'").list-item
-                        img(src="~assets/brands/gray/docs.svg" alt="Docs").icon
-                      a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github && item.github !== 'x'").list-item
-                        img(src="~assets/brands/gray/github.svg" alt="GitHub").icon
-                      a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat && item.chat !== 'x'").list-item
-                        img(src="~assets/brands/gray/chat.svg" alt="Chat").icon
+                      a(:href="item.tutorial" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Tutorial'" v-if="item.tutorial && item.tutorial !== 'x'").list-item
+                        img(src="~assets/brands/gray/book.svg" alt="Tutorial").icon
+                      a(:href="item.videoTutorial" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Video Tutorial'" v-if="item.videoTutorial && item.videoTutorial !== 'x'").list-item
+                        img(src="~assets/brands/gray/media.svg" alt="Video Tutorial").icon
                       a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter && item.twitter !== 'x'").list-item
                         img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
 
@@ -109,22 +108,18 @@
 
 <script>
 import algoliasearch from "algoliasearch"
-//- import { mapGetters } from "vuex"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
 import IconDot from "common/IconDot"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
-//- const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
-
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
-//- const client = algoliasearch("ME7376U3XW", adminApiKey)
 
 export default {
-  name: "page-ecosystem",
+  name: "page-wallets",
   metaInfo: {
-    title: "Ecosystem"
+    title: "Wallets"
   },
   components: {
     TmHeader,
@@ -146,42 +141,23 @@ export default {
       status: null
     }
   },
-  mounted() {
-    //- const index = client.initIndex("apps")
-    //- this method can significantly increase your indexing operations count
-    //- https://www.algolia.com/doc/api-reference/api-methods/replace-all-objects/
-    //- index
-    //-   .replaceAllObjects(this.ecosystem.apps, {
-    //-     autoGenerateObjectIDIfNotExist: true
-    //-   })
-    //-   .then(({ objectIDs }) => {
-    //-     // eslint-disable-next-line
-    //-     console.log(objectIDs)
-    //-   })
-    //-   .catch(err => {
-    //-     // eslint-disable-next-line
-    //-     console.log(err)
-    //-   })
-  },
-  computed: {
-    //- ...mapGetters(["ecosystem"])
-  },
   methods: {
-    moveToTheEnd(arr, word) {
-      arr.map((elem, index) => {
-        if (elem.label.toLowerCase() === word.toLowerCase()) {
-          arr.splice(index, 1)
-          arr.push(elem)
-        }
-      })
-      return arr
-    },
     transformItems(items) {
-      this.moveToTheEnd(items, "Uncategorized")
-      this.moveToTheEnd(items, "Unknown")
-
       return items.map(item => ({
-        ...item
+        ...item,
+        label: item.label
+      }))
+    },
+    ledgerItems(items) {
+      return items.map(item => ({
+        ...item,
+        label: "Ledger Supported"
+      }))
+    },
+    votingItems(items) {
+      return items.map(item => ({
+        ...item,
+        label: "Voting Supported"
       }))
     },
     getImgUrl(input) {
