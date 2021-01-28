@@ -64,12 +64,7 @@
                   .text
                     .text__top
                       a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'").text__top__name {{ item.name }}
-                        //- span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                        //-   icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}").
                       .text__top__name__none(v-else) {{ item.name }}
-                        //- span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                        //-   icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
-                    //- .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
                     .text__list
                       a(:href="item.tutorial" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Tutorial'" v-if="item.tutorial && item.tutorial !== 'x'").list-item
                         img(src="~assets/brands/gray/book.svg" alt="Tutorial").icon
@@ -119,7 +114,6 @@ import algoliasearch from "algoliasearch"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
-import IconDot from "common/IconDot"
 import axios from "axios"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
@@ -140,20 +134,11 @@ export default {
   components: {
     TmHeader,
     TmSection,
-    TmBtn,
-    IconDot
+    TmBtn
   },
   data() {
     return {
       searchClient: searchClient,
-      dotColor: {
-        mainnet: "#4ACF4A",
-        testnet: "#BA3FD9",
-        development: "#FF9500",
-        proofofconcept: "#3B427D",
-        beta: "#66A1FF",
-        alpha: "#BCE7FF"
-      },
       status: null,
       records: []
     }
