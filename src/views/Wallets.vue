@@ -20,7 +20,7 @@
 
           .header
             .heading
-              .heading__title Operating Systems
+              .heading__title Networks
               ais-clear-refinements(:excluded-attributes="['tags']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Networks Filter
