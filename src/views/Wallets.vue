@@ -16,7 +16,7 @@
               ais-clear-refinements(:excluded-attributes="['networks']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Tags Filter
-            ais-refinement-list(attribute="tags" operator="or" :limit="10" :sort-by="['count:desc']" :transform-items="transformItems")
+            ais-menu(attribute="tags" :sort-by="['count:desc', 'name:asc']")
 
           .header
             .heading
@@ -24,7 +24,7 @@
               ais-clear-refinements(:excluded-attributes="['tags']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Networks Filter
-            ais-refinement-list(attribute="networks" operator="or" :limit="10" :sort-by="['count:desc']" :transform-items="transformItems")
+            ais-refinement-list(attribute="networks" operator="or" :limit="10" :sort-by="['count:desc']")
 
           .header
             .heading
@@ -174,21 +174,14 @@ export default {
           if (rec.fields.active) this.records.push(rec.fields)
         })
 
-        index
-          .replaceAllObjects(this.records, {
-            autoGenerateObjectIDIfNotExist: true
-          })
-          .then(({ objectIDs }) => {
-            // eslint-disable-next-line
-            console.log(objectIDs)
-          })
+        index.replaceAllObjects(this.records, {
+          autoGenerateObjectIDIfNotExist: true
+        })
+        //- .then(({ objectIDs }) => {
+        //-   // eslint-disable-next-line
+        //-   console.log(objectIDs)
+        //- })
       })
-    },
-    transformItems(items) {
-      return items.map(item => ({
-        ...item,
-        label: item.label
-      }))
     },
     ledgerItems(items) {
       return items.map(item => ({
@@ -202,19 +195,8 @@ export default {
         label: "Voting Supported"
       }))
     },
-    getImgUrl(input) {
-      const findUrlRegex = /(?:(?:https?:\/\/)|(?:www\.))[^\s]+.(?:jpg|jpeg|svg|png)/g
-      const match = findUrlRegex.exec(input)
-
-      return match
-    },
     cleanText(item) {
       return item.replace(/\s+/g, "").toLowerCase()
-    },
-    bouncer(items) {
-      return items.filter(Boolean).map(i => {
-        return i
-      })
     }
   }
 }
