@@ -23,18 +23,25 @@ let gatherRecords = function(commit, baseName, mutationName) {
 }
 
 const state = {
-  apps: []
+  apps: [],
+  wallets: []
 }
 
 const actions = {
-  initEcosystem({ commit }) {
+  initEcosystemApps({ commit }) {
     gatherRecords(commit, "apps", "addEcosystemApps")
+  },
+  initEcosystemWallets({ commit }) {
+    gatherRecords(commit, "wallets", "addEcosystemWallets")
   }
 }
 
 const mutations = {
   addEcosystemApps(state, value) {
     state.apps.push(value.fields)
+  },
+  addEcosystemWallets(state, value) {
+    state.wallets.push(value.fields)
   }
 }
 

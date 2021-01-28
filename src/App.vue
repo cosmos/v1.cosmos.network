@@ -198,10 +198,11 @@ export default {
     this.$store.commit("initializeBlog")
     this.$store.commit("initMeetupEvents")
     this.$store.dispatch("initCommunityEvents")
+    this.$store.dispatch("initEcosystemApps")
+    this.$store.dispatch("initEcosystemWallets")
     this.$store.dispatch("initCwuWorkshops")
     this.$store.dispatch("initializeRoadmap")
     this.$store.dispatch("initializeEmail")
-    // this.$store.dispatch("initEcosystem")
   },
   store
 }
