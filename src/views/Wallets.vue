@@ -171,7 +171,7 @@ export default {
         }
       }).then(res => {
         res.data.records.forEach(rec => {
-          this.records.push(rec.fields)
+          if (rec.fields.active) this.records.push(rec.fields)
         })
 
         index
