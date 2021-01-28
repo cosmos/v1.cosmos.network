@@ -16,12 +16,20 @@
               ais-clear-refinements(:excluded-attributes="['networks']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Tags Filter
-            ais-menu(attribute="tags" :sort-by="['count:desc', 'name:asc']" :limit="10" :transform-items="transformItems")
+            ais-refinement-list(attribute="tags" operator="or" :limit="10" :sort-by="['count:desc']" :transform-items="transformItems")
+
+          .header
+            .heading
+              .heading__title Operating Systems
+              ais-clear-refinements(:excluded-attributes="['tags']")
+                div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
+            span.sr-only Networks Filter
+            ais-refinement-list(attribute="networks" operator="or" :limit="10" :sort-by="['count:desc']" :transform-items="transformItems")
 
           .header
             .heading
               .heading__title Supported Features
-              ais-clear-refinements(:excluded-attributes="['networks']")
+              ais-clear-refinements(:excluded-attributes="['networks', 'tags']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Tags Filter
             ais-menu(attribute="isLedger" :sort-by="['name:asc']" :transform-items="ledgerItems")
@@ -41,17 +49,17 @@
                 .item
                   a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'")
                     .logo-wrapper
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
+                      img(:src="item.logo[0].url" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
+                      img(:src="item.logo[0].url" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__base
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__top
                       .logo-wrapper__color
                   div(v-else)
                     .logo-wrapper
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
+                      img(:src="item.logo[0].url" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
+                      img(:src="item.logo[0].url" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__base
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__top
                       .logo-wrapper__color
                   .text
                     .text__top
@@ -112,9 +120,17 @@ import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
 import IconDot from "common/IconDot"
+import axios from "axios"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
+const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
+
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
+const client = algoliasearch("ME7376U3XW", adminApiKey)
+
+const apiKey = process.env.VUE_APP_AIRTABLE_API_KEY
+
+const index = client.initIndex("wallets")
 
 export default {
   name: "page-wallets",
@@ -138,10 +154,36 @@ export default {
         beta: "#66A1FF",
         alpha: "#BCE7FF"
       },
-      status: null
+      status: null,
+      records: []
     }
   },
+  mounted() {
+    this.getAirtableData()
+  },
+  created() {},
   methods: {
+    getAirtableData() {
+      axios({
+        url: "https://api.airtable.com/v0/app257DDgKV2KGpWA/wallets",
+        headers: {
+          Authorization: `Bearer ${apiKey}`
+        }
+      }).then(res => {
+        res.data.records.forEach(rec => {
+          this.records.push(rec.fields)
+        })
+
+        index
+          .replaceAllObjects(this.records, {
+            autoGenerateObjectIDIfNotExist: true
+          })
+          .then(({ objectIDs }) => {
+            // eslint-disable-next-line
+            console.log(objectIDs)
+          })
+      })
+    },
     transformItems(items) {
       return items.map(item => ({
         ...item,
