@@ -20,18 +20,18 @@
 
           .header
             .heading
-              .heading__title Networks
+              .heading__title Tokens
               ais-clear-refinements(:excluded-attributes="['tags']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Networks Filter
-            ais-refinement-list(attribute="networks" operator="or" :limit="10" :sort-by="['count:desc']")
+            span.sr-only Tokens Filter
+            ais-refinement-list(attribute="tokens" operator="or" :limit="10" :sort-by="['count:desc']")
 
           .header
             .heading
-              .heading__title Supported Features
-              ais-clear-refinements(:excluded-attributes="['networks', 'tags']")
+              .heading__title Features
+              ais-clear-refinements(:excluded-attributes="['tokens', 'tags']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Tags Filter
+            span.sr-only Features Filter
             ais-menu(attribute="isLedger" :sort-by="['name:asc']" :transform-items="ledgerItems")
             ais-menu(attribute="isVoting" :sort-by="['name:asc']" :transform-items="votingItems")
 
@@ -110,7 +110,7 @@
         .cta-container__item__title Built something with Cosmos tools?
         .cta-container__item__btn
           tm-btn(
-            value="Submit a project" size="lg" type="anchor" href="https://airtable.com/shrHJJ4U4ChUxjILk" target="_blank" rel="noreferrer noopener"
+            value="Submit a wallet" size="lg" type="anchor" href="https://airtable.com/shrVmoUlJJRspBSj7" target="_blank" rel="noreferrer noopener"
             icon="arrow_forward" icon-pos="right" color="transparent-bg")
 </template>
 
