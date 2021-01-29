@@ -961,6 +961,11 @@ label.ais-RefinementList-label, .ais-Menu-link {
     flex-direction: column;
     align-items: flex-start !important;
   }
+
+  .ais-RefinementList-labelText,
+  .ais-Menu-label {
+    font-size: 0.75rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
