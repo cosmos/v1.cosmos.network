@@ -12,7 +12,7 @@
           ais-search-box(placeholder="Search" class="searchbox")
           .header
             .heading
-              .heading__title Operating Systems
+              .heading__title Platforms
               ais-clear-refinements(:excluded-attributes="['networks']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Platforms Filter
