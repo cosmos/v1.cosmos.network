@@ -15,13 +15,13 @@
               .heading__title Operating Systems
               ais-clear-refinements(:excluded-attributes="['networks']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Tags Filter
-            ais-menu(attribute="tags" :sort-by="['count:desc', 'name:asc']")
+            span.sr-only Platforms Filter
+            ais-menu(attribute="platforms" :sort-by="['count:desc', 'name:asc']")
 
           .header
             .heading
               .heading__title Tokens
-              ais-clear-refinements(:excluded-attributes="['tags']")
+              ais-clear-refinements(:excluded-attributes="['platforms']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Tokens Filter
             ais-refinement-list(attribute="tokens" operator="or" :limit="10" :sort-by="['count:desc']")
@@ -29,7 +29,7 @@
           .header
             .heading
               .heading__title Features
-              ais-clear-refinements(:excluded-attributes="['tokens', 'tags']")
+              ais-clear-refinements(:excluded-attributes="['tokens', 'platforms']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Features Filter
             ais-menu(attribute="isLedger" :sort-by="['name:asc']" :transform-items="ledgerItems")
