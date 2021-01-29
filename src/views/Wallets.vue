@@ -171,13 +171,13 @@ export default {
     ledgerItems(items) {
       return items.map(item => ({
         ...item,
-        label: "Ledger Supported"
+        label: "Ledger support"
       }))
     },
     votingItems(items) {
       return items.map(item => ({
         ...item,
-        label: "Voting Supported"
+        label: "Voting"
       }))
     },
     cleanText(item) {
