@@ -1,12 +1,11 @@
 <template lang="pug">
   div
     .container
-      cosmos-newsletter-signup(v-bind="{...newsletter}" fullscreen="100vh")
+      cosmos-newsletter-signup(v-bind="{...newsletter}" fullscreen="60vh")
 </template>
 
 <style lang="stylus" scoped>
 .container
-  padding-top 4rem
   background var(--app-nav)
 </style>
 
