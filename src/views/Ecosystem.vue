@@ -6,84 +6,86 @@
     div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of apps and blockchains built in the Cosmos ecosystem by developers and contributors from across the globe.
 
   tm-section
-    ais-instant-search(:search-client="searchClient" index-name="apps")
-      .layout
-        .layout__sidebar
-          ais-search-box(placeholder="Search" class="searchbox")
-          .header
-            .heading
-              .heading__title Categories
-              ais-clear-refinements(:excluded-attributes="['status']")
-                div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Categories Filter
-            ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :limit="20" :transform-items="transformItems")
+    tm-tabs
+      tm-tab(name="Apps & projects" :selected="true")
+        ais-instant-search(:search-client="searchClient" index-name="apps")
+          .layout
+            .layout__sidebar
+              ais-search-box(placeholder="Search" class="searchbox")
+              .header
+                .heading
+                  .heading__title Categories
+                  ais-clear-refinements(:excluded-attributes="['status']")
+                    div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
+                span.sr-only Categories Filter
+                ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :limit="20" :transform-items="transformItems")
 
-          .header
-            .heading
-              .heading__title Status
-              ais-clear-refinements(:excluded-attributes="['category']")
-                div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Status Filter
-            ais-refinement-list(attribute="status" operator="or" :sort-by="['count:desc']" :transform-items="transformItems")
-          .faq
-            .faq__title Be Advised
-            .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
+              .header
+                .heading
+                  .heading__title Status
+                  ais-clear-refinements(:excluded-attributes="['category']")
+                    div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
+                span.sr-only Status Filter
+                ais-refinement-list(attribute="status" operator="or" :sort-by="['count:desc']" :transform-items="transformItems")
+              .faq
+                .faq__title Be Advised
+                .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
 
-        .layout__results
-          ais-stats
-            //- .layout__results__title(slot-scope="{ nbHits }") Cosmos apps and projects <span class="hits">{{ nbHits }}</span>
-            .layout__results__title Cosmos apps and projects
+            .layout__results
 
-          div
-            ais-hits
-              template(slot="item" slot-scope="{ item }")
-                .item
-                  a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'")
-                    .logo-wrapper
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
-                      .logo-wrapper__color
-                  div(v-else)
-                    .logo-wrapper
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
-                      .logo-wrapper__color
-                  .text
-                    .text__top
-                      a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'").text__top__name {{ item.name }}
-                        span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}").
-                      .text__top__name__none(v-else) {{ item.name }}
-                        span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
-                    .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
-                    .text__list
-                      a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs && item.docs !== 'x'").list-item
-                        img(src="~assets/brands/gray/docs.svg" alt="Docs").icon
-                      a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github && item.github !== 'x'").list-item
-                        img(src="~assets/brands/gray/github.svg" alt="GitHub").icon
-                      a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat && item.chat !== 'x'").list-item
-                        img(src="~assets/brands/gray/chat.svg" alt="Chat").icon
-                      a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter && item.twitter !== 'x'").list-item
-                        img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
+              div
+                ais-hits
+                  template(slot="item" slot-scope="{ item }")
+                    .item
+                      a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'")
+                        .logo-wrapper
+                          img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
+                          img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
+                          img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
+                          img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
+                          .logo-wrapper__color
+                      div(v-else)
+                        .logo-wrapper
+                          img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
+                          img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
+                          img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
+                          img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
+                          .logo-wrapper__color
+                      .text
+                        .text__top
+                          a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'").text__top__name {{ item.name }}
+                            span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
+                              icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}").
+                          .text__top__name__none(v-else) {{ item.name }}
+                            span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
+                              icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
+                        .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
+                        .text__list
+                          a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs && item.docs !== 'x'").list-item
+                            img(src="~assets/brands/gray/docs.svg" alt="Docs").icon
+                          a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github && item.github !== 'x'").list-item
+                            img(src="~assets/brands/gray/github.svg" alt="GitHub").icon
+                          a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat && item.chat !== 'x'").list-item
+                            img(src="~assets/brands/gray/chat.svg" alt="Chat").icon
+                          a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter && item.twitter !== 'x'").list-item
+                            img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
 
-            ais-state-results
-              .no-results(slot-scope="{ state: { query }, results: { hits } }" v-show="!hits.length") No results found matching <em>{{ query }}</em>.
+                ais-state-results
+                  .no-results(slot-scope="{ state: { query }, results: { hits } }" v-show="!hits.length") No results found matching <em>{{ query }}</em>.
 
-            .pagination
-              ais-pagination
-                template(slot="first" slot-scope="{ refine, isFirstPage }")
-                  div(@click="refine" :disabled="isFirstPage" v-show="!isFirstPage")
-                template(slot="previous" slot-scope="{ refine, isFirstPage }")
-                  div(@click="refine" :disabled="isFirstPage" v-show="!isFirstPage") previous
-                template(slot="next" slot-scope="{ refine, isLastPage }")
-                  div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") next
-                template(slot="last" slot-scope="{ refine, isLastPage }")
-                  div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") last
+                .pagination
+                  ais-pagination
+                    template(slot="first" slot-scope="{ refine, isFirstPage }")
+                      div(@click="refine" :disabled="isFirstPage" v-show="!isFirstPage")
+                    template(slot="previous" slot-scope="{ refine, isFirstPage }")
+                      div(@click="refine" :disabled="isFirstPage" v-show="!isFirstPage") previous
+                    template(slot="next" slot-scope="{ refine, isLastPage }")
+                      div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") next
+                    template(slot="last" slot-scope="{ refine, isLastPage }")
+                      div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") last
+
+      tm-tab(name="Wallets")
+        h1 Wallets
 
   tm-section.cta-bg
     .cta-container
@@ -109,17 +111,15 @@
 
 <script>
 import algoliasearch from "algoliasearch"
-//- import { mapGetters } from "vuex"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
+import TmTabs from "common/TmTabs"
+import TmTab from "common/TmTab"
 import IconDot from "common/IconDot"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
-//- const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
-
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
-//- const client = algoliasearch("ME7376U3XW", adminApiKey)
 
 export default {
   name: "page-ecosystem",
@@ -130,6 +130,8 @@ export default {
     TmHeader,
     TmSection,
     TmBtn,
+    TmTabs,
+    TmTab,
     IconDot
   },
   data() {
@@ -145,26 +147,6 @@ export default {
       },
       status: null
     }
-  },
-  mounted() {
-    //- const index = client.initIndex("apps")
-    //- this method can significantly increase your indexing operations count
-    //- https://www.algolia.com/doc/api-reference/api-methods/replace-all-objects/
-    //- index
-    //-   .replaceAllObjects(this.ecosystem.apps, {
-    //-     autoGenerateObjectIDIfNotExist: true
-    //-   })
-    //-   .then(({ objectIDs }) => {
-    //-     // eslint-disable-next-line
-    //-     console.log(objectIDs)
-    //-   })
-    //-   .catch(err => {
-    //-     // eslint-disable-next-line
-    //-     console.log(err)
-    //-   })
-  },
-  computed: {
-    //- ...mapGetters(["ecosystem"])
   },
   methods: {
     moveToTheEnd(arr, word) {
