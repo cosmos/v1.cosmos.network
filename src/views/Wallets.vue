@@ -87,6 +87,18 @@
                 template(slot="last" slot-scope="{ refine, isLastPage }")
                   div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") last
 
+  tm-section#section-messari(layout="split" theme="dark")
+    div(slot="title") Over $12B USD of digital assets under management
+    p Explore an ever-expanding ecosystem of blockchain apps, powered by Cosmos technology.
+    tm-btn(size="lg" value="view stats" type="anchor" href="https://messari.io/screener/cosmos-ecosystem-FCB5C9E8" target="_blank" rel="noreferrer noopener"
+      icon="north_east" icon-pos="right")
+    .note Screener powered by Messari
+    div(slot="image")
+      .phone: img(src="~assets/images/ecosystem/messari-screener.svg" alt="Messari screener")
+      .tablet: img(src="~assets/images/ecosystem/messari-screener.svg" alt="Messari screener")
+      .laptop
+      .desktop
+
   tm-section.cta-bg
     .cta-container
       .cta-container__item
@@ -196,6 +208,13 @@ export default {
   width 1px
   overflow hidden
   clip rect(1px, 1px, 1px, 1px)
+
+#section-messari
+  background url('~images/site/bg-tile-stars.svg'), linear-gradient(135deg, rgb(15,13,32,1) 0%, rgb(4,4,5) 25%, rgb(33,34,77) 53%, rgb(68,110,183) 100%)
+  background-size 256px 256px, auto
+
+.note
+  margin-top var(--pad320)
 
 .hits
   color var(--dim)
@@ -401,6 +420,11 @@ export default {
 
 .no-results
   margin-top 2rem
+
+@media screen and (min-width: 1024px)
+  #section-messari
+    background url('~images/ecosystem/messari-screener.svg') right center no-repeat, url('~images/site/bg-tile-stars.svg'), linear-gradient(135deg, rgb(15,13,32,1) 0%, rgb(4,4,5) 25%, rgb(33,34,77) 53%, rgb(68,110,183) 100%)
+    background-size auto 130%, 256px 256px, auto
 
 @media screen and (max-width: 832px)
   .layout
