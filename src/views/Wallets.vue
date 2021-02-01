@@ -90,22 +90,16 @@
   tm-section.cta-bg
     .cta-container
       .cta-container__item
-        .cta-container__item__title Want to build your own Cosmos app?
+        .cta-container__item__title What are Hierarchical Deterministic (HD) wallets?
         .cta-container__item__btn
           tm-btn(
-            value="Build now" size="lg" type="link" :to="{ name: 'tools' }"
+            value="learn more" size="lg" type="anchor" href="https://hub.cosmos.network/main/resources/hd-wallets.html" target="_blank" rel="noreferrer noopener"
             icon="arrow_forward" icon-pos="right" color="transparent-bg")
       .cta-container__item
-        .cta-container__item__title Need funding to build your great idea?
+        .cta-container__item__title Built your own Cosmos wallet?
         .cta-container__item__btn
           tm-btn(
-            value="Get a grant" size="lg" type="link" :to="{ name: 'contributors' }"
-            icon="arrow_forward" icon-pos="right" color="transparent-bg")
-      .cta-container__item
-        .cta-container__item__title Built something with Cosmos tools?
-        .cta-container__item__btn
-          tm-btn(
-            value="Submit a wallet" size="lg" type="anchor" href="https://airtable.com/shrVmoUlJJRspBSj7" target="_blank" rel="noreferrer noopener"
+            value="feature your wallet" size="lg" type="anchor" href="https://airtable.com/shrVmoUlJJRspBSj7" target="_blank" rel="noreferrer noopener"
             icon="arrow_forward" icon-pos="right" color="transparent-bg")
 </template>
 
