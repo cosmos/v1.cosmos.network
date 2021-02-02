@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     .container
-      validator-newsletter-signup(v-bind="{...newsletter}" validator)
+      validator-newsletter-signup(v-bind="{...newsletter}" validator fullscreen="100vh")
 </template>
 
 <style lang="stylus" scoped>

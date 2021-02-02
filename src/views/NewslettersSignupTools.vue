@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     .container
-      cosmos-newsletter-signup(v-bind="{...newsletter}" fullscreen="60vh")
+      cosmos-newsletter-signup(v-bind="{...newsletter}" fullscreen="100vh")
 </template>
 
 <style lang="stylus" scoped>
