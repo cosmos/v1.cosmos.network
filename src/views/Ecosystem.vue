@@ -114,8 +114,6 @@ import algoliasearch from "algoliasearch"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
-import TmTabs from "common/TmTabs"
-import TmTab from "common/TmTab"
 import SectionMessari from "sections/SectionMessari"
 import IconDot from "common/IconDot"
 import axios from "axios"
@@ -139,8 +137,6 @@ export default {
     TmHeader,
     TmSection,
     TmBtn,
-    TmTabs,
-    TmTab,
     SectionMessari,
     IconDot
   },
