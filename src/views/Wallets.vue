@@ -199,11 +199,11 @@ export default {
   flex-direction row
 
 .tabs__item > a
-  padding 24px 0
+  padding 0.75rem 0
   color rgba(0, 4, 56, 0.738)
+  line-height 2rem
 
   &.router-link-exact-active
-    color bright
     background inherit
     border-bottom 2px solid var(--primary)
 

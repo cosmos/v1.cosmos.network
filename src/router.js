@@ -110,6 +110,7 @@ const routes = [
     ["/dev/whitepaper/zh-CN", "/resources/whitepaper/zh-CN"],
     ["/events/all", "/events"],
     ["/events/code-with-us", "/series/code-with-us"],
+    ["/ecosystem", "/ecosystem/apps"],
     ["/faq", "/resources/faq"],
     ["/hackatom", "/events"],
     ["/hiring", "/careers"],
@@ -183,11 +184,6 @@ const routes = [
     path: "/tools",
     name: "tools",
     component: Tools
-  },
-  {
-    path: "/ecosystem",
-    name: "ecosystem",
-    component: Ecosystem
   },
   {
     path: "/ecosystem/apps",
