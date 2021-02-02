@@ -3,7 +3,7 @@
   tm-header
     div(slot="suptitle") Wallets
     div(slot="title") Explore Cosmos Network
-    div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of wallets built in the Cosmos ecosystem by developers and contributors from across the globe.
+    div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of apps, blockchains, wallets and explorers, built in the Cosmos ecosystem by developers and contributors from across the globe.
     div(slot="tabs").tabs
       .tabs__item #[router-link(:to="{ name: 'ecosystem-apps'}") Apps &amp; projects]
       .tabs__item #[router-link(:to="{ name: 'ecosystem-wallets'}") Wallets]
