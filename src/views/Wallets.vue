@@ -4,6 +4,9 @@
     div(slot="suptitle") Wallets
     div(slot="title") Explore Cosmos Network
     div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of wallets built in the Cosmos ecosystem by developers and contributors from across the globe.
+    div(slot="tabs").tabs
+      .tabs__item #[router-link(:to="{ name: 'ecosystem-apps'}") Apps &amp; projects]
+      .tabs__item #[router-link(:to="{ name: 'ecosystem-wallets'}") Wallets]
 
   tm-section
     ais-instant-search(:search-client="searchClient" index-name="wallets")
@@ -40,9 +43,6 @@
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
 
         .layout__results
-          ais-stats
-            .layout__results__title Cosmos wallets
-
           div
             ais-hits
               template(slot="item" slot-scope="{ item }")
@@ -87,17 +87,7 @@
                 template(slot="last" slot-scope="{ refine, isLastPage }")
                   div(@click="refine" :disabled="isLastPage" v-show="!isLastPage") last
 
-  tm-section#section-messari(layout="split" theme="dark")
-    div(slot="title") Over $12B USD of digital assets under management
-    p Explore an ever-expanding ecosystem of blockchain apps, powered by Cosmos technology.
-    tm-btn(size="lg" value="view stats" type="anchor" href="https://messari.io/screener/cosmos-ecosystem-FCB5C9E8" target="_blank" rel="noreferrer noopener"
-      icon="north_east" icon-pos="right")
-    .note Screener powered by Messari
-    div(slot="image")
-      .phone: img(src="~assets/images/ecosystem/messari-screener.svg" alt="Messari screener")
-      .tablet: img(src="~assets/images/ecosystem/messari-screener.svg" alt="Messari screener")
-      .laptop
-      .desktop
+  section-messari
 
   tm-section.cta-bg
     .cta-container
@@ -120,6 +110,7 @@ import algoliasearch from "algoliasearch"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
+import SectionMessari from "sections/SectionMessari"
 import axios from "axios"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
@@ -140,7 +131,8 @@ export default {
   components: {
     TmHeader,
     TmSection,
-    TmBtn
+    TmBtn,
+    SectionMessari
   },
   data() {
     return {
@@ -202,16 +194,28 @@ export default {
     .tm-section__main ol
       margin auto
 
+.tabs
+  display flex
+  flex-direction row
+
+.tabs__item > a
+  padding 24px 0
+  color rgba(0, 4, 56, 0.738)
+
+  &.router-link-exact-active
+    color bright
+    background inherit
+    border-bottom 2px solid var(--primary)
+
+.tabs__item + .tabs__item
+  margin-left 2rem
+
 .sr-only
   position absolute
   height 1px
   width 1px
   overflow hidden
   clip rect(1px, 1px, 1px, 1px)
-
-#section-messari
-  background url('~images/site/bg-tile-stars.svg'), linear-gradient(135deg, rgb(15,13,32,1) 0%, rgb(4,4,5) 25%, rgb(33,34,77) 53%, rgb(68,110,183) 100%)
-  background-size 256px 256px, auto
 
 .note
   margin-top var(--pad320)
@@ -420,11 +424,6 @@ export default {
 
 .no-results
   margin-top 2rem
-
-@media screen and (min-width: 1024px)
-  #section-messari
-    background url('~images/ecosystem/messari-screener.svg') right center no-repeat, url('~images/site/bg-tile-stars.svg'), linear-gradient(135deg, rgb(15,13,32,1) 0%, rgb(4,4,5) 25%, rgb(33,34,77) 53%, rgb(68,110,183) 100%)
-    background-size auto 130%, 256px 256px, auto
 
 @media screen and (max-width: 832px)
   .layout
