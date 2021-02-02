@@ -217,12 +217,16 @@ export default {
 
 .tabs__item > a
   padding 0.75rem 0
+  font-weight 500
+  font-size 1.3125rem
+  line-height 100%
+  letter-spacing -0.007em
   color rgba(0, 4, 56, 0.738)
   line-height 2rem
 
   &.router-link-exact-active
     background inherit
-    border-bottom 2px solid var(--primary)
+    border-bottom 2px solid #4251FA
 
 .tabs__item + .tabs__item
   margin-left 2rem
