@@ -252,8 +252,10 @@ export default {
 
 .cta-container
   display grid
-  grid-template-columns repeat(auto-fit, minmax(0, 1fr))
-  gap 4rem
+  grid-template-columns repeat(2, 1fr)
+  gap 9.625rem
+  max-width 51.125rem
+  margin auto
 
   &__item
     display flex
@@ -447,6 +449,7 @@ export default {
 
 @media screen and (max-width: 600px)
   .cta-container
+    gap 4rem
 
     &__item + &__item
       margin-top 2rem
