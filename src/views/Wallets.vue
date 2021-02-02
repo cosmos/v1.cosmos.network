@@ -137,14 +137,12 @@ export default {
   data() {
     return {
       searchClient: searchClient,
-      status: null,
       records: []
     }
   },
   mounted() {
     this.getAirtableData()
   },
-  created() {},
   methods: {
     getAirtableData() {
       axios({

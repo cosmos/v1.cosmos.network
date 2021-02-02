@@ -9,7 +9,7 @@
       .tabs__item #[router-link(:to="{ name: 'ecosystem-wallets'}") Wallets]
 
   tm-section
-    ais-instant-search(:search-client="searchClient" index-name="apps")
+    ais-instant-search(:search-client="searchClient" index-name="apps1")
       .layout
         .layout__sidebar
           ais-search-box(placeholder="Search" class="searchbox")
@@ -40,17 +40,17 @@
                 .item
                   a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'")
                     .logo-wrapper
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
+                      img(:src="item.logo[0].url" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
+                      img(:src="item.logo[0].url" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__base
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__top
                       .logo-wrapper__color
                   div(v-else)
                     .logo-wrapper
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__base
-                      img(:src="getImgUrl(item.logo)" :alt="`${item.name} App logo`" v-if="getImgUrl(item.logo)").logo-wrapper__top
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__base
-                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!getImgUrl(item.logo)").logo-wrapper__top
+                      img(:src="item.logo[0].url" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__base
+                      img(:src="item.logo[0].url" :alt="`${item.name} App logo`" v-if="item.logo").logo-wrapper__top
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__base
+                      img(src="~assets/images/ecosystem/avatar-placeholder.svg" :alt="`${item.name} App logo`" v-if="!item.logo").logo-wrapper__top
                       .logo-wrapper__color
                   .text
                     .text__top
@@ -118,9 +118,17 @@ import TmTabs from "common/TmTabs"
 import TmTab from "common/TmTab"
 import SectionMessari from "sections/SectionMessari"
 import IconDot from "common/IconDot"
+import axios from "axios"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
+const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
+
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
+const client = algoliasearch("ME7376U3XW", adminApiKey)
+
+const apiKey = process.env.VUE_APP_AIRTABLE_API_KEY
+
+const index = client.initIndex("apps1")
 
 export default {
   name: "page-ecosystem",
@@ -147,10 +155,33 @@ export default {
         beta: "#66A1FF",
         alpha: "#BCE7FF"
       },
-      status: null
+      records: []
     }
   },
+  mounted() {
+    this.getAirtableData()
+  },
   methods: {
+    getAirtableData() {
+      axios({
+        url: "https://api.airtable.com/v0/app257DDgKV2KGpWA/apps",
+        headers: {
+          Authorization: `Bearer ${apiKey}`
+        }
+      }).then(res => {
+        res.data.records.forEach(rec => {
+          if (rec.fields.active) this.records.push(rec.fields)
+        })
+
+        index.replaceAllObjects(this.records, {
+          autoGenerateObjectIDIfNotExist: true
+        })
+        //- .then(({ objectIDs }) => {
+        //-   // eslint-disable-next-line
+        //-   console.log(objectIDs)
+        //- })
+      })
+    },
     moveToTheEnd(arr, word) {
       arr.map((elem, index) => {
         if (elem.label.toLowerCase() === word.toLowerCase()) {
@@ -168,19 +199,8 @@ export default {
         ...item
       }))
     },
-    getImgUrl(input) {
-      const findUrlRegex = /(?:(?:https?:\/\/)|(?:www\.))[^\s]+.(?:jpg|jpeg|svg|png)/g
-      const match = findUrlRegex.exec(input)
-
-      return match
-    },
     cleanText(item) {
       return item.replace(/\s+/g, "").toLowerCase()
-    },
-    bouncer(items) {
-      return items.filter(Boolean).map(i => {
-        return i
-      })
     }
   }
 }
