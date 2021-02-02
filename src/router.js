@@ -190,8 +190,13 @@ const routes = [
     component: Ecosystem
   },
   {
-    path: "/wallets",
-    name: "wallets",
+    path: "/ecosystem/apps",
+    name: "ecosystem-apps",
+    component: Ecosystem
+  },
+  {
+    path: "/ecosystem/wallets",
+    name: "ecosystem-wallets",
     component: Wallets
   },
   {
