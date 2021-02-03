@@ -409,6 +409,12 @@ const routes = [
       import(/* webpackChunkName: "404" */ "./views/NewslettersSignupIbc.vue")
   },
   {
+    path: "/newsletters/signup/validators",
+    name: "validators-signup",
+    component: () =>
+      import(/* webpackChunkName: "404" */ "./views/NewslettersSignupValidators.vue")
+  },
+  {
     path: "/rpc",
     redirect: "/rpc/v0.37.9"
   },
