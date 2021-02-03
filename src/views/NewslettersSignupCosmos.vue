@@ -6,7 +6,6 @@
 
 <style lang="stylus" scoped>
 .container
-  padding-top 4rem
   background var(--app-nav)
 </style>
 
