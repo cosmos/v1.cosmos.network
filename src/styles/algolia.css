@@ -978,3 +978,19 @@ label.ais-RefinementList-label, .ais-Menu-link {
     row-gap: 2rem;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .ais-RefinementList-label {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ais-RefinementList {
+    margin-right: -1rem;
+  }
+
+  .ais-RefinementList-count {
+    display: block;
+  }
+}
