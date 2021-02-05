@@ -19,7 +19,7 @@
               ais-clear-refinements(:excluded-attributes="['status']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Categories Filter
-            ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :transform-items="transformItems")
+            ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :limit="20" :transform-items="transformItems")
 
           .header
             .heading
