@@ -119,8 +119,6 @@ const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
 const client = algoliasearch("ME7376U3XW", adminApiKey)
 
-const apiKey = process.env.VUE_APP_AIRTABLE_API_KEY
-
 const index = client.initIndex("wallets")
 
 export default {
@@ -144,15 +142,14 @@ export default {
     this.getAirtableData()
   },
   methods: {
-    getAirtableData() {
-      axios({
-        url: "https://api.airtable.com/v0/app257DDgKV2KGpWA/wallets",
-        headers: {
-          Authorization: `Bearer ${apiKey}`
-        }
+    async getAirtableData() {
+      await axios({
+        url: "https://cosmos-ecosystem-api.vercel.app/wallets"
       }).then(res => {
         res.data.records.forEach(rec => {
-          if (rec.fields.active) this.records.push(rec.fields)
+          if (rec.fields.active) {
+            this.records.push(rec.fields)
+          }
         })
 
         index.replaceAllObjects(this.records, {
@@ -195,6 +192,10 @@ export default {
 .tabs
   display flex
   flex-direction row
+
+
+.tabs__item
+  cursor pointer
 
 .tabs__item > a
   padding 0.75rem 0

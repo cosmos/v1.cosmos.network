@@ -19,7 +19,7 @@
               ais-clear-refinements(:excluded-attributes="['status']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
             span.sr-only Categories Filter
-            ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :limit="20" :transform-items="transformItems")
+            ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :transform-items="transformItems")
 
           .header
             .heading
@@ -33,7 +33,6 @@
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
 
         .layout__results
-
           div
             ais-hits
               template(slot="item" slot-scope="{ item }")
@@ -56,7 +55,7 @@
                     .text__top
                       a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'").text__top__name {{ item.name }}
                         span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}").
+                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
                       .text__top__name__none(v-else) {{ item.name }}
                         span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
                           icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
@@ -111,20 +110,18 @@
 
 <script>
 import algoliasearch from "algoliasearch"
+import axios from "axios"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
 import SectionMessari from "sections/SectionMessari"
 import IconDot from "common/IconDot"
-import axios from "axios"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
 const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
 
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
 const client = algoliasearch("ME7376U3XW", adminApiKey)
-
-const apiKey = process.env.VUE_APP_AIRTABLE_API_KEY
 
 const index = client.initIndex("apps1")
 
@@ -158,15 +155,14 @@ export default {
     this.getAirtableData()
   },
   methods: {
-    getAirtableData() {
-      axios({
-        url: "https://api.airtable.com/v0/app257DDgKV2KGpWA/apps",
-        headers: {
-          Authorization: `Bearer ${apiKey}`
-        }
+    async getAirtableData() {
+      await axios({
+        url: "https://cosmos-ecosystem-api.vercel.app/apps"
       }).then(res => {
         res.data.records.forEach(rec => {
-          if (rec.fields.active) this.records.push(rec.fields)
+          if (rec.fields.active && rec.fields.status !== "Deprecated") {
+            this.records.push(rec.fields)
+          }
         })
 
         index.replaceAllObjects(this.records, {
@@ -196,7 +192,10 @@ export default {
       }))
     },
     cleanText(item) {
-      return item.replace(/\s+/g, "").toLowerCase()
+      return item
+        .split(" ")
+        .join("")
+        .toLowerCase()
     }
   }
 }
@@ -214,6 +213,9 @@ export default {
 .tabs
   display flex
   flex-direction row
+
+.tabs__item
+  cursor pointer
 
 .tabs__item > a
   padding 0.75rem 0
