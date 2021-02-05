@@ -16,7 +16,7 @@ header.app-header
           span Build on Cosmos
         router-link(:to="{ name: 'community' }" @click.native="close")
           span Community
-        router-link(:to="{ name: 'ecosystem' }" @click.native="close")
+        router-link(:to="{ name: 'ecosystem-apps' }" @click.native="close")
           span Ecosystem
         router-link(:to="{ name: 'tools' }" @click.native="close")
           span Tools

@@ -1,7 +1,7 @@
 <template lang="pug">
 .page-projects
   tm-header
-    div(slot="suptitle") Ecosystem
+    div(slot="suptitle") Wallets
     div(slot="title") Explore Cosmos Network
     div(slot="subtitle").subtitle Welcome, Cosmonauts! Discover a wide variety of apps, blockchains, wallets and explorers, built in the Cosmos ecosystem by developers and contributors from across the globe.
     div(slot="tabs").tabs
@@ -9,25 +9,35 @@
       .tabs__item #[router-link(:to="{ name: 'ecosystem-wallets'}") Wallets]
 
   tm-section
-    ais-instant-search(:search-client="searchClient" index-name="apps")
+    ais-instant-search(:search-client="searchClient" index-name="wallets")
       .layout
         .layout__sidebar
           ais-search-box(placeholder="Search" class="searchbox")
           .header
             .heading
-              .heading__title Categories
-              ais-clear-refinements(:excluded-attributes="['status']")
+              .heading__title Platforms
+              ais-clear-refinements(:excluded-attributes="['networks']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Categories Filter
-            ais-menu(attribute="category" :sort-by="['count:desc', 'name:asc']" :transform-items="transformItems")
+            span.sr-only Platforms Filter
+            ais-menu(attribute="platforms" :sort-by="['count:desc', 'name:asc']")
 
           .header
             .heading
-              .heading__title Status
-              ais-clear-refinements(:excluded-attributes="['category']")
+              .heading__title Tokens
+              ais-clear-refinements(:excluded-attributes="['platforms']")
                 div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
-            span.sr-only Status Filter
-            ais-refinement-list(attribute="status" operator="or" :sort-by="['count:desc']" :transform-items="transformItems")
+            span.sr-only Tokens Filter
+            ais-refinement-list(attribute="tokens" operator="or" :limit="10" :sort-by="['count:desc']")
+
+          .header
+            .heading
+              .heading__title Features
+              ais-clear-refinements(:excluded-attributes="['tokens', 'platforms']")
+                div(slot-scope="{ canRefine, refine }" :disabled="!canRefine" v-show="canRefine" @click="refine()").heading__clear Clear
+            span.sr-only Features Filter
+            ais-menu(attribute="isLedger" :sort-by="['name:asc']" :transform-items="ledgerItems")
+            ais-menu(attribute="isVoting" :sort-by="['name:asc']" :transform-items="votingItems")
+
           .faq
             .faq__title Be Advised
             .faq__desc We have not officially vetted or contacted these projects for proof. Do your own research before using any service in this open network.
@@ -54,19 +64,12 @@
                   .text
                     .text__top
                       a(:href="item.website" target="_blank" rel="noreferrer noopener" v-if="item.website && item.website !== 'x'").text__top__name {{ item.name }}
-                        span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
                       .text__top__name__none(v-else) {{ item.name }}
-                        span(v-tooltip.top="item.status" v-if="item.status !== 'Unknown'").dot
-                          icon-dot(fill="var(--dot-color, rgba(59, 66, 125, 0.12))" :style="{'--dot-color': `${dotColor[cleanText(item.status)]}`}")
-                    .text__category(v-if="!item.category || item.category !== '?'") {{ item.category }}
                     .text__list
-                      a(:href="item.docs" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Docs'" v-if="item.docs && item.docs !== 'x'").list-item
-                        img(src="~assets/brands/gray/docs.svg" alt="Docs").icon
-                      a(:href="item.github" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'GitHub'" v-if="item.github && item.github !== 'x'").list-item
-                        img(src="~assets/brands/gray/github.svg" alt="GitHub").icon
-                      a(:href="item.chat" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Chat'" v-if="item.chat && item.chat !== 'x'").list-item
-                        img(src="~assets/brands/gray/chat.svg" alt="Chat").icon
+                      a(:href="item.tutorial" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Tutorial'" v-if="item.tutorial && item.tutorial !== 'x'").list-item
+                        img(src="~assets/brands/gray/book.svg" alt="Tutorial").icon
+                      a(:href="item.videoTutorial" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Video Tutorial'" v-if="item.videoTutorial && item.videoTutorial !== 'x'").list-item
+                        img(src="~assets/brands/gray/media.svg" alt="Video Tutorial").icon
                       a(:href="item.twitter" target="_blank" rel="noreferrer noopener" v-tooltip.bottom="'Twitter'" v-if="item.twitter && item.twitter !== 'x'").list-item
                         img(src="~assets/brands/gray/twitter.svg" alt="Twitter").icon
 
@@ -89,33 +92,26 @@
   tm-section.cta-bg
     .cta-container
       .cta-container__item
-        .cta-container__item__title Want to build your own Cosmos app?
+        .cta-container__item__title What are Hierarchical Deterministic (HD) wallets?
         .cta-container__item__btn
           tm-btn(
-            value="Build now" size="lg" type="link" :to="{ name: 'tools' }"
+            value="learn more" size="lg" type="anchor" href="https://hub.cosmos.network/main/resources/hd-wallets.html" target="_blank" rel="noreferrer noopener"
             icon="arrow_forward" icon-pos="right" color="transparent-bg")
       .cta-container__item
-        .cta-container__item__title Need funding to build your great idea?
+        .cta-container__item__title Built your own Cosmos wallet?
         .cta-container__item__btn
           tm-btn(
-            value="Get a grant" size="lg" type="link" :to="{ name: 'contributors' }"
-            icon="arrow_forward" icon-pos="right" color="transparent-bg")
-      .cta-container__item
-        .cta-container__item__title Built something with Cosmos tools?
-        .cta-container__item__btn
-          tm-btn(
-            value="Submit a project" size="lg" type="anchor" href="https://airtable.com/shrHJJ4U4ChUxjILk" target="_blank" rel="noreferrer noopener"
+            value="submit your wallet" size="lg" type="anchor" href="https://airtable.com/shrVmoUlJJRspBSj7" target="_blank" rel="noreferrer noopener"
             icon="arrow_forward" icon-pos="right" color="transparent-bg")
 </template>
 
 <script>
 import algoliasearch from "algoliasearch"
-import axios from "axios"
 import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
 import SectionMessari from "sections/SectionMessari"
-import IconDot from "common/IconDot"
+import axios from "axios"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
 const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
@@ -123,31 +119,22 @@ const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
 const client = algoliasearch("ME7376U3XW", adminApiKey)
 
-const index = client.initIndex("apps")
+const index = client.initIndex("wallets")
 
 export default {
-  name: "page-ecosystem",
+  name: "page-wallets",
   metaInfo: {
-    title: "Ecosystem"
+    title: "Wallets"
   },
   components: {
     TmHeader,
     TmSection,
     TmBtn,
-    SectionMessari,
-    IconDot
+    SectionMessari
   },
   data() {
     return {
       searchClient: searchClient,
-      dotColor: {
-        mainnet: "#4ACF4A",
-        testnet: "#BA3FD9",
-        development: "#FF9500",
-        proofofconcept: "#3B427D",
-        beta: "#66A1FF",
-        alpha: "#BCE7FF"
-      },
       records: []
     }
   },
@@ -157,10 +144,10 @@ export default {
   methods: {
     async getAirtableData() {
       await axios({
-        url: "https://cosmos-ecosystem-api.vercel.app/apps"
+        url: "https://cosmos-ecosystem-api.vercel.app/wallets"
       }).then(res => {
         res.data.records.forEach(rec => {
-          if (rec.fields.active && rec.fields.status !== "Deprecated") {
+          if (rec.fields.active) {
             this.records.push(rec.fields)
           }
         })
@@ -174,28 +161,20 @@ export default {
         //- })
       })
     },
-    moveToTheEnd(arr, word) {
-      arr.map((elem, index) => {
-        if (elem.label.toLowerCase() === word.toLowerCase()) {
-          arr.splice(index, 1)
-          arr.push(elem)
-        }
-      })
-      return arr
-    },
-    transformItems(items) {
-      this.moveToTheEnd(items, "Uncategorized")
-      this.moveToTheEnd(items, "Unknown")
-
+    ledgerItems(items) {
       return items.map(item => ({
-        ...item
+        ...item,
+        label: "Ledger support"
+      }))
+    },
+    votingItems(items) {
+      return items.map(item => ({
+        ...item,
+        label: "Voting"
       }))
     },
     cleanText(item) {
-      return item
-        .split(" ")
-        .join("")
-        .toLowerCase()
+      return item.replace(/\s+/g, "").toLowerCase()
     }
   }
 }
@@ -213,6 +192,7 @@ export default {
 .tabs
   display flex
   flex-direction row
+
 
 .tabs__item
   cursor pointer
@@ -239,6 +219,9 @@ export default {
   width 1px
   overflow hidden
   clip rect(1px, 1px, 1px, 1px)
+
+.note
+  margin-top var(--pad320)
 
 .hits
   color var(--dim)
@@ -272,8 +255,10 @@ export default {
 
 .cta-container
   display grid
-  grid-template-columns repeat(auto-fit, minmax(0, 1fr))
-  gap 4rem
+  grid-template-columns repeat(2, 1fr)
+  gap 9.625rem
+  max-width 51.125rem
+  margin auto
 
   &__item
     display flex
@@ -467,6 +452,7 @@ export default {
 
 @media screen and (max-width: 600px)
   .cta-container
+    gap 4rem
 
     &__item + &__item
       margin-top 2rem

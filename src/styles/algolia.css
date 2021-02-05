@@ -831,7 +831,7 @@ a[class^="ais-"] {
 
 .ais-RefinementList-labelText,
 .ais-Menu-label {
-  text-transform: capitalize;
+  text-transform: initial;
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: 0.03em;
@@ -961,6 +961,11 @@ label.ais-RefinementList-label, .ais-Menu-link {
     flex-direction: column;
     align-items: flex-start !important;
   }
+
+  .ais-RefinementList-labelText,
+  .ais-Menu-label {
+    font-size: 0.75rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -971,5 +976,21 @@ label.ais-RefinementList-label, .ais-Menu-link {
 
   .ais-Hits-list {
     row-gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .ais-RefinementList-label {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ais-RefinementList {
+    margin-right: -1rem;
+  }
+
+  .ais-RefinementList-count {
+    display: block;
   }
 }

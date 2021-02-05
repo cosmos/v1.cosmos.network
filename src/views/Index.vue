@@ -92,7 +92,7 @@ export default {
     Modal
   },
   computed: {
-    ...mapGetters(["email", "urls"])
+    ...mapGetters(["urls"])
   },
   data: function() {
     return {
