@@ -201,7 +201,6 @@ export default {
     this.$store.dispatch("initCwuWorkshops")
     this.$store.dispatch("initializeRoadmap")
     this.$store.dispatch("initializeEmail")
-    // this.$store.dispatch("initEcosystem")
   },
   store
 }

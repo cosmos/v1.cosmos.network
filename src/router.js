@@ -8,6 +8,7 @@ import ProductSDK from "./views/ProductSDK.vue"
 import Community from "./views/Community.vue"
 import Contributors from "./views/Contributors.vue"
 import Ecosystem from "./views/Ecosystem.vue"
+import Wallets from "./views/Wallets.vue"
 import Tools from "./views/Tools.vue"
 import Ibc from "./views/Ibc.vue"
 import Api from "./views/Api.vue"
@@ -109,6 +110,7 @@ const routes = [
     ["/dev/whitepaper/zh-CN", "/resources/whitepaper/zh-CN"],
     ["/events/all", "/events"],
     ["/events/code-with-us", "/series/code-with-us"],
+    ["/ecosystem", "/ecosystem/apps"],
     ["/faq", "/resources/faq"],
     ["/hackatom", "/events"],
     ["/hiring", "/careers"],
@@ -184,9 +186,14 @@ const routes = [
     component: Tools
   },
   {
-    path: "/ecosystem",
-    name: "ecosystem",
+    path: "/ecosystem/apps",
+    name: "ecosystem-apps",
     component: Ecosystem
+  },
+  {
+    path: "/ecosystem/wallets",
+    name: "ecosystem-wallets",
+    component: Wallets
   },
   {
     path: "/epicenter",

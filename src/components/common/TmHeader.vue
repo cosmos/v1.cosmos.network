@@ -14,6 +14,9 @@
       .tm-header__subtitle(v-if="$slots['subtitle'] || subtitle")
         template(v-if='subtitle') {{ subtitle }}
         slot(v-else name='subtitle')
+      .tm-header__tabs(v-if="$slots['tabs'] || tabs")
+        template(v-if='tabs') {{ tabs }}
+        slot(v-else name='tabs')
     .tm-header__menu
       slot
 </template>
@@ -21,7 +24,7 @@
 <script>
 export default {
   name: "tm-header",
-  props: ["suptitle", "title", "subtitle", "project-title"]
+  props: ["suptitle", "title", "subtitle", "tabs", "project-title"]
 }
 </script>
 
@@ -49,6 +52,9 @@ export default {
 
 .tm-header__subtitle
   color var(--dim)
+
+.tm-header__tabs
+  margin-top 2rem
 
 .tm-header__project-title
   display flex
