@@ -1,7 +1,6 @@
 export const assets = state => state.assets
 export const blog = state => state.blog
 export const community = state => state.community
-export const email = state => state.email
 export const events = state => state.community.events
 export const glossary = state => state.glossary
 export const launch = state => state.launch
@@ -17,7 +16,6 @@ export const visualizers = state => state.visualizers
 export const meetup = state => state.meetup
 export const liveness = state => state.liveness
 export const cwu = state => state.cwu
-export const ecosystem = state => state.ecosystem
 
 // toc
 export const toc = state => state.toc
