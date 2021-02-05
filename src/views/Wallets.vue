@@ -101,7 +101,7 @@
         .cta-container__item__title Built your own Cosmos wallet?
         .cta-container__item__btn
           tm-btn(
-            value="feature your wallet" size="lg" type="anchor" href="https://airtable.com/shrVmoUlJJRspBSj7" target="_blank" rel="noreferrer noopener"
+            value="submit your wallet" size="lg" type="anchor" href="https://airtable.com/shrVmoUlJJRspBSj7" target="_blank" rel="noreferrer noopener"
             icon="arrow_forward" icon-pos="right" color="transparent-bg")
 </template>
 
