@@ -8,7 +8,8 @@ const state = {
 const mutations = {
   async initializeBlog(state) {
     const parser = new RSSParser()
-    let feed = await parser.parseURL("https://blogrss.cosmos.network/")
+    // TODO: update https://blogrss.cosmos.network/
+    let feed = await parser.parseURL("https://cosmos-blog.glitch.me/")
     state.posts = feed.items
   }
 }
