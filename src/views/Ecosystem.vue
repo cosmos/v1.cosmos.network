@@ -9,7 +9,7 @@
       .tabs__item #[router-link(:to="{ name: 'ecosystem-wallets'}") Wallets]
 
   tm-section
-    ais-instant-search(:search-client="searchClient" index-name="apps1")
+    ais-instant-search(:search-client="searchClient" index-name="apps")
       .layout
         .layout__sidebar
           ais-search-box(placeholder="Search" class="searchbox")
@@ -123,7 +123,7 @@ const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
 const client = algoliasearch("ME7376U3XW", adminApiKey)
 
-const index = client.initIndex("apps1")
+const index = client.initIndex("apps")
 
 export default {
   name: "page-ecosystem",
