@@ -151,7 +151,7 @@ export default {
       records: []
     }
   },
-  mounted() {
+  beforeMount() {
     this.getAirtableData()
   },
   methods: {
