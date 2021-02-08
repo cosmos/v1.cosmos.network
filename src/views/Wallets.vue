@@ -111,15 +111,9 @@ import TmHeader from "common/TmHeader"
 import TmSection from "common/TmSection"
 import TmBtn from "common/TmBtn"
 import SectionMessari from "sections/SectionMessari"
-import axios from "axios"
 
 const searchApiKey = process.env.VUE_APP_ALGOLIA_SEARCH_API_KEY
-const adminApiKey = process.env.VUE_APP_ALGOLIA_ADMIN_API_KEY
-
 const searchClient = algoliasearch("ME7376U3XW", searchApiKey)
-const client = algoliasearch("ME7376U3XW", adminApiKey)
-
-const index = client.initIndex("wallets")
 
 export default {
   name: "page-wallets",
@@ -134,33 +128,10 @@ export default {
   },
   data() {
     return {
-      searchClient: searchClient,
-      records: []
+      searchClient: searchClient
     }
   },
-  beforeMount() {
-    this.getAirtableData()
-  },
   methods: {
-    async getAirtableData() {
-      await axios({
-        url: "https://cosmos-ecosystem-api.vercel.app/wallets"
-      }).then(res => {
-        res.data.records.forEach(rec => {
-          if (rec.fields.active) {
-            this.records.push(rec.fields)
-          }
-        })
-
-        index.replaceAllObjects(this.records, {
-          autoGenerateObjectIDIfNotExist: true
-        })
-        //- .then(({ objectIDs }) => {
-        //-   // eslint-disable-next-line
-        //-   console.log(objectIDs)
-        //- })
-      })
-    },
     ledgerItems(items) {
       return items.map(item => ({
         ...item,
