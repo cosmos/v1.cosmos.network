@@ -1,6 +1,6 @@
 <template lang="pug">
   tm-section#section-messari(layout="split" theme="dark")
-    div(slot="title") Over $17B USD of digital assets under management
+    div(slot="title") Over $28B USD of digital assets under management
     p Explore an ever-expanding ecosystem of blockchain apps, powered by Cosmos technology.
     tm-btn(size="lg" value="view stats" type="anchor" href="https://messari.io/screener/cosmos-ecosystem-FCB5C9E8" target="_blank" rel="noreferrer noopener"
       icon="north_east" icon-pos="right")
