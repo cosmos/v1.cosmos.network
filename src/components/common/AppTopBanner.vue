@@ -21,8 +21,7 @@ export default {
       }),
       show: null,
       url: "https://stargate.cosmos.network",
-      content:
-        "Enter the new era of Cosmos. <strong>Vote for Stargate</strong> &#8594;"
+      content: "Enter the new era of Cosmos. <strong>Stargate</strong> &#8594;"
     }
   },
   mounted() {
