@@ -123,7 +123,7 @@
           li
             strong Does the Cosmos Hub have a wallet?
             a(href="https://lunie.io" target="_blank" rel="noreferrer noopener") Lunie, A Cosmos Wallet
-            a(href="https://hub.cosmos.network/master/delegators/delegator-guide-cli.html" target="_blank" rel="noreferrer noopener") CLI Guide
+            a(href="https://hub.cosmos.network/main/delegators/delegator-guide-cli.html" target="_blank" rel="noreferrer noopener") CLI Guide
             a(href="https://hub.cosmos.network/ko/delegator-guide-cli.html" target="_blank" rel="noreferrer noopener") 위임자 가이드라인
             a(href="https://hub.cosmos.network/zh/delegator-guide-cli.html" target="_blank" rel="noreferrer noopener") 委托人指南
           li #[strong I have ATOM. How can I secure them? ] #[router-link(to="/atom-protection") Read security tips]

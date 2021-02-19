@@ -160,7 +160,7 @@
       subtitle="Learn how to become a Cosmos Hub validator.")
       img(slot="icon" src="~images/sdk/icon-footer-docs.svg" alt="Docs")
       tm-btn(value="Get started" size="lg" type="anchor"
-        target="_blank" rel="noreferrer noopener" href="https://hub.cosmos.network/master/validators/overview.html")
+        target="_blank" rel="noreferrer noopener" href="https://hub.cosmos.network/main/validators/overview.html")
     tm-column(
       title="Developer Chat"
       subtitle="Have questions? Get them answered here.")

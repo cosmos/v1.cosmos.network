@@ -65,7 +65,7 @@ Visit the Cosmos [Tutorials website](https://tutorials.cosmos.network/) to learn
 
 ## How can I become a validator
 
-If you would like to become a validator for the Cosmos Hub, please see the [comprehensive guide](https://hub.cosmos.network/master/validators/validator-setup.html) in the Cosmos Hub documentation.
+If you would like to become a validator for the Cosmos Hub, please see the [comprehensive guide](https://hub.cosmos.network/main/validators/validator-setup.html) in the Cosmos Hub documentation.
 
 ## What infrastructure is needed to run a validator?
 
