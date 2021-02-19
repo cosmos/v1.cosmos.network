@@ -245,6 +245,12 @@ export default {
           id: "host-tom-langer",
           name: "Tom Langer",
           company: "Enigma MPC"
+        },
+        {
+          id: "host-orkun-kulce",
+          name: "Orkun Kulce",
+          company: "Confio",
+          twitter: "zl00ba"
         }
       ],
       questions: [
