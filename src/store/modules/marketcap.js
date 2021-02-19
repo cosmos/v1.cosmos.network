@@ -1,7 +1,7 @@
 const axios = require("axios")
 
 const state = {
-  totalMarketcap: 30
+  totalMarketcap: 60
 }
 
 const mutations = {
