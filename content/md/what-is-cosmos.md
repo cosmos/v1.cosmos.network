@@ -118,7 +118,7 @@ This question is justified, considering that most decentralized applications tod
 
 ## Connecting Blockchains Together - IBC
 
-Now that developers have a way to quickly build customized blockchains, let us see how to connect these blockchains together. The connection between blockchains is achieved through a protocol called [Inter-Blockchain Communication protocol](https://blog.cosmos.network/developer-deep-dive-cosmos-ibc-5855aaf183fe) (IBC). IBC leverages the instant finality property of Tendermint consensus (although it can work with any "fast-finality" blockchain engine) to allow **heterogeneous chains to transfer value (i.e. tokens) or data to each other**.
+Now that developers have a way to quickly build customized blockchains, let us see how to connect these blockchains together. The connection between blockchains is achieved through a protocol called [Inter-Blockchain Communication protocol](https://ibcprotocol.org) (IBC). IBC leverages the instant finality property of Tendermint consensus (although it can work with any "fast-finality" blockchain engine) to allow **heterogeneous chains to transfer value (i.e. tokens) or data to each other**.
 
 ### What are heterogeneous chains?
 
