@@ -18,7 +18,6 @@ const docs = "https://docs.cosmos.network"
 const routes = [
   ...[
     ["/atom-protection", `${hub}/master/delegators/delegator-security.html`],
-    ["/blog", "https://blog.cosmos.network"],
     [
       "/dev/wallet",
       `${hub}/master/hub-overview/overview.html#cosmos-hub-wallets`
@@ -65,13 +64,11 @@ const routes = [
       "https://tutorials.cosmos.network/nameservice/tutorial/02-app-init.html"
     ],
     ["/join-testnet", `${hub}/master/gaia-tutorials/join-testnet.html`],
-    ["/discord", "https://discord.gg/vcExX9T"],
     ["/resources/delegator", `${hub}/master/delegators/delegator-faq.html`],
     ["/security", "https://tendermint.com/security"],
     ["/staking", `${hub}/master/validators/overview.html`],
     ["/staking/validators-faq", `${hub}/master/validators/validator-faq.html`],
     ["/staking/validators", `${hub}/master/validators/overview.html`],
-    ["/telegram", "https://t.me/cosmosproject"],
     ["/testnet-tutorial", `${hub}/master/gaia-tutorials/join-testnet.html`],
     ["/testnet", `${hub}/master/gaia-tutorials/join-testnet.html`],
     ["/validate", `${hub}/master/validators/overview.html`],
@@ -81,7 +78,13 @@ const routes = [
     ["/validators/tutorial", `${hub}/master/validators/overview.html`],
     ["/wallet", `${hub}/#cosmos-hub-wallets`],
     ["/roadmap", "https://stargate.cosmos.network"],
-    ["/ibc", "https://ibcprotocol.org"]
+    ["/ibc", "https://ibcprotocol.org"],
+    ["/discord", "https://discord.gg/vcExX9T"],
+    ["/telegram", "https://t.me/cosmosproject"],
+    ["/twitter", "https://twitter.com/cosmos"],
+    ["/youtube", "https://www.youtube.com/c/CosmosProject"],
+    ["/reddit", "https://reddit.com/r/cosmosnetwork"],
+    ["/blog", "https://blog.cosmos.network"],
   ].map(([path, url]) => ({
     path,
     beforeEnter: () => window.location.assign(url)
