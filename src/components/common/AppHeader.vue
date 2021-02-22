@@ -22,8 +22,6 @@ header.app-header
           span Tools
         a(href="https://hub.cosmos.network" @click="close" target="_blank" rel="noreferrer noopener")
           span Cosmos Hub
-        a(href="https://ibcprotocol.org" @click="close" target="_blank" rel="noreferrer noopener")
-          span IBC
 </template>
 
 <script>
