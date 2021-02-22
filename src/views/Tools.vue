@@ -76,9 +76,8 @@
       .text
         .h3
           span.h3__text IBC Protocol
-          span.chip Coming soon
         .p The inter-blockchain communication protocol is a reliable & secure inter-module communication protocol that allows blockchains to connect to one another.
-        tm-btn(size="lg" value="learn about ibc" color="dark" type="anchor"  href="https://github.com/cosmos/ics/tree/master/ibc" target="_blank" rel="noreferrer noopener").gtm__tools__ibc__learn-about-ibc
+        tm-btn(size="lg" value="learn about ibc" color="dark" type="anchor"  href="https://ibcprotocol.org" target="_blank" rel="noreferrer noopener").gtm__tools__ibc__learn-about-ibc
         .resources
           .resources__item #[a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener") Developer chat]
           .resources__item #[router-link(:to="{ name: 'ibc-signup' }") Get updates]
