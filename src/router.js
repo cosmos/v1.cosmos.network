@@ -10,7 +10,6 @@ import Contributors from "./views/Contributors.vue"
 import Ecosystem from "./views/Ecosystem.vue"
 import Wallets from "./views/Wallets.vue"
 import Tools from "./views/Tools.vue"
-import Ibc from "./views/Ibc.vue"
 import Api from "./views/Api.vue"
 
 const hub = "https://hub.cosmos.network"
@@ -81,7 +80,8 @@ const routes = [
     ["/validators/faq", `${hub}/master/validators/validator-faq.html`],
     ["/validators/tutorial", `${hub}/master/validators/overview.html`],
     ["/wallet", `${hub}/#cosmos-hub-wallets`],
-    ["/roadmap", "https://stargate.cosmos.network"]
+    ["/roadmap", "https://stargate.cosmos.network"],
+    ["/ibc", "https://ibcprotocol.org"]
   ].map(([path, url]) => ({
     path,
     beforeEnter: () => window.location.assign(url)
@@ -278,16 +278,6 @@ const routes = [
     path: "/intro",
     name: "intro",
     component: Intro
-  },
-  {
-    path: "/ibc/*",
-    redirect: "/ibc",
-    pathToRegexpOptions: { strict: true }
-  },
-  {
-    path: "/ibc",
-    name: "ibc",
-    component: Ibc
   },
   {
     path: "/launch",
