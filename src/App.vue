@@ -124,15 +124,15 @@ export default {
               },
               {
                 h1: "Cosmos Hub",
-                href: "https://hub.cosmos.network/"
+                href: "https://hub.cosmos.network"
               },
               {
                 h1: "Tendermint Core",
-                href: "https://tendermint.com/"
+                href: "https://tendermint.com"
               },
               {
-                h1: "Interchain Standards",
-                href: "https://github.com/cosmos/ics"
+                h1: "IBC Protocol",
+                href: "https://ibcprotocol.org"
               }
             ]
           },
