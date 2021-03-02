@@ -115,7 +115,7 @@ export default {
       const dom_id = "#swagger"
       if (host) {
         spec.host = host
-      }
+      } else spec.host = "api.cosmos.network"
       this.host = spec.host
       if (version) {
         this.spec = SwaggerUI({ dom_id, spec })
