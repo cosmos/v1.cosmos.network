@@ -1,22 +1,17 @@
 [
   {
-    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.41.3/client/docs/swagger-ui/swagger.yaml",
-    "label": "Gaia v4.0.4",
-    "key": "v0.41.3"
+    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.41.4/client/docs/swagger-ui/swagger.yaml",
+    "label": "Cosmos SDK v0.41.4 (Gaia v4.0.5 / cosmoshub-4)",
+    "key": "v0.41.4"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.39.2/client/lcd/swagger-ui/swagger.yaml",
+    "label": "Cosmos SDK v0.39.2 (launchpad)",
+    "key": "v0.39.2"
   },
   {
     "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.37.9/client/lcd/swagger-ui/swagger.yaml",
-    "label": "Gaia 2.0.8",
+    "label": "Cosmos SDK v0.37.9 (Gaia 2.0.8 / cosmoshub-3)",
     "key": "v0.37.9"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.38.3/client/lcd/swagger-ui/swagger.yaml",
-    "label": "Cosmos SDK v0.38.3",
-    "key": "v0.38.3"
-  },
-  {
-    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/master/client/docs/swagger-ui/swagger.yaml",
-    "label": "Cosmos SDK master",
-    "key": "master"
   }
 ]
