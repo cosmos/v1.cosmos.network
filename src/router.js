@@ -416,7 +416,7 @@ const routes = [
   },
   {
     path: "/rpc",
-    redirect: "/rpc/v0.37.9"
+    redirect: "/rpc/v0.41.4"
   },
   {
     path: "/rpc/:version?",
