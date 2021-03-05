@@ -85,6 +85,7 @@ const routes = [
     ["/youtube", "https://www.youtube.com/c/CosmosProject"],
     ["/reddit", "https://reddit.com/r/cosmosnetwork"],
     ["/blog", "https://blog.cosmos.network"],
+    ["/forum", "https://forum.cosmos.network"],
   ].map(([path, url]) => ({
     path,
     beforeEnter: () => window.location.assign(url)
