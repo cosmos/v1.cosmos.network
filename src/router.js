@@ -378,16 +378,10 @@ const routes = [
     path: "/404",
     component: () => import(/* webpackChunkName: "404" */ "./views/404.vue")
   },
-  {
-    path: "*",
-    component: () => import(/* webpackChunkName: "404" */ "./views/404.vue")
-  },
-  {
-    path: "/newsletters/2020-03*",
-    beforeEnter: () => {
-      window.location.assign("/newsletters/community/2020-03")
-    }
-  },
+  // {
+  //   path: "*",
+  //   component: () => import(/* webpackChunkName: "404" */ "./views/404.vue")
+  // },
   {
     path: "/newsletters/",
     component: Newsletters
