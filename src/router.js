@@ -262,6 +262,10 @@ const routes = [
     component: Contributors
   },
   {
+    path: "/hub/*",
+    redirect: "/hub",
+  },
+  {
     path: "/goz/*",
     redirect: "/goz",
     pathToRegexpOptions: { strict: true }
