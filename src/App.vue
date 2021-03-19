@@ -2,7 +2,8 @@
 #app
   cookie-banner(v-if="showHeader")
   app-top-banner
-  app-header(v-if="showHeader")
+  //- app-header(v-if="showHeader")
+  demo(v-if="showHeader")
   main#app-content: router-view(@header="showHeader = $event" @newsletter="newsletterShow = $event")
   cosmos-newsletter-signup(v-bind="{...newsletter}" v-if="newsletterShow")
   app-footer(v-if="showHeader" v-bind="{...footer}").footer
@@ -13,6 +14,7 @@
 <script>
 import AppTopBanner from "common/AppTopBanner"
 import AppHeader from "common/AppHeader.vue"
+import Demo from "common/Demo.vue"
 import store from "@/store/index.js"
 import { CookieBanner, Footer, CosmosNewsletterSignup } from "@cosmos-ui/vue"
 
@@ -21,6 +23,7 @@ export default {
   components: {
     AppTopBanner,
     AppHeader,
+    Demo,
     CookieBanner,
     "app-footer": Footer,
     CosmosNewsletterSignup
