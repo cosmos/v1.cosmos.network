@@ -6,9 +6,8 @@ const state = {
 
 const mutations = {
   async initTotalMarketcap(state) {
-    let data = (
-      await axios.get(`https://cosmos-ecosystem-api.vercel.app/marketcap`)
-    ).data
+    let data = (await axios.get(`https://backend.tendermint.com/marketcap`))
+      .data
     state.totalMarketcap = data
   }
 }
