@@ -2,10 +2,10 @@
   transition(name="fade" v-on:before-leave="beforeLeave" appear)
     .banner(v-if="show")
       a(:href="this.url" target='_blank' rel='noreferrer noopener').banner__content(v-html="this.md.render(this.content)")
-      a.banner__dismiss(@click.prevent="close" href="#")
-        .banner__dismiss__icon
-          svg(width='16', height='16', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
-            path(d='M1.66669 1.66669L12.3334 12.3334M12.3334 1.66669L1.66664 12.3334', stroke='var(--dark-txt)', stroke-width='1.5', stroke-linecap='round')
+      //- a.banner__dismiss(@click.prevent="close" href="#")
+      //-   .banner__dismiss__icon
+      //-     svg(width='16', height='16', viewBox='0 0 14 14', fill='none', xmlns='http://www.w3.org/2000/svg')
+      //-       path(d='M1.66669 1.66669L12.3334 12.3334M12.3334 1.66669L1.66664 12.3334', stroke='var(--dark-txt)', stroke-width='1.5', stroke-linecap='round')
 </template>
 
 <script>
@@ -20,8 +20,9 @@ export default {
         html: true
       }),
       show: null,
-      url: "https://stargate.cosmos.network",
-      content: "Enter the new era of Cosmos. <strong>Stargate</strong> &#8594;"
+      url: "https://cosmos.network",
+      content:
+        "cosmos.network 2.0 has landed. <strong>Check it out</strong> &#8594;"
     }
   },
   mounted() {
@@ -61,7 +62,7 @@ export default {
   line-height 1.25rem
   letter-spacing 0.01em
   color var(--dark-txt)
-  background linear-gradient(90deg,#5064fb,#641179)
+  background linear-gradient(90deg, #CF36D2 0%, #F6743C 100%)
   text-align center
   display flex
   flex auto
