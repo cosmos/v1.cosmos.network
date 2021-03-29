@@ -20,8 +20,9 @@ export default {
         html: true
       }),
       show: null,
-      url: "https://stargate.cosmos.network",
-      content: "Enter the new era of Cosmos. <strong>Stargate</strong> &#8594;"
+      url: "https://cosmos.network",
+      content:
+        "cosmos.network 2.0 has landed. <strong>Check it out</strong> &#8594;"
     }
   },
   mounted() {
