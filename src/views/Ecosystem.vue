@@ -140,7 +140,8 @@ export default {
         development: "#FF9500",
         proofofconcept: "#3B427D",
         beta: "#66A1FF",
-        alpha: "#BCE7FF"
+        alpha: "#BCE7FF",
+        live: "#4ACF4A"
       }
     }
   },
