@@ -1,15 +1,15 @@
-# [cosmos.network](https://cosmos.network)
+# [v1.cosmos.network](https://v1.cosmos.network)
 
 > The website for Cosmos - Internet of Blockchains.
 
-[![banner](public/og-image.jpg)](https://cosmos.network)
+[![banner](public/og-image.jpg)](https://v1.cosmos.network)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5abbcc2b-7b81-4bae-b0c0-cf66bab9e758/deploy-status)](https://app.netlify.com/sites/cosmos-network/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5abbcc2b-7b81-4bae-b0c0-cf66bab9e758/deploy-status)](https://app.netlify.com/sites/v1-cosmos-network/deploys)
 
 ## Run this locally
 
-1. `$ git clone https://github.com/cosmos/cosmos.network.git`
-2. `$ cd cosmos.network`
+1. `$ git clone https://github.com/cosmos/v1.cosmos.network.git`
+2. `$ cd v1.cosmos.network`
 3. `$ npm i`
 4. `$ npm run serve`
 5. View the running app in your browser at `http://localhost:8080`
