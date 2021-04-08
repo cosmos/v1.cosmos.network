@@ -18,8 +18,8 @@
     "lint:md": "prettier \"**/*.md\" --write && remark . && textlint \"docs/**\" && textlint \"content/**\""
   },
   "dependencies": {
-    "@cosmos-ui/vue": "^0.36.1",
-    "airtable": "^0.9.0",
+    "@cosmos-ui/vue": "^0.36.3",
+    "airtable": "^0.10.1",
     "algoliasearch": "^4.6.0",
     "axios": "^0.21.1",
     "cookieconsent": "^3.1.0",
@@ -77,7 +77,7 @@
     "stylus": "0.54.5",
     "stylus-loader": "3.0.2",
     "textlint": "10.2.1",
-    "textlint-rule-no-dead-link": "4.3.0",
+    "textlint-rule-no-dead-link": "^4.7.0",
     "textlint-rule-stop-words": "1.0.3",
     "tiny-cookie": "^2.3.1",
     "vue-lazyload": "1.2.6",
