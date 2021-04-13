@@ -43,7 +43,7 @@ div
         .panel__title Create media / content
         ul.panel__list
           li.panel__list__item Product / marketing video
-          li.panel__list__item GIF / animation / meme
+          li.panel__list__item GIF / animation
           li.panel__list__item Technical blog post
           li.panel__list__item Other media
         tm-btn(value="Submit" size="lg" color="primary" type="anchor" href="https://docs.google.com/forms/d/e/1FAIpQLSfhrKufDANtlOM66PxLz2HYdGruj5V7WP0oRuG8RvgJIx8kBw/viewform" target="blank_" rel="noopener noreferrer").panel__btn
