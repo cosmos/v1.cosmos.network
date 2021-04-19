@@ -9,7 +9,7 @@
   background var(--app-nav)
 </style>
 
-<script lang="ts">
+<script>
 import { CosmosNewsletterSignup } from "@cosmos-ui/vue"
 
 export default {

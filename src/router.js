@@ -416,6 +416,12 @@ const routes = [
       import(/* webpackChunkName: "404" */ "./views/NewslettersSignupValidators.vue")
   },
   {
+    path: "/newsletters/signup/gravity-dex",
+    name: "gravity-dex-signup",
+    component: () =>
+      import(/* webpackChunkName: "404" */ "./views/NewslettersSignupGravityDex.vue")
+  },
+  {
     path: "/rpc",
     redirect: "/rpc/v0.41.4"
   },
