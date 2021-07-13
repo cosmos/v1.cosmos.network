@@ -85,7 +85,7 @@ const routes = [
     ["/youtube", "https://www.youtube.com/c/CosmosProject"],
     ["/reddit", "https://reddit.com/r/cosmosnetwork"],
     ["/blog", "https://blog.cosmos.network"],
-    ["/forum", "https://forum.cosmos.network"],
+    ["/forum", "https://forum.cosmos.network"]
   ].map(([path, url]) => ({
     path,
     beforeEnter: () => window.location.assign(url)
@@ -221,7 +221,9 @@ const routes = [
         path: "all",
         name: "page-events-all",
         component: () =>
-          import(/* webpackChunkName: "page-events-all" */ "./views/EventsAll.vue")
+          import(
+            /* webpackChunkName: "page-events-all" */ "./views/EventsAll.vue"
+          )
       },
       {
         path: ":event",
@@ -241,13 +243,17 @@ const routes = [
         path: "code-with-us",
         name: "series-code-with-us",
         component: () =>
-          import(/* webpackChunkName: "series-code-with-us" */ "./views/EventCodewithus.vue")
+          import(
+            /* webpackChunkName: "series-code-with-us" */ "./views/EventCodewithus.vue"
+          )
       },
       {
         path: "/series/code-with-us/:workshop",
         name: "series-workshop",
         component: () =>
-          import(/* webpackChunkName: "series-workshop" */ "./views/Workshop.vue")
+          import(
+            /* webpackChunkName: "series-workshop" */ "./views/Workshop.vue"
+          )
       }
     ]
   },
@@ -333,19 +339,25 @@ const routes = [
         path: "/",
         name: "resources",
         component: () =>
-          import(/* webpackChunkName: "resources-index" */ "./views/ResourcesIndex.vue")
+          import(
+            /* webpackChunkName: "resources-index" */ "./views/ResourcesIndex.vue"
+          )
       },
       {
         path: "whitepaper",
         name: "whitepaper",
         component: () =>
-          import(/* webpackChunkName: "whitepaper" */ "./views/ResourcesWhitepaper.vue")
+          import(
+            /* webpackChunkName: "whitepaper" */ "./views/ResourcesWhitepaper.vue"
+          )
       },
       {
         path: "whitepaper/:locale",
         name: "whitepaper-i18n",
         component: () =>
-          import(/* webpackChunkName: "whitepaper-i18n" */ "./views/ResourcesWhitepaper.vue")
+          import(
+            /* webpackChunkName: "whitepaper-i18n" */ "./views/ResourcesWhitepaper.vue"
+          )
       },
       {
         path: "faq",
@@ -396,7 +408,9 @@ const routes = [
     path: "/newsletters/signup/cosmos",
     name: "cosmos-signup",
     component: () =>
-      import(/* webpackChunkName: "404" */ "./views/NewslettersSignupCosmos.vue")
+      import(
+        /* webpackChunkName: "404" */ "./views/NewslettersSignupCosmos.vue"
+      )
   },
   {
     path: "/newsletters/signup/tools",
@@ -413,11 +427,13 @@ const routes = [
     path: "/newsletters/signup/validators",
     name: "validators-signup",
     component: () =>
-      import(/* webpackChunkName: "404" */ "./views/NewslettersSignupValidators.vue")
+      import(
+        /* webpackChunkName: "404" */ "./views/NewslettersSignupValidators.vue"
+      )
   },
   {
     path: "/rpc",
-    redirect: "/rpc/v0.41.4"
+    redirect: "/rpc/v0.42.6"
   },
   {
     path: "/rpc/:version?",
