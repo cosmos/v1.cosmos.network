@@ -1,8 +1,18 @@
 [
   {
     "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.42.6/client/docs/swagger-ui/swagger.yaml",
-    "label": "Cosmos SDK v0.42.6 (Gaia v5.0.0)",
+    "label": "Cosmos SDK v0.42.6 (Gaia v5.0.2 / cosmoshub-4)",
     "key": "v0.42.6"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/cosmos/ibc-go/55afb90cabab436204a89e3bea37fc1e693f1ea6/docs/client/swagger-ui/swagger.yaml",
+    "label": "IBC (Gaia v5.0.2 / cosmoshub-4)",
+    "key": "ibc"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/tendermint/liquidity/develop/client/docs/swagger-ui/swagger.yaml",
+    "label": "Gravity DEX (Gaia v5.0.2 / cosmoshub-4)",
+    "key": "gravity-dex"
   },
   {
     "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.41.4/client/docs/swagger-ui/swagger.yaml",
