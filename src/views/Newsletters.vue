@@ -5,7 +5,7 @@
     tm-section
       div(slot="title") Ecosystem Updates
       .tm-cards-hz.tm-cards-hz--horizontal.tm-section-margin
-        tm-card-hz(v-for="item in filtered('community')" :key="item[0]" :title="title(item)" :subtitle="date(item)" :href="`/newsletters/community/${item[0]}/`" :img-src="true" :img-bg-src="`/newsletters/community/${item[0]}/cover.jpg`")
+        tm-card-hz(v-for="item in filtered('community')" :key="item[0]" :title="title(item)" :subtitle="date(item)" :href="`/newsletters/community/${item[0]}/`" :newsletters="true")
     tm-section
       div(slot="title") Engineering Updates
       .tm-cards-hz.tm-cards-hz--horizontal.tm-section-margin
