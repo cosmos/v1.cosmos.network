@@ -64,7 +64,7 @@ div
         .item__num 3
         .item__title Join the call
         .item__desc Make sure to install the #[a(href="https://zoom.us/download" target="_blank" rel="noreferrer noopener") Zoom] app beforehand and join the Cosmos developer chat on Discord.
-        a(href="https://discord.gg/vcExX9T" target="_blank" rel="noreferrer noopener").item__cta Developer chat
+        a(href="https://discord.gg/cosmosnetwork" target="_blank" rel="noreferrer noopener").item__cta Developer chat
 
   tm-section
     div(slot="title") FAQ
@@ -262,7 +262,7 @@ export default {
         {
           question: "Can I share a project or tutorial?",
           answer:
-            "Yes, please do! Join the [Cosmos Developer chat](https://discord.gg/vcExX9T) to share any relevant projects or tutorials."
+            "Yes, please do! Join the [Cosmos Developer chat](https://discord.gg/cosmosnetwork) to share any relevant projects or tutorials."
         },
         {
           question: "Can I host my own workshop?",
@@ -272,7 +272,7 @@ export default {
         {
           question: "Still have questions?",
           answer:
-            "Reach out on the [developer chat](https://discord.gg/vcExX9T) (#code-with-us-workshops channel) for assistance."
+            "Reach out on the [developer chat](https://discord.gg/cosmosnetwork) (#code-with-us-workshops channel) for assistance."
         }
       ]
     }
