@@ -7,7 +7,7 @@
 Jae Kwon [jae@tendermint.com](mailto:jae@tendermint.com)<br>
 Ethan Buchman [ethan@tendermint.com](mailto:ethan@tendermint.com)
 
-For discussions, [join our developer chat](https://discord.gg/vcExX9T)!
+For discussions, [join our developer chat](https://discord.gg/cosmosnetwork)!
 
 **번역 및 제작:**
 

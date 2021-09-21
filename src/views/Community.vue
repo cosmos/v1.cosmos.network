@@ -166,7 +166,7 @@
       subtitle="Have questions? Get them answered here.")
       img(slot="icon" src="~images/sdk/icon-footer-discord.svg" alt="Forum")
       tm-btn(value="Chat now" size="lg" type="anchor"
-        target="_blank" rel="noreferrer noopener" href="https://discord.gg/vcExX9T")
+        target="_blank" rel="noreferrer noopener" href="https://discord.gg/cosmosnetwork")
     tm-column(
       title="Cosmos Jobs"
       subtitle="Climb aboard the fleet of vessels, headed for the stars.")
@@ -233,7 +233,7 @@ export default {
       },
       {
         title: "Developer Chat",
-        url: "https://discord.gg/vcExX9T",
+        url: "https://discord.gg/cosmosnetwork",
         icon: "discord-light"
       },
       {

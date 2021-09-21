@@ -1,14 +1,14 @@
 {
   "tm": {
     "blog": "https://blog.cosmos.network/tendermint/home",
-    "chat": "https://discord.gg/vcExX9T",
+    "chat": "https://discord.gg/cosmosnetwork",
     "community": {
       "bitcointalk": "https://bitcointalk.org/index.php?topic=1607111.0",
       "discourse": "https://forum.cosmos.network",
       "facebook": "https://www.facebook.com/tendermint/",
       "irc": "http://webchat.freenode.net/?channels=%23cosmos_network",
       "linkedin": "https://www.linkedin.com/company/tendermint",
-      "matrix": "https://discord.gg/vcExX9T",
+      "matrix": "https://discord.gg/cosmosnetwork",
       "reddit": "https://reddit.com/r/cosmosnetwork",
       "rewards": "https://contribute.cosmos.network",
       "telegram": "https://t.me/cosmosproject",
@@ -36,13 +36,13 @@
   "cosmos": {
     "bitcointalk": "https://bitcointalk.org/index.php?topic=1607111.0",
     "blog": "https://blog.cosmos.network",
-    "chat": "https://discord.gg/vcExX9T",
+    "chat": "https://discord.gg/cosmosnetwork",
     "community": {
       "bitcointalk": "https://bitcointalk.org/index.php?topic=1607111.0",
       "discourse": "https://forum.cosmos.network",
       "facebook": "https://www.facebook.com/cosmosblockchain/",
       "irc": "http://webchat.freenode.net/?channels=%23cosmos_network",
-      "matrix": "https://discord.gg/vcExX9T",
+      "matrix": "https://discord.gg/cosmosnetwork",
       "reddit": "https://reddit.com/r/cosmosnetwork",
       "telegram": "https://t.me/cosmosproject",
       "twitter": "https://twitter.com/cosmos"
@@ -77,7 +77,7 @@
     "reddit": "https://reddit.com/r/cosmosnetwork",
     "twitter": "https://twitter.com/cosmos",
     "validators": {
-      "chat": "https://discord.gg/vcExX9T"
+      "chat": "https://discord.gg/cosmosnetwork"
     },
     "website": "https://cosmos.network"
   },
