@@ -22,14 +22,13 @@ export default {
   data() {
     return {
       newsletter: {
-        h1: "Get Cosmos tools & technology updates",
+        h1: "Sign up for Cosmos updates",
         h2:
-          "Get engineering and development updates on Cosmos SDK, Tendermint Core, IBC and more - straight to your inbox.",
-        requestURL: "https://app.mailerlite.com/webforms/submit/u3s3t9",
-        callback: "jQuery1830889145586852685_1594158789750",
-        _: "1594158795317",
-        groups: "108606910",
-        svg: "/images/icons/icon-terminal-window.svg"
+          "Get the latest from the Cosmos ecosystem and engineering updates, straight to your inbox.",
+        requestURL: "https://app.mailerlite.com/webforms/submit/o0t6d7",
+        callback: "jQuery18307296239382192573_1594158619276",
+        _: "1594158625563",
+        groups: "107770117"
       }
     }
   }
