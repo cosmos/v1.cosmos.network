@@ -79,7 +79,7 @@ const routes = [
     ["/wallet", `${hub}/#cosmos-hub-wallets`],
     ["/roadmap", "https://stargate.cosmos.network"],
     ["/ibc", "https://ibcprotocol.org"],
-    ["/discord", "https://discord.gg/vcExX9T"],
+    ["/discord", "https://discord.gg/cosmosnetwork"],
     ["/telegram", "https://t.me/cosmosproject"],
     ["/twitter", "https://twitter.com/cosmos"],
     ["/youtube", "https://www.youtube.com/c/CosmosProject"],

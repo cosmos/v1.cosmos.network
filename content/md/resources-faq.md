@@ -117,7 +117,7 @@ Cosmos does not intend to act as a drop-in replacement of Ethereum. The Cosmos t
 
 ## Where can I get Developer support?
 
-Check out the Cosmos [Developer Chat](https://discord.gg/vcExX9T) for technical support from the growing community of Cosmos developers.
+Check out the Cosmos [Developer Chat](https://discord.gg/cosmosnetwork) for technical support from the growing community of Cosmos developers.
 
 ## How can I get in touch with the Interchain Foundation?
 
