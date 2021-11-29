@@ -23,5 +23,6 @@ export default {
   flex-flow column nowrap
 
   > div
+  > a
     margin-top 0.5em
 </style>
