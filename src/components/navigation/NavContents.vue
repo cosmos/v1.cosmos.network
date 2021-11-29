@@ -5,9 +5,11 @@
       menu-locale(
         path='whitepaper'
         :langs="['en-US', 'ko', 'pt', 'zh-CN']")
-      overlay-btn.print-btn(
-        @click.native='downloadWhitepaper'
-        icon='file_download')
+      a(
+        download=""
+        href="/cosmos-whitepaper.pdf"
+      )
+        overlay-btn.print-btn(icon='file_download')
 </template>
 
 <script>
@@ -32,9 +34,6 @@ export default {
   },
   data: () => ({ ps: "" }),
   methods: {
-    downloadWhitepaper() {
-      window.location.href = "https://cosmos.network/cosmos-whitepaper.pdf"
-    },
     setTocVisOnWidth() {
       let width = document.documentElement.clientWidth
       if (width >= 1024) {
