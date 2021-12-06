@@ -8,7 +8,10 @@ Airtable.configure({
 })
 let base = Airtable.base("appNu0Ye9QMY89sCh")
 
-const state = []
+const state = {
+  entries: [],
+  dict: {}
+}
 
 const actions = {
   initializeGlossary({ commit }) {
@@ -19,7 +22,8 @@ const actions = {
           return
         }
         records.forEach(record => {
-          if (record.fields.active) commit("addTerm", record)
+          //if (record.fields.active)
+          commit("addTerm", record)
         })
       })
   }
@@ -27,7 +31,8 @@ const actions = {
 
 const mutations = {
   addTerm(state, value) {
-    state.push(value.fields)
+    state.entries.push(value.fields)
+    state.dict[value.fields.slug] = value.fields
   }
 }
 
