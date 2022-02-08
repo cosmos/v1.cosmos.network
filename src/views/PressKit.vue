@@ -2,7 +2,7 @@
 .page-press-kit
   tm-header
     div(slot="title") Press Kit
-    tm-btn(icon="help_outline" value="Cosmos One-Pager" type="anchor" href="https://docs.google.com/document/d/1xSQF5Cq7eMJ411EtitMVb3QKAopnhlesRu_JMm9pWwU" target="_blank")
+    //- tm-btn(icon="help_outline" value="Cosmos One-Pager" type="anchor" href="https://docs.google.com/document/d/1xSQF5Cq7eMJ411EtitMVb3QKAopnhlesRu_JMm9pWwU" target="_blank")
   .tm-sect-cols
     .tm-sect-col
       tm-section
