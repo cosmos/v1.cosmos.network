@@ -433,7 +433,7 @@ const routes = [
   },
   {
     path: "/rpc",
-    redirect: "/rpc/v0.42.6"
+    redirect: "/rpc/v0.44.5"
   },
   {
     path: "/rpc/:version?",
