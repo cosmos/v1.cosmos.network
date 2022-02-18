@@ -82,7 +82,7 @@ Until recently, building a blockchain required building all three layers (_Netwo
 
 Tendermint BFT is a solution that packages the _networking_ and _consensus_ layers of a blockchain into a generic engine, allowing developers to focus on _application_ development as opposed to the complex underlying protocol. As a result, Tendermint saves hundreds of hours of development time. Note that Tendermint also designates the name of the [byzantine fault tolerant (BFT)](https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm) <def value="consensus-algorithm">consensus algorithm</def> used within the Tendermint BFT engine. For more on the history of consensus protocols and BFT you can check this cool [podcast](https://softwareengineeringdaily.com/2018/03/26/consensus-systems-with-ethan-buchman/) by Tendermint co-founder Ethan Buchman. \
  \
-The [Tendermint BFT engine](https://github.com/tendermint/tendermint) is connected to the application by a socket protocol called the [Application Blockchain Interface](https://github.com/tendermint/abci) (<def value="abci">ABCI</def>). This protocol can be wrapped in any programming language, making it possible for developers to choose a language that fits their needs.
+The [Tendermint BFT engine](https://github.com/tendermint/tendermint) is connected to the application by a socket protocol called the [Application Blockchain Interface](https://github.com/tendermint/tendermint/tree/master/abci) (<def value="abci">ABCI</def>). This protocol can be wrapped in any programming language, making it possible for developers to choose a language that fits their needs.
 
 **But that is not all**. Here are the properties that make Tendermint BFT a state-of-the-art blockchain engine:
 
