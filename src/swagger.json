@@ -1,5 +1,10 @@
 [
   {
+    "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.45.1/client/docs/swagger-ui/swagger.yaml",
+    "label": "Cosmos SDK v0.45.1 (Gaia v7.0.0 / cosmoshub-4)",
+    "key": "v0.45.1"
+  },
+  {
     "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.44.5/client/docs/swagger-ui/swagger.yaml",
     "label": "Cosmos SDK v0.44.5 (Gaia v6.0.0 / cosmoshub-4)",
     "key": "v0.44.5"
