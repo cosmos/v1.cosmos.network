@@ -5,13 +5,18 @@
     "key": "v0.45.1"
   },
   {
+    "url": "  https://raw.githubusercontent.com/cosmos/ibc-go/release/v3.0.x/docs/client/swagger-ui/swagger.yaml",
+    "label": "IBC v3.0.x (Gaia v7.0.0 / cosmoshub-4)",
+    "key": "ibc"
+  },
+  {
     "url": "https://raw.githubusercontent.com/cosmos/cosmos-sdk/v0.44.5/client/docs/swagger-ui/swagger.yaml",
     "label": "Cosmos SDK v0.44.5 (Gaia v6.0.0 / cosmoshub-4)",
     "key": "v0.44.5"
   },
   {
     "url": "https://raw.githubusercontent.com/cosmos/ibc-go/release/v2.0.x/docs/client/swagger-ui/swagger.yaml",
-    "label": "IBC (Gaia v6.0.0 / cosmoshub-4)",
+    "label": "IBC v2.0.x (Gaia v6.0.0 / cosmoshub-4)",
     "key": "ibc"
   },
   {
