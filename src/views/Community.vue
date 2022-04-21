@@ -132,7 +132,7 @@
     p Get up and running with your own sovereign blockchain application in a matter of minutes. Connect to the Cosmos Hub once IBC launches and join the Internet of Blockchains!
     img(slot="image" src="~images/community/community-section-sdk-chain.svg" alt="SDK")
     tm-btn(
-      value="Install starport" size="lg" type="anchor" href="https://github.com/tendermint/starport#installation" target="blank_" rel="noopener noreferrer"
+      value="Install Ignite CLI" size="lg" type="anchor" href="https://github.com/ignite-hq/cli#installation" target="blank_" rel="noopener noreferrer"
       icon="arrow_forward" icon-pos="right")
     .note #[strong Note:] You don’t need ATOM tokens to create a Cosmos Zone.
 
