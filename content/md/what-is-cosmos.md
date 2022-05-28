@@ -5,6 +5,7 @@
 ## Introduction
 
 Strictly speaking, **Cosmos is a decentralized network of independent parallel blockchains, each powered by <def value="bft">BFT</def> consensus algorithms like [Tendermint](#what-is-tendermint-core-and-the-abci) consensus.**
+<def value="stelios-test">Stelios Test</def>
 
 In other words, Cosmos is an ecosystem of <def value="blockchain">blockchains</def> that can scale and interoperate with each other. Before Cosmos, blockchains were siloed and unable to communicate with each other. They were hard to build and could only handle a small amount of <def value="tx">transactions</def> per second. Cosmos solves these problems with a new technical vision. In order to understand this vision we need to go back to the fundamentals of blockchain technology.
 

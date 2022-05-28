@@ -19,6 +19,7 @@ npm-debug.log*
 *.ntvs*
 *.njsproj
 *.sln
+*.iml
 
 # Local Netlify folder
 .netlify

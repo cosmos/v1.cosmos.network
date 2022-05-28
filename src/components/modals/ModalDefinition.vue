@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import MarkdownIt from "markdown-it"
 import { mapGetters } from "vuex"
 export default {
   name: "modal-definition",
@@ -26,9 +25,6 @@ export default {
       }
     }
   },
-  data: () => ({
-    md: new MarkdownIt()
-  }),
   methods: {
     close() {
       this.$store.commit("closeDefinition")

@@ -1,5 +1,6 @@
 <template lang="pug">
 .tm-definition
+  a(:name="`${definition.slug}`")
   .tm-definition__title {{ definition.title }}
   .tm-definition__description(v-html="md.render(definition.description)")
 </template>
@@ -9,7 +10,10 @@ import MarkdownIt from "markdown-it"
 export default {
   name: "tm-definition",
   data: () => ({
-    md: new MarkdownIt()
+    md: new MarkdownIt({
+      linkify: true,
+      html: true
+    })
   }),
   props: ["definition"]
 }

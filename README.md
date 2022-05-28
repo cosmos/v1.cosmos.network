@@ -27,3 +27,27 @@ Under the hood, `/pre.sh` script is executed before `serve` and `build` npm comm
 ## Sitemap
 
 - [Sitemap.xml](./public/sitemap.xml) is currently being maintained manually. The sitemap is to be added when there is a new page created.
+
+## Airtable integration
+
+The site is using a number of [Airtables][1] to populate various views, in lieu of a [CMS][7]. Some of the Airtables support Markdown (M), some only plain text (T).   
+Changes to Airtables take effect immediately on the live site.  
+A change is composed of  
+* adding/deleting a row, and/or
+* (un)marking the row as `Active`. 
+
+The Airtables are:  
+* [Code with Us][2]. (M) See uses of [cwu.js](./src/store/modules/cwu.js)  
+* [Community][3]. (T) See uses of [community.js](./src/store/modules/community.js)
+* [Glossary][4]. (M) See uses of [glossary.js](./src/store/modules/glossary.js)
+* [Media][5]. (T) See uses of [media.js](./src/store/modules/media.js)
+* [Roadmap][6]. (T) See uses of [roadmap.js](./src/store/modules/roadmap.js)
+
+
+  [1]: https://airtable.com/
+  [2]: https://airtable.com/appGq4J4B7aGj2d3P
+  [3]: https://airtable.com/app6cmf6dU89OHtUP
+  [4]: https://airtable.com/appNu0Ye9QMY89sCh
+  [5]: https://airtable.com/apphVC4IpCTi0JBCl
+  [6]: https://airtable.com/appk7A90P9mH7LFnl
+  [7]: https://en.wikipedia.org/wiki/Content_management_system
