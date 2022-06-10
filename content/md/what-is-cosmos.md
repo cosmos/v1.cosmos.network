@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Strictly speaking, **Cosmos is a decentralized network of independent parallel blockchains, each powered by <def value="bft">BFT</def> consensus algorithms like [Tendermint](#what-is-tendermint-core-and-the-abci) consensus.**
+Strictly speaking, **Cosmos is a decentralized network of independent parallel blockchains, each powered by <def value="bft">BFT</def> consensus algorithms like [Tendermint](#what-is-tendermint-bft-and-the-abci) consensus.**
 
 In other words, Cosmos is an ecosystem of <def value="blockchain">blockchains</def> that can scale and interoperate with each other. Before Cosmos, blockchains were siloed and unable to communicate with each other. They were hard to build and could only handle a small amount of <def value="tx">transactions</def> per second. Cosmos solves these problems with a new technical vision. In order to understand this vision we need to go back to the fundamentals of blockchain technology.
 
@@ -80,16 +80,16 @@ Until recently, building a blockchain required building all three layers (_Netwo
 
 <figure><img src="/images/intro/03-tendermint.svg" alt="Diagram for Tendermint BFT"></figure>
 
-Tendermint BFT is a solution that packages the _networking_ and _consensus_ layers of a blockchain into a generic engine, allowing developers to focus on _application_ development as opposed to the complex underlying protocol. As a result, Tendermint saves hundreds of hours of development time. Note that Tendermint also designates the name of the [byzantine fault tolerant (BFT)](https://github.com/tendermint/tendermint/wiki/Byzantine-Consensus-Algorithm) <def value="consensus-algorithm">consensus algorithm</def> used within the Tendermint BFT engine. For more on the history of consensus protocols and BFT you can check this cool [podcast](https://softwareengineeringdaily.com/2018/03/26/consensus-systems-with-ethan-buchman/) by Tendermint co-founder Ethan Buchman. \
+Tendermint BFT is a solution that packages the _networking_ and _consensus_ layers of a blockchain into a generic engine, allowing developers to focus on _application_ development as opposed to the complex underlying protocol. As a result, Tendermint saves hundreds of hours of development time. Note that Tendermint also designates the name of the [byzantine fault tolerant (BFT)](https://en.wikipedia.org/wiki/Byzantine_fault) <def value="consensus-algorithm">consensus algorithm</def> used within the Tendermint BFT engine. For more on the history of consensus protocols and BFT you can check this cool [podcast](https://softwareengineeringdaily.com/2018/03/26/consensus-systems-with-ethan-buchman/) by Tendermint co-founder Ethan Buchman. \
  \
-The [Tendermint BFT engine](https://github.com/tendermint/tendermint) is connected to the application by a socket protocol called the [Application Blockchain Interface](https://github.com/tendermint/abci) (<def value="abci">ABCI</def>). This protocol can be wrapped in any programming language, making it possible for developers to choose a language that fits their needs.
+The [Tendermint BFT engine](https://github.com/tendermint/tendermint) is connected to the application by a socket protocol called the [Application Blockchain Interface](https://github.com/tendermint/tendermint/tree/master/abci) (<def value="abci">ABCI</def>). This protocol can be wrapped in any programming language, making it possible for developers to choose a language that fits their needs.
 
 **But that is not all**. Here are the properties that make Tendermint BFT a state-of-the-art blockchain engine:
 
 - **Public or private blockchain ready:** Tendermint BFT only handles _networking_ and _consensus_ for a blockchain, meaning that it helps nodes propagate transactions and validators agree on a set of transactions to append to the blockchain. It is the role of the _application_ layer to define how the <def value="validator-set">validator set</def> is constituted. **Developers can therefore build both public and private blockchains on top of the Tendermint BFT engine**. If the application defines that validators are elected based on how many tokens they have at stake, then the blockchain can be characterised as <def value="pos">Proof-of-Stake (PoS)</def>. If however the application defines that only a restricted set of pre-authorized entities can be validators, then the blockchain can be characterised as permissioned or private. Developers have all the freedom to customize the rules that define how the validator set of their blockchain changes.
 - **High Performance:** Tendermint BFT can have a block time on the order of 1 second and handle up to thousands of transactions per second.
 - **Instant finality:** A property of the Tendermint consensus algorithm is instant finality. This means that forks are never created as long as more than a third of the validators are honest (byzantine). Users can be sure their transactions are finalized as soon as a block is created (which is not the case in Proof-of-Work blockchains like Bitcoin and Ethereum).
-- **Security:** Tendermint consensus is not only fault tolerant, it is also accountable. If the blockchain forks, [there is a way to determine liability](https://docs.tendermint.com/master/spec/light-client/accountability.html).
+- **Security:** Tendermint consensus is not only fault tolerant, it is also accountable. If the blockchain forks, [there is a way to determine liability](https://docs.tendermint.com/master/spec/light-client/accountability/).
 
 ## Cosmos SDK and other application layer frameworks
 
@@ -99,7 +99,7 @@ Tendermint BFT reduces the development time of a blockchain from years to weeks,
 
 The [Cosmos SDK](/sdk) is a generalized framework that simplifies the process of building secure blockchain applications on top of Tendermint BFT. It is based on two major principles:
 
-- **Modularity:** The goal of the Cosmos SDK is to create an ecosystem of <def value="module">modules</def> that allows developers to easily spin up <def value="application-specific-blockchain">application-specific blockchains</def> without having to code each bit of functionality of their application from scratch. Anyone can create a module for the Cosmos SDK, and using ready built modules in your blockchain is as simple as importing them into your application. For example, the Tendermint team is building a [set of basic modules](https://github.com/cosmos/cosmos-sdk/tree/develop/x) that are needed for the <def value="cosmos-hub">Cosmos Hub</def>. These modules can be used by any developer as they build their own application. Additionally, developers can create new modules to customize their application. As the Cosmos network develops, the ecosystem of SDK modules will expand, making it increasingly easier to develop complex blockchain applications.
+- **Modularity:** The goal of the Cosmos SDK is to create an ecosystem of <def value="module">modules</def> that allows developers to easily spin up <def value="application-specific-blockchain">application-specific blockchains</def> without having to code each bit of functionality of their application from scratch. Anyone can create a module for the Cosmos SDK, and using ready built modules in your blockchain is as simple as importing them into your application. For example, the Tendermint team is building a [set of basic modules](https://github.com/cosmos/cosmos-sdk/tree/main/x) that are needed for the <def value="cosmos-hub">Cosmos Hub</def>. These modules can be used by any developer as they build their own application. Additionally, developers can create new modules to customize their application. As the Cosmos network develops, the ecosystem of SDK modules will expand, making it increasingly easier to develop complex blockchain applications.
 - **Capabilities-based security:** Capabilities constrain the security boundaries between modules, enabling developers to better reason about the composability of modules and limit the scope of malicious or unexpected interactions. For a deeper look at capabilities click [here](https://docs.cosmos.network/master/core/ocap.html).
 
 The Cosmos SDK also comes with a set of useful developer tools for building command line interfaces (CLI), REST servers and a variety of other commonly used utility libraries.
@@ -156,7 +156,7 @@ The proof is verified on chain B against chain A's header and, if it is valid, t
 
 Note that the ATOM that have been created on chain B are not real ATOM, as ATOM only exist on chain A. They are a representation on B of ATOM from chain A, along with a proof that these ATOM are frozen on chain A.
 
-A similar mechanism is used to unlock ATOM when they come back to their origin chain. For a more comprehensive description of the IBC protocol, you can look at this [specification](https://github.com/cosmos/cosmos-sdk/tree/master/docs/spec/ibc).
+A similar mechanism is used to unlock ATOM when they come back to their origin chain. For a more comprehensive description of the IBC protocol, you can look at this [specification](https://github.com/cosmos/ibc/tree/master/spec).
 
 ## Designing the "Internet of Blockchains"
 
@@ -196,9 +196,9 @@ A <def value="peg-zone">Peg-Zone</def> is a blockchain that tracks the state of 
 >
 > Second, a contract is deployed on the main Ethereum blockchain. When users want to send tokens from Ethereum to Cosmos, they start by sending tokens to this contract. Then the contract freezes the assets and after 100 blocks, a representation of these assets is released on the Peg-Zone. A similar mechanism is used to send assets back to the Ethereum chain.
 
-Interestingly enough, the Peg-Zone also allows users to send any token that lives on Cosmos to the Ethereum chain (the Cosmos tokens would be represented as ERC20 on the Ethereum chain). The Tendermint team is currently working on a Peg-Zone implementation for the Ethereum chain called [Peggy](https://github.com/cosmos/peggy).
+Interestingly enough, the Peg-Zone also allows users to send any token that lives on Cosmos to the Ethereum chain (the Cosmos tokens would be represented as ERC20 on the Ethereum chain). The Tendermint team is currently working on a Peg-Zone implementation for the Ethereum chain called [Gravity Bridge](https://github.com/cosmos/gravity-bridge).
 
-Peg-Zones will need to be customized for the particular chain they bridge. Building an Ethereum Peg-Zone is relatively simple because Ethereum is account-based and has smart-contracts. However, building a Bitcoin Peg-Zone is a bit more challenging. Explaining how to build a Bitcoin-like Peg-Zone is out-of-scope for this intro but know that it is theoretically possible. If you want to learn more about Peg-Zones you can take a look at this [spec](https://github.com/cosmos/peggy/tree/master/spec).
+Peg-Zones will need to be customized for the particular chain they bridge. Building an Ethereum Peg-Zone is relatively simple because Ethereum is account-based and has smart-contracts. However, building a Bitcoin Peg-Zone is a bit more challenging. Explaining how to build a Bitcoin-like Peg-Zone is out-of-scope for this intro but know that it is theoretically possible. If you want to learn more about Peg-Zones you can take a look at this [spec](https://github.com/cosmos/gravity-bridge/tree/main/spec).
 
 ## Solving Scalability
 
