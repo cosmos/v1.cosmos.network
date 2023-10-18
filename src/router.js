@@ -85,17 +85,31 @@ const routes = [
     ["/youtube", "https://www.youtube.com/c/CosmosProject"],
     ["/reddit", "https://reddit.com/r/cosmosnetwork"],
     ["/blog", "https://blog.cosmos.network"],
-    ["/forum", "https://forum.cosmos.network"]
+    ["/forum", "https://forum.cosmos.network"],
+    ["/about/whitepaper", "https://cosmos.network/whitepaper"],
+    ["/about/whitepaper/ko", "https://cosmos.network/whitepaper/ko"],
+    ["/about/whitepaper/pt", "https://cosmos.network/whitepaper/pt"],
+    ["/about/whitepaper/zh-CN", "https://cosmos.network/whitepaper/zh-CN"],
+    ["/dev/whitepaper", "https://cosmos.network/whitepaper"],
+    ["/dev/whitepaper/ko", "https://cosmos.network/whitepaper/ko"],
+    ["/dev/whitepaper/pt", "https://cosmos.network/whitepaper/pt"],
+    ["/dev/whitepaper/zh-CN", "https://cosmos.network/whitepaper/zh-CN"],
+    ["/dev/scaling-eth", "https://cosmos.network/whitepaper"],
+    ["/scaling-eth", "https://cosmos.network/whitepaper"],
+    ["/scaling", "https://cosmos.network/whitepaper"],
+    ["/scalingeth", "https://cosmos.network/whitepaper"],
+    ["/whitepaper", "https://cosmos.network/whitepaper"],
+    ["/whitepaper/en-US", "https://cosmos.network/whitepaper"],
+    ["/resources/whitepaper", "https://cosmos.network/whitepaper"],
+    ["/resources/whitepaper/ko", "https://cosmos.network/whitepaper/ko"],
+    ["/resources/whitepaper/pt", "https://cosmos.network/whitepaper/pt"],
+    ["/resources/whitepaper/zh-CN", "https://cosmos.network/whitepaper/zh-CN"]
   ].map(([path, url]) => ({
     path,
     beforeEnter: () => window.location.assign(url)
   })),
   ...[
     ["/about/*", "/about"],
-    ["/about/whitepaper", "/resources/whitepaper"],
-    ["/about/whitepaper/ko", "/resources/whitepaper/ko"],
-    ["/about/whitepaper/pt", "/resources/whitepaper/pt"],
-    ["/about/whitepaper/zh-CN", "/resources/whitepaper/zh-CN"],
     ["/academy", "/ecosystem"],
     ["/academy/kr", "/ecosystem"],
     ["/apply", "/careers"],
@@ -107,11 +121,6 @@ const routes = [
     ["/dev", "/tools"],
     ["/developers", "/tools"],
     ["/dev/hackatom", "/events"],
-    ["/dev/scaling-eth", "/resources/whitepaper#use-cases"],
-    ["/dev/whitepaper", "/resources/whitepaper"],
-    ["/dev/whitepaper/ko", "/resources/whitepaper/ko"],
-    ["/dev/whitepaper/pt", "/resources/whitepaper/pt"],
-    ["/dev/whitepaper/zh-CN", "/resources/whitepaper/zh-CN"],
     ["/events/all", "/events"],
     ["/events/code-with-us", "/series/code-with-us"],
     ["/ecosystem", "/ecosystem/apps"],
@@ -130,9 +139,6 @@ const routes = [
     ["/plan/:locale", "/resources/plan"],
     ["/press", "/media"],
     ["/resources/academy", "/ecosystem"],
-    ["/scaling-eth", "/resources/whitepaper#use-cases"],
-    ["/scaling", "/resources/whitepaper#use-cases"],
-    ["/scalingeth", "/resources/whitepaper#use-cases"],
     ["/staking/delegators", "resources/delegators"],
     ["/team", "/about"],
     ["/tm", "/design/trademark"],
@@ -140,8 +146,7 @@ const routes = [
     ["/what", "/intro"],
     ["/whatiscosmos", "/intro"],
     ["/whatscosmos", "/intro"],
-    ["/whitepaper", "/resources/whitepaper"],
-    ["/whitepaper/en-US", "/resources/whitepaper"]
+    
   ].map(([path, redirect]) => ({ path, redirect })),
   // PAGES
   {
@@ -341,22 +346,6 @@ const routes = [
         component: () =>
           import(
             /* webpackChunkName: "resources-index" */ "./views/ResourcesIndex.vue"
-          )
-      },
-      {
-        path: "whitepaper",
-        name: "whitepaper",
-        component: () =>
-          import(
-            /* webpackChunkName: "whitepaper" */ "./views/ResourcesWhitepaper.vue"
-          )
-      },
-      {
-        path: "whitepaper/:locale",
-        name: "whitepaper-i18n",
-        component: () =>
-          import(
-            /* webpackChunkName: "whitepaper-i18n" */ "./views/ResourcesWhitepaper.vue"
           )
       },
       {
