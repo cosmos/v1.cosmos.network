@@ -1,3 +1,5 @@
+## This site has been deprecated as at 27 Feb 2024. For the current site, go to [this repo](https://github.com/cosmos/cosmos.network)
+
 # [v1.cosmos.network](https://v1.cosmos.network)
 
 > The website for Cosmos - Internet of Blockchains.
